@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e6f2ff;
+            color: #00264d;
+            line-height: 1.6;
+            background-image: linear-gradient(white 97%, #cce0ff 100%);
+            background-size: 100% 30px;
+        }
+        header {
+            background: #007acc;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5em;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 80%;
+            height: 450px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .notes, .game {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #f9fbff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .notes h2, .game h2 {
+            color: #0059b3;
+            border-bottom: 2px solid #99ccff;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        details {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 10px;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #004080;
+        }
+        summary:hover {
+            color: #0066cc;
+        }
+        ul {
+            margin: 10px 0 0 20px;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        button {
+            background: #007acc;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #005c99;
+        }
+        .question-box {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+        }
+        .feedback {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+    </style>
+</head>
+<body>
+
+<header>
+    Physic
+</header>
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/5xU1oig7AG8" allowfullscreen></iframe>
+</div>
+
+<div class="notes">
+    <h2>Key Notes</h2>
+
+    <details>
+        <summary>Core Principle</summary>
+        <ul>
+            <li>Energy is never created or destroyed (law of conservation).</li>
+            <li>Energy changes form or transfers between objects/stores.</li>
+            <li>Work is done when energy moves into an object’s energy store.</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Types of Energy Stores</summary>
+        <ul>
+            <li>Heat (temperature-related)</li>
+            <li>Kinetic (movement)</li>
+            <li>Gravitational potential (position in field)</li>
+            <li>Elastic (stretched spring)</li>
+            <li>Chemical bonds</li>
+            <li>Magnetic</li>
+            <li>Electrostatic</li>
+            <li>Nuclear</li>
+        </ul>
+        <p>Energy transfers between stores by: mechanically, electrically, heating, or radiation (light/sound).</p>
+    </details>
+
+    <details>
+        <summary>Systems</summary>
+        <ul>
+            <li>A system is a collection of matter in physics.</li>
+            <li>Open system: exchanges energy and matter with outside world.</li>
+            <li>Closed system: no matter or energy enters/leaves.</li>
+            <li>Energy is conserved → zero overall change.</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Kettle Example</summary>
+        <ul>
+            <li>Energy flows from plug socket → heating element.</li>
+            <li>Heating element’s thermal energy transfers to water.</li>
+            <li>Water’s thermal energy store increases (work done).</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Work Done</summary>
+        <ul>
+            <li>Work can be mechanical or electrical.</li>
+            <li>Example: kicking a ball → chemical energy (muscles) → kinetic energy (ball).</li>
+            <li>When current flows, energy is needed to overcome resistance in wires.</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Train Example</summary>
+        <ul>
+            <li>Brakes apply friction → kinetic energy (wheels) → thermal energy (surroundings).</li>
+        </ul>
+    </details>
+</div>
+
+<div class="game">
+    <h2>Quiz Game</h2>
+    <div id="game-area">
+        <button onclick="startGame()">Start Quiz Game</button>
+    </div>
+</div>
+
+<script>
+    const questions = [
+        {
+            type: "mcq",
+            question: "Which statement best describes the law of conservation of energy?",
+            options: [
+                "Energy can be created and destroyed.",
+                "Energy is never created or destroyed, only transferred.",
+                "Energy disappears when used."
+            ],
+            answer: 1,
+            explanation: "Energy cannot be created or destroyed; it only changes form or transfers."
+        },
+        {
+            type: "mcq",
+            question: "Which of the following is NOT an energy store?",
+            options: ["Kinetic", "Gravitational", "Photosynthetic", "Elastic"],
+            answer: 2,
+            explanation: "Photosynthesis is a process, not an energy store."
+        },
+        {
+            type: "fill",
+            question: "In a closed system, the overall change in energy is ________.",
+            answerText: "zero",
+            explanation: "In a closed system, energy is conserved so the net change is zero."
+        },
+        {
+            type: "mcq",
+            question: "In the kettle example, which component first receives energy from the plug socket?",
+            options: ["Water", "Heating element", "Steam"],
+            answer: 1,
+            explanation: "The heating element receives electrical energy first."
+        },
+        {
+            type: "mcq",
+            question: "When brakes are applied on a train, kinetic energy is mainly transferred into:",
+            options: ["Light energy", "Thermal energy", "Nuclear energy"],
+            answer: 1,
+            explanation: "Friction in the brakes converts kinetic energy into thermal energy of the surroundings."
+        },
+        {
+            type: "mcq",
+            question: "Which is NOT a common way energy transfers between stores?",
+            options: ["Mechanically", "Electrically", "By heating", "By osmosis"],
+            answer: 3,
+            explanation: "Osmosis is a biological transport process, not an energy transfer pathway."
+        },
+        {
+            type: "mcq",
+            question: "Work has been done on an object when:",
+            options: [
+                "Its temperature label changes but energy stays the same",
+                "Energy is transferred to one of the object’s energy stores",
+                "It is observed without interaction"
+            ],
+            answer: 1,
+            explanation: "Work corresponds to energy transfer into/out of an object's energy store."
+        },
+        {
+            type: "mcq",
+            question: "Kicking a ball into the air primarily transfers energy from which store to which store?",
+            options: [
+                "Kinetic → Chemical",
+                "Chemical (muscles) → Kinetic (ball)",
+                "Thermal → Nuclear"
+            ],
+            answer: 1,
+            explanation: "Chemical energy in muscles becomes kinetic energy of the ball."
+        },
+        {
+            type: "fill",
+            question: "Electrical work is done when current flows and energy is needed to overcome ________ in wires.",
+            answerText: "resistance",
+            explanation: "Energy is transferred as current overcomes electrical resistance."
+        },
+        {
+            type: "mcq",
+            question: "A ‘system’ in physics is best described as:",
+            options: [
+                "Any random observation",
+                "A collection of matter being considered",
+                "Only a closed container"
+            ],
+            answer: 1,
+            explanation: "A system is the matter/objects we choose to analyze."
+        },
+        {
+            type: "mcq",
+            question: "An open system can exchange what with the outside world?",
+            options: ["Energy only", "Matter only", "Both energy and matter"],
+            answer: 2,
+            explanation: "Open systems exchange both energy and matter."
+        },
+        {
+            type: "mcq",
+            question: "In a closed system:",
+            options: [
+                "Energy enters but matter does not",
+                "Neither energy nor matter enters or leaves",
+                "Matter enters but energy does not"
+            ],
+            answer: 1,
+            explanation: "Closed systems exchange neither energy nor matter."
+        },
+        {
+            type: "fill",
+            question: "In the kettle example, the water’s ________ energy store increases.",
+            answerText: "thermal",
+            explanation: "Thermal energy of the water increases as it is heated."
+        },
+        {
+            type: "mcq",
+            question: "Which is an example of an elastic energy store?",
+            options: ["A stretched spring", "A hot cup of tea", "A moving car"],
+            answer: 0,
+            explanation: "Elastic stores are associated with deformation like stretching."
+        },
+        {
+            type: "mcq",
+            question: "Gravitational potential energy relates to an object’s:",
+            options: ["Temperature", "Position in a gravitational field", "Charge distribution"],
+            answer: 1,
+            explanation: "It depends on height/position in a gravitational field."
+        },
+        {
+            type: "fill",
+            question: "Magnetic and electrostatic are types of energy ________.",
+            answerText: "stores",
+            explanation: "They are listed as distinct types of energy stores."
+        },
+        {
+            type: "mcq",
+            question: "Nuclear energy in this context is considered a:",
+            options: ["Transfer pathway", "Type of energy store", "Form of friction"],
+            answer: 1,
+            explanation: "Nuclear energy is one of the energy stores."
+        },
+        {
+            type: "mcq",
+            question: "Energy transfer by a force moving an object is called:",
+            options: ["Mechanical work", "Electrical work", "Radiative cooling"],
+            answer: 0,
+            explanation: "Using a force to move an object is mechanical work."
+        },
+        {
+            type: "fill",
+            question: "The movement or motion of an object corresponds to the ________ energy store.",
+            answerText: "kinetic",
+            explanation: "Kinetic energy is the energy of motion."
+        },
+        {
+            type: "mcq",
+            question: "Which list correctly names the four energy transfer pathways mentioned?",
+            options: [
+                "Mechanically, electrically, by heating, by radiation",
+                "Chemically, magnetically, electrically, by osmosis",
+                "By diffusion, by heating, chemically, by sound"
+            ],
+            answer: 0,
+            explanation: "Energy transfers mechanically, electrically, by heating, or by radiation (light/sound)."
+        }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    let shuffledQuestions = [];
+
+    function startGame() {
+        shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+        currentQuestion = 0;
+        score = 0;
+        showQuestion();
+    }
+
+    function showQuestion() {
+        const gameArea = document.getElementById("game-area");
+        const q = shuffledQuestions[currentQuestion];
+        let html = `<div class='question-box'><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+        if (q.type === "mcq") {
+            q.options.forEach((opt, index) => {
+                html += `<label><input type='radio' name='option' value='${index}'> ${opt}</label><br>`;
+            });
+            html += `<button onclick='checkMCQ()'>Submit</button>`;
+        } else if (q.type === "fill") {
+            html += `<input type='text' id='fill-answer' placeholder='Type your answer here'><br>`;
+            html += `<button onclick='checkFill()'>Submit</button>`;
+        }
+
+        html += `<div id='feedback' class='feedback'></div></div>`;
+        gameArea.innerHTML = html;
+    }
+
+    function checkMCQ() {
+        const q = shuffledQuestions[currentQuestion];
+        const selected = document.querySelector("input[name='option']:checked");
+        const feedback = document.getElementById("feedback");
+        if (!selected) {
+            feedback.textContent = "Please select an answer!";
+            feedback.className = "feedback incorrect";
+            return;
+        }
+        if (parseInt(selected.value, 10) === q.answer) {
+            feedback.textContent = "✅ Correct! " + q.explanation;
+            feedback.className = "feedback correct";
+            score++;
+        } else {
+            feedback.textContent = "❌ Incorrect. " + q.explanation;
+            feedback.className = "feedback incorrect";
+        }
+        setTimeout(nextQuestion, 1500);
+    }
+
+    function checkFill() {
+        const q = shuffledQuestions[currentQuestion];
+        const answer = document.getElementById("fill-answer").value.trim().toLowerCase();
+        const feedback = document.getElementById("feedback");
+        if (!answer) {
+            feedback.textContent = "Please enter your answer!";
+            feedback.className = "feedback incorrect";
+            return;
+        }
+        if (answer.includes(q.answerText)) {
+            feedback.textContent = "✅ Correct! " + q.explanation;
+            feedback.className = "feedback correct";
+            score++;
+        } else {
+            feedback.textContent = "❌ Incorrect. " + q.explanation;
+            feedback.className = "feedback incorrect";
+        }
+        setTimeout(nextQuestion, 1500);
+    }
+
+    function nextQuestion() {
+        currentQuestion++;
+        if (currentQuestion < shuffledQuestions.length) {
+            showQuestion();
+        } else {
+            endGame();
+        }
+    }
+
+    function endGame() {
+        const gameArea = document.getElementById("game-area");
+        gameArea.innerHTML = `<h3>Game Over!</h3><p>Your score: ${score} / ${shuffledQuestions.length}</p>` +
+                             `<button onclick='startGame()'>Play Again</button>`;
+    }
+</script>
+
+</body>
+</html>
