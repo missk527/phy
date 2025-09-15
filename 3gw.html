@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weight & Gravitational Potential Energy | Notes + Quiz</title>
+  <style>
+    :root{
+      --brand:#9333ea;
+      --bg:#fafafa;
+      --card:#fff;
+      --ok:#15803d;
+      --bad:#b91c1c;
+      --muted:#6b7280;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#111827;line-height:1.6}
+    header{background:linear-gradient(135deg,var(--brand),#4f46e5);color:#fff;padding:20px 16px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.2)}
+    header h1{margin:0;font-size:clamp(22px,4vw,32px)}
+    .wrap{max-width:960px;margin:20px auto;padding:0 16px 40px}
+    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(0,0,0,.08);margin:16px 0}
+    iframe{width:100%;height:420px;border:0;border-radius:10px}
+    h2{color:var(--brand)}
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:600}
+    .formula{font-family:monospace;background:#111827;color:#f9fafb;padding:8px 12px;border-radius:8px;margin:6px 0;display:inline-block}
+    .pill{display:inline-block;background:#ede9fe;color:#4c1d95;border:1px solid #c4b5fd;border-radius:999px;padding:2px 8px;font-size:.85rem;margin-right:6px}
+    .qbox{border:1px solid #e5e7eb;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .feedback.ok{color:var(--ok)}
+    .feedback.bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);margin-top:20px;font-size:.9rem}
+    @media(max-width:760px){iframe{height:240px}}
+  </style>
+</head>
+<body>
+<header><h1>Weight & Gravitational Potential Energy</h1></header>
+
+<div class="wrap">
+  <section class="card">
+    <iframe src="https://www.youtube.com/embed/6LTT8T1GlwE" title="Weight & GPE" allowfullscreen></iframe>
+  </section>
+
+  <section class="card">
+    <h2>Key Notes (rewritten from the speech)</h2>
+    <details open>
+      <summary>1) Gravity & Gravitational Field</summary>
+      <ul>
+        <li>Gravity = force of attraction between objects.</li>
+        <li>Strength depends on <b>mass</b> of objects and <b>distance</b> apart.</li>
+        <li>Large nearby objects (Earth, Moon) create strong gravitational effects.</li>
+        <li>Each massive body has a <b>gravitational field</b>; its strength is denoted <b>g</b>.</li>
+        <li>Earth: g ≈ 9.8 N/kg; Moon: g ≈ 1.6 N/kg.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>2) Weight vs. Mass</summary>
+      <ul>
+        <li><b>Mass (m):</b> intrinsic property, measured in kilograms (kg).</li>
+        <li><b>Weight (W):</b> force due to gravity on mass; W = m × g.</li>
+        <li>Unit of weight = newton (N).</li>
+        <li>Example: 60 kg person on Earth → W = 60 × 9.8 = 588 N.</li>
+        <li>Everyday speech often confuses mass (kg) and weight (N).</li>
+      </ul>
+    </details>
+    <details>
+      <summary>3) Work Against Gravity & Gravitational Potential Energy</summary>
+      <ul>
+        <li>To lift an object, work is done against gravity.</li>
+        <li>Energy transferred → object's <b>gravitational potential energy (GPE)</b> store.</li>
+        <li>Formula: <span class="formula">E<sub>p</sub> = m × g × h</span></li>
+        <li>Units: kg × (N/kg) × m = joules (J).</li>
+      </ul>
+    </details>
+    <details>
+      <summary>4) Example Calculation</summary>
+      <ul>
+        <li>Apple mass = 100 g = 0.1 kg.</li>
+        <li>Height = 3 m, g = 9.8 N/kg.</li>
+        <li>GPE = 0.1 × 9.8 × 3 = 2.94 J.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>5) Recap</summary>
+      <ul>
+        <li>Gravity depends on mass and distance.</li>
+        <li>Weight = m × g.</li>
+        <li>Earth’s g ≈ 9.8 N/kg.</li>
+        <li>Gravitational potential energy: E<sub>p</sub> = m g h (in joules).</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2>Quiz (30 Questions)</h2>
+    <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+  </section>
+
+  <footer>© 2025 Physics Pack</footer>
+</div>
+
+<script>
+const questions=[
+ {type:"mcq",q:"Gravity is:",opts:["A repulsive force","A force of attraction","Only felt on Earth"],a:1,exp:"Gravity attracts masses."},
+ {type:"mcq",q:"The strength of gravity depends on:",opts:["Mass and distance","Temperature and color","Speed and time"],a:0,exp:"Gravity ∝ mass, 1/distance²."},
+ {type:"mcq",q:"The region around a mass where it exerts gravity is called:",opts:["Force field","Gravitational field","Magnetic field"],a:1,exp:"Correct term is gravitational field."},
+ {type:"mcq",q:"Symbol for gravitational field strength:",opts:["W","M","g"],a:2,exp:"g represents field strength."},
+ {type:"mcq",q:"On Earth, g ≈",opts:["1.6 N/kg","9.8 N/kg","100 N/kg"],a:1,exp:"Earth g ≈ 9.8 N/kg."},
+ {type:"mcq",q:"On the Moon, g ≈",opts:["9.8 N/kg","1.6 N/kg","0"],a:1,exp:"Moon g ≈ 1.6 N/kg."},
+ {type:"mcq",q:"Weight is defined as:",opts:["Mass × acceleration due to gravity","Mass ÷ volume","Mass only"],a:0,exp:"W = m × g."},
+ {type:"fill",q:"Write the formula for weight.",ans:"m×g",alt:["mg","m x g"],exp:"Weight = m × g."},
+ {type:"mcq",q:"Unit of weight is:",opts:["kg","J","N"],a:2,exp:"Weight is a force measured in newtons."},
+ {type:"fill",q:"A 60 kg person on Earth has weight = ____ N.",ans:"588",exp:"60 × 9.8 = 588 N."},
+ {type:"mcq",q:"Mass is measured in:",opts:["kg","N","J"],a:0,exp:"Mass in kilograms."},
+ {type:"mcq",q:"Weight is measured in:",opts:["J","N","kg"],a:1,exp:"Weight in newtons."},
+ {type:"mcq",q:"Mass is an ____ property.",opts:["extrinsic","intrinsic","imaginary"],a:1,exp:"Mass is intrinsic to matter."},
+ {type:"mcq",q:"Weight is a ____ acting on a mass.",opts:["force","property","temperature"],a:0,exp:"Weight is a force."},
+ {type:"mcq",q:"To lift an object requires:",opts:["Force and energy","No energy","Cooling"],a:0,exp:"Work must be done against gravity."},
+ {type:"mcq",q:"Energy stored when lifting against gravity is called:",opts:["Kinetic energy","Gravitational potential energy","Elastic potential energy"],a:1,exp:"Energy in GPE store."},
+ {type:"fill",q:"Formula for gravitational potential energy (E_p).",ans:"mgh",alt:["m×g×h"],exp:"E_p = m g h."},
+ {type:"mcq",q:"Unit of gravitational potential energy:",opts:["J","N","kg"],a:0,exp:"Energy is measured in joules."},
+ {type:"fill",q:"Convert 100 g to kilograms.",ans:"0.1",exp:"100 g ÷ 1000 = 0.1 kg."},
+ {type:"fill",q:"Calculate GPE: 0.1 × 9.8 × 3 = ____ J.",ans:"2.94",exp:"= 2.94 J."},
+ {type:"mcq",q:"If height doubles, GPE:",opts:["Stays the same","Doubles","Halves"],a:1,exp:"Directly proportional to h."},
+ {type:"mcq",q:"If mass triples, GPE:",opts:["Triples","Halves","No change"],a:0,exp:"Directly proportional to m."},
+ {type:"mcq",q:"If g is smaller (e.g., Moon), weight is:",opts:["Smaller","Bigger","Unchanged"],a:0,exp:"Weight depends on g."},
+ {type:"fill",q:"Weight = mass × ____.",ans:"g",exp:"Weight = m × g."},
+ {type:"mcq",q:"Difference between mass and weight is important in:",opts:["Physics exams","Everyday speech","Both"],a:2,exp:"Mass vs weight is key in physics."},
+ {type:"mcq",q:"Energy unit is named after:",opts:["James Joule","Isaac Newton","Albert Einstein"],a:0,exp:"Joule is the SI unit of energy."},
+ {type:"fill",q:"Earth g value (approx) = ____ N/kg.",ans:"9.8",exp:"9.8 N/kg."},
+ {type:"fill",q:"Moon g value (approx) = ____ N/kg.",ans:"1.6",exp:"1.6 N/kg."},
+ {type:"mcq",q:"If g = 0, weight is:",opts:["Zero","Infinite","Unchanged"],a:0,exp:"No field → no weight."},
+ {type:"fill",q:"Symbol for gravitational potential energy is E with subscript ____.",ans:"p",exp:"E_p."}
+];
+
+let idx=0,score=0,order=[];
+function startGame(){order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);idx=0;score=0;renderQ();}
+function renderQ(){const q=questions[order[idx]];let html=`<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+if(q.type==="mcq"){q.opts.forEach((o,i)=>{html+=`<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`});html+=`<button onclick='checkMCQ()'>Submit</button>`;}else{html+=`<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;}
+html+=`<div id='fb' class='feedback'></div></div>`;document.getElementById('game').innerHTML=html;}
+function checkMCQ(){const q=questions[order[idx]];const sel=document.querySelector("input[name='opt']:checked");const fb=document.getElementById('fb');if(!sel){fb.textContent='Pick one';fb.className='feedback bad';return;}if(parseInt(sel.value)===q.a){score++;fb.textContent='✅ '+q.exp;fb.className='feedback ok';}else{fb.textContent='❌ '+q.exp;fb.className='feedback bad';}setTimeout(nextQ,1200);}
+function checkFill(){const q=questions[order[idx]];const val=(document.getElementById('fill').value||'').trim().toLowerCase();const fb=document.getElementById('fb');if(!val){fb.textContent='Enter answer';fb.className='feedback bad';return;}let correct=[q.ans].concat(q.alt||[]).map(s=>String(s).toLowerCase());if(correct.includes(val)){score++;fb.textContent='✅ '+q.exp;fb.className='feedback ok';}else{fb.textContent='❌ Correct: '+q.ans+'. '+q.exp;fb.className='feedback bad';}setTimeout(nextQ,1200);}
+function nextQ(){idx++;if(idx<questions.length)renderQ();else endGame();}
+function endGame(){document.getElementById('game').innerHTML=`<div class='qbox'><h3>Done!</h3><p>Your score: <b>${score}</b>/${questions.length}</p><button onclick='startGame()'>Retry</button></div>`;}
+</script>
+
+</body>
+</html>
