@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conservation of Energy | Notes + Quiz</title>
+  <style>
+    :root{ --brand:#06b6d4; --accent:#10b981; --ink:#0f172a; --paper:#ffffff; --bg:#f1f5f9; --ok:#16a34a; --bad:#dc2626; --muted:#64748b }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, Segoe UI, Arial;line-height:1.65;color:var(--ink);background:var(--bg)}
+    header{background:linear-gradient(120deg,var(--brand),var(--accent));color:#fff;padding:20px 14px;text-align:center;box-shadow:0 8px 28px rgba(0,0,0,.18)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:20px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    h2{margin:0 0 10px;color:#045d56}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .kbd{background:#eef2ff;border:1px solid #c7d2fe;border-bottom-width:3px;border-radius:8px;padding:2px 6px;font-family:ui-monospace,Consolas,monospace}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .feedback.ok{color:var(--ok)} .feedback.bad{color:var(--bad)}
+    .pill{display:inline-block;background:#ecfeff;color:#0e7490;border:1px solid #a5f3fc;border-radius:999px;padding:2px 10px;margin-right:6px;font-size:.9rem}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Conservation of Energy</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <!-- Updated video link as requested -->
+      <iframe src="https://www.youtube.com/embed/sCsox2igh-w" title="Conservation of Energy" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) The Principle</summary>
+        <ul>
+          <li><b>Conservation of energy:</b> energy can be <b>transferred</b>, <b>stored</b>, or <b>dissipated</b>, but can <b>never be created or destroyed</b>.</li>
+          <li>Energy only moves between <b>objects</b> and between <b>forms</b> (e.g., electrical → chemical → light).</li>
+        </ul>
+        <div>
+          <span class="pill">Transfer</span><span class="pill">Store</span><span class="pill">Dissipate</span><span class="pill">Cannot be created/destroyed</span>
+        </div>
+      </details>
+
+      <details>
+        <summary>2) Phone charging + using (energy pathways)</summary>
+        <ul>
+          <li><b>Charging:</b> electrical energy from the mains travels along the wire and is transferred to the battery’s <b>chemical energy store</b>.</li>
+          <li><b>Using the phone:</b> chemical energy → electrical energy which flows around the internal circuit and powers components.</li>
+          <li>At the <b>screen</b>: electrical → <b>light</b> (so you can see). At the <b>speaker</b>: electrical → <b>sound</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Useful vs wasted (dissipated) energy</summary>
+        <ul>
+          <li>Ideally, all transferred energy would go into the <b>desired store</b>.</li>
+          <li>In reality, some energy is <b>dissipated</b> to other forms (i.e., <b>wasted</b> relative to our goal).</li>
+          <li>Commonly dissipated as <b>heat</b> (phone warms when charging or heavy use) but can also be <b>sound</b>, etc.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Systems: open vs closed</summary>
+        <ul>
+          <li>A <b>system</b> is the portion of the physical universe you choose to analyze; everything else is the <b>environment</b>.</li>
+          <li><b>Open system:</b> energy and matter can move between system and environment (e.g., the phone by itself).</li>
+          <li><b>Closed system:</b> energy and matter cannot enter or escape (e.g., the sealed jar containing the phone and the air).</li>
+          <li>In the jar example, heat from the phone is dissipated to the air <b>inside the jar</b>, so it <b>stays within the system</b>.</li>
+          <li><b>Total energy of a closed system does not change.</b></li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2025 Physics Pack</footer>
+  </div>
+
+  <script>
+    // 35-question quiz based strictly on the provided speech
+    const questions = [
+      {type:"mcq", q:"Conservation of energy means energy can be transferred, stored, or dissipated but it can ____.", opts:["be created","be destroyed","never be created or destroyed"], a:2, exp:"Energy cannot be created or destroyed."},
+      {type:"mcq", q:"Energy can move between:", opts:["Only objects, not forms","Both different objects and different forms","Neither objects nor forms"], a:1, exp:"It moves between objects and forms."},
+      {type:"mcq", q:"When charging a phone, energy pathway is:", opts:["Chemical → electrical (mains)","Electrical (mains) → chemical (battery)","Light → electrical"], a:1, exp:"Mains electrical goes into the chemical store."},
+      {type:"mcq", q:"When using a phone, the battery’s chemical energy is converted to:", opts:["Electrical energy in the circuit","Nuclear energy","Gravitational energy"], a:0, exp:"Chemical → electrical around the circuit."},
+      {type:"mcq", q:"At the screen, electrical energy is converted primarily to:", opts:["Light energy","Sound energy","Chemical energy"], a:0, exp:"So you can see the screen."},
+      {type:"mcq", q:"At the speaker, electrical energy is converted to:", opts:["Light","Sound","Kinetic energy of wheels"], a:1, exp:"Speaker → sound."},
+      {type:"mcq", q:"Ideally, all transferred energy would be:", opts:["Dissipated as heat","Stored in the Earth","Transferred usefully into the desired store"], a:2, exp:"We want useful transfer."},
+      {type:"mcq", q:"In reality, some energy is dissipated as:", opts:["Heat and sometimes sound","Dark matter","Gravity"], a:0, exp:"Common wastes are heat and sound."},
+      {type:"mcq", q:"A reason your phone gets warm during charging/use is:", opts:["Creation of new energy","Destruction of energy","Dissipation of energy as heat"], a:2, exp:"Wasted energy appears as heat."},
+      {type:"mcq", q:"A 'system' in physics is:", opts:["The entire universe only","Any portion of the universe chosen for analysis","Only living organisms"], a:1, exp:"You define the system for analysis."},
+      {type:"mcq", q:"Everything outside the system is called the:", opts:["Surroundings/environment","Vacuum","Closed space"], a:0, exp:"Environment surrounds the system."},
+      {type:"mcq", q:"If the phone alone is the system, it is considered:", opts:["A closed system","An open system","An isolated system with no forces"], a:1, exp:"Energy and matter can move between phone and environment."},
+      {type:"mcq", q:"Evidence that the phone-as-system is open:", opts:["It glows in the dark","It exchanges heat with your skin and surroundings","It creates energy"], a:1, exp:"Heat flows to surroundings."},
+      {type:"mcq", q:"If the phone is sealed in a jar and the system is 'phone + air in jar', that system is:", opts:["Open","Closed","Undefined"], a:1, exp:"Energy and matter cannot enter or leave the sealed jar."},
+      {type:"mcq", q:"In the sealed-jar system, heat from the phone:", opts:["Leaves to the room","Is absorbed only by your hand","Transfers to the air inside the jar"], a:2, exp:"Dissipates within the system."},
+      {type:"mcq", q:"Total energy of a closed system:", opts:["Increases steadily","Decreases steadily","Does not change overall"], a:2, exp:"Energy is conserved within a closed system."},
+      {type:"fill", q:"Complete the principle: energy can be transferred, stored, or dissipated but can never be ______ or ______.", ans:"created, destroyed", exp:"Cannot be created or destroyed."},
+      {type:"fill", q:"Charging pathway: electrical (mains) → ______ energy store in the battery.", ans:"chemical", exp:"Transferred to chemical store."},
+      {type:"fill", q:"Using the phone: chemical → ______ energy flows around the circuit.", ans:"electrical", exp:"Chemical becomes electrical."},
+      {type:"fill", q:"At the screen: electrical → ______ energy.", ans:"light", exp:"So you can see it."},
+      {type:"fill", q:"At the speaker: electrical → ______ energy.", ans:"sound", exp:"Speakers produce sound."},
+      {type:"mcq", q:"Dissipated energy in the examples is usually:", opts:["Light","Heat (and sometimes sound)","Nuclear"], a:1, exp:"Often waste heat; can be sound."},
+      {type:"mcq", q:"'Wasted energy' in the speech means:", opts:["Energy that disappears","Energy transferred to forms other than the intended one","Energy that violates conservation"], a:1, exp:"It’s still conserved, just not useful."},
+      {type:"mcq", q:"Which statement matches the speech?", opts:["We can make new energy in power stations","Energy cannot be created or destroyed","Phones destroy energy when hot"], a:1, exp:"Conservation holds."},
+      {type:"mcq", q:"In the phone example, the environment can include:", opts:["Everything inside the phone only","Your skin and surrounding air","Only the power station"], a:1, exp:"Outside the system."},
+      {type:"fill", q:"A system is the portion of the physical ______ you analyze.", ans:"universe", exp:"System vs environment."},
+      {type:"mcq", q:"Matter exchange in an open system is:", opts:["Forbidden","Allowed","Irrelevant"], a:1, exp:"Both energy and matter can move in/out."},
+      {type:"mcq", q:"Matter and energy exchange in a closed system is:", opts:["Allowed","Not allowed to enter or escape","Only energy allowed"], a:1, exp:"Neither enters nor leaves."},
+      {type:"fill", q:"In the sealed-jar example, the system consists of the phone and the ______ inside the jar.", ans:"air", exp:"Phone + air are the system."},
+      {type:"fill", q:"In the sealed-jar example, heat stays ______ the system.", ans:"within", exp:"It doesn't leave the jar."},
+      {type:"mcq", q:"Why is sound sometimes listed as 'waste' here?", opts:["Because sound is not a form of energy","Because it is not the intended useful output","Because it breaks conservation"], a:1, exp:"Not the desired store in the example."},
+      {type:"mcq", q:"Which is a correct pairing from the speech?", opts:["Screen → sound","Speaker → light","Screen → light"], a:2, exp:"Screen gives light; speaker gives sound."},
+      {type:"fill", q:"Another word used for 'wasted' energy in the speech is ______.", ans:"dissipated", exp:"Energy dissipated as other forms."},
+      {type:"fill", q:"The total energy of a closed system does not ever ______.", ans:"change", exp:"It remains constant overall."},
+      {type:"mcq", q:"If your phone gets hot in normal use, this indicates:", opts:["Energy is being created","Energy is being dissipated as heat","Energy is being destroyed"], a:1, exp:"Waste heat."},
+      {type:"fill", q:"Energy moves between different objects and different ______.", ans:"forms", exp:"Objects and forms."},
+      {type:"mcq", q:"Choosing what is 'inside' the system boundary is:", opts:["Fixed by nature","Arbitrary to the analysis (your choice)","Always the entire universe"], a:1, exp:"Analyst defines the system."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad';
+      }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
