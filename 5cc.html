@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heat Transfer — Conduction, Convection & Radiation | Notes + Quiz</title>
+  <style>
+    :root{ --brand:#f97316; --accent:#ef4444; --ink:#0f172a; --paper:#ffffff; --bg:#fff7ed; --ok:#16a34a; --bad:#dc2626; --muted:#64748b }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, Segoe UI, Arial;line-height:1.65;color:var(--ink);background:var(--bg)}
+    header{background:linear-gradient(120deg,var(--brand),var(--accent));color:#fff;padding:20px 14px;text-align:center;box-shadow:0 8px 28px rgba(0,0,0,.18)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:20px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    h2{margin:0 0 10px;color:#7c2d12}
+    details{border:1px solid #fed7aa;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .qbox{border:1px solid #fed7aa;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .feedback.ok{color:var(--ok)} .feedback.bad{color:var(--bad)}
+    .pill{display:inline-block;background:#fff7ed;color:#7c2d12;border:1px solid #fed7aa;border-radius:999px;padding:2px 10px;margin-right:6px;font-size:.9rem}
+    .scorebar{margin-top:10px;color:#7c2d12}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Heat Transfer — Conduction, Convection & Radiation</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <!-- Updated video link as requested -->
+      <iframe src="https://www.youtube.com/embed/DYBQWB8LdJI" title="Heat Transfer" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Heating & Temperature</summary>
+        <ul>
+          <li>When an object is <b>heated</b>, energy is transferred to its <b>thermal energy store</b> and its <b>temperature increases</b>.</li>
+          <li>Three transfer pathways depending on the medium: <b>conduction</b> (solids), <b>convection</b> (fluids: liquids & gases), <b>radiation</b> (through empty space).</li>
+        </ul>
+        <div>
+          <span class="pill">Thermal energy store</span><span class="pill">Conduction</span><span class="pill">Convection</span><span class="pill">Radiation</span>
+        </div>
+      </details>
+
+      <details>
+        <summary>2) Conduction (mainly in solids)</summary>
+        <ul>
+          <li><b>Idea:</b> neighboring particles transfer energy via <b>collisions</b> as their <b>vibrations</b> increase.</li>
+          <li>Heating one end of a metal → particles there gain <b>kinetic energy</b> → vibrate more → collide with neighbors → energy passes along the solid.</li>
+          <li>Conduction is strongest in solids because particles are <b>closely packed</b>, so collisions are frequent.</li>
+          <li><b>Thermal conductivity:</b> a measure of how well a material conducts heat. <b>Metals</b> = high; <b>plastics</b> = low (insulators); fluids generally = low.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Convection (in fluids: liquids & gases)</summary>
+        <ul>
+          <li>Particles are free to move. When heated they gain <b>kinetic energy</b>, move faster, and spread by random motion (<b>diffusion</b>).</li>
+          <li>Warmer fluid becomes <b>less dense</b> (expands) and <b>rises</b>; cooler, denser fluid <b>sinks</b> to replace it.</li>
+          <li>This continuous cycle forms a <b>convection current</b> while heating continues.</li>
+          <li>Examples: radiators warming room air; large-scale currents in <b>oceans</b> and within <b>buildings</b>.</li>
+          <li>To <b>reduce convection</b>, restrict fluid flow (e.g., <b>blankets</b> trap warm air, stopping it from escaping).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Radiation (infrared)</summary>
+        <ul>
+          <li>Heat transfer can occur <b>without particles</b> → travels through a <b>vacuum</b> as <b>infrared radiation</b>.</li>
+          <li><b>All objects</b> both <b>emit</b> and <b>absorb</b> infrared radiation at the same time.</li>
+          <li>Hotter objects emit <b>more</b> radiation. (e.g., feeling heat from a <b>barbecue</b> without touching it.)</li>
+          <li>Infrared is part of the <b>electromagnetic spectrum</b> (covered elsewhere).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Conduction vs Convection</summary>
+        <ul>
+          <li><b>Both</b> involve particles gaining <b>kinetic energy</b>.</li>
+          <li>In <b>conduction</b>, energy transfers between particles; the particles themselves stay in place (mainly in solids).</li>
+          <li>In <b>convection</b>, <b>particles move</b> and carry energy with them (in fluids).</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start Quiz</button>
+        <div class="scorebar" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <footer>© 2025 Physics Pack</footer>
+
+  <script>
+    // 35-question quiz based on the speech
+    const questions = [
+      // Basics
+      {type:"mcq", q:"Heating transfers energy to an object's ______ energy store and raises its temperature.", opts:["kinetic","thermal","chemical"], a:1, exp:"Heating increases the thermal energy store."},
+      {type:"mcq", q:"Which pairing is correct for heat transfer pathway and medium?", opts:["Conduction → fluids","Convection → solids","Radiation → vacuum/through space"], a:2, exp:"Radiation can travel through empty space."},
+      {type:"tf", q:"Conduction occurs mainly in solids; convection occurs mainly in fluids.", a:true, exp:"That's the medium distinction in the speech."},
+
+      // Conduction
+      {type:"mcq", q:"Conduction occurs because:", opts:["Vibrating particles transfer energy to neighbours via collisions","Fluids flow en masse","Infrared waves carry energy"], a:0, exp:"Particle collisions pass on energy."},
+      {type:"mcq", q:"When you heat one end of a metal rod, particles there first gain:", opts:["Gravitational energy","Kinetic energy","Nuclear energy"], a:1, exp:"They vibrate faster (more kinetic energy)."},
+      {type:"mcq", q:"Why is conduction most significant in solids?", opts:["Particles are far apart","Particles are closely packed so collisions are frequent","Solids emit infrared strongly"], a:1, exp:"Close packing leads to many collisions."},
+      {type:"mcq", q:"Materials with high thermal conductivity include:", opts:["Metals","Plastics","All fluids"], a:0, exp:"Metals conduct heat rapidly."},
+      {type:"tf", q:"Plastics generally have low thermal conductivity and are used as insulators.", a:true, exp:"Hence their use as handles, casings, etc."},
+      {type:"tf", q:"Most fluids have high thermal conductivity.", a:false, exp:"Most fluids have low thermal conductivity."},
+
+      // Convection
+      {type:"mcq", q:"Convection occurs in:", opts:["Solids only","Fluids (liquids and gases)","Vacuum only"], a:1, exp:"It requires moving fluid."},
+      {type:"mcq", q:"As a region of fluid is heated, particles gain kinetic energy and:", opts:["Become more dense and sink","Spread out, becoming less dense and rise","Stop moving"], a:1, exp:"Heated fluid expands and rises."},
+      {type:"mcq", q:"Cooler fluid does what in a convection cycle?", opts:["Rises to the top","Sinks to replace the warmer fluid","Evaporates instantly"], a:1, exp:"Cooler, denser fluid sinks."},
+      {type:"fill", q:"The repeating cycle of rising warm fluid and sinking cool fluid is called a ______ current.", ans:"convection", exp:"Convection current."},
+      {type:"tf", q:"Convection relies on the bulk movement of particles themselves.", a:true, exp:"Unlike conduction, where particles mostly stay put."},
+      {type:"mcq", q:"Which everyday example triggers convection?", opts:["Radiator warming nearby air","A book on a table","A closed vacuum flask"], a:0, exp:"Warm air rises, cool air sinks."},
+      {type:"mcq", q:"To reduce convection heat loss from your body while sleeping:", opts:["Encourage airflow","Use a blanket to trap warm air","Open windows"], a:1, exp:"Blankets restrict free flow of air."},
+
+      // Radiation
+      {type:"mcq", q:"Heat transfer through empty space requires:", opts:["Particles to collide","Conduction","Radiation (infrared)"], a:2, exp:"Radiation needs no medium."},
+      {type:"tf", q:"All objects both absorb and emit infrared radiation all the time.", a:true, exp:"Emission and absorption occur simultaneously."},
+      {type:"mcq", q:"The hotter the object, the ______ infrared radiation it emits.", opts:["less","same amount of","more"], a:2, exp:"Emission increases with temperature."},
+      {type:"mcq", q:"Feeling heat from a barbecue without touching it is mainly due to:", opts:["Conduction through air","Convection only","Infrared radiation reaching your hand"], a:2, exp:"IR from hot surfaces is absorbed by your hand."},
+      {type:"fill", q:"Radiation involved here is in the ______ part of the electromagnetic spectrum.", ans:"infrared", exp:"Infrared radiation."},
+
+      // Compare & contrast
+      {type:"mcq", q:"What do conduction and convection have in common in this speech?", opts:["Both require a vacuum","Both involve particles gaining kinetic energy","Both move energy only via waves"], a:1, exp:"Particles gain kinetic energy in both."},
+      {type:"mcq", q:"Key difference highlighted:", opts:["In conduction particles move in bulk; in convection they stay put","In conduction particles stay in place; in convection particles move in bulk","No difference"], a:1, exp:"That's the stated distinction."},
+
+      // Terminology & reasoning
+      {type:"fill", q:"The measure of how well a substance transfers heat by conduction is its thermal ______.", ans:"conductivity", exp:"Thermal conductivity."},
+      {type:"mcq", q:"Which material pairing matches the speech?", opts:["Metal → low conductivity; Plastic → high","Metal → high conductivity; Plastic → low","Both high"], a:1, exp:"Metals high, plastics low."},
+      {type:"tf", q:"Liquids and gases are referred to collectively as 'fluids' in this context.", a:true, exp:"Fluids = liquids + gases."},
+      {type:"mcq", q:"During convection, diffusion is mentioned because:", opts:["Particles drift randomly, helping spread energy from warm to cool regions","It stops particle motion","It only occurs in solids"], a:0, exp:"Random motion contributes to spreading."},
+      {type:"mcq", q:"Why does warmer fluid become less dense?", opts:["Particles stick together more","Particles spread out (expand) when energetic","Gravity weakens"], a:1, exp:"Expansion reduces density."},
+      {type:"tf", q:"A convection current continues only while heating persists.", a:true, exp:"It relies on continuous temperature differences."},
+
+      // Applications & misconceptions
+      {type:"mcq", q:"Which scenario is mainly conduction?", opts:["Metal spoon getting hot from its end in soup","Steam rising from a kettle","Sunlight warming your face"], a:0, exp:"Heat flows along the solid spoon."},
+      {type:"mcq", q:"Which scenario is mainly convection?", opts:["Air currents above a radiator","Warm handle on a metal pan far from the flame","Microwave heating"], a:0, exp:"Bulk motion of air."},
+      {type:"mcq", q:"Which scenario is mainly radiation?", opts:["Touching a hot pan","Warm air rising near a heater","Feeling heat from a campfire at a distance"], a:2, exp:"Infrared travels through space."},
+      {type:"fill", q:"Blankets reduce heat loss primarily by limiting ______ of air.", ans:"convection", exp:"They restrict airflow."},
+      {type:"tf", q:"Radiation requires particles to transfer energy.", a:false, exp:"It can cross a vacuum."},
+
+      // Wrap-up checks
+      {type:"fill", q:"Conduction is strongest where particles are ______ packed.", ans:"closely", exp:"Close packing increases collisions."},
+      {type:"fill", q:"In convection, warmer fluid ______ and cooler fluid ______.", ans:"rises, sinks", exp:"Density differences drive motion."},
+      {type:"fill", q:"Hotter objects emit ______ radiation than colder ones.", ans:"more", exp:"Emission increases with temperature."}
+    ];
+
+    let order=[], idx=0, score=0;
+
+    function startGame(){
+      order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx = 0; score = 0;
+      const area = document.getElementById("game-area");
+      area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+      document.getElementById("scorebar").textContent = `Question ${idx+1} / ${questions.length}  Score: ${score}`;
+      renderQ();
+    }
+
+    function renderQ(){
+      const q = questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{ // fill or tf handled as fill if 'a' not present
+        if(typeof q.a === "boolean"){
+          html += `<label><input type='radio' name='opt' value='true'> True</label><br>`;
+          html += `<label><input type='radio' name='opt' value='false'> False</label><br>`;
+          html += `<button onclick='checkTF()'>Submit</button>`;
+        }else{
+          html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+        }
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game-area-inner').innerHTML = html;
+    }
+
+    function checkMCQ(){
+      const q = questions[order[idx]];
+      const pick = document.querySelector("input[name='opt']:checked");
+      const fb = document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value,10) === q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 900);
+    }
+
+    function checkTF(){
+      const q = questions[order[idx]];
+      const pick = document.querySelector("input[name='opt']:checked");
+      const fb = document.getElementById('fb');
+      if(!pick){ fb.textContent='Select True/False'; fb.className='feedback bad'; return; }
+      const val = pick.value === 'true';
+      if(val === q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 900);
+    }
+
+    function checkFill(){
+      const q = questions[order[idx]];
+      const fb = document.getElementById('fb');
+      const ans = (document.getElementById('fill').value||'').trim().toLowerCase();
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans === String(q.ans).toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad';
+      }
+      setTimeout(nextQ, 900);
+    }
+
+    function nextQ(){
+      idx++;
+      if(idx < questions.length){
+        document.getElementById("scorebar").textContent = `Question ${idx+1} / ${questions.length}  Score: ${score}`;
+        renderQ();
+      }else{
+        endGame();
+      }
+    }
+
+    function endGame(){
+      const wrap = document.getElementById('game-area-inner');
+      wrap.innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+      document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+    }
+  </script>
+</body>
+</html>
