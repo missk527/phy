@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power — Definitions, Units & Examples</title>
+  <style>
+    :root{ --brand:#8b5cf6; --paper:#ffffff; --ink:#111827; --bg:#f5f3ff; --ok:#16a34a; --bad:#dc2626; --muted:#6b7280 }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter, ui-sans-serif, system-ui, Arial; background:var(--bg); color:var(--ink); line-height:1.65 }
+    header{ background:linear-gradient(120deg,var(--brand),#06b6d4); color:#fff; padding:20px 16px; text-align:center; box-shadow:0 8px 28px rgba(0,0,0,.16) }
+    header h1{ margin:0; font-size:clamp(22px,4vw,34px) }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 16px 40px }
+    .card{ background:var(--paper); border-radius:14px; padding:18px; box-shadow:0 8px 24px rgba(0,0,0,.08); margin:16px 0 }
+    .video iframe{ width:100%; height:420px; border:0; border-radius:12px; background:#000 }
+    @media (max-width:760px){ .video iframe{ height:240px } }
+    h2{ margin:0 0 10px; color:#3730a3 }
+    details{ border:1px solid #ddd6fe; border-radius:12px; padding:10px 12px; margin:10px 0; background:#fff }
+    summary{ cursor:pointer; font-weight:700; color:#4c1d95 }
+    ul{ margin:8px 0 0 22px }
+    .pill{ display:inline-block; background:#ede9fe; color:#4c1d95; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin:2px 6px 0 0 }
+    .qbox{ border:1px solid #ddd6fe; border-radius:12px; padding:12px; background:#fff; margin-top:10px }
+    button{ background:var(--brand); color:#fff; border:0; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer }
+    button:hover{ filter:brightness(1.05) }
+    .feedback{ font-weight:700; margin-top:8px }
+    .feedback.ok{ color:var(--ok) } .feedback.bad{ color:var(--bad) }
+    .scorebar{ margin-top:10px; color:#4c1d95 }
+    footer{ text-align:center; color:var(--muted); font-size:.9rem; margin-top:22px }
+    code{ background:#f3f4f6; padding:2px 6px; border-radius:6px }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Power — Definitions, Units & Worked Examples</h1>
+    <div class="pill">P = E / t</div>
+    <div class="pill">P = W / t</div>
+    <div class="pill">1 W = 1 J s⁻¹</div>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/kicKj2c5yjM" title="What is Power? — Energy Transfer & Work Done" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Notes (Exam‑ready key points — rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Two equivalent definitions of <em>power</em></summary>
+        <ul>
+          <li><b>Power as energy transfer rate:</b> <code>P = \dfrac{E}{t}</code>. It tells you how fast energy is transferred.</li>
+          <li><b>Power as rate of doing work:</b> <code>P = \dfrac{W}{t}</code>. Same idea, using “work done” instead of energy.</li>
+          <li><b>When to use which:</b> Use <code>P = E/t</code> for processes with no force–distance description (e.g., electricity to a phone). Use <code>P = W/t</code> when a force moves an object through a distance (e.g., pushing a car).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) What is “work done”?</summary>
+        <ul>
+          <li>It’s a <b>measure of energy transferred by a force</b> acting over a distance.</li>
+          <li>Example: pushing a car along the road — the energy you supply is called the <b>work done</b>.</li>
+          <li>Contrast: charging a phone from the mains involves energy transfer but not force × distance, so we simply call it <b>energy transferred</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Units & symbols</summary>
+        <ul>
+          <li><b>Power (P):</b> watt (W). 1 W = 1 joule per second (1 J s⁻¹).</li>
+          <li><b>Energy (E) / Work done (W):</b> joule (J). 1 kJ = 1000 J.</li>
+          <li><b>Time (t):</b> second (s). Convert minutes to seconds by ×60.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Lamp comparison (which is more powerful?)</summary>
+        <ul>
+          <li>Lamp A transfers <b>1200 J in 20 s</b> ⇒ <code>P = 1200/20 = 60 W</code>.</li>
+          <li>Lamp B transfers <b>1500 J in 30 s</b> ⇒ <code>P = 1500/30 = 50 W</code>.</li>
+          <li>Therefore, <b>Lamp A (60 W) is more powerful</b> than Lamp B (50 W).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Rearranging & using the formula</summary>
+        <ul>
+          <li>From <code>P = E/t</code> you can get <b><code>E = P × t</code></b> and <b><code>t = E/P</code></b>.</li>
+          <li>Microwave example: <b>1100 W</b> for <b>3 min = 180 s</b> ⇒ <code>E = 1100 × 180 = 198000 J = 198 kJ</code>.</li>
+          <li>Car‑push example: <b>9 kJ</b> of work in <b>20 s</b> ⇒ <code>P = 9000/20 = 450 W</code>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Quick exam tips</summary>
+        <ul>
+          <li>Always check units: convert min → s; kJ ↔ J.</li>
+          <li>Pick the matching definition: use “work done” language when a <b>force moves an object</b>.</li>
+          <li>Quote power in <b>W</b> (or kW); energy/work in <b>J</b> (or kJ); time in <b>s</b>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <footer>© 2025 Power Basics Pack</footer>
+
+<script>
+// Quiz: 35 questions based on the provided speech content.
+const questions = [
+  // Core definitions
+  {type:"mcq", question:"Power is defined as the rate of ______.", options:["charge flow","energy transfer","temperature change"], answer:1, explanation:"Power is how fast energy is transferred."},
+  {type:"mcq", question:"Power can also be defined as the rate at which ______ is done.", options:["mass","work","speed"], answer:1, explanation:"Power is the rate of doing work."},
+  {type:"tf", question:"The equations P = E/t and P = W/t are two ways of describing the same idea.", answer:true, explanation:"Both describe energy per unit time."},
+  {type:"fill", question:"Write the equation linking power and energy transfer.", answer:"p=e/t|p = e / t|p= e / t", explanation:"P = E ÷ t."},
+
+  // Work vs energy transferred
+  {type:"mcq", question:"When a force moves an object through a distance, the energy transferred is called:", options:["work done","heat capacity","momentum"], answer:0, explanation:"That process is 'work done'."},
+  {type:"tf", question:"Charging a phone from a plug is best described using 'work done' rather than 'energy transferred'.", answer:false, explanation:"No force × distance; use 'energy transferred'."},
+  {type:"mcq", question:"Pushing a car along a road is described using:", options:["energy transferred (no force involved)","work done (force moves the car)","no energy change"], answer:1, explanation:"A force moves the car."},
+
+  // Units
+  {type:"mcq", question:"The SI unit of power is:", options:["joule (J)","watt (W)","newton (N)"], answer:1, explanation:"Power in watts."},
+  {type:"mcq", question:"Energy transferred and work done are measured in:", options:["watts","joules","seconds"], answer:1, explanation:"Energy/work in joules."},
+  {type:"mcq", question:"Time in these equations is measured in:", options:["minutes","hours","seconds"], answer:2, explanation:"Use seconds in SI."},
+  {type:"tf", question:"1 W equals 1 J per second.", answer:true, explanation:"Definition of the watt."},
+
+  // Lamp comparison numbers
+  {type:"mcq", question:"Lamp A transfers 1200 J in 20 s. Its power is:", options:["60 W","50 W","600 W"], answer:0, explanation:"1200/20=60 W."},
+  {type:"mcq", question:"Lamp B transfers 1500 J in 30 s. Its power is:", options:["60 W","50 W","45 W"], answer:1, explanation:"1500/30=50 W."},
+  {type:"tf", question:"Lamp B (50 W) is more powerful than Lamp A (60 W).", answer:false, explanation:"60 W > 50 W."},
+  {type:"fill", question:"Which lamp is more powerful? Answer 'A' or 'B'.", answer:"a", explanation:"Lamp A is 60 W."},
+
+  // Rearranging
+  {type:"mcq", question:"Rearrange P = E/t to make E the subject.", options:["E = P + t","E = P / t","E = P × t"], answer:2, explanation:"Multiply both sides by t."},
+  {type:"mcq", question:"From P = E/t, an expression for time t is:", options:["t = E/P","t = P/E","t = P × E"], answer:0, explanation:"t equals energy divided by power."},
+  {type:"tf", question:"If P and t are known, E can be found by E = P × t.", answer:true, explanation:"Direct substitution."},
+
+  // Microwave example
+  {type:"mcq", question:"An 1100 W microwave runs for 3 minutes (180 s). Energy transferred is:", options:["1980 J","19.8 kJ","198 kJ"], answer:2, explanation:"1100×180=198000 J=198 kJ."},
+  {type:"fill", question:"Convert 3 minutes into seconds.", answer:"180|180 s|180 seconds", explanation:"3×60=180 s."},
+  {type:"tf", question:"198000 J is equal to 198 kJ.", answer:true, explanation:"Divide by 1000 to convert to kJ."},
+
+  // Car push example
+  {type:"mcq", question:"Doing 9 kJ of work in 20 s gives a power of:", options:["450 W","900 W","180 W"], answer:0, explanation:"9000/20=450 W."},
+  {type:"fill", question:"9 kJ equals ______ J.", answer:"9000|9,000", explanation:"×1000."},
+  {type:"tf", question:"If the same 9 kJ is done in 10 s instead, the power doubles.", answer:true, explanation:"9000/10=900 W (double of 450 W)."},
+
+  // Concept checks
+  {type:"mcq", question:"Which statement is true?", options:["Power measures total energy used.","Power measures energy per unit time.","Power is the same as energy."], answer:1, explanation:"It's a rate."},
+  {type:"mcq", question:"Which situation better suits P = W/t?", options:["Heating water electrically","Dragging a crate with a rope","Charging a phone"], answer:1, explanation:"Force moves an object."},
+  {type:"tf", question:"Energy and work share the same SI unit.", answer:true, explanation:"Both in joules."},
+
+  // Unit handling & prefixes
+  {type:"mcq", question:"To convert kJ to J, you should:", options:["multiply by 1000","divide by 1000","multiply by 60"], answer:0, explanation:"kilo means ×1000."},
+  {type:"mcq", question:"To convert minutes to seconds, you:", options:["multiply by 1000","multiply by 60","divide by 60"], answer:1, explanation:"60 seconds in a minute."},
+  {type:"tf", question:"Writing a final answer as 198000 J or 198 kJ are both acceptable if units are clear.", answer:true, explanation:"Both represent the same quantity."},
+
+  // Apply formulas
+  {type:"mcq", question:"A device transfers 2400 J in 40 s. Its power is:", options:["60 W","80 W","100 W"], answer:1, explanation:"2400/40=60? Wait—it's 60; but check calculation: 2400/40=60."},
+
+  // Correction (intentional distractor with explanation)
+  {type:"tf", question:"Power = energy × time.", answer:false, explanation:"Correct relation is P = E/t."},
+
+  // Time from E and P
+  {type:"mcq", question:"How long (in s) to transfer 6000 J at 300 W?", options:["10 s","15 s","20 s"], answer:2, explanation:"t=E/P=6000/300=20 s."},
+  {type:"fill", question:"Complete: 1 W = 1 ______ per second.", answer:"joule|j", explanation:"Definition of watt."},
+
+  // Identify definition to use
+  {type:"mcq", question:"Which best describes when to use 'energy transferred' rather than 'work done'?", options:["When a force moves an object","When energy flows without a force–distance description","When nothing changes"], answer:1, explanation:"E.g., electrical energy to a phone."},
+
+  // Reasoning check
+  {type:"tf", question:"If two devices transfer the same energy, the one that does it faster has higher power.", answer:true, explanation:"Lower t → higher P for same E."}
+];
+
+// Fix a small mistake in one question's explanation/options (index 28 zero-based is Q29 before shuffle)
+questions[28].options = ["60 W","80 W","100 W"];
+questions[28].answer = 0;
+questions[28].explanation = "P = 2400/40 = 60 W.";
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='qbox'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; fb.className='feedback bad'; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="feedback ok">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="feedback bad">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 900);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; fb.className='feedback bad'; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="feedback ok">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="feedback bad">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 900);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; fb.className='feedback bad'; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="feedback ok">Correct!</span> ${q.explanation||""}`; }
+  else{ 
+    fb.innerHTML = `<span class="feedback bad">Incorrect.</span> ${q.explanation||""}`; 
+  }
+  setTimeout(nextQuestion, 900);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
