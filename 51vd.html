@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speed vs Velocity — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#2563eb; --paper:#ffffff; --ink:#0f172a; --bg:#eef2ff; --ok:#16a34a; --bad:#dc2626; --muted:#64748b }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter, ui-sans-serif, system-ui, Arial; background:var(--bg); color:var(--ink); line-height:1.65 }
+    header{ background:linear-gradient(120deg,var(--brand),#22c55e); color:#fff; padding:20px 16px; text-align:center; box-shadow:0 8px 28px rgba(0,0,0,.16) }
+    header h1{ margin:0; font-size:clamp(22px,4vw,34px) }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 16px 40px }
+    .card{ background:var(--paper); border-radius:14px; padding:18px; box-shadow:0 8px 24px rgba(0,0,0,.08); margin:16px 0 }
+    .video iframe{ width:100%; height:420px; border:0; border-radius:12px; background:#000 }
+    @media (max-width:760px){ .video iframe{ height:240px } }
+    h2{ margin:0 0 10px; color:#1d4ed8 }
+    details{ border:1px solid #bfdbfe; border-radius:12px; padding:10px 12px; margin:10px 0; background:#fff }
+    summary{ cursor:pointer; font-weight:700; color:#1d4ed8 }
+    ul{ margin:8px 0 0 22px }
+    .pill{ display:inline-block; background:#dbeafe; color:#1e40af; border:1px solid #bfdbfe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin:2px 6px 0 0 }
+    .qbox{ border:1px solid #bfdbfe; border-radius:12px; padding:12px; background:#fff; margin-top:10px }
+    button{ background:var(--brand); color:#fff; border:0; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer }
+    button:hover{ filter:brightness(1.05) }
+    .feedback{ font-weight:700; margin-top:8px }
+    .feedback.ok{ color:var(--ok) } .feedback.bad{ color:var(--bad) }
+    .scorebar{ margin-top:10px; color:#1d4ed8 }
+    footer{ text-align:center; color:#334155; font-size:.9rem; margin-top:22px }
+    .note{background:#f8fafc;border-left:4px solid #2563eb;padding:8px 12px;border-radius:8px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Speed vs Velocity — Exam Notes & Quiz</h1>
+    <div class="pill">Scalar vs vector</div>
+    <div class="pill">Distance vs displacement</div>
+    <div class="pill">Average values & units</div>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/esF8uV1iDok" title="Speed vs Velocity" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>Scalar vs vector</summary>
+        <ul>
+          <li><strong>Scalar</strong>: has <strong>magnitude only</strong> (size/amount). Example: <strong>speed</strong> 4&nbsp;m/s; plane flying at 250&nbsp;m/s.</li>
+          <li><strong>Vector</strong>: has <strong>magnitude and direction</strong>. Example: <strong>velocity</strong> 6&nbsp;m/s east; a train traveling <strong>backwards</strong> at 55&nbsp;m/s.</li>
+          <li class="note"><b>Speed = scalar</b>, <b>Velocity = vector</b>. Don’t mix them up in exams.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Distance vs displacement</summary>
+        <ul>
+          <li><strong>Distance</strong> (scalar): 10&nbsp;m, 40&nbsp;m — magnitude only.</li>
+          <li><strong>Displacement</strong> (vector): includes direction, e.g., 40&nbsp;m east; 2&nbsp;m downward.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Calculating speed and velocity</summary>
+        <ul>
+          <li>General idea: divide a <strong>change in position measure</strong> by the <strong>time</strong> taken.</li>
+          <li><strong>Speed</strong> = distance ÷ time → scalar answer, e.g., 55&nbsp;m/s.</li>
+          <li><strong>Velocity</strong> = displacement ÷ time → vector answer with a <strong>direction</strong>, e.g., 55&nbsp;m/s east.</li>
+          <li class="note">Train example: bridge length 550&nbsp;m crossed in 10&nbsp;s → speed = 550/10 = <b>55&nbsp;m/s</b>. If direction is east, velocity = <b>55&nbsp;m/s east</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Symbols used in equations</summary>
+        <ul>
+          <li>Be careful: the letter <strong>S</strong> can mean different things in different contexts.</li>
+          <li>In the <strong>velocity</strong> equation, <strong>S</strong> is used for <strong>displacement</strong>.</li>
+          <li>In the <strong>speed</strong> equation, <strong>S</strong> stands for <strong>speed</strong>, while <strong>D</strong> is <strong>distance</strong>. In both, <strong>T</strong> is <strong>time</strong>.</li>
+          <li>People often use the velocity form even without a stated direction because it allows <strong>negative velocity</strong> to represent motion backward.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Average values when speed varies</summary>
+        <ul>
+          <li>Objects often <strong>don’t move at constant speed</strong>.</li>
+          <li><strong>Average speed</strong> = total distance ÷ total time. <strong>Average velocity</strong> = total displacement ÷ total time.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Typical speeds (m/s)</summary>
+        <ul>
+          <li><strong>Walking</strong> ≈ 1.5&nbsp;m/s; <strong>Running</strong> ≈ 3&nbsp;m/s; <strong>Cycling</strong> ≈ 6&nbsp;m/s (varies with age, health, effort).</li>
+          <li><strong>Car (main road)</strong> ≈ 25&nbsp;m/s; <strong>Fast train</strong> ≈ 55&nbsp;m/s; <strong>Planes</strong> &gt; 250&nbsp;m/s.</li>
+          <li><strong>Sound in air</strong> ≈ 330&nbsp;m/s (memorise); speed changes in other media (e.g., water).</li>
+          <li><strong>Wind</strong> (moving air) can vary from ~0&nbsp;m/s on a still day to faster than a speeding train on windy days; affected by temperature, air pressure, and obstacles (buildings, mountains).</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (35 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <footer>© 2025 Speed & Velocity Pack</footer>
+
+<script>
+// Quiz: 35 questions based strictly on the provided speech content.
+const questions = [
+  // Core definitions
+  {type:"mcq", question:"Which statement is correct?", options:[
+    "Speed is a vector; velocity is a scalar",
+    "Speed is a scalar; velocity is a vector",
+    "Both speed and velocity are vectors",
+    "Both speed and velocity are scalars"
+  ], answer:1, explanation:"Speed has magnitude only; velocity has magnitude and direction."},
+
+  {type:"mcq", question:"Which is a valid speed example?", options:[
+    "6 m/s east",
+    "55 m/s backwards",
+    "250 m/s",
+    "40 m east"
+  ], answer:2, explanation:"Speed gives magnitude only, e.g., 250 m/s."},
+
+  {type:"mcq", question:"Which is a valid velocity example?", options:[
+    "4 m/s",
+    "6 m/s east",
+    "10 m",
+    "250 m/s"
+  ], answer:1, explanation:"Velocity must include direction."},
+
+  {type:"tf", question:"Vectors have both magnitude and direction.", answer:true, explanation:"That’s the definition of a vector."},
+
+  {type:"tf", question:"Scalars include only magnitude.", answer:true, explanation:"No direction is associated with scalar quantities."},
+
+  // Distance vs displacement
+  {type:"mcq", question:"Distance is best described as:", options:[
+    "A vector with direction",
+    "A scalar with magnitude only",
+    "A negative number",
+    "A unit of time"
+  ], answer:1, explanation:"Distance is a scalar."},
+
+  {type:"mcq", question:"Displacement is:", options:[
+    "Always equal to distance",
+    "A scalar that may be negative",
+    "A vector that includes direction",
+    "The same as speed"
+  ], answer:2, explanation:"Displacement is a vector."},
+
+  {type:"fill", question:"A ball that falls 2 m ______ is giving a displacement.", answer:"downwards|down", explanation:"Direction included → vector."},
+
+  // Train example
+  {type:"mcq", question:"A train crosses a 550 m bridge in 10 s. The speed is:", options:[
+    "5.5 m/s",
+    "55 m/s",
+    "110 m/s",
+    "5500 m/s"
+  ], answer:1, explanation:"Speed = distance/time = 550/10 = 55 m/s."},
+
+  {type:"mcq", question:"If the train is moving east, the velocity is:", options:[
+    "55 m/s",
+    "55 m/s east",
+    "550 m east",
+    "10 s east"
+  ], answer:1, explanation:"Velocity includes the direction."},
+
+  // Equations & symbols
+  {type:"mcq", question:"In the velocity equation, the symbol S represents:", options:[
+    "Speed",
+    "Distance",
+    "Displacement",
+    "Second"
+  ], answer:2, explanation:"S is used for displacement in the velocity formula."},
+
+  {type:"mcq", question:"In the speed equation, S stands for ______ and D stands for ______.", options:[
+    "speed; distance",
+    "second; displacement",
+    "scalar; vector",
+    "slope; direction"
+  ], answer:0, explanation:"Speed uses S for speed and D for distance; T is time in both."},
+
+  {type:"tf", question:"T stands for time in both equations.", answer:true, explanation:"Common symbol for time."},
+
+  {type:"tf", question:"People often use the velocity equation because it allows negative values to represent backwards motion.", answer:true, explanation:"Negative velocity indicates opposite direction."},
+
+  // Average values
+  {type:"mcq", question:"If speed varies during a trip, average speed is calculated as:", options:[
+    "Largest speed recorded",
+    "Total displacement ÷ total time",
+    "Total distance ÷ total time",
+    "Distance ÷ time for the fastest segment"
+  ], answer:2, explanation:"Average speed uses total distance over total time."},
+
+  {type:"mcq", question:"Average velocity uses:", options:[
+    "Total distance ÷ total time",
+    "Total displacement ÷ total time",
+    "Fastest instantaneous speed",
+    "The mode of the speeds"
+  ], answer:1, explanation:"Average velocity is based on displacement."},
+
+  // Typical speeds
+  {type:"mcq", question:"A typical walking speed given is about:", options:[
+    "0.3 m/s",
+    "1.5 m/s",
+    "3 m/s",
+    "6 m/s"
+  ], answer:1, explanation:"Approximate walking speed from the speech."},
+
+  {type:"mcq", question:"A typical running speed given is about:", options:[
+    "0.8 m/s",
+    "1.5 m/s",
+    "3 m/s",
+    "6 m/s"
+  ], answer:2, explanation:"Running ~3 m/s."},
+
+  {type:"mcq", question:"A typical cycling speed given is about:", options:[
+    "1.5 m/s",
+    "3 m/s",
+    "6 m/s",
+    "25 m/s"
+  ], answer:2, explanation:"Cycling ~6 m/s."},
+
+  {type:"mcq", question:"A car on a main road might travel around:", options:[
+    "6 m/s",
+    "25 m/s",
+    "55 m/s",
+    "250 m/s"
+  ], answer:1, explanation:"Car ~25 m/s."},
+
+  {type:"mcq", question:"A fast train could travel around:", options:[
+    "6 m/s",
+    "25 m/s",
+    "55 m/s",
+    "250 m/s"
+  ], answer:2, explanation:"Train ~55 m/s."},
+
+  {type:"mcq", question:"Planes can exceed:", options:[
+    "6 m/s",
+    "25 m/s",
+    "55 m/s",
+    "250 m/s"
+  ], answer:3, explanation:"Planes > 250 m/s."},
+
+  {type:"tf", question:"The speed of sound in air is about 330 m/s.", answer:true, explanation:"This figure should be memorised."},
+
+  // Units & direction
+  {type:"mcq", question:"Which pair correctly contrasts speed and velocity?", options:[
+    "Both need direction",
+    "Speed needs direction; velocity does not",
+    "Speed has no direction; velocity includes direction",
+    "Neither needs direction"
+  ], answer:2, explanation:"Direction distinguishes velocity from speed."},
+
+  {type:"fill", question:"Velocity can be ______ to represent going backwards.", answer:"negative", explanation:"A sign indicates direction."},
+
+  {type:"tf", question:"Distance and displacement are always equal for any trip.", answer:false, explanation:"Only equal for straight-line, no reversal trips."},
+
+  // Media & wind
+  {type:"mcq", question:"The speech states that sound travels at 330 m/s in air but changes speed when:", options:[
+    "Travelling through different media (e.g., water)",
+    "Mass increases",
+    "Distance increases",
+    "It gets louder"
+  ], answer:0, explanation:"Speed depends on the medium."},
+
+  {type:"mcq", question:"Wind speed (air movement) can range from nearly 0 m/s to:", options:[
+    "Less than walking speed only",
+    "Faster than a speeding train on a windy day",
+    "Exactly 6 m/s",
+    "Never more than 10 m/s"
+  ], answer:1, explanation:"It can exceed train speeds on very windy days."},
+
+  {type:"mcq", question:"Wind speed can be affected by:", options:[
+    "Temperature, atmospheric pressure, and nearby structures",
+    "Only humidity",
+    "Only altitude",
+    "Only human activity"
+  ], answer:0, explanation:"All three are mentioned in the speech."},
+
+  // Quick checks
+  {type:"fill", question:"Speed uses ______ ÷ time, where the numerator is a scalar.", answer:"distance", explanation:"Distance over time."},
+
+  {type:"fill", question:"Velocity uses ______ ÷ time, where the numerator is a vector.", answer:"displacement", explanation:"Displacement over time."},
+
+  {type:"tf", question:"A value like 55 m/s east is a speed.", answer:false, explanation:"Direction included → velocity."},
+
+  {type:"mcq", question:"Which statement about average quantities is correct?", options:[
+    "Average speed and average velocity are always the same",
+    "Average speed uses total distance; average velocity uses total displacement",
+    "Average speed uses total displacement; average velocity uses total distance",
+    "You cannot average vector quantities"
+  ], answer:1, explanation:"Different numerators, same denominator."},
+
+  {type:"fill", question:"If a trip takes 10 s to cover a displacement of 550 m east, the velocity magnitude is ______ m/s.", answer:"55", explanation:"550/10 = 55."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='qbox'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; fb.className='feedback bad'; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="feedback ok">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="feedback bad">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 900);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; fb.className='feedback bad'; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="feedback ok">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="feedback bad">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 900);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; fb.className='feedback bad'; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="feedback ok">Correct!</span> ${q.explanation||""}`; }
+  else{ 
+    fb.innerHTML = `<span class="feedback bad">Incorrect.</span> ${q.explanation||""}`; 
+  }
+  setTimeout(nextQuestion, 900);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
