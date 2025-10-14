@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceleration — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffdfb; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter,Arial,system-ui,sans-serif; background:#f6f7fb; color:var(--ink); line-height:1.7; }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15) }
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#5b21b6; border-bottom:2px solid #ddd6fe; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#5b21b6 }
+    ul{ margin:8px 0 0 22px }
+    code.k{ background:#ede9fe; padding:2px 6px; border-radius:6px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#e9d5ff; color:#4c1d95; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Acceleration — Exam Notes & Quiz <span class="pill">a=Δv/t · v²−u²=2as · vectors</span></h1>
+    <div class="small">Video + exam-focused notes + 40-question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/554UliNwty0" title="Acceleration video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>Definition & units</summary>
+        <ul>
+          <li><strong>Acceleration</strong> is the <strong>rate of change of velocity</strong> (how fast speed increases or decreases).</li>
+          <li>Symbol: <code class="k">a</code>; typical units: <code class="k">m s⁻²</code> (m/s²).</li>
+          <li>It is a <strong>vector</strong> (has magnitude and direction). Negative acceleration indicates slowing down (deceleration) if direction is unchanged.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Core equations</summary>
+        <ul>
+          <li><strong>Time form</strong>: <code class="k">a = Δv / t</code>, where <code class="k">Δv = v − u</code> (final minus initial velocity).</li>
+          <li><strong>Distance form (SUVAT)</strong>: <code class="k">v² − u² = 2 a s</code> → rearrange to find distance: <code class="k">s = (v² − u²) / (2a)</code>.</li>
+          <li>Choose the equation based on the given quantities: use <code class="k">Δv/t</code> if you have time; use <code class="k">v²−u²=2as</code> if you have distance and velocities.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Worked examples (from the speech)</summary>
+        <ul>
+          <li><strong>Car</strong>: 5 s to go from 15 to 35 m/s → Δv = 20 m/s → <code class="k">a = 20/5 = 4 m/s²</code> (average over 5 s).</li>
+          <li><strong>Ball drop</strong> (ignore air resistance): u = 0, v = 7 m/s, a = g = 9.8 m/s² downward → <code class="k">s = (7² − 0)/ (2×9.8) = 49/19.6 = 2.5 m</code>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Average vs constant acceleration</summary>
+        <ul>
+          <li><strong>Average acceleration</strong> uses overall Δv and total time (real cars may not accelerate uniformly).</li>
+          <li><strong>Uniform/constant acceleration</strong> means the same a throughout the motion.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Exam tips</summary>
+        <ul>
+          <li>If an object <strong>starts from rest</strong>, then <code class="k">u = 0</code>.</li>
+          <li>Keep <strong>units</strong> consistent (m/s, s, m).</li>
+          <li>Specify <strong>direction/signs</strong> for vector quantities when required.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions — Mixed Types)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Acceleration practice</div>
+
+<script>
+// Quiz supports: mcq (options, answer index), tf (boolean), fill (string; use | for acceptable variants), num (numeric exact)
+const questions = [
+  // ---- MCQ (1–12) ----
+  {type:"mcq", question:"Acceleration is defined as the rate of change of:", options:[
+    "Displacement","Velocity","Distance","Speed only"
+  ], answer:1, explanation:"Acceleration is d(velocity)/dt."},
+  {type:"mcq", question:"Standard SI unit for acceleration:", options:[
+    "m/s","m/s²","N/kg","m"
+  ], answer:1, explanation:"Metres per second squared."},
+  {type:"mcq", question:"Δv stands for:", options:[
+    "Sum of velocities","Average velocity","Change in velocity","Vector velocity"
+  ], answer:2, explanation:"Δ (delta) means 'change in'."},
+  {type:"mcq", question:"Which equation uses time directly?", options:[
+    "v² − u² = 2as","a = Δv / t","s = (v² − u²)/(2a)","F = ma"
+  ], answer:1, explanation:"Time appears in a=Δv/t."},
+  {type:"mcq", question:"In the car example (15→35 m/s in 5 s), average acceleration is:", options:[
+    "2 m/s²","3 m/s²","4 m/s²","5 m/s²"
+  ], answer:2, explanation:"(35−15)/5 = 4 m/s²."},
+  {type:"mcq", question:"Acceleration is a vector. Which is TRUE?", options:[
+    "It has magnitude but no direction","It has direction as well as magnitude","It is always positive","It is a scalar"
+  ], answer:1, explanation:"Vectors include direction."},
+  {type:"mcq", question:"If an object slows down in a chosen positive direction, its acceleration is:", options:[
+    "Positive","Negative","Zero","Undefined"
+  ], answer:1, explanation:"Opposite to velocity direction → negative."},
+  {type:"mcq", question:"Which equation helps you find distance without time when a is constant?", options:[
+    "a = Δv / t","F = ma","v² − u² = 2as","p = mv"
+  ], answer:2, explanation:"Rearrange to s=(v²−u²)/2a."},
+  {type:"mcq", question:"For motion from rest, the initial velocity u is:", options:[
+    "v","0","g","a"
+  ], answer:1, explanation:" 'From rest' means u=0."},
+  {type:"mcq", question:"In the ball-drop example, g is taken as:", options:[
+    "8.9 m/s²","9.8 m/s²","10.8 m/s²","7.0 m/s²"
+  ], answer:1, explanation:"Gravitational acceleration ≈ 9.8 m/s²."},
+  {type:"mcq", question:"Which of the following best describes 'uniform acceleration'?", options:[
+    "Acceleration changes randomly","Acceleration is zero","Acceleration is constant","Velocity is constant"
+  ], answer:2, explanation:"Uniform means constant a."},
+  {type:"mcq", question:"If velocity increases linearly with time, acceleration is:", options:[
+    "Zero","Increasing","Decreasing","Constant"
+  ], answer:3, explanation:"Linear v(t) ⇒ constant slope ⇒ constant a."},
+
+  // ---- True/False (13–22) ----
+  {type:"tf", question:"Acceleration can be negative depending on direction.", answer:true, explanation:"It is a vector."},
+  {type:"tf", question:"Average acceleration over a time interval equals Δv/t for that interval.", answer:true, explanation:"By definition."},
+  {type:"tf", question:"Uniform acceleration means velocity is constant.", answer:false, explanation:"Uniform a means constant acceleration, not constant velocity."},
+  {type:"tf", question:"In real life, acceleration during a 5 s interval is always constant.", answer:false, explanation:"It may vary; Δv/t gives the average."},
+  {type:"tf", question:"If u=0, then v² = 2as for constant a.", answer:true, explanation:"From v²−u²=2as with u=0."},
+  {type:"tf", question:"Distance in v²−u²=2as is measured in metres.", answer:true, explanation:"s is distance in metres."},
+  {type:"tf", question:"If Δv is zero, acceleration must be non-zero.", answer:false, explanation:"Δv=0 ⇒ a=0 (for that interval)."},
+  {type:"tf", question:"The symbol Δ represents 'change in'.", answer:true, explanation:"Delta denotes difference."},
+  {type:"tf", question:"If an object speeds up, its acceleration must be negative.", answer:false, explanation:"Speeding up in the positive direction ⇒ positive a."},
+  {type:"tf", question:"Sign conventions matter for vectors like velocity and acceleration.", answer:true, explanation:"Direction and signs are essential."},
+
+  // ---- Fill-in (23–32) ----
+  {type:"fill", question:"Write the time-form acceleration equation: a = ______ / t.", answer:"Δv|delta v|v−u|v - u", explanation:"a = Δv / t = (v−u)/t."},
+  {type:"fill", question:"The symbols in Δv = v − u represent ______ velocity minus ______ velocity.", answer:"final|initial|final velocity|initial velocity", explanation:"v is final, u is initial."},
+  {type:"fill", question:"Complete the distance-form equation: v² − u² = 2 a ______.", answer:"s|distance|displacement", explanation:"s stands for distance in metres."},
+  {type:"fill", question:"Starting from rest means u = ______.", answer:"0|zero", explanation:"Initial velocity is zero."},
+  {type:"fill", question:"Give the SI unit of acceleration: ______ / s².", answer:"m|metre|meter|metres|meters", explanation:"m/s²."},
+  {type:"fill", question:"Gravitational acceleration symbol is commonly ______.", answer:"g", explanation:"g ≈ 9.8 m/s²."},
+  {type:"fill", question:"The car example produced an average acceleration of ______ m/s².", answer:"4|4.0", explanation:"Δv/t = 20/5."},
+  {type:"fill", question:"Ignoring air resistance, a dropped object accelerates downward at about ______ m/s².", answer:"9.8|9.81|9.8 m/s²|9.81 m/s²", explanation:"Standard g on Earth."},
+  {type:"fill", question:"Negative acceleration in the positive direction corresponds to ______.", answer:"deceleration|slowing down", explanation:"Opposing the motion direction."},
+  {type:"fill", question:"Choose the correct variable for distance in SUVAT here: ______.", answer:"s", explanation:"s denotes distance."},
+
+  // ---- Numeric (33–40) ----
+  // Exact numeric answers (simple decimals/integers)
+  {type:"num", question:"Compute a (m/s²): u=15, v=35, t=5 s.", answer:4, explanation:"(35−15)/5=4."},
+  {type:"num", question:"Δv for u=5 m/s, v=17 m/s (m/s).", answer:12, explanation:"17−5=12."},
+  {type:"num", question:"Distance s (m): u=0, v=7 m/s, a=9.8 m/s² (use s=(v²−u²)/2a).", answer:2.5, explanation:"49/19.6=2.5 m."},
+  {type:"num", question:"Find v (m/s): u=0, a=3 m/s², t=6 s (assume constant a; use Δv=at).", answer:18, explanation:"v=0+3×6=18."},
+  {type:"num", question:"Find a (m/s²): u=10 m/s, v=4 m/s, t=3 s.", answer:-2, explanation:"(4−10)/3=−2."},
+  {type:"num", question:"Find s (m): u=10, v=4, a=−2 (use s=(v²−u²)/2a).", answer:21, explanation:"(16−100)/(−4)=84/−4? Wait carefully: (v²−u²)=16−100=−84; 2a=−4; s=(−84)/(−4)=21."},
+  {type:"num", question:"Find v (m/s): u=20, a=−5, t=2 s.", answer:10, explanation:"v=20+(−5)×2=10."},
+  {type:"num", question:"Find a (m/s²): Δv=30 m/s over 10 s.", answer:3, explanation:"a=30/10=3."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else if(q.type === "fill"){
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }else if(q.type === "num"){
+    html += `<input id="num" type="number" step="any" placeholder="Enter a number" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkNum()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function checkNum(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const valStr = (document.getElementById("num").value || "").trim();
+  if(valStr===""){ fb.textContent = "Please enter a number."; return; }
+  const val = Number(valStr);
+  const correct = Math.abs(val - q.answer) < 1e-9; // exact match for these items
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 800);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
