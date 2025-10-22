@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energy Resources & Electricity — Notes & 40-Q Quiz</title>
+  <style>
+    :root{ --brand:#0f766e; --brand-2:#14b8a6; --paper:#fcfffd; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f3faf8; color:var(--ink); line-height:1.6;
+    }
+    header{ background:linear-gradient(90deg,var(--brand), var(--brand-2)); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:clamp(22px,4vw,28px); letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.92rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #d1fae5; border-radius:14px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#065f46; border-bottom:2px solid #a7f3d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e6f5ef; border-radius:12px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#0f766e }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #dbece7; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ccfbf1; color:#064e3b; border:1px solid #99f6e4; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#667; font-size:.85rem; padding:20px 0 }
+    .key{ background:#ecfdf5; border-left:4px solid #10b981; padding:10px 12px; border-radius:8px; }
+    code.k{ background:#e6fffb; padding:2px 6px; border-radius:6px; border:1px solid #bff0e6 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Energy Resources & Electricity — Exam Notes & 40-Question Quiz <span class="pill">Fossil · Nuclear · Renewables</span></h1>
+    <div class="small">Video + exam-focused notes + interactive practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/dE6rbst8IYs" title="Energy resources and electricity" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) How our energy use has changed</summary>
+        <ul>
+          <li>For most of human history, the <strong>primary energy</strong> source was <strong>wood</strong> (heating, cooking).</li>
+          <li>Over the last ~200 years, heavy use of <strong>non‑renewables</strong>: <strong>fossil fuels</strong> (coal, oil, natural gas) and <strong>nuclear</strong> energy.</li>
+          <li>In the past ~50 years, rapid growth of <strong>renewables</strong>: <strong>solar</strong>, <strong>wind</strong>, <strong>hydroelectric</strong>, <strong>geothermal</strong>, <strong>biofuels</strong>, <strong>tidal</strong>, etc.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) What we use energy for (UK focus)</summary>
+        <ul>
+          <li>Two major sectors: <strong>transport</strong> and <strong>domestic</strong>.</li>
+          <li><strong>Transport</strong> = cars, trains, planes, ships. Traditionally powered by <strong>oil‑derived fuels</strong> (petrol, diesel; kerosene for planes).</li>
+          <li>Trains: historically <strong>coal</strong> (industrial revolution), now mostly <strong>electric</strong>.</li>
+          <li>Recent trends: more <strong>biofuels</strong> and growth of <strong>electric cars</strong>.</li>
+          <li><strong>Domestic</strong> = household <strong>heating</strong> & <strong>cooking</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Heating at home</summary>
+        <ul>
+          <li>Main UK heating source: <strong>natural gas</strong> burned to <strong>heat water</strong>, then pumped through <strong>radiators</strong> to warm rooms (thermal energy transfer to air).</li>
+          <li>Other non‑renewable heating: <strong>coal</strong> burned in fireplaces.</li>
+          <li>Renewable heating options: <strong>solar water heaters</strong> (sun heats water → radiators), and <strong>biofuels</strong> burned similarly to coal.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Electricity: not renewable or non‑renewable by itself</summary>
+        <ul>
+          <li><strong>Electricity</strong> is a <em>carrier</em>, not a resource. Its status depends on <strong>how it is generated</strong>.</li>
+          <li>Example breakdown (speech, UK): ~<strong>60%</strong> from <strong>fossil fuels</strong>; <strong>non‑renewables</strong> in total ≈ <strong>~80%</strong> → most UK electricity from <strong>non‑renewable</strong> sources.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Key definitions</summary>
+        <ul>
+          <li><strong>Non‑renewable</strong>: resources that will <em>run out</em> (fossil fuels, nuclear fuel).</li>
+          <li><strong>Renewable</strong>: resources replenished on human timescales (e.g., solar, wind, hydro, geothermal, biofuels, tidal).</li>
+          <li><strong>Biofuels</strong>: fuels made from <strong>biomass</strong> (plants/organic matter); considered <strong>renewable</strong>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Energy Resources practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer with '|' for alternates)
+// All items are derived from the provided speech.
+const questions = [
+  // 1
+  {type:"mcq", question:"Historically, humans’ main energy source was:", options:[
+    "Coal","Wood","Oil","Electricity"
+  ], answer:1, explanation:"For most of history, wood was the primary source for heat/cooking."},
+
+  // 2
+  {type:"tf", question:"Over the past ~200 years, global energy use shifted heavily to fossil fuels and nuclear.", answer:true, explanation:"Coal, oil, gas, and nuclear dominate outside many developing regions."},
+
+  // 3
+  {type:"mcq", question:"Which are fossil fuels?", options:[
+    "Coal, oil, natural gas","Wind, solar, tidal","Biofuels, geothermal","Nuclear, hydro"
+  ], answer:0, explanation:"Coal, oil, and gas are fossil fuels."},
+
+  // 4
+  {type:"fill", question:"Name two renewable energy resources mentioned.", answer:"solar; wind|wind; solar|solar and wind|wind and solar", explanation:"Any order accepted."},
+
+  // 5
+  {type:"mcq", question:"Which of these is classed as non-renewable in the speech?", options:[
+    "Solar","Wind","Nuclear","Tidal"
+  ], answer:2, explanation:"Nuclear energy is non-renewable (fuel is finite)."},
+
+  // 6
+  {type:"tf", question:"Use of renewables (e.g., solar, wind) has risen sharply in the last ~50 years.", answer:true, explanation:"The speech highlights a ‘massive rise’."},
+
+  // 7
+  {type:"mcq", question:"Two big UK energy-use sectors highlighted are:", options:[
+    "Industry and agriculture","Transport and domestic","Healthcare and retail","Mining and computing"
+  ], answer:1, explanation:"Transport and domestic are emphasized."},
+
+  // 8
+  {type:"fill", question:"Transport includes cars, trains, planes, and ______.", answer:"ships|boats", explanation:"Ships are specifically named."},
+
+  // 9
+  {type:"mcq", question:"Road vehicles primarily rely on:", options:[
+    "Petrol and diesel","Hydrogen","Coal","Uranium"
+  ], answer:0, explanation:"Both derived from oil."},
+
+  // 10
+  {type:"mcq", question:"Planes primarily use:", options:[
+    "Diesel","Kerosene","Ethanol","Coal"
+  ], answer:1, explanation:"Aviation turbine fuel is kerosene-based."},
+
+  // 11
+  {type:"tf", question:"Trains were traditionally powered by coal during the industrial revolution.", answer:true, explanation:"Steam locomotives ran on coal."},
+
+  // 12
+  {type:"mcq", question:"Most trains now are powered by:", options:[
+    "Coal","Diesel only","Electricity","Hydrogen only"
+  ], answer:2, explanation:"The speech states most are electric."},
+
+  // 13
+  {type:"fill", question:"A recent transport trend is growth in ______ and electric cars.", answer:"biofuels|bio-fuels|bio fuel|bio fuels", explanation:"Biofuels are plant/biomass-derived."},
+
+  // 14
+  {type:"mcq", question:"‘Domestic uses’ mainly refers to:", options:[
+    "Factories and offices","Household heating and cooking","Farming equipment","Road construction"
+  ], answer:1, explanation:"Domestic = household context."},
+
+  // 15
+  {type:"mcq", question:"Main UK household heating fuel mentioned:", options:[
+    "Oil","Coal","Natural gas","Hydrogen"
+  ], answer:2, explanation:"Natural gas heats water for radiators."},
+
+  // 16
+  {type:"fill", question:"In gas central heating, hot water is pumped through ______ to warm rooms.", answer:"radiators|radiator", explanation:"Thermal energy transfers to room air."},
+
+  // 17
+  {type:"tf", question:"Coal is a renewable domestic heating source.", answer:false, explanation:"Coal is non-renewable."},
+
+  // 18
+  {type:"mcq", question:"Which renewable device heats water using the Sun?", options:[
+    "Solar water heater","Wind turbine","Fuel cell","Gas boiler"
+  ], answer:0, explanation:"Solar thermal collectors heat water."},
+
+  // 19
+  {type:"fill", question:"Biofuels can be burned for heat in a manner similar to ______.", answer:"coal", explanation:"They can substitute for coal in some stoves/boilers."},
+
+  // 20
+  {type:"tf", question:"Electricity itself is neither renewable nor non-renewable.", answer:true, explanation:"Its status depends on how it’s generated."},
+
+  // 21
+  {type:"mcq", question:"In the speech’s UK example, roughly what share comes from fossil fuels?", options:[
+    "~20%","~40%","~60%","~90%"
+  ], answer:2, explanation:"‘Almost 60%’ from fossil fuels is stated."},
+
+  // 22
+  {type:"mcq", question:"According to the speech, non-renewables together make up nearly:", options:[
+    "20%","50%","80%","100%"
+  ], answer:2, explanation:"Nearly 80% when fossil + other non-renewables are combined."},
+
+  // 23
+  {type:"fill", question:"List three renewables named: ______, ______, and ______.", answer:"solar; wind; hydroelectric|wind; solar; hydroelectric|solar; hydro; wind|hydroelectric; solar; wind", explanation:"Any order accepted."},
+
+  // 24
+  {type:"mcq", question:"Which of the following is a renewable resource from the list?", options:[
+    "Geothermal","Diesel","Kerosene","Coal"
+  ], answer:0, explanation:"Geothermal is renewable."},
+
+  // 25
+  {type:"tf", question:"Tidal energy was mentioned as a renewable resource.", answer:true, explanation:"Yes, alongside solar, wind, hydro, geothermal, biofuels."},
+
+  // 26
+  {type:"mcq", question:"Which statement about electricity is correct?", options:[
+    "Electricity is a fuel found underground","Electricity is an energy carrier made from primary sources","Electricity is always renewable","Electricity is always non-renewable"
+  ], answer:1, explanation:"It is generated from primary energy sources."},
+
+  // 27
+  {type:"fill", question:"Road fuels named in the speech: petrol and ______.", answer:"diesel", explanation:"Both are refined from oil."},
+
+  // 28
+  {type:"fill", question:"The aviation fuel mentioned is ______.", answer:"kerosene|jet fuel", explanation:"Kerosene-based jet fuel."},
+
+  // 29
+  {type:"mcq", question:"Historically, what discovery helped power the UK’s industrial revolution?", options:[
+    "Crude oil in the North Sea","Large coal deposits","Uranium mines","Geothermal vents"
+  ], answer:1, explanation:"Coal discovery and use powered steam engines."},
+
+  // 30
+  {type:"tf", question:"Biofuels are produced from plants and other biomass.", answer:true, explanation:"Hence classed as renewable."},
+
+  // 31
+  {type:"mcq", question:"In home heating, thermal energy from hot water is transferred to:", options:[
+    "Room air via radiators","Underground rocks","Car engines","Sea water"
+  ], answer:0, explanation:"Radiators transfer heat to the air in rooms."},
+
+  // 32
+  {type:"fill", question:"Name one non-renewable electricity source listed.", answer:"coal|natural gas|gas|oil|nuclear", explanation:"Any of these qualifies per the speech."},
+
+  // 33
+  {type:"fill", question:"Name one renewable electricity source listed.", answer:"solar|wind|hydroelectric|geothermal|biofuels|tidal|hydro", explanation:"Any named renewable accepted."},
+
+  // 34
+  {type:"tf", question:"Most UK electricity in the speech’s example comes from renewable sources.", answer:false, explanation:"The speech says the vast majority is non-renewable."},
+
+  // 35
+  {type:"mcq", question:"Which statement matches trains ‘now’ per the speech?", options:[
+    "Mostly coal-powered","Mostly electricity-powered","Mostly kerosene-powered","Mostly hydrogen-powered"
+  ], answer:1, explanation:"‘Now, most trains are powered by electricity.’"},
+
+  // 36
+  {type:"fill", question:"Domestic energy includes ______ and heating.", answer:"cooking|cook", explanation:"Household uses."},
+
+  // 37
+  {type:"mcq", question:"Which pairing matches sector → typical energy source?", options:[
+    "Transport → petrol/diesel/kerosene","Domestic heating → natural gas hot-water radiators","Both A and B","Neither A nor B"
+  ], answer:2, explanation:"Both statements are given in the speech."},
+
+  // 38
+  {type:"tf", question:"Coal burned in fireplaces is an example of renewable heating.", answer:false, explanation:"Coal is non-renewable."},
+
+  // 39
+  {type:"mcq", question:"Solar water heaters primarily provide:", options:[
+    "Electricity","Hot water for heating","Compressed air","Liquid fuel"
+  ], answer:1, explanation:"They heat water using the Sun."},
+
+  // 40
+  {type:"fill", question:"Complete: Electricity’s ‘renewable’ status depends on how it is ______.", answer:"generated|produced|made", explanation:"It is an energy carrier."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #dbece7;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      const alts = q.answer.split("|").map(s=>s.trim().toLowerCase());
+      ok = alts.includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
