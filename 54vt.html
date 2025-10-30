@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velocity–Time Graphs — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#2563eb; --paper:#ffffff; --ink:#0f172a; --accent:#1d4ed8 }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#eef2ff; color:var(--ink); line-height:1.62 }
+    header{ background:linear-gradient(90deg, var(--brand), #22d3ee); color:#fff; padding:18px 20px; text-align:center; font-size:1.28rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 14px 28px }
+    .video{ display:flex; justify-content:center; margin:18px 0 }
+    iframe{ width:88%; max-width:1100px; height:480px; border:2px solid #bfdbfe; border-radius:14px; background:#000; box-shadow:0 2px 12px rgba(37,99,235,.18) }
+    .card{ background:var(--paper); border-radius:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); padding:20px; margin:18px 0 }
+    h2{ color:var(--accent); border-bottom:2px solid #bfdbfe; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#1e3a8a }
+    .pill{ display:inline-block; background:#dbeafe; border:1px solid #bfdbfe; border-radius:999px; padding:2px 10px; margin:2px; font-size:.9rem }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(37,99,235,.25) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem }
+    .tiny{ font-size:.85rem; color:#475569 }
+    @media (max-width:760px){ iframe{ width:96%; height:240px } }
+  </style>
+</head>
+<body>
+<header>Velocity–Time Graphs — Gradient = Acceleration, Area = Distance</header>
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/_KPo0BjrtX8" title="Velocity–Time Graphs" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="card">
+    <h2>Notes (rewritten in English from the speech)</h2>
+
+    <details open>
+      <summary>V–t vs. d–t graphs</summary>
+      <ul>
+        <li><b>Velocity–time (v–t)</b> graphs show how <b>velocity</b> changes with time (y‑axis: velocity; x‑axis: time).</li>
+        <li><b>Distance–time (d–t)</b> graphs show how <b>distance</b> changes with time.</li>
+        <li>They look similar; in exams, <b>double‑check which graph</b> you’re reading.</li>
+      </ul>
+      <div>
+        <span class="pill">v on y‑axis</span>
+        <span class="pill">t on x‑axis</span>
+        <span class="pill">Don’t confuse with d–t</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>Gradient → acceleration</summary>
+      <ul>
+        <li>Gradient on a v–t graph is <b>Δv / Δt</b> → that is the <b>acceleration</b>.</li>
+        <li><b>Positive constant gradient</b> → constant acceleration.</li>
+        <li><b>Negative constant gradient</b> → constant deceleration.</li>
+        <li><b>Zero gradient (flat)</b> → <b>constant velocity</b> (no acceleration).</li>
+        <li><b>Steeper curve</b> → increasing gradient → <b>increasing acceleration</b>.</li>
+        <li>Example: Δv = 3 m/s over Δt = 2 s ⇒ <b>a = 1.5 m/s²</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Reading values</summary>
+      <ul>
+        <li>For a flat section, the <b>velocity</b> equals the <b>y‑axis value</b>.</li>
+        <li>Example: stage 2 velocity <b>3 m/s</b>; stage 4 velocity <b>5 m/s</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Area under the curve → distance</summary>
+      <ul>
+        <li>The <b>area under a v–t graph</b> gives the <b>distance travelled</b>.</li>
+        <li>Break the area into <b>simple shapes</b> (triangles/rectangles) to calculate.</li>
+        <li>Example (first 4 s): triangle area = ½ × base(2 s) × height(3 m/s) = <b>3 m</b>; rectangle area = base(2 s) × height(3 m/s) = <b>6 m</b>; total <b>9 m</b>.</li>
+        <li>Units: although it’s an area, we report the <b>distance in metres (m)</b>, not m².</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Estimating curved areas</summary>
+      <ul>
+        <li>If the graph has curved sections and a grid is provided, <b>estimate by counting squares</b> under the curve.</li>
+        <li>Combine <b>partial squares</b> to make full ones.</li>
+        <li>Example: ~6 full squares + two halves + one nearly full ≈ <b>~8 m</b> over 2 seconds (given 1 square = 1 m).</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2>Quiz (40 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar tiny" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40 questions grounded strictly in the provided v–t graph speech
+const Q = [
+  // Multiple Choice (1–20)
+  {type:"mcq", q:"What does a velocity–time graph show?", opts:["Distance vs time","Velocity vs time","Acceleration vs time"], a:1, exp:"v–t shows velocity on y, time on x."},
+  {type:"mcq", q:"Which axes are used on a v–t graph?", opts:["y: velocity, x: time","y: time, x: velocity","y: distance, x: time"], a:0, exp:"Velocity on y, time on x."},
+  {type:"mcq", q:"What quantity does the gradient of a v–t graph represent?", opts:["Velocity","Acceleration","Distance"], a:1, exp:"Gradient = Δv/Δt = acceleration."},
+  {type:"mcq", q:"A constant positive gradient indicates:", opts:["Constant acceleration","Constant velocity","Constant distance"], a:0, exp:"Positive slope → constant acceleration."},
+  {type:"mcq", q:"A constant negative gradient indicates:", opts:["Constant deceleration","Constant speed","Zero velocity"], a:0, exp:"Negative slope → constant deceleration."},
+  {type:"mcq", q:"A flat (horizontal) section of a v–t graph means:", opts:["Changing acceleration","Constant velocity","Zero distance"], a:1, exp:"Zero gradient → velocity constant."},
+  {type:"mcq", q:"If the curve gets steeper over time, what is increasing?", opts:["Acceleration","Velocity only","Mass"], a:0, exp:"Increasing gradient → increasing acceleration."},
+  {type:"mcq", q:"How do you find distance from a v–t graph?", opts:["Take the gradient","Area under the curve","Count peaks"], a:1, exp:"Area under v–t = distance."},
+  {type:"mcq", q:"Area of a triangle formula is:", opts:["base × height","½ × base × height","base + height"], a:1, exp:"½bh."},
+  {type:"mcq", q:"In the example, Δv = 3 m/s and Δt = 2 s. What is a?", opts:["1.5 m/s²","6 m/s²","0.67 m/s²"], a:0, exp:"a = 3/2 = 1.5 m/s²."},
+  {type:"mcq", q:"In a flat section at 3 m/s, the velocity is:", opts:["0 m/s","3 m/s","5 m/s"], a:1, exp:"Read from the y‑axis value."},
+  {type:"mcq", q:"In a later flat section at 5 m/s, the velocity is:", opts:["3 m/s","5 m/s","10 m/s"], a:1, exp:"Stage 4 example."},
+  {type:"mcq", q:"For first 4 s, triangle area using ½bh equals:", opts:["3 m","6 m","9 m"], a:0, exp:"½×2×3 = 3 m."},
+  {type:"mcq", q:"For first 4 s, rectangle area equals:", opts:["3 m","6 m","9 m"], a:1, exp:"2×3 = 6 m."},
+  {type:"mcq", q:"Total distance in first 4 s equals:", opts:["3 m","6 m","9 m"], a:2, exp:"3 + 6 = 9 m."},
+  {type:"mcq", q:"Why is the distance not reported in m²?", opts:["It’s not an area quantity","It cancels units","We ignore units"], a:0, exp:"Area under v–t has units of m."},
+  {type:"mcq", q:"When estimating curved areas, you should:", opts:["Use grid squares","Ignore the curve","Use gradient"], a:0, exp:"Count squares; combine partials."},
+  {type:"mcq", q:"If each square equals 1 m and you count ~8 squares, distance is:", opts:["~4 m","~8 m","~16 m"], a:1, exp:"Each square is one metre."},
+  {type:"mcq", q:"Which graph is often confused with v–t graphs?", opts:["d–t (distance–time)","a–t (acceleration–time)","p–t (power–time)"], a:0, exp:"They look similar; check axes."},
+  {type:"mcq", q:"What should you always double‑check in exams?", opts:["Units only","Which graph you are reading","Pen color"], a:1, exp:"Confirm v–t vs d–t."},
+
+  // True / False (21–30)
+  {type:"tf", q:"Gradient on a v–t graph equals acceleration.", a:true, exp:"Δv/Δt is acceleration."},
+  {type:"tf", q:"A zero gradient means zero velocity.", a:false, exp:"It means velocity is constant, not necessarily zero."},
+  {type:"tf", q:"A steeper slope means decreasing acceleration.", a:false, exp:"Steeper means larger gradient → increasing acceleration."},
+  {type:"tf", q:"Area under v–t gives distance travelled.", a:true, exp:"Yes, area under v–t = distance."},
+  {type:"tf", q:"Use ½×base×height for triangle areas.", a:true, exp:"Standard triangle area formula."},
+  {type:"tf", q:"For rectangles, area = base × height.", a:true, exp:"Yes."},
+  {type:"tf", q:"Distance from area is reported in m².", a:false, exp:"Report in metres (m)."},
+  {type:"tf", q:"Counting grid squares can estimate curved areas.", a:true, exp:"Add partial squares to make full ones."},
+  {type:"tf", q:"Velocity is plotted on the x‑axis in a v–t graph.", a:false, exp:"Velocity is on the y‑axis."},
+  {type:"tf", q:"Time is on the x‑axis in a v–t graph.", a:true, exp:"Yes."},
+
+  // Fill‑in (31–40)
+  {type:"fill", q:"On a v–t graph, the gradient is ______ / time.", text:"change in velocity", exp:"Δv over Δt."},
+  {type:"fill", q:"Acceleration symbolically is Δv divided by ______.", text:"Δt", exp:"Change in time."},
+  {type:"fill", q:"A flat section means ______ velocity.", text:"constant", exp:"Zero gradient → constant velocity."},
+  {type:"fill", q:"A negative constant gradient indicates ______.", text:"deceleration", exp:"Speed decreasing at constant rate."},
+  {type:"fill", q:"Area under v–t equals ______ travelled.", text:"distance", exp:"Area = distance."},
+  {type:"fill", q:"Triangle area uses ½ × base × ______.", text:"height", exp:"Standard formula."},
+  {type:"fill", q:"Example acceleration: 3 m/s change in 2 s → ______ m/s².", text:"1.5", exp:"3 ÷ 2 = 1.5."},
+  {type:"fill", q:"First 4 s total distance example = ______ m.", text:"9", exp:"Triangle 3 m + rectangle 6 m."},
+  {type:"fill", q:"Counting squares helps estimate area under a ______ part.", text:"curved", exp:"Curved sections are tricky; use squares."},
+  {type:"fill", q:"Combine ______ squares to make full ones when estimating.", text:"partial", exp:"Add halves to form wholes."}
+];
+
+let i=0, score=0, order=[];
+function startGame(){
+  order = [...Array(Q.length).keys()].sort(()=>Math.random()-0.5);
+  i = 0; score = 0;
+  document.getElementById("scorebar").textContent = `Question ${i+1} / ${Q.length}  Score: ${score}`;
+  renderQ();
+}
+function renderQ(){
+  const q = Q[order[i]];
+  let html = `<div class='question-box'><p><strong>Q${i+1}:</strong> ${q.q}</p>`;
+  if(q.type==="mcq"){
+    q.opts.forEach((opt,idx)=> html += `<label><input type="radio" name="opt" value="${idx}"> ${opt}</label><br>`);
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type==="tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  const area = document.getElementById("game-area");
+  const inner = document.getElementById("game-area-inner");
+  if(inner){ inner.innerHTML = html; } else { area.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`); }
+}
+function checkMCQ(){
+  const q = Q[order[i]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkTF(){
+  const q = Q[order[i]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select True or False."; fb.className="feedback incorrect"; return;}
+  const val = sel.value === "true";
+  if(val === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkFill(){
+  const q = Q[order[i]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  function norm(s){ return s.replace(/\s+/g,"").toLowerCase(); }
+  const ok = norm(ans).includes(norm(q.text));
+  if(ok){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function nextQ(){
+  i++;
+  if(i < Q.length){
+    document.getElementById("scorebar").textContent = `Question ${i+1} / ${Q.length}  Score: ${score}`;
+    renderQ();
+  }else{
+    endGame();
+  }
+}
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${Q.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${Q.length}`;
+}
+</script>
+</body>
+</html>
