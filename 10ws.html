@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wind & Solar Power — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#0ea5e9; --brand2:#22c55e; --paper:#fffefb; --ink:#111827; --accent:#075985 }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f2f9ff; color:var(--ink); line-height:1.62 }
+    header{ background:linear-gradient(90deg, var(--brand), var(--brand2)); color:#fff; padding:18px 20px; text-align:center; font-size:1.3rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 14px 28px }
+    .video{ display:flex; justify-content:center; margin:18px 0 }
+    iframe{ width:88%; max-width:1100px; height:480px; border:2px solid #bae6fd; border-radius:14px; background:#000; box-shadow:0 2px 12px rgba(14,165,233,.18) }
+    .card{ background:var(--paper); border-radius:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); padding:20px; margin:18px 0 }
+    h2{ color:var(--accent); border-bottom:2px solid #bae6fd; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#0c4a6e }
+    .pill{ display:inline-block; background:#dcfce7; border:1px solid #bbf7d0; border-radius:999px; padding:2px 10px; margin:2px; font-size:.9rem }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(14,165,233,.25) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem }
+    .tiny{ font-size:.85rem; color:#475569 }
+    @media (max-width:760px){ iframe{ width:96%; height:240px } }
+  </style>
+</head>
+<body>
+<header>Wind & Solar Power — How they work, pros & cons</header>
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/BqwwyNOCXgE" title="Wind & Solar Power" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="card">
+    <h2>Notes (rewritten in English from the speech)</h2>
+
+    <details open>
+      <summary>How wind power works</summary>
+      <ul>
+        <li>Wind energy is captured by <b>wind turbines</b>, often seen in exposed areas like <b>moors</b> or <b>coasts</b>.</li>
+        <li>Spinning blades turn a <b>generator</b>, converting <b>kinetic energy</b> from wind into <b>electrical energy</b>.</li>
+        <li>Electricity is sent to the <b>national grid</b>.</li>
+      </ul>
+      <div>
+        <span class="pill">Exposed sites</span>
+        <span class="pill">Blades → generator</span>
+        <span class="pill">Kinetic → electrical</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>How solar power works</summary>
+      <ul>
+        <li><b>Solar cells</b> (solar panels) generate <b>electric current</b> directly from <b>sunlight</b>.</li>
+        <li>Good for <b>low‑energy devices</b> (watches, calculators) to avoid battery replacement.</li>
+        <li>Useful in <b>remote regions</b> not connected to the main grid (e.g., the <b>Australian outback</b>).</li>
+        <li>Now widely used at <b>large scale</b> to power entire towns.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Pros shared by wind & solar</summary>
+      <ul>
+        <li><b>Very low running costs</b> once installed.</li>
+        <li><b>No pollutants</b> during operation — notably <b>no CO₂</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Cons & limitations</summary>
+      <ul>
+        <li><b>High upfront costs</b>; manufacturing (especially of <b>solar cells</b>) can produce pollutants.</li>
+        <li><b>Weather‑dependent</b>: no wind or no sun → no electricity.</li>
+        <li><b>No on‑demand ramping</b>: cannot instantly increase supply at <b>peak demand</b>.</li>
+        <li>Require <b>large areas</b>; need many units to generate significant power.</li>
+        <li>Public concerns: <b>visual impact</b> and <b>noise</b> (for wind turbines).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Bottom line</summary>
+      <ul>
+        <li>Neither wind nor solar <b>damages the environment</b> during use.</li>
+        <li>Both are becoming <b>cheaper every year</b>.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2>Quiz (40 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar tiny" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40 questions grounded strictly in the provided wind & solar speech
+const Q = [
+  // Multiple Choice (1–20)
+  {type:"mcq", q:"Where are wind turbines commonly placed?", opts:["In forests","In exposed areas like moors/coasts","Inside cities only"], a:1, exp:"They’re placed where winds are strong and unobstructed."},
+  {type:"mcq", q:"What sits inside a wind turbine to make electricity?", opts:["A battery","A generator","A condenser"], a:1, exp:"The spinning blades drive a generator."},
+  {type:"mcq", q:"What form of energy do spinning blades convert?", opts:["Thermal to electrical","Kinetic to electrical","Chemical to electrical"], a:1, exp:"Kinetic energy of wind becomes electrical energy."},
+  {type:"mcq", q:"Where does wind-generated electricity go?", opts:["Directly to houses only","To the national grid","Stored in the blades"], a:1, exp:"Electricity is fed into the national grid."},
+  {type:"mcq", q:"What produces electricity directly from sunlight?", opts:["Solar cells","Wind vanes","Heat pumps"], a:0, exp:"Solar cells (panels) generate current from light."},
+  {type:"mcq", q:"Name a low-energy device powered well by solar cells.", opts:["Electric oven","Calculator","Refrigerator"], a:1, exp:"Watches and calculators are classic examples."},
+  {type:"mcq", q:"Why are solar panels useful in the Australian outback?", opts:["Abundant rivers","Connected to the main grid","Remote and off-grid"], a:2, exp:"They serve remote regions not on the grid."},
+  {type:"mcq", q:"How is most solar energy increasingly used today?", opts:["Toy cars","Large-scale electricity for towns","Only garden lights"], a:1, exp:"Solar now powers entire towns at scale."},
+  {type:"mcq", q:"What is a shared advantage of wind and solar?", opts:["High running cost","No pollutants during operation","Guaranteed 24/7 output"], a:1, exp:"They don’t emit CO₂ while running."},
+  {type:"mcq", q:"Which is a shared drawback?", opts:["Weather dependence","Abundant at night regardless of weather","Instant ramping at peak demand"], a:0, exp:"Both depend on weather conditions."},
+  {type:"mcq", q:"What’s a major financial disadvantage?", opts:["Low upfront cost","High upfront cost","No installation needed"], a:1, exp:"Initial investment is high."},
+  {type:"mcq", q:"Manufacturing which technology often produces pollutants?", opts:["Wind turbine towers","Solar cells","Hydro dams"], a:1, exp:"Solar cell manufacturing can create pollutants."},
+  {type:"mcq", q:"If the wind is calm, output from wind turbines is:", opts:["Unaffected","Zero or low","Maximum"], a:1, exp:"No wind → little or no electricity."},
+  {type:"mcq", q:"If the sun doesn’t shine, solar panels:", opts:["Produce as normal","Produce little or nothing","Overheat and melt"], a:1, exp:"No sun → little or no electricity."},
+  {type:"mcq", q:"During peak demand, wind/solar can:", opts:["Instantly ramp up","Not increase supply on demand","Guarantee surplus"], a:1, exp:"They cannot be ramped instantly."},
+  {type:"mcq", q:"A space-related drawback is that wind/solar:", opts:["Take little space","Take a lot of space","Are underground"], a:1, exp:"Many units are needed for significant power."},
+  {type:"mcq", q:"Some people complain that wind turbines are:", opts:["Invisible","Too noisy and unattractive","Too small"], a:1, exp:"Noise and visual impact are common complaints."},
+  {type:"mcq", q:"What greenhouse gas do wind and solar not emit while running?", opts:["CO₂","CH₄","N₂O"], a:0, exp:"They emit no carbon dioxide in operation."},
+  {type:"mcq", q:"Overall environmental harm during operation is:", opts:["None stated","Severe","Moderate"], a:0, exp:"Speech states neither damages the environment during use."},
+  {type:"mcq", q:"Cost trend for wind and solar is:", opts:["Getting more expensive","Staying the same","Getting cheaper every year"], a:2, exp:"They are becoming cheaper over time."},
+
+  // True / False (21–30)
+  {type:"tf", q:"Wind turbines convert chemical energy to electrical energy.", a:false, exp:"They convert kinetic energy from wind."},
+  {type:"tf", q:"Solar cells make electric current directly from sunlight.", a:true, exp:"That’s their defining feature."},
+  {type:"tf", q:"Watches and calculators are examples of low-energy devices for solar.", a:true, exp:"Correct per the speech."},
+  {type:"tf", q:"Remote, off-grid regions benefit from solar panels.", a:true, exp:"They provide power where grids don’t reach."},
+  {type:"tf", q:"Wind and solar have high running costs.", a:false, exp:"They have very low running costs."},
+  {type:"tf", q:"Operating wind/solar emits CO₂.", a:false, exp:"No pollutants are produced during operation."},
+  {type:"tf", q:"Manufacturing solar cells may produce pollutants.", a:true, exp:"This is noted as a drawback."},
+  {type:"tf", q:"Wind and solar are fully independent of weather.", a:false, exp:"They are weather-dependent."},
+  {type:"tf", q:"Wind/solar can quickly increase output during peak demand.", a:false, exp:"They cannot ramp on demand."},
+  {type:"tf", q:"Both technologies require a lot of space to make serious power.", a:true, exp:"Many units are needed."},
+
+  // Fill-in (31–40)
+  {type:"fill", q:"Wind turbine blades turn a ______ to make electricity.", text:"generator", exp:"The generator converts motion to electricity."},
+  {type:"fill", q:"Blade motion converts ______ energy into electrical energy.", text:"kinetic", exp:"Wind’s kinetic energy is converted."},
+  {type:"fill", q:"Electricity from wind farms feeds the national ______.", text:"grid", exp:"Power is transported to the grid."},
+  {type:"fill", q:"Solar panels generate electric ______ from sunlight.", text:"current", exp:"They produce electric current directly."},
+  {type:"fill", q:"Solar cells are useful for low-energy devices like ______.", text:"watches", exp:"Also calculators."},
+  {type:"fill", q:"Solar is helpful in remote regions such as the Australian ______.", text:"outback", exp:"A classic off-grid example."},
+  {type:"fill", q:"A shared advantage is very low ______ costs.", text:"running", exp:"Low operating costs are a plus."},
+  {type:"fill", q:"During operation, wind and solar emit no ______ dioxide.", text:"carbon", exp:"No CO₂ while running."},
+  {type:"fill", q:"A shared drawback is high ______ cost.", text:"upfront", exp:"Initial investment is high."},
+  {type:"fill", q:"Wind turbines may be criticized for ______ and noise.", text:"appearance", exp:"People say they don’t look nice and are noisy."}
+];
+
+let i=0, score=0, order=[];
+function startGame(){
+  order = [...Array(Q.length).keys()].sort(()=>Math.random()-0.5);
+  i = 0; score = 0;
+  document.getElementById("scorebar").textContent = `Question ${i+1} / ${Q.length}  Score: ${score}`;
+  renderQ();
+}
+function renderQ(){
+  const q = Q[order[i]];
+  let html = `<div class='question-box'><p><strong>Q${i+1}:</strong> ${q.q}</p>`;
+  if(q.type==="mcq"){
+    q.opts.forEach((opt,idx)=> html += `<label><input type="radio" name="opt" value="${idx}"> ${opt}</label><br>`);
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type==="tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  const area = document.getElementById("game-area");
+  const inner = document.getElementById("game-area-inner");
+  if(inner){ inner.innerHTML = html; } else { area.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`); }
+}
+function checkMCQ(){
+  const q = Q[order[i]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkTF(){
+  const q = Q[order[i]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select True or False."; fb.className="feedback incorrect"; return;}
+  const val = sel.value === "true";
+  if(val === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkFill(){
+  const q = Q[order[i]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  function norm(s){ return s.replace(/\s+/g,"").toLowerCase(); }
+  const ok = norm(ans).includes(norm(q.text));
+  if(ok){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function nextQ(){
+  i++;
+  if(i < Q.length){
+    document.getElementById("scorebar").textContent = `Question ${i+1} / ${Q.length}  Score: ${score}`;
+    renderQ();
+  }else{
+    endGame();
+  }
+}
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${Q.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${Q.length}`;
+}
+</script>
+</body>
+</html>
