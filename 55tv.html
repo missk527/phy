@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terminal Velocity: Forces, Drag & Parachutes</title>
+<style>
+:root{ --brand:#3f51b5; --paper:#fffef7; --ink:#333; }
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:Arial, system-ui, sans-serif; background:#f5f7fb; color:var(--ink); line-height:1.6;
+  background-image:linear-gradient(white 97%, #e0e0e0 100%); background-size:100% 30px;
+}
+header{ background:var(--brand); color:#fff; padding:16px 20px; text-align:center; font-size:1.4rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+.video-container{ display:flex; justify-content:center; margin-top:20px }
+iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #ccc; border-radius:10px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+.notes,.game{ background:var(--paper); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+.notes h2,.game h2{ color:var(--brand); border-bottom:2px solid #c5cae9; padding-bottom:6px; margin:0 0 12px }
+details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+summary{ cursor:pointer; font-weight:bold; color:#283593 }
+.question-box{ border:1px solid #e0e0e0; border-radius:10px; background:#fff; padding:12px; margin-top:14px }
+button{ background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:bold; cursor:pointer; transition:.25s; margin-top:8px }
+button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+.feedback{ margin-top:8px; font-weight:bold }
+.correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+.scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+@media (max-width:760px){ iframe{ width:95%; height:240px } }
+.small{font-size:.95rem}
+</style>
+</head>
+<body>
+<header>Terminal Velocity: Forces, Drag & Parachutes</header>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/aNS6J9Cpzxc" title="Terminal Velocity" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+<section class="notes">
+<h2>Key Notes (rewritten from the speech)</h2>
+
+<details open>
+  <summary>What is terminal velocity?</summary>
+  <ul>
+    <li><b>Terminal velocity</b> is when a falling object’s <b>velocity becomes constant</b>—it no longer accelerates or decelerates.</li>
+    <li>At terminal velocity, the <b>resultant force is zero</b>: weight downward equals air resistance (drag) upward.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Step 1 — Just after the jump</summary>
+  <ul>
+    <li>At the instant a person steps out of a plane, the only force is <b>weight</b> (gravity), so the <b>resultant force is downward</b>.</li>
+    <li>They <b>accelerate downward</b> because weight is unopposed.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Step 2 — Building air resistance (drag)</summary>
+  <ul>
+    <li>As the person starts to fall, they collide with air particles → an upward force called <b>air resistance / drag</b>.</li>
+    <li><b>Drag depends on</b> surface area (bigger area → more collisions) and velocity (faster → more collisions).</li>
+    <li>As velocity increases, <b>drag increases</b>; weight stays constant → <b>resultant force decreases</b>, so acceleration gets smaller.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Step 3 — Reaching terminal velocity</summary>
+  <ul>
+    <li>Eventually, <b>drag = weight</b> → <b>resultant force = 0</b> → <b>acceleration = 0</b>.</li>
+    <li>Velocity becomes constant: this is <b>terminal velocity</b>.</li>
+    <li>On a velocity–time graph: the curve’s slope decreases and then flattens when terminal velocity is reached.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Parachute opening & new terminal velocity</summary>
+  <ul>
+    <li>Opening a parachute greatly increases <b>surface area</b> → <b>drag jumps up</b>.</li>
+    <li>For a moment, <b>drag &gt; weight</b> → resultant force points upward → the person <b>decelerates</b> (slows) while still moving downward.</li>
+    <li>As they slow, drag decreases until it <b>equals weight again</b> → a <b>new, lower terminal velocity</b> is reached.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Recap</summary>
+  <ul>
+    <li>Start: weight ≫ drag → accelerate downward.</li>
+    <li>Mid-fall: speed up → drag ↑ → acceleration ↓.</li>
+    <li>Terminal: drag = weight → a = 0 → constant velocity.</li>
+    <li>Parachute: surface area ↑ → drag ↑↑ → slow down → <b>lower</b> terminal velocity.</li>
+  </ul>
+</details>
+</section>
+
+<section class="game">
+<h2>Quiz (40 Questions, Mixed)</h2>
+<div id="game-area">
+  <button onclick="startGame()">Start</button>
+  <div class="scorebar muted" id="scorebar">Not started</div>
+</div>
+</section>
+</div>
+
+<script>
+const questions = [
+  {type:"mcq", question:"Terminal velocity is when a falling object’s velocity is:", options:["Increasing","Decreasing","Constant"], answer:2, explanation:"Terminal velocity = constant velocity."},
+  {type:"mcq", question:"At terminal velocity, the resultant force is:", options:["Downwards","Upwards","Zero"], answer:2, explanation:"Weight equals drag, so resultant is zero."},
+  {type:"mcq", question:"Right after stepping out of the plane, the only force is:", options:["Drag","Weight","Lift"], answer:1, explanation:"Initially only weight acts."},
+  {type:"mcq", question:"A non-zero resultant force causes:", options:["Acceleration","Constant speed","No motion"], answer:0, explanation:"Newton’s second law."},
+  {type:"mcq", question:"Air resistance is also called:", options:["Thrust","Lift","Drag"], answer:2, explanation:"Drag opposes motion through a fluid."},
+  {type:"mcq", question:"Drag arises due to collisions with:", options:["Raindrops","Air particles","Sunlight"], answer:1, explanation:"Molecules of air collide with the body."},
+  {type:"mcq", question:"Which increases drag?", options:["Smaller surface area","Greater surface area","Lower velocity"], answer:1, explanation:"More area → more collisions."},
+  {type:"mcq", question:"As velocity increases, drag:", options:["Decreases","Stays the same","Increases"], answer:2, explanation:"More speed → more collisions."},
+  {type:"mcq", question:"During early fall, weight compared to drag is:", options:["Much larger","Equal","Smaller"], answer:0, explanation:"Initially drag is small."},
+  {type:"mcq", question:"As drag increases (weight constant), the resultant force:", options:["Increases","Decreases","Stays the same"], answer:1, explanation:"Weight − drag shrinks."},
+  {type:"mcq", question:"As resultant force decreases (still downward), acceleration:", options:["Increases","Decreases","Becomes negative"], answer:1, explanation:"Smaller resultant → smaller acceleration."},
+  {type:"mcq", question:"On a velocity–time graph before terminal velocity, the slope:", options:["Gets steeper","Gets less steep","Is vertical"], answer:1, explanation:"Acceleration reduces."},
+  {type:"mcq", question:"Terminal velocity occurs when:", options:["Weight = drag","Weight > drag","Weight < drag"], answer:0, explanation:"Forces balance."},
+  {type:"mcq", question:"When forces balance, acceleration is:", options:["Positive","Negative","Zero"], answer:2, explanation:"No resultant → no acceleration."},
+  {type:"mcq", question:"Opening a parachute suddenly changes which factor most?", options:["Mass","Surface area","Weight"], answer:1, explanation:"Surface area jumps up."},
+  {type:"mcq", question:"Immediately after opening a parachute, the resultant force points:", options:["Downward","Upward","Sideways"], answer:1, explanation:"Drag becomes greater than weight briefly."},
+  {type:"mcq", question:"After parachute opens, the skydiver:", options:["Accelerates downward faster","Decelerates (slows) while still descending","Stops moving"], answer:1, explanation:"Upward resultant reduces speed."},
+  {type:"mcq", question:"Eventually with parachute, drag and weight become:", options:["Unequal","Equal again","Zero"], answer:1, explanation:"New equilibrium of forces."},
+  {type:"mcq", question:"The new terminal velocity with parachute is:", options:["Higher","Lower","The same"], answer:1, explanation:"Larger area → lower terminal speed."},
+  {type:"mcq", question:"Weight is caused by:", options:["Air pushing","Magnetism","Gravity acting on mass"], answer:2, explanation:"Weight = mg."},
+  {type:"mcq", question:"If weight stays constant but drag increases, the acceleration:", options:["Increases","Decreases","Becomes zero immediately"], answer:1, explanation:"Resultant shrinks, so acceleration drops."},
+  {type:"mcq", question:"Resultant force is defined as:", options:["Mass × velocity","Sum of all forces (with direction)","Friction only"], answer:1, explanation:"Vector sum of forces."},
+  {type:"mcq", question:"When drag equals weight, velocity:", options:["Increases","Decreases","Becomes constant"], answer:2, explanation:"No acceleration → constant v."},
+  {type:"mcq", question:"The force opposing motion through air is:", options:["Thrust","Drag","Tension"], answer:1, explanation:"Air resistance = drag."},
+
+  {type:"fill", question:"Terminal velocity means the object is no longer ______ or decelerating.", answerText:"accelerating", explanation:"Speed is constant."},
+  {type:"fill", question:"Right after the jump, the resultant force acts ______.", answerText:"downwards", explanation:"Only weight acts initially."},
+  {type:"fill", question:"Drag depends on surface area and ______.", answerText:"velocity", explanation:"Faster → more collisions."},
+  {type:"fill", question:"At the start of a fall, drag is relatively ______.", answerText:"small", explanation:"Speed is low, so few collisions."},
+  {type:"fill", question:"As speed increases, drag ______.", answerText:"increases", explanation:"More collisions per second."},
+  {type:"fill", question:"At terminal velocity, weight and drag are ______ in size.", answerText:"equal", explanation:"Balanced forces."},
+  {type:"fill", question:"When forces balance, the resultant force is ______.", answerText:"zero", explanation:"No net force."},
+  {type:"fill", question:"No resultant force means ______ acceleration.", answerText:"zero", explanation:"a = 0."},
+  {type:"fill", question:"A larger surface area creates a ______ drag force.", answerText:"larger", explanation:"Area ↑ → drag ↑."},
+  {type:"fill", question:"Opening a parachute causes an immediate ______ in drag.", answerText:"increase", explanation:"Area jumps up."},
+  {type:"fill", question:"After parachute opens, the skydiver’s speed ______.", answerText:"decreases", explanation:"Upward resultant slows them."},
+  {type:"fill", question:"The new terminal velocity with a parachute is ______ than before.", answerText:"lower", explanation:"More drag → lower speed."},
+  {type:"fill", question:"On a velocity–time graph, the slope ______ as terminal velocity approaches.", answerText:"decreases", explanation:"Acceleration drops."},
+  {type:"fill", question:"Weight is the force due to ______.", answerText:"gravity", explanation:"Weight = mg."},
+  {type:"fill", question:"Drag is caused by collisions with ______ particles.", answerText:"air", explanation:"Air resistance."},
+  {type:"fill", question:"Resultant force equals weight minus ______ (direction accounted).", answerText:"drag", explanation:"Opposing forces sum."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let order = [];
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const game = document.getElementById("game-area");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`;});
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  const inner = document.getElementById("game-area-inner");
+  if(inner){ inner.innerHTML = html; } else { game.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`); }
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.answer){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  if(ans.includes(q.answerText.toLowerCase())){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else endGame();
+}
+
+function endGame(){
+  document.getElementById("game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${questions.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
