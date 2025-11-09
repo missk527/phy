@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biofuels — Pros, Cons & Reality (Notes & Quiz)</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffef8; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#fafafa; color:var(--ink); line-height:1.6;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.95rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e5e7eb; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:#5b21b6; border-bottom:2px solid #ddd6fe; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#5b21b6 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ede9fe; color:#5b21b6; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#6b7280; font-size:.85rem; padding:20px 0 }
+    code.kbd{ background:#eef2ff; border:1px solid #e0e7ff; padding:1px 6px; border-radius:6px }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Biofuels — Pros, Cons & Reality <span class="pill">Definition · Carbon neutrality · Trade‑offs</span></h1>
+    <div class="small">Video + focused notes + interactive 40‑question quiz</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/GkJCiQ5Jk34" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points rewritten from the speech)</h2>
+
+      <details open>
+        <summary>What are biofuels?</summary>
+        <ul>
+          <li><strong>Biofuels</strong> are fuels made from <strong>recently living organisms</strong> (e.g., plants, algae; sometimes animal waste).</li>
+          <li>They differ from <strong>fossil fuels</strong>, which also came from life but lived <strong>millions of years ago</strong> and formed by different processes.</li>
+          <li>Plants and algae use <strong>photosynthesis</strong> to lock up the sun’s energy; burning the fuel releases that stored energy.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Common sources & uses</summary>
+        <ul>
+          <li><strong>Plants and algae</strong> are the main sources; <strong>animal waste</strong> can be used but usually on a smaller scale.</li>
+          <li>Biofuels are <strong>easy to transport</strong> and can be <strong>blended with petrol/diesel</strong>, so most drivers don’t need new cars.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Why biofuels are attractive</summary>
+        <ul>
+          <li>Often treated as <strong>carbon neutral</strong>: CO₂ released on burning ≈ CO₂ taken up during growth.</li>
+          <li><strong>Renewable</strong> — can be grown repeatedly.</li>
+          <li>Typically <strong>relatively cheap</strong> to make compared with some alternatives.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Limitations & real‑world complications</summary>
+        <ul>
+          <li><strong>Land‑use change</strong>: converting natural land (e.g., cutting forests) to grow biofuel crops can damage ecosystems and release large amounts of CO₂ <em>before the first harvest</em>.</li>
+          <li><strong>Lifecycle emissions</strong>: harvesting, processing, and transporting biofuels require energy → often more CO₂ is emitted.</li>
+          <li><strong>Bottom line</strong>: biofuels are <em>not as perfect</em> as once hoped, but <strong>can be a useful substitute for fossil fuels</strong> when applied appropriately.</li>
+          <li>As with all renewables, it’s <strong>not all‑or‑nothing</strong>: use biofuels where they make sense; use other options elsewhere.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Biofuels practice</div>
+
+<script>
+// Quiz schema: mcq (options, answer index), tf (boolean), fill (string/alternatives)
+const questions = [
+  // 1
+  {type:"mcq", question:"What are biofuels made from?", options:["Recently living organisms","Minerals","Only fossilized plants","Pure CO2"], answer:0, explanation:"Biofuels come from recently living matter (e.g., plants, algae)."},
+  // 2
+  {type:"mcq", question:"How do biofuels differ from fossil fuels?", options:["Biofuels are from recent biomass; fossil fuels formed from ancient life over millions of years","Biofuels are always gases","Fossil fuels contain no carbon","Biofuels are mined"], answer:0, explanation:"Origin and timescale differ."},
+  // 3
+  {type:"mcq", question:"Main biological sources of biofuels mentioned are:", options:["Fungi and bacteria","Plants and algae","Animals only","Minerals"], answer:1, explanation:"Plants and algae are the main sources; animal waste can be used smaller‑scale."},
+  // 4
+  {type:"tf", question:"Animal waste can be used for biofuel, typically at smaller scale.", answer:true, explanation:"The speech says animal waste is often used on a small scale."},
+  // 5
+  {type:"mcq", question:"Why are plants/algae suitable for biofuels?", options:["They photosynthesize and store solar energy","They are metallic","They don’t need water","They are fossils"], answer:0, explanation:"Photosynthesis stores energy that can be released on burning."},
+  // 6
+  {type:"mcq", question:"Biofuels are often called carbon neutral because:", options:["They produce no CO₂ when burned","CO₂ released ≈ CO₂ absorbed during growth","They absorb methane","They dissolve in water"], answer:1, explanation:"Growth CO₂ uptake roughly balances emissions on burning."},
+  // 7
+  {type:"tf", question:"Biofuels can be considered renewable because they can be grown repeatedly.", answer:true, explanation:"They can be regrown."},
+  // 8
+  {type:"mcq", question:"Which is a practical advantage of biofuels?", options:["They require new cars","Hard to transport","Can be blended with petrol","Only usable at power plants"], answer:2, explanation:"Compatibility with existing engines is an advantage."},
+  // 9
+  {type:"mcq", question:"A stated economic advantage is that biofuels are:", options:["Extremely expensive","Relatively cheap to make","Free","Priceless"], answer:1, explanation:"The speech says they are relatively cheap to make."},
+  // 10
+  {type:"mcq", question:"Which statement captures a real‑world complication?", options:["No land is needed","Land conversion (e.g., deforestation) may be required","Harvesting needs no energy","Transport never emits CO₂"], answer:1, explanation:"Land‑use change can damage the environment and release CO₂."},
+  // 11
+  {type:"tf", question:"Cutting down forests for biofuel crops can release CO₂ before the first harvest.", answer:true, explanation:"The speech highlights this upfront emission."},
+  // 12
+  {type:"mcq", question:"Which stages can add CO₂ emissions to biofuels’ lifecycle?", options:["Harvesting","Processing","Transport","All of the above"], answer:3, explanation:"All three stages require energy and may emit CO₂."},
+  // 13
+  {type:"tf", question:"The speech concludes biofuels are perfect and always better than fossil fuels.", answer:false, explanation:"It says they are not as good as first thought but can be useful if used properly."},
+  // 14
+  {type:"mcq", question:"What's the recommended approach to renewables, according to the speech?", options:["All‑or‑nothing","Use only biofuels everywhere","Use biofuels where sensible; use other options where not","Abandon all renewables"], answer:2, explanation:"A pragmatic, mixed approach is suggested."},
+  // 15
+  {type:"fill", question:"Biofuels store energy originally captured by ______.", answer:"photosynthesis", explanation:"Plants/algae capture solar energy via photosynthesis."},
+  // 16
+  {type:"fill", question:"Because biomass was recently living, biofuels are considered ______ (regarding CO₂).", answer:"carbon neutral|carbon‑neutral|carbonneutral", explanation:"Common phrasing: 'carbon neutral'."},
+  // 17
+  {type:"fill", question:"Biofuels are considered a ______ resource because we can regrow them.", answer:"renewable", explanation:"They can be grown repeatedly."},
+  // 18
+  {type:"fill", question:"Converting natural land to biofuel crops can damage ______.", answer:"the environment|ecosystems|habitats", explanation:"Land‑use change harms ecosystems."},
+  // 19
+  {type:"fill", question:"Name one stage (other than burning) that can emit CO₂ in the biofuel lifecycle: ______.", answer:"harvesting|processing|transport|transportation", explanation:"Any of these fits the speech."},
+  // 20
+  {type:"tf", question:"Biofuels can be mixed with petrol so most drivers don't need new cars.", answer:true, explanation:"Compatibility is a key benefit."},
+  // 21
+  {type:"mcq", question:"Which statement about fossil fuels is true per the speech?", options:["They are from recently living organisms","They formed from ancient organisms over very long times","They are identical to biofuels","They contain no carbon"], answer:1, explanation:"Ancient origin distinguishes them from biofuels."},
+  // 22
+  {type:"mcq", question:"Which best summarizes the speech's 'bottom line' on biofuels?", options:["Always good everywhere","Always worse than fossil fuels","Useful in some contexts; not ideal in all cases","Completely unnecessary"], answer:2, explanation:"Use where they make sense."},
+  // 23
+  {type:"tf", question:"The speech states biofuels are always zero‑emission.", answer:false, explanation:"It notes lifecycle emissions from cultivation and logistics."},
+  // 24
+  {type:"mcq", question:"Which of these is NOT cited as a benefit?", options:["Renewable","Relatively cheap","Easy to transport","Requires brand‑new cars"], answer:3, explanation:"They do not require new cars due to blending."},
+  // 25
+  {type:"mcq", question:"Which is a potential environmental cost mentioned?", options:["Increased biodiversity from plantations","Deforestation releasing CO₂","Ocean acidification from wind turbines","Nuclear waste"], answer:1, explanation:"Deforestation/land conversion is highlighted."},
+  // 26
+  {type:"fill", question:"Plants and algae can ______ the sun’s energy.", answer:"lock up|store|capture", explanation:"They capture and store energy via photosynthesis."},
+  // 27
+  {type:"tf", question:"Using animal waste for biofuel is typically large‑scale and dominant.", answer:false, explanation:"The speech says 'often done at a much smaller scale'."},
+  // 28
+  {type:"mcq", question:"Which transport‑related point is made?", options:["Biofuels cannot be moved easily","Biofuels are easy to transport","Only pipelines work","Transport requires cryogenic tanks"], answer:1, explanation:"They are easy to transport."},
+  // 29
+  {type:"mcq", question:"Which phrase best describes how to think about renewables in general per the speech?", options:["Not all or nothing","All or nothing","Never use them","Switch instantly everywhere"], answer:0, explanation:"Pragmatic, mixed strategy."},
+  // 30
+  {type:"mcq", question:"Which of these directly undermines biofuels’ 'carbon neutral' idea?", options:["Photosynthesis","Land‑use change emissions and fossil energy in the supply chain","Low energy density","High octane rating"], answer:1, explanation:"Upfront and supply‑chain emissions complicate neutrality."},
+  // 31
+  {type:"fill", question:"Biofuels can be ______ with petrol.", answer:"mixed|blended", explanation:"Blending allows use in existing engines."},
+  // 32
+  {type:"fill", question:"Even before the first crop, converting land can release lots of ______.", answer:"CO2|carbon dioxide|co2", explanation:"From deforestation and disturbance."},
+  // 33
+  {type:"tf", question:"The speech says we should replace all fossil fuels with biofuels immediately.", answer:false, explanation:"It argues for targeted use, not total replacement."},
+  // 34
+  {type:"mcq", question:"Which energy source is mentioned as requiring new cars if used directly for transport?", options:["Biofuels","Petrol","Electricity from solar/wind","Diesel"], answer:2, explanation:"Switching to electric vehicles requires different cars, while biofuel blends can use existing ones."},
+  // 35
+  {type:"mcq", question:"Which statement about costs is closest to the speech?", options:["Biofuels are always the cheapest option","They are relatively cheap to make","They are more expensive than diamond mining","Cost was not mentioned"], answer:1, explanation:"'Relatively cheap to make' is noted."},
+  // 36
+  {type:"fill", question:"Biofuels are fuels made from ______ living organisms.", answer:"recently|recent", explanation:"That timing distinguishes them from fossil fuels."},
+  // 37
+  {type:"tf", question:"Algae are listed as a potential source of biofuels.", answer:true, explanation:"Plants and algae are both named."},
+  // 38
+  {type:"mcq", question:"Which comparison is emphasized in the speech?", options:["Biofuels vs. nuclear","Biofuels vs. fossil fuels","Biofuels vs. hydropower","Biofuels vs. geothermal"], answer:1, explanation:"The contrast with fossil fuels is central."},
+  // 39
+  {type:"mcq", question:"Which best describes the overall tone on biofuels?", options:["Uncritical praise","Balanced: benefits and drawbacks","Total rejection","No opinion"], answer:1, explanation:"It presents pros, cons, and context."},
+  // 40
+  {type:"fill", question:"A sensible policy is to use biofuels where they ______ ______.", answer:"make sense|are sensible|are appropriate|fit best", explanation:"Selective adoption is recommended."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
