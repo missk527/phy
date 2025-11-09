@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newton’s Laws, Circular Motion & Inertia — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#8b5cf6; --paper:#fffef8; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#fafafa; color:var(--ink); line-height:1.6; }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.95rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e5e7eb; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:#5b21b6; border-bottom:2px solid #ddd6fe; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#5b21b6 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ede9fe; color:#5b21b6; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#6b7280; font-size:.85rem; padding:20px 0 }
+    code.kbd{ background:#eef2ff; border:1px solid #e0e7ff; padding:1px 6px; border-radius:6px }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Newton’s 1st & 2nd Laws, Circular Motion, and Inertia <span class="pill">Resultant Force · Acceleration · F = m a</span></h1>
+    <div class="small">Video + focused notes + interactive 40-question quiz</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/Hi9RDxeNPkY" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+      <h2>Notes (Key points rewritten from the speech)</h2>
+
+      <details open>
+        <summary>Newton’s First Law (inertia law)</summary>
+        <ul>
+          <li>A <strong>resultant force</strong> is required to change an object’s motion.</li>
+          <li>If the <strong>resultant force = 0</strong>: motion does not change.</li>
+          <li><em>Stationary object</em> + zero resultant → stays stationary.</li>
+          <li><em>Moving object</em> + zero resultant → continues at the <strong>same velocity</strong> (same speed & direction).</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Newton’s Second Law</summary>
+        <ul>
+          <li>A <strong>non‑zero resultant force</strong> causes <strong>acceleration</strong>.</li>
+          <li>Depending on initial motion, acceleration can mean: start moving, speed up, slow down, stop, or <strong>change direction</strong> at constant speed (velocity changes because direction changes).</li>
+          <li><strong>Proportionality</strong>: larger resultant force → larger acceleration (for the same mass).</li>
+          <li>Equation: <strong>F = m a</strong>. Rearranged: <strong>a = F / m</strong>.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Circular motion (constant speed, changing velocity)</summary>
+        <ul>
+          <li><strong>Acceleration</strong> is “change in velocity per unit time”; velocity includes <em>direction</em>.</li>
+          <li>In uniform circular motion (e.g., the Moon’s orbit), speed is constant but direction constantly changes → object is <strong>accelerating</strong>.</li>
+          <li>Cause: a force <strong>perpendicular</strong> to motion (e.g., Earth’s <strong>gravity</strong>) provides the inward pull.</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Worked example (from speech)</summary>
+        <ul>
+          <li>Mass <code>m = 0.25 kg</code>; forces: <code>30 N</code> left, <code>42 N</code> right.</li>
+          <li>Resultant: <code>F = 42 − 30 = 12 N</code> to the right.</li>
+          <li>Acceleration: <code>a = F/m = 12 / 0.25 = 48 m·s⁻²</code> (to the right).</li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Inertia & inertial mass</summary>
+        <ul>
+          <li><strong>Inertia</strong>: tendency of an object’s motion to remain unchanged (rest stays at rest; motion stays in motion unless a resultant force acts).</li>
+          <li><strong>Inertial mass</strong>: how hard it is to change velocity; defined via <strong>m = F / a</strong> (from Newton’s second law).</li>
+          <li>Large masses (e.g., the Moon) have large inertia → require big forces to change velocity; acceleration is small for a given force.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Newton’s laws practice</div>
+
+<script>
+// Quiz schema: mcq (options, answer index), tf (boolean), fill (string/alternatives)
+const questions = [
+  // 1
+  {type:"mcq", question:"Newton’s first law states that:", options:[
+    "A force is never needed to change motion",
+    "A resultant force is required to change motion",
+    "Objects always slow down without forces",
+    "Acceleration is impossible at constant speed"
+  ], answer:1, explanation:"A resultant (net) force is required to change motion."},
+
+  // 2
+  {type:"tf", question:"If the resultant force on a stationary object is zero, it stays at rest.", answer:true, explanation:"No resultant → no change in motion."},
+
+  // 3
+  {type:"tf", question:"If the resultant force on a moving object is zero, it keeps the same velocity.", answer:true, explanation:"Same speed and direction continue."},
+
+  // 4
+  {type:"mcq", question:"A non-zero resultant force will cause:", options:["Acceleration","No change","Only rotation","Only heat"], answer:0, explanation:"Second law: non-zero net force causes acceleration."},
+
+  // 5
+  {type:"mcq", question:"Acceleration can result in:", options:["Starting to move","Speeding up","Slowing down or stopping","Changing direction at constant speed","All of the above"], answer:4, explanation:"All are possible depending on initial motion."},
+
+  // 6
+  {type:"mcq", question:"Why is changing direction at constant speed still acceleration?", options:[
+    "Because speed changes",
+    "Because time changes",
+    "Because velocity changes when direction changes",
+    "Because mass changes"
+  ], answer:2, explanation:"Velocity includes direction, so a direction change = acceleration."},
+
+  // 7
+  {type:"mcq", question:"In circular motion at constant speed, the object:", options:[
+    "Is not accelerating",
+    "Is accelerating because direction changes",
+    "Has zero velocity",
+    "Has no forces acting"
+  ], answer:1, explanation:"Direction changes continuously → acceleration exists."},
+
+  // 8
+  {type:"mcq", question:"The inward force for the Moon’s orbit is due to:", options:["Friction","Magnetism","Earth’s gravity","Air resistance"], answer:2, explanation:"Gravity provides the inward (centripetal) force."},
+
+  // 9
+  {type:"mcq", question:"The inward gravitational force in orbit acts:", options:["Along the motion","Opposite the motion","Perpendicular to the instantaneous motion (toward center)","At 45° to motion"], answer:2, explanation:"Toward the center, perpendicular to velocity."},
+
+  // 10
+  {type:"mcq", question:"According to F = m a, doubling the resultant force (same mass) does what to acceleration?", options:["Halves it","Doubles it","No change","Squares it"], answer:1, explanation:"a ∝ F for fixed m."},
+
+  // 11
+  {type:"mcq", question:"For a fixed force, doubling the mass does what to the acceleration?", options:["Halves it","Doubles it","No change","Inverts it"], answer:0, explanation:"a = F/m."},
+
+  // 12
+  {type:"fill", question:"Write the equation linking force, mass, and acceleration: ______ = ______ × ______.", answer:"f=ma|F=ma|force=mass×acceleration|force=mass*acceleration", explanation:"Newton’s second law."},
+
+  // 13
+  {type:"mcq", question:"What is the resultant force if 42 N acts right and 30 N acts left?", options:["72 N right","12 N right","12 N left","0 N"], answer:1, explanation:"42 − 30 = 12 N to the right."},
+
+  // 14
+  {type:"fill", question:"With resultant 12 N and mass 0.25 kg, acceleration is ______ m·s⁻².", answer:"48|48 m/s^2|48 m·s^-2|48 ms^-2|48 m s^-2", explanation:"a = 12 / 0.25 = 48 m·s⁻²."},
+
+  // 15
+  {type:"tf", question:"Acceleration is defined as change in velocity per unit time.", answer:true, explanation:"a = Δv / Δt."},
+
+  // 16
+  {type:"mcq", question:"If a rightward acceleration acts while the object moves left, it will:", options:["Speed up left","Keep constant velocity","Slow down (maybe stop)","Instantly reverse direction"], answer:2, explanation:"Acceleration opposite motion slows the object."},
+
+  // 17
+  {type:"tf", question:"A zero resultant force can change an object’s speed.", answer:false, explanation:"Zero net force → no change in velocity."},
+
+  // 18
+  {type:"mcq", question:"Which statement about velocity is correct?", options:[
+    "Velocity is speed only",
+    "Velocity includes speed and direction",
+    "Velocity includes mass",
+    "Velocity equals force times time"
+  ], answer:1, explanation:"Velocity is vector: magnitude and direction."},
+
+  // 19
+  {type:"mcq", question:"Inertia is the tendency of motion to:", options:["Always change","Remain unchanged unless a resultant force acts","Increase spontaneously","Depend on temperature"], answer:1, explanation:"First law in words."},
+
+  // 20
+  {type:"mcq", question:"Inertial mass is measured by:", options:["m = a / F","m = F / a","m = F · a","m = F^2 / a"], answer:1, explanation:"From F = m a → m = F / a."},
+
+  // 21
+  {type:"tf", question:"Large mass → larger inertia → harder to change velocity.", answer:true, explanation:"More force needed for the same acceleration."},
+
+  // 22
+  {type:"mcq", question:"If no resultant force acts on a moving object, which is true?", options:[
+    "It must slow down",
+    "It keeps moving at constant velocity",
+    "It must speed up",
+    "It must rotate"
+  ], answer:1, explanation:"No net force → constant velocity."},
+
+  // 23
+  {type:"fill", question:"Give one possible outcome of applying a non‑zero resultant force: ______.", answer:"start moving|speed up|slow down|stop|change direction", explanation:"All are valid outcomes mentioned."},
+
+  // 24
+  {type:"mcq", question:"Which pair matches: term → meaning?", options:[
+    "Resultant force → sum of all forces (vector)",
+    "Acceleration → change in speed only",
+    "Velocity → mass times acceleration",
+    "Inertia → change in motion caused by gravity"
+  ], answer:0, explanation:"Resultant is the net (vector) force."},
+
+  // 25
+  {type:"tf", question:"Constant speed in a circle implies zero acceleration.", answer:false, explanation:"Direction changes → acceleration exists."},
+
+  // 26
+  {type:"mcq", question:"The force responsible for circular motion is directed:", options:[
+    "Outward",
+    "Inward toward the center",
+    "Along the tangent",
+    "Downward only"
+  ], answer:1, explanation:"Centripetal (center-seeking) direction."},
+
+  // 27
+  {type:"mcq", question:"Which quantity must change for acceleration to be non-zero?", options:[
+    "Mass",
+    "Velocity (speed and/or direction)",
+    "Time unit",
+    "Temperature"
+  ], answer:1, explanation:"a = Δv/Δt, so Δv ≠ 0."},
+
+  // 28
+  {type:"fill", question:"Rearrange F = m a to make a the subject: a = ______ / ______.", answer:"F/m|force/mass", explanation:"a = F / m."},
+
+  // 29
+  {type:"fill", question:"Rearrange F = m a to make m the subject: m = ______ / ______.", answer:"F/a|force/acceleration", explanation:"m = F / a."},
+
+  // 30
+  {type:"tf", question:"If the rightward force is bigger than the leftward force, the resultant is to the right.", answer:true, explanation:"Net direction follows the larger vector."},
+
+  // 31
+  {type:"mcq", question:"If the resultant force is tripled while mass stays constant, acceleration:", options:[
+    "Is divided by three",
+    "Triples",
+    "Stays the same",
+    "Squares"
+  ], answer:1, explanation:"a ∝ F."},
+
+  // 32
+  {type:"mcq", question:"If the mass is doubled while force is constant, acceleration:", options:[
+    "Doubles",
+    "Halves",
+    "Stays the same",
+    "Becomes zero"
+  ], answer:1, explanation:"a ∝ 1/m."},
+
+  // 33
+  {type:"tf", question:"Speed can remain constant while velocity changes.", answer:true, explanation:"If direction changes, velocity changes."},
+
+  // 34
+  {type:"mcq", question:"Which statement links first law and inertia?", options:[
+    "Inertia demands a force to keep motion constant",
+    "Inertia is the tendency of motion to remain unchanged unless a resultant force acts",
+    "Inertia equals mass times acceleration",
+    "Inertia applies only to stationary objects"
+  ], answer:1, explanation:"That is the first law phrased as inertia."},
+
+  // 35
+  {type:"mcq", question:"Which example best illustrates 'change in direction with constant speed'?", options:[
+    "Car speeding up on a straight road",
+    "Ball thrown straight up",
+    "Moon orbiting Earth",
+    "Box at rest on a table"
+  ], answer:2, explanation:"Uniform circular motion in orbit."},
+
+  // 36
+  {type:"fill", question:"Acceleration symbol and SI unit: a in ______.", answer:"m/s^2|m·s^-2|ms^-2|m s^-2", explanation:"Standard SI unit."},
+
+  // 37
+  {type:"fill", question:"Force symbol and SI unit: F in ______.", answer:"newtons|N", explanation:"Force measured in newtons (N)."},
+
+  // 38
+  {type:"fill", question:"Mass symbol and SI unit: m in ______.", answer:"kilograms|kg", explanation:"Mass measured in kilograms (kg)."},
+
+  // 39
+  {type:"tf", question:"A large mass like the Moon will typically have small acceleration for a given force.", answer:true, explanation:"a = F/m; large m → small a."},
+
+  // 40
+  {type:"mcq", question:"Which statement best summarizes the lesson?", options:[
+    "Only forces change speed; direction changes need no force",
+    "Zero resultant → constant velocity; non-zero resultant → acceleration; circular motion shows acceleration at constant speed; inertia resists changes in motion",
+    "Velocity and acceleration are the same",
+    "Inertial mass is unrelated to F = m a"
+  ], answer:1, explanation:"This captures first & second laws, circular motion, and inertia."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
