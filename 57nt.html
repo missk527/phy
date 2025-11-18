@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Newton's Third Law</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>57. Newton's Third Law</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/XWtWUUsG_FI" title="Newton's Third Law Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: the statement of Newton's third law, what “equal and opposite” means, and how it links to acceleration via F = ma.</p>
+
+      <details open>
+        <summary>1) Newton’s Third Law – Definition</summary>
+        <ul>
+          <li>Newton’s third law states that when <strong>two objects interact</strong>, the forces they exert on each other are <strong>equal and opposite</strong>.</li>
+          <li>This means:
+            <ul>
+              <li>They are equal in <strong>magnitude</strong> (size).</li>
+              <li>They are opposite in <strong>direction</strong>.</li>
+            </ul>
+          </li>
+          <li>This is the definition you can use directly in an exam.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Equal and Opposite – What It Means</summary>
+        <ul>
+          <li>The <strong>“equal”</strong> part refers to the <strong>size (magnitude)</strong> of the forces.</li>
+          <li>The <strong>“opposite”</strong> part refers to their <strong>directions</strong>.</li>
+          <li>Example:
+            <ul>
+              <li>If you push a box with a force of <strong>100 N</strong>,</li>
+              <li>the box pushes back on you with a force of <strong>100 N</strong> in the opposite direction.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Normal Contact Force</summary>
+        <ul>
+          <li>The force that the box exerts on you is called the <strong>normal contact force</strong>.</li>
+          <li>It acts at the <strong>point of contact</strong> between two solid objects.</li>
+          <li>Normal contact forces are one example of a <strong>Newton’s third law pair</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Which Object Moves?</summary>
+        <ul>
+          <li>Even though the forces are equal and opposite, the motion of the objects can be very different.</li>
+          <li>If the box is <strong>small</strong> (low mass), the box is more likely to be the one that <strong>moves</strong>.</li>
+          <li>If the box is <strong>very big</strong> (large mass), it might hardly move at all, and <strong>you</strong> might be pushed backwards instead.</li>
+          <li>Sometimes both objects move a bit (for example with a <strong>medium-sized</strong> box).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Everyday Examples</summary>
+        <ul>
+          <li>When you <strong>push yourself off a wall</strong>:
+            <ul>
+              <li>You push the wall, and the wall pushes you back with an equal and opposite force.</li>
+              <li><strong>You</strong> are the one that moves away from the wall.</li>
+            </ul>
+          </li>
+          <li>When you <strong>jump off the ground</strong>:
+            <ul>
+              <li>Your feet push down on the ground.</li>
+              <li>The ground pushes you upwards with an equal and opposite force, so you move up.</li>
+            </ul>
+          </li>
+          <li>In each case, the forces are equal and opposite, but the <strong>effect</strong> (the motion) depends on mass.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Link to Newton’s Second Law</summary>
+        <ul>
+          <li>Newton’s second law is <strong>F = ma</strong>, where:
+            <ul>
+              <li><code>F</code> is the resultant force (N)</li>
+              <li><code>m</code> is the mass (kg)</li>
+              <li><code>a</code> is the acceleration (m/s²)</li>
+            </ul>
+          </li>
+          <li>Rearranging gives <strong>a = F / m</strong>.</li>
+          <li>This shows that acceleration depends on the <strong>force</strong> and the <strong>mass</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Why Smaller Objects Move More</summary>
+        <ul>
+          <li>For two objects pushing on each other, the forces are equal (same F).</li>
+          <li>However, their masses can be different.</li>
+          <li>From <strong>a = F / m</strong>:
+            <ul>
+              <li>If <strong>m is small</strong>, then <strong>a</strong> is larger.</li>
+              <li>If <strong>m is large</strong>, then <strong>a</strong> is smaller.</li>
+            </ul>
+          </li>
+          <li>So the object with the <strong>smaller mass</strong> will generally have the <strong>larger acceleration</strong> and move more.</li>
+          <li>This explains why a light box moves more easily than a heavy box when you push.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Not “One Force Only” – Always Pairs</summary>
+        <ul>
+          <li>Newton’s third law always involves a <strong>pair of forces</strong> on <strong>two different objects</strong>.</li>
+          <li>It is wrong to think “you push the box, but the box does nothing”.</li>
+          <li>The box <strong>always</strong> pushes back on you with an equal and opposite force.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Motion vs Force – Key Idea</summary>
+        <ul>
+          <li>Equal and opposite forces <strong>do not automatically mean</strong> equal motion.</li>
+          <li>Motion depends on <strong>both</strong> the force and the mass (via <strong>F = ma</strong>).</li>
+          <li>Therefore:
+            <ul>
+              <li>A light object can accelerate a lot.</li>
+              <li>A heavy object may accelerate very little, even with the same force.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Key Takeaways</summary>
+        <ul>
+          <li>Newton’s third law: when two objects interact, they exert <strong>equal and opposite forces</strong> on each other.</li>
+          <li>Equal = same magnitude; opposite = opposite direction.</li>
+          <li>Examples include pushing a box, pushing off a wall, or jumping off the ground.</li>
+          <li>Which object moves more depends on <strong>mass</strong>, using <strong>F = ma</strong> and <strong>a = F / m</strong>.</li>
+          <li>The <strong>smaller mass</strong> generally gets the <strong>larger acceleration</strong> and moves most.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Newton's Third Law Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the Newton's third law speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"What does Newton's third law say?", options:["For every action there is no reaction","When two objects interact, they exert equal and opposite forces on each other","Heavier objects always exert a bigger force"], answer:1,
+   explanation:"Newton's third law states that when two objects interact, the forces they exert on each other are equal and opposite."},
+  // 2
+  {type:"fill", question:"Newton's third law applies when two objects ______.", answerText:"interact",
+   explanation:"The law describes what happens when two objects interact."},
+  // 3
+  {type:"mcq", question:"In Newton's third law, what does 'equal' refer to?", options:["Equal energy","Equal mass","Equal magnitude of the forces"], answer:2,
+   explanation:"Equal refers to the magnitude (size) of the forces."},
+  // 4
+  {type:"mcq", question:"In Newton's third law, what does 'opposite' refer to?", options:["Opposite colour","Opposite direction of the forces","Opposite mass"], answer:1,
+   explanation:"Opposite refers to their directions."},
+  // 5
+  {type:"fill", question:"The third law forces are equal in magnitude but opposite in ______.", answerText:"direction",
+   explanation:"They have opposite directions."},
+  // 6
+  {type:"mcq", question:"If you push a box with 100 N, how big is the force the box exerts on you?", options:["50 N","100 N","200 N"], answer:1,
+   explanation:"The box exerts an equal force of 100 N back on you."},
+  // 7
+  {type:"fill", question:"In the example, both you and the box exert a force of ______ newtons.", answerText:"100",
+   explanation:"You push the box with 100 N and it pushes back with 100 N."},
+  // 8
+  {type:"mcq", question:"What is the name of the force that the box exerts on you at the point of contact?", options:["Friction","Normal contact force","Gravitational force"], answer:1,
+   explanation:"The box exerts a normal contact force on you."},
+  // 9
+  {type:"fill", question:"The force that the box exerts on you when you push it is called the ______ contact force.", answerText:"normal",
+   explanation:"This is the normal contact force."},
+  // 10
+  {type:"mcq", question:"When you push a small box, which object is more likely to move?", options:["You","The small box","Both stay still"], answer:1,
+   explanation:"The small box, which has lower mass, is more likely to move."},
+  // 11
+  {type:"mcq", question:"When you push a very large, heavy box, what might happen?", options:["The box easily moves, you stay still","Neither object experiences any force","The box barely moves and you might be pushed backwards"], answer:2,
+   explanation:"The heavy box hardly moves, and you might move backwards instead."},
+  // 12
+  {type:"fill", question:"If the box is very big and you push it quickly, you might be pushed ______ instead.", answerText:"backwards",
+   explanation:"You can be pushed backwards by the reaction force."},
+  // 13
+  {type:"mcq", question:"Which everyday action is used as an example of Newton's third law in the speech?", options:["Throwing a ball","Pushing yourself off a wall","Switching on a light"], answer:1,
+   explanation:"Pushing yourself off a wall is given as an example."},
+  // 14
+  {type:"mcq", question:"When you jump off the ground, which force pushes you upwards?", options:["Your force on the ground","The ground's equal and opposite force on you","Gravity"], answer:1,
+   explanation:"The ground pushes upwards on you with an equal and opposite force."},
+  // 15
+  {type:"fill", question:"When you jump, your feet push down on the ground and the ground pushes you ______.", answerText:"upwards",
+   explanation:"The ground's reaction force is upwards."},
+  // 16
+  {type:"mcq", question:"Can both you and the box move when you push a medium-sized box?", options:["No, only one object can move","Yes, you may move back a bit and the box moves forwards a bit","No, neither can move"], answer:1,
+   explanation:"For a medium-sized box, both objects may move somewhat."},
+  // 17
+  {type:"mcq", question:"Which equation is Newton's second law?", options:["F = mv","F = ma","F = mg"], answer:1,
+   explanation:"Newton's second law is F = ma."},
+  // 18
+  {type:"fill", question:"Rearranging Newton's second law gives a = F / ______.", answerText:"m",
+   explanation:"Acceleration equals force divided by mass."},
+  // 19
+  {type:"mcq", question:"According to a = F / m, how can you get a large acceleration?", options:["High force or small mass","Low force and large mass","Zero force and any mass"], answer:0,
+   explanation:"Large acceleration comes from high force and/or small mass."},
+  // 20
+  {type:"mcq", question:"If two objects exert equal forces on each other, which will accelerate more?", options:["The one with smaller mass","The one with larger mass","They must accelerate equally"], answer:0,
+   explanation:"With the same force, the smaller mass gets greater acceleration."},
+  // 21
+  {type:"fill", question:"For an object to accelerate and move, you need either a high force or a small ______.", answerText:"mass",
+   explanation:"Small mass or large force leads to greater acceleration."},
+  // 22
+  {type:"mcq", question:"Why does the smaller object generally move the most in these interactions?", options:["It has more friction","It has smaller mass, so for the same force it gets larger acceleration","It has no forces on it"], answer:1,
+   explanation:"Smaller mass means larger acceleration for the same force."},
+  // 23
+  {type:"mcq", question:"In Newton's third law, where do the two forces act?", options:["On the same object","On two different objects","On no objects"], answer:1,
+   explanation:"The action and reaction forces act on different objects."},
+  // 24
+  {type:"fill", question:"Newton's third law always involves a pair of forces on two different ______.", answerText:"objects",
+   explanation:"The forces act on different objects."},
+  // 25
+  {type:"mcq", question:"Is it correct to say 'you push the box, but the box does nothing'?", options:["Yes, that is correct","No, it also pushes back on you","Sometimes true"], answer:1,
+   explanation:"The box always exerts an equal and opposite force on you."},
+  // 26
+  {type:"fill", question:"When you push a box, the box ______ back on you with an equal and opposite force.", answerText:"pushes",
+   explanation:"The box pushes back on you."},
+  // 27
+  {type:"mcq", question:"Equal and opposite forces mean:", options:["Equal motion for both objects","Different forces on each object","Same size forces in opposite directions"], answer:2,
+   explanation:"They are equal in size but opposite in direction."},
+  // 28
+  {type:"fill", question:"Even though forces are equal and opposite, the ______ can be very different for each object.", answerText:"motion",
+   explanation:"Their motions differ because of different masses."},
+  // 29
+  {type:"mcq", question:"What two things does acceleration depend on according to the equation a = F / m?", options:["Force and distance","Force and mass","Mass and speed"], answer:1,
+   explanation:"Acceleration depends on the force and the mass."},
+  // 30
+  {type:"mcq", question:"If the same force is applied to a heavy and a light object, which one gets a smaller acceleration?", options:["The light object","The heavy object","They get the same"], answer:1,
+   explanation:"The heavier object has smaller acceleration."},
+  // 31
+  {type:"fill", question:"In F = ma, F stands for ______.", answerText:"force",
+   explanation:"F is the force in newtons."},
+  // 32
+  {type:"fill", question:"In F = ma, m stands for ______.", answerText:"mass",
+   explanation:"m is the mass in kilograms."},
+  // 33
+  {type:"fill", question:"In F = ma, a stands for ______.", answerText:"acceleration",
+   explanation:"a is the acceleration in m/s²."},
+  // 34
+  {type:"mcq", question:"When you are standing and not moving, which statement is true about the forces between you and the ground?", options:["You push the ground but it does not push back","The ground pushes you but you do nothing","You and the ground push on each other with equal and opposite forces"], answer:2,
+   explanation:"Your weight and the normal contact force form a pair of forces on different objects."},
+  // 35
+  {type:"fill", question:"The example of pushing yourself off a wall shows you moving even though you are the one who ______ the wall.", answerText:"push",
+   explanation:"You push the wall, and the wall pushes you back so you move."},
+  // 36
+  {type:"mcq", question:"What is the main reason the speech gives for not needing to know exact details of which object moves?", options:["It is too hard","Exams never ask about it","You can generally think about it using F = ma and mass"], answer:2,
+   explanation:"We can reason about motion using F = ma without detailed analysis."},
+  // 37
+  {type:"fill", question:"The smaller object will generally move the ______.", answerText:"most",
+   explanation:"Because it has the larger acceleration."},
+  // 38
+  {type:"mcq", question:"Which of these is a correct summary of Newton's third law?", options:["Forces occur singly","Forces come in equal and opposite pairs","Only heavy objects experience forces"], answer:1,
+   explanation:"Forces come in equal and opposite pairs when two objects interact."},
+  // 39
+  {type:"fill", question:"Newton's third law tells us that forces always come in ______.", answerText:"pairs",
+   explanation:"Each interaction produces a pair of forces."},
+  // 40
+  {type:"mcq", question:"Why is the idea of 'equal and opposite' important?", options:["It helps to predict energy changes","It explains why objects can move even with equal forces","It only applies in space"], answer:1,
+   explanation:"Even with equal forces, different masses lead to different accelerations, so objects can still move."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
