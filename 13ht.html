@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hydroelectric Dams & Tidal Barrages</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>13. Hydroelectric Dams & Tidal Barrages</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/BFhu7RJYuYg" title="Hydroelectric and Tidal Power Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: how hydroelectric dams and tidal barrages generate electricity, and their advantages and disadvantages.</p>
+
+      <details open>
+        <summary>1) Basic Idea of Both Systems</summary>
+        <ul>
+          <li>Both <strong>hydroelectric dams</strong> and <strong>tidal barrages</strong> work in basically the same way.</li>
+          <li>They use a <strong>dam</strong> to stop water flowing normally, creating a <strong>higher water level</strong> on one side than the other.</li>
+          <li>This difference in height means the stored water has a lot of <strong>gravitational potential energy</strong>.</li>
+          <li>That energy can be converted into <strong>electrical energy</strong> using turbines and generators.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Hydroelectric Dams</summary>
+        <ul>
+          <li>In a normal hydroelectric dam, water from the river <strong>upstream</strong> is trapped by the dam.</li>
+          <li>This stops the water from continuing its journey to the ocean.</li>
+          <li>Over time, a huge volume of water builds up behind the dam, forming a <strong>reservoir</strong> (like an artificial lake).</li>
+          <li>The water level in the reservoir is much <strong>higher</strong> than the water level downstream.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Tidal Barrages</summary>
+        <ul>
+          <li><strong>Tides</strong> are the regular rise and fall of sea levels, mainly caused by the <strong>gravitational pull of the Moon</strong>.</li>
+          <li>We usually get <strong>two high tides</strong> each day, when the sea level rises.</li>
+          <li>Tides affect not only the open ocean but also <strong>estuaries</strong>, where rivers meet the sea.</li>
+          <li>A <strong>tidal barrage</strong> is basically a big dam built across an estuary.</li>
+          <li>As the tide comes in, water is trapped behind the barrage.</li>
+          <li>When the tide goes out again, a large difference in water level remains on the two sides of the barrage.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Converting Gravitational Energy to Electrical Energy</summary>
+        <ul>
+          <li>The <strong>height difference</strong> between the water levels gives the stored water a lot of gravitational potential energy.</li>
+          <li>When water is released from the reservoir (or behind a barrage), it flows downwards through the dam.</li>
+          <li>The <strong>force of the moving water</strong> spins the blades of <strong>turbines</strong> inside the dam.</li>
+          <li>These turbines are connected to <strong>generators</strong>, which produce electrical power as they spin.</li>
+          <li>After passing through the turbines, the water flows out into the river or sea on the other side.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Similarities Between Hydroelectric Dams and Tidal Barrages</summary>
+        <ul>
+          <li>Both use a <strong>dam structure</strong> to create a difference in water level.</li>
+          <li>Both rely on <strong>gravitational potential energy</strong> of stored water.</li>
+          <li>Both use <strong>turbines and generators</strong> to convert energy of moving water into electricity.</li>
+          <li>Both can generate <strong>large amounts of electrical power</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Main Advantages</summary>
+        <ul>
+          <li><span class="pill">No pollution while running</span> They generate electricity with <strong>no direct air pollution</strong> (no greenhouse gases during operation).</li>
+          <li><span class="pill">Reliable</span> Both methods are <strong>reliable sources of electricity</strong>.</li>
+          <li><span class="pill">Quick response (hydroelectric)</span> Hydroelectric dams in particular can provide an <strong>immediate response</strong> to an increase in electricity demand.</li>
+          <li><span class="pill">Low running costs</span> Once built, the <strong>running costs</strong> are fairly low.</li>
+          <li><span class="pill">Flexible scale</span> They can be built on both <strong>large and small scales</strong> (big power stations or small local schemes).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Main Disadvantages – Environmental Impact</summary>
+        <ul>
+          <li>The main disadvantage is the <strong>impact on the environment</strong>.</li>
+          <li><span class="pill">Flooding</span> Hydroelectric dams often flood very large areas.</li>
+          <li>This can <strong>submerge habitats</strong> such as forests, wetlands and farmland.</li>
+          <li>Sometimes entire <strong>villages</strong> are flooded and people have to move.</li>
+          <li><span class="pill">Blocking movement</span> Both dams and barrages can stop <strong>boats</strong> and <strong>fish</strong> from traveling up or down the river.</li>
+          <li>This can damage <strong>fish migration routes</strong> and river ecosystems.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Main Disadvantages – Cost</summary>
+        <ul>
+          <li>The <strong>initial setup cost</strong> of building a dam or tidal barrage is usually very <strong>high</strong>.</li>
+          <li>They require large construction projects, lots of materials and careful design.</li>
+          <li>However, once built, the <strong>running costs</strong> are relatively low compared with fossil fuel power stations.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Summary of Hydroelectric Dams</summary>
+        <ul>
+          <li>Use a <strong>river dam</strong> to create a high reservoir of water.</li>
+          <li>Convert gravitational potential energy of stored water into electricity via turbines and generators.</li>
+          <li><strong>Pros:</strong> no pollution while running, reliable, very quick response to demand, low running costs.</li>
+          <li><strong>Cons:</strong> can flood huge areas, destroy habitats, displace people, and block fish and boats; expensive to build.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Summary of Tidal Barrages</summary>
+        <ul>
+          <li>Use <strong>tides</strong> (rise and fall of sea level) in <strong>estuaries</strong>.</li>
+          <li>Trap water at <strong>high tide</strong> behind a barrage and release it as the tide falls.</li>
+          <li>Like hydroelectric dams, they use turbines and generators.</li>
+          <li><strong>Pros:</strong> renewable, no pollution while running, reliable pattern of tides, low running costs.</li>
+          <li><strong>Cons:</strong> environmental changes in estuaries, effects on marine life and navigation, high construction cost.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Hydroelectric & Tidal Power Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the hydroelectric and tidal power speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"What do both hydroelectric dams and tidal barrages use to generate electricity?", options:["Wind speed","Differences in water levels","Solar radiation"], answer:1,
+   explanation:"Both systems create a difference in water level on two sides of a dam and use the stored water to generate electricity."},
+  // 2
+  {type:"mcq", question:"What type of energy does stored water behind a dam mainly have?", options:["Chemical potential energy","Gravitational potential energy","Nuclear energy"], answer:1,
+   explanation:"The high water behind the dam has gravitational potential energy due to its height."},
+  // 3
+  {type:"fill", question:"In both systems, a ______ stops water flowing normally and creates a higher water level on one side.", answerText:"dam",
+   explanation:"A dam or barrage is used to block and store water."},
+  // 4
+  {type:"mcq", question:"What is the water stored behind a hydroelectric dam commonly called?", options:["Pond","Reservoir","Canal"], answer:1,
+   explanation:"The large, lake-like body of stored water is called a reservoir."},
+  // 5
+  {type:"mcq", question:"Where does the water for a hydroelectric dam usually come from?", options:["Underground pipes","Upstream river flow","Rainwater only"], answer:1,
+   explanation:"The dam traps water coming from the river upstream."},
+  // 6
+  {type:"fill", question:"Over time, trapping river water behind a dam forms a large ______ that looks like a lake.", answerText:"reservoir",
+   explanation:"The built-up water is called a reservoir."},
+  // 7
+  {type:"mcq", question:"Tides are mainly caused by the gravity of which object?", options:["The Sun","The Moon","Mars"], answer:1,
+   explanation:"Tides are mainly due to the gravitational pull of the Moon."},
+  // 8
+  {type:"mcq", question:"How many high tides do we usually get each day?", options:["One","Two","Four"], answer:1,
+   explanation:"The speech states that we get two high tides each day."},
+  // 9
+  {type:"fill", question:"An ______ is the place where a river meets the sea.", answerText:"estuary",
+   explanation:"Tidal barrages are often built across estuaries."},
+  // 10
+  {type:"mcq", question:"Where are tidal barrages usually built?", options:["Across estuaries","Across mountain tops","Across deserts"], answer:0,
+   explanation:"They are built across estuaries, where rivers meet the ocean."},
+  // 11
+  {type:"mcq", question:"During which part of the tide is water trapped behind a tidal barrage?", options:["When the tide comes in (high tide)","When the tide is low","Only during storms"], answer:0,
+   explanation:"As the tide comes in, water is trapped behind the barrage."},
+  // 12
+  {type:"fill", question:"When the tide goes back out, there is a much higher water level on one ______ of the barrage than the other.", answerText:"side",
+   explanation:"The barrage creates a difference in water level on the two sides."},
+  // 13
+  {type:"mcq", question:"What part of the power station does the moving water spin?", options:["Boilers","Turbines","Transformers"], answer:1,
+   explanation:"Moving water turns the blades of turbines."},
+  // 14
+  {type:"mcq", question:"What device is connected to turbines to produce electricity?", options:["Motors","Generators","Pumps"], answer:1,
+   explanation:"Turbines are linked to generators that produce electricity as they spin."},
+  // 15
+  {type:"fill", question:"The force of the moving water spins the blades of ______ inside the dam.", answerText:"turbines",
+   explanation:"Turbines are turned by the force of the flowing water."},
+  // 16
+  {type:"fill", question:"After passing through the turbines, the water flows back into the ______ or sea on the other side of the dam.", answerText:"river",
+   explanation:"The water returns to the river (or estuary/sea) after giving up energy."},
+  // 17
+  {type:"mcq", question:"Which statement about pollution is true for both hydroelectric dams and tidal barrages?", options:["They release large amounts of greenhouse gases","They generate electricity with no direct pollution during operation","They always produce acid rain"], answer:1,
+   explanation:"Both methods can generate electricity with no pollution while they are running."},
+  // 18
+  {type:"mcq", question:"How reliable are hydroelectric and tidal barrage systems?", options:["Very unreliable","Very reliable","Only work once a year"], answer:1,
+   explanation:"They are described as very reliable sources of electricity."},
+  // 19
+  {type:"fill", question:"Hydroelectric dams can provide an ______ response to an increased demand for electricity.", answerText:"immediate",
+   explanation:"They can respond very quickly to changes in demand."},
+  // 20
+  {type:"mcq", question:"What is said about the running costs of hydroelectric dams and tidal barrages?", options:["Very high running costs","Fairly low running costs","Unknown running costs"], answer:1,
+   explanation:"Once built, their running costs are fairly low."},
+  // 21
+  {type:"fill", question:"Both methods can work on large and small ______, meaning they are flexible in size.", answerText:"scales",
+   explanation:"They can be used in both large and small scale projects."},
+  // 22
+  {type:"mcq", question:"What is one major disadvantage of both types of structure?", options:["They always cause air pollution","They often have a big impact on the surrounding environment","They can only be used once"], answer:1,
+   explanation:"A major downside is their large impact on the environment."},
+  // 23
+  {type:"mcq", question:"What environmental problem is especially associated with hydroelectric dams?", options:["Droughts","Flooding huge areas","Noise pollution only"], answer:1,
+   explanation:"Hydroelectric dams can flood huge areas because of the large reservoir."},
+  // 24
+  {type:"fill", question:"Hydroelectric dams can submerge important ______ such as forests or farmland.", answerText:"habitats",
+   explanation:"Flooding can submerge important habitats."},
+  // 25
+  {type:"mcq", question:"What human impact can occur when an area is flooded for a dam?", options:["More farming land is created","Whole villages can be submerged","Cities always become richer"], answer:1,
+   explanation:"Sometimes entire villages are submerged and people must move."},
+  // 26
+  {type:"mcq", question:"How can dams and barrages affect fish?", options:["They always increase fish numbers","They sometimes block fish migration routes","They have no effect on fish"], answer:1,
+   explanation:"They can stop fish traveling up or down the river, affecting migration."},
+  // 27
+  {type:"fill", question:"Both structures sometimes stop boats and ______ from traveling along the river.", answerText:"fish",
+   explanation:"They can block the movement of both boats and fish."},
+  // 28
+  {type:"mcq", question:"What is said about the initial setup cost of both methods?", options:["Very cheap to build","Often expensive","Always free"], answer:1,
+   explanation:"The initial setup is often expensive."},
+  // 29
+  {type:"fill", question:"The initial ______ cost for both hydroelectric dams and tidal barrages is usually high.", answerText:"setup",
+   explanation:"The initial setup or construction cost is high."},
+  // 30
+  {type:"mcq", question:"Which of the following best describes the main similarity between hydroelectric dams and tidal barrages?", options:["Both use wind turbines","Both rely on fossil fuels","Both use height differences in water to generate power"], answer:2,
+   explanation:"Both depend on differences in water level and height."},
+  // 31
+  {type:"fill", question:"Stored water behind a dam has gravitational potential energy because of its ______ above the lower water level.", answerText:"height",
+   explanation:"The energy is due to its height above the downstream water."},
+  // 32
+  {type:"mcq", question:"Which statement about tides is correct?", options:["They are random and never repeat","They are cyclic rises and falls of sea level","They occur only once per year"], answer:1,
+   explanation:"Tides are cyclic rises and falls of sea level."},
+  // 33
+  {type:"mcq", question:"What is one benefit of using tidal energy?", options:["Tides are predictable","Tides can be turned on and off","Tides produce smoke"], answer:0,
+   explanation:"Tides are regular and predictable, which makes tidal energy reliable."},
+  // 34
+  {type:"fill", question:"The main type of energy change in these systems is from gravitational potential energy to ______ energy.", answerText:"electrical",
+   explanation:"The goal is to convert gravitational potential energy into electrical energy."},
+  // 35
+  {type:"mcq", question:"What happens to the water after it has passed through the turbines?", options:["It disappears","It stays inside the dam forever","It flows back into the river or sea"], answer:2,
+   explanation:"After passing the turbines, water flows out into the river or sea."},
+  // 36
+  {type:"mcq", question:"Which of these is NOT mentioned as an advantage of hydroelectric or tidal power?", options:["Immediate response to demand (for hydroelectric)","Low running costs","Producing large amounts of air pollution"], answer:2,
+   explanation:"They are said to produce no pollution while generating electricity."},
+  // 37
+  {type:"fill", question:"Both methods are described as very ______ sources of electricity, meaning they work dependably.", answerText:"reliable",
+   explanation:"They are reliable sources of electrical power."},
+  // 38
+  {type:"mcq", question:"Why might people disagree with building a new hydroelectric dam?", options:["Because it generates electricity","Because it might flood land and habitats","Because it uses turbines"], answer:1,
+   explanation:"A key concern is flooding land, habitats and even villages."},
+  // 39
+  {type:"fill", question:"Blocking the river with a dam can negatively affect fish ______.", answerText:"migrations",
+   explanation:"Fish migrations can be disturbed if fish cannot travel along the river."},
+  // 40
+  {type:"mcq", question:"Which description best summarises both hydroelectric dams and tidal barrages?", options:["Expensive to build but clean and reliable once running","Cheap to build but very polluting","Unreliable and noisy"], answer:0,
+   explanation:"They have high initial costs but low running costs and produce electricity without pollution while operating."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
