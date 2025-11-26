@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electric Circuits: Current, Voltage & Resistance</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Electric Circuits: Current, Voltage &amp; Resistance</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/j7zA7T2fdco" title="Electric Circuits" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) What is an electric circuit?</summary>
+        <ul>
+          <li>An <b>electric circuit</b> is a <b>closed loop</b> that allows charge (electrons) to flow.</li>
+          <li>It must include a <b>power source</b> (e.g. cell or battery) and a <b>conducting path</b> (wires).</li>
+          <li>The simplest circuit is: <b>cell + wires + component</b> (e.g. a lamp) all connected in a loop.</li>
+          <li>We usually represent circuits using <b>circuit diagrams</b> with standard symbols.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Basic circuit symbols</summary>
+        <ul>
+          <li>A <b>cell</b> is a single power source. Its symbol has a long line (positive) and a short line (negative).</li>
+          <li>A <b>battery</b> is two or more cells joined together. Its symbol is just several cell symbols in a row.</li>
+          <li>In exams, cells and batteries behave in the <b>same way</b> – they both provide potential difference.</li>
+        </ul>
+        <div>
+          <span class="pill">Cell</span>
+          <span class="pill">Battery (two or more cells)</span>
+          <span class="pill">Filament lamp (light bulb)</span>
+          <span class="pill">Switch (open / closed)</span>
+        </div>
+        <ul>
+          <li>A <b>filament lamp</b> is a small light bulb; if the circuit is complete and powered, it lights up.</li>
+          <li>A <b>switch</b> can be:
+            <ul>
+              <li><b>Closed</b> – circuit complete, current can flow, lamp is on.</li>
+              <li><b>Open</b> – circuit broken, current stops, lamp is off.</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Electric current (I)</summary>
+        <ul>
+          <li><b>Current</b> is the <b>rate of flow of charge</b> (the flow of electrons) around a circuit.</li>
+          <li>It is denoted by the letter <b>I</b>.</li>
+          <li>It is measured in <b>amperes</b> (amps), symbol <b>A</b>.</li>
+          <li>You can think of current like the <b>flow of water</b> through a pipe.</li>
+        </ul>
+        <div class="chem">
+Current (I)
+• Measures how much charge passes a point each second.
+• Unit: ampere (A).
+• Analogy: water flow in a pipe.
+        </div>
+      </details>
+
+      <details>
+        <summary>4) Potential difference / voltage (V)</summary>
+        <ul>
+          <li><b>Potential difference</b> (p.d.) is the <b>driving force</b> that pushes electrons around the circuit.</li>
+          <li>It is provided by the <b>cell</b> or <b>battery</b>.</li>
+          <li>It is denoted by the letter <b>V</b>.</li>
+          <li>Another common name for potential difference is <b>voltage</b>.</li>
+          <li>It is measured in <b>volts</b>, symbol <b>V</b>.</li>
+          <li>Analogy: it is like the <b>pump</b> that pushes water along a pipe.</li>
+        </ul>
+        <div class="chem">
+Potential difference (V)
+• "Push" provided by the power source.
+• Unit: volt (V).
+• Also called voltage.
+        </div>
+      </details>
+
+      <details>
+        <summary>5) Resistance (R)</summary>
+        <ul>
+          <li><b>Resistance</b> is anything that <b>opposes</b> or <b>resists</b> the flow of electrons.</li>
+          <li>It is denoted by the letter <b>R</b>.</li>
+          <li>It is measured in <b>ohms</b>, symbol <b>Ω</b>.</li>
+          <li>Analogy: resistance is like a <b>partial blockage</b> in a water pipe, making it harder for water to flow.</li>
+        </ul>
+        <div class="chem">
+Resistance (R)
+• Opposes current in a circuit.
+• Unit: ohm (Ω).
+• Analogy: a blockage in a pipe.
+        </div>
+      </details>
+
+      <details>
+        <summary>6) Direction of electron flow vs conventional current</summary>
+        <ul>
+          <li>In a cell symbol, the <b>longer line</b> is the <b>positive terminal</b>.</li>
+          <li>The <b>shorter line</b> is the <b>negative terminal</b>.</li>
+          <li>Electrons are <b>negatively charged</b>, so they actually flow from the <b>negative</b> terminal to the <b>positive</b> terminal.</li>
+          <li>Historically, people did not know about electrons, so they said current flows from <b>positive to negative</b>.</li>
+          <li>This is called <b>conventional current</b>, and we still use this definition in circuits and exams.</li>
+        </ul>
+        <div class="chem">
+Electron flow: negative → positive
+Conventional current: positive → negative
+(For exams, always use conventional current direction.)
+        </div>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2025 Physics Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the circuits speech
+    const questions = [
+      {type:"mcq", q:"What is an electric circuit?", opts:["A single wire with no power source","A closed loop that allows charge to flow","A device that stores energy only"], a:1, exp:"A circuit is a closed loop containing a power source and a conducting path."},
+      {type:"fill", q:"An electric circuit must form a closed ______.", ans:"loop", exp:"The circuit must be a closed loop for current to flow."},
+      {type:"mcq", q:"Which of the following must every simple circuit include?", opts:["A cell or battery and wires","Only a lamp","Only a switch"], a:0, exp:"A power source and a conducting path are essential."},
+      {type:"mcq", q:"What do we use to represent circuits simply on paper?", opts:["Bar charts","Circuit diagrams","Timelines"], a:1, exp:"Circuit diagrams show circuits using standard symbols."},
+      {type:"fill", q:"A single power source in a circuit is called a ______.", ans:"cell", exp:"One power source is a cell."},
+      {type:"mcq", q:"What is a battery?", opts:["A single cell","Two or more cells joined together","A type of lamp"], a:1, exp:"A battery is made from two or more cells."},
+      {type:"mcq", q:"In exam questions, cells and batteries are usually treated as:", opts:["Different in every way","Acting in the same way","Impossible to compare"], a:1, exp:"They both provide potential difference to drive current."},
+      {type:"mcq", q:"What component does a filament lamp represent?", opts:["A heater","A small light bulb","A resistor"], a:1, exp:"A filament lamp is a small light bulb."},
+      {type:"fill", q:"If the switch is open, the circuit is ______ and the lamp turns off.", ans:"broken", exp:"An open switch breaks the circuit so current stops."},
+      {type:"mcq", q:"What happens when a switch is closed?", opts:["The circuit is complete and current can flow","The circuit is broken and current stops","The battery is removed"], a:0, exp:"A closed switch allows current to continue around the circuit."},
+      {type:"mcq", q:"Which letter is used to represent electric current?", opts:["V","R","I"], a:2, exp:"Current is denoted by I."},
+      {type:"mcq", q:"What does electric current measure?", opts:["The flow of electrons (charge) around the circuit","The amount of energy stored in the battery","The speed of light in a wire"], a:0, exp:"Current is the rate of flow of charge."},
+      {type:"fill", q:"Current is measured in ______ (full word).", ans:"amperes", exp:"The unit of current is the ampere."},
+      {type:"fill", q:"The symbol for amperes is the letter ______.", ans:"A", exp:"Amps are written with the symbol A."},
+      {type:"mcq", q:"What is the water analogy for current?", opts:["Height of the water tank","Flow of water through a pipe","Colour of the water"], a:1, exp:"Current is like the flow rate of water in a pipe."},
+      {type:"mcq", q:"Which letter is used to represent potential difference (voltage)?", opts:["I","V","R"], a:1, exp:"Potential difference is denoted by V."},
+      {type:"mcq", q:"What provides potential difference in a circuit?", opts:["Lamp","Switch","Cell or battery"], a:2, exp:"The power source (cell or battery) provides potential difference."},
+      {type:"fill", q:"Another name for potential difference is ______.", ans:"voltage", exp:"Potential difference is also called voltage."},
+      {type:"fill", q:"Potential difference is measured in ______.", ans:"volts", exp:"The unit of potential difference is the volt."},
+      {type:"fill", q:"The symbol for volts is the letter ______.", ans:"V", exp:"Volts are written with the symbol V."},
+      {type:"mcq", q:"In the water analogy, potential difference is like:", opts:["The pump pushing water","The size of the pipe","The colour of the pipe"], a:0, exp:"Potential difference is like the pump that pushes water along."},
+      {type:"mcq", q:"Which letter is used to represent resistance?", opts:["I","V","R"], a:2, exp:"Resistance is represented by R."},
+      {type:"mcq", q:"What is resistance?", opts:["Force that pushes electrons","Anything that opposes the flow of electrons","The total charge in a circuit"], a:1, exp:"Resistance opposes current in a circuit."},
+      {type:"fill", q:"Resistance is measured in ______.", ans:"ohms", exp:"The unit of resistance is the ohm."},
+      {type:"fill", q:"The symbol for ohms is the Greek letter ______.", ans:"omega", exp:"Ohms use the symbol Ω (omega)."},
+      {type:"mcq", q:"In the water analogy, resistance is like:", opts:["A pump speeding up water","A partial blockage in the pipe","The length of the river"], a:1, exp:"Resistance is like a blockage that makes flow harder."},
+      {type:"mcq", q:"In the symbol for a cell, the longer line represents:", opts:["Negative terminal","Positive terminal","Neutral point"], a:1, exp:"The longer line is always the positive terminal."},
+      {type:"mcq", q:"In the symbol for a cell, the shorter line represents:", opts:["Positive terminal","Negative terminal","Ground"], a:1, exp:"The shorter line is the negative terminal."},
+      {type:"mcq", q:"Electrons are:", opts:["Positively charged","Negatively charged","Neutral"], a:1, exp:"Electrons carry negative charge."},
+      {type:"fill", q:"Electrons actually flow from the ______ terminal to the ______ terminal.", ans:"negative, positive", exp:"Electron flow is from negative to positive."},
+      {type:"mcq", q:"Historically, before electrons were understood, people defined current as flowing from:", opts:["Negative to positive","Positive to negative","Both directions at once"], a:1, exp:"They assumed current flowed from positive to negative."},
+      {type:"fill", q:"The old but still used definition of current direction is called ______ current.", ans:"conventional", exp:"We call it conventional current."},
+      {type:"mcq", q:"For exams, which direction should you use for current in a circuit?", opts:["Negative to positive","Positive to negative (conventional current)","Any direction you like"], a:1, exp:"Use conventional current: positive to negative."},
+      {type:"fill", q:"Conventional current flows from the ______ terminal to the ______ terminal.", ans:"positive, negative", exp:"By convention, current goes from positive to negative."},
+      {type:"mcq", q:"If the circuit is broken anywhere, what happens to the current?", opts:["It increases","It stops","It reverses"], a:1, exp:"An open circuit stops current from flowing."},
+      {type:"mcq", q:"Which component can be used to intentionally open or close a circuit?", opts:["Lamp","Cell","Switch"], a:2, exp:"A switch can make or break the circuit."},
+      {type:"fill", q:"A lamp only lights when there is a ______ path around the circuit.", ans:"complete", exp:"The circuit must be complete (closed) for the lamp to work."},
+      {type:"mcq", q:"Which of these triples is correctly matched?", opts:["Current – I – amps","Voltage – R – volts","Resistance – V – ohms"], a:0, exp:"Current is I and measured in amperes (amps)."},
+      {type:"mcq", q:"Which quantity is described as the 'push' that drives electrons?", opts:["Current","Potential difference","Resistance"], a:1, exp:"Potential difference provides the 'push' for electrons."},
+      {type:"mcq", q:"Which quantity describes how much the circuit resists current?", opts:["Current","Potential difference","Resistance"], a:2, exp:"Resistance measures how strongly the circuit opposes current."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
