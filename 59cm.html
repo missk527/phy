@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Momentum & Conservation of Momentum</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#fee2e2;color:#b91c1c;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>59. Momentum & Conservation of Momentum</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/MrMHGVLlbgM" title="Momentum and Conservation of Momentum Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: definition of momentum, vector nature, conservation of momentum, collision examples, and recoil problems like the gun–bullet example.</p>
+
+      <details open>
+        <summary>1) What Is Momentum?</summary>
+        <ul>
+          <li><strong>Momentum</strong> is a property that all <strong>moving objects</strong> have.</li>
+          <li>It depends on both the <strong>mass</strong> of the object and its <strong>velocity</strong>.</li>
+          <li>The basic equation is <strong>momentum = mass × velocity</strong>.</li>
+          <li>In symbols: <strong>p = m × v</strong>, where p is momentum, m is mass, and v is velocity.</li>
+          <li>The SI unit for momentum is <strong>kg m/s</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Example: Dinosaur and Car</summary>
+        <ul>
+          <li>Example 1: A <strong>4500 kg dinosaur</strong) moving at <strong>12 m/s</strong>.</li>
+          <li>Its momentum is p = 4500 × 12 = <strong>54,000 kg m/s</strong>.</li>
+          <li>Example 2: A <strong>1200 kg car</strong> moving at <strong>25 m/s</strong>.</li>
+          <li>Its momentum is p = 1200 × 25 = <strong>30,000 kg m/s</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Momentum Is a Vector Quantity</summary>
+        <ul>
+          <li>Momentum is a <strong>vector</strong>, which means it has both <strong>magnitude and direction</strong>.</li>
+          <li>We usually choose one direction (for example, to the right) as <strong>positive</strong>.</li>
+          <li>Objects moving in the opposite direction then have <strong>negative momentum</strong>.</li>
+          <li>In the example, if we take right as positive, the dinosaur moving right has <strong>positive</strong> momentum.</li>
+          <li>The car moving left in the same diagram would have <strong>negative</strong> momentum.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Conservation of Momentum – The Principle</summary>
+        <ul>
+          <li>The <strong>principle of conservation of momentum</strong> says that in a <strong>closed system</strong>, the total momentum before an event is <strong>equal</strong> to the total momentum after the event.</li>
+          <li>This applies to events like <strong>collisions</strong> and <strong>explosions</strong>.</li>
+          <li>Mathematically: <strong>total momentum before = total momentum after</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Head-On Collision Example – Dinosaur and Car</summary>
+        <ul>
+          <li>Imagine the dinosaur and the car moving <strong>towards each other</strong> and then colliding.</li>
+          <li>We treat them as two particles that stick together and move with a <strong>shared velocity</strong> after the collision.</li>
+          <li>Step 1: Find total momentum before collision by <strong>adding their momenta with signs</strong>.</li>
+          <li>Using right as positive: dinosaur has +54,000 kg m/s; car has −30,000 kg m/s.</li>
+          <li>Total momentum before = +54,000 + (−30,000) = <strong>+24,000 kg m/s</strong>.</li>
+          <li>By conservation of momentum, total momentum after the collision is also <strong>+24,000 kg m/s</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Finding the Shared Velocity After Collision</summary>
+        <ul>
+          <li>After they collide and stick together, we treat dinosaur + car as <strong>one combined object</strong>.</li>
+          <li>Combined mass = 4500 kg + 1200 kg = <strong>5700 kg</strong>.</li>
+          <li>We rearrange p = m v to <strong>v = p / m</strong>.</li>
+          <li>So v = 24,000 ÷ 5700 ≈ <strong>4.2–4.4 m/s to the right</strong> (depending on rounding).</li>
+          <li>This means they both move off together <strong>to the right</strong> after the collision.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Situations with Zero Initial Momentum – Recoil</summary>
+        <ul>
+          <li>If the total momentum before an event is <strong>zero</strong>, the total momentum after must also be <strong>zero</strong>.</li>
+          <li>Stationary objects have <strong>zero momentum</strong> because their velocity is zero.</li>
+          <li>Example: A gun before it is fired has <strong>zero momentum</strong>.</li>
+          <li>When it fires, the bullet gains forward momentum, so the gun must gain <strong>backward momentum</strong> to keep the total at zero.</li>
+          <li>This backwards motion of the gun is called <strong>recoil</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Gun and Bullet Example – Working Out Recoil</summary>
+        <ul>
+          <li>Suppose a gun of mass <strong>2.0 kg</strong> fires a <strong>5 g bullet</strong> (0.005 kg) forwards.</li>
+          <li>The bullet&apos;s velocity is <strong>120 m/s</strong> forwards.</li>
+          <li>Bullet momentum = 0.005 × 120 = <strong>0.6 kg m/s</strong> forwards.</li>
+          <li>Let the gun&apos;s velocity be v (backwards). Its momentum is then <strong>2v</strong>.</li>
+          <li>Total momentum after must be zero: 2v + 0.6 = 0.</li>
+          <li>Rearrange: 2v = −0.6, so v = <strong>−0.3 m/s</strong>.</li>
+          <li>The negative sign shows the gun recoils in the <strong>opposite direction</strong> to the bullet.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Symbol for Momentum</summary>
+        <ul>
+          <li>The letter symbol used for momentum is <strong>p</strong> (often shown as the Greek letter rho, but it looks like p).</li>
+          <li>The momentum equation can be written as <strong>p = m v</strong>.</li>
+          <li>Always include a <strong>direction or sign</strong> when working with momentum in 1D problems.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Problem-Solving Tips</summary>
+        <ul>
+          <li>Choose one direction as <strong>positive</strong> at the start and stick to it.</li>
+          <li>Assign <strong>positive and negative velocities</strong> according to that chosen direction.</li>
+          <li>Use <strong>p = m v</strong> to find individual momenta, then add them to get the <strong>total</strong>.</li>
+          <li>Apply <strong>conservation of momentum</strong> to link momentum before and after the event.</li>
+          <li>Rearrange the equation to solve for the <strong>unknown velocity</strong>.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the momentum and conservation of momentum speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Momentum Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the momentum speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"Momentum is a property that all ______ objects have.", options:["stationary","moving","hot"], answer:1,
+   explanation:"Momentum is a property of moving objects."},
+  // 2
+  {type:"mcq", question:"Which formula gives momentum?", options:["p = m + v","p = m × v","p = m / v"], answer:1,
+   explanation:"Momentum is mass multiplied by velocity: p = m v."},
+  // 3
+  {type:"fill", question:"The symbol used for momentum in equations is the letter ______.", answerText:"p",
+   explanation:"Momentum is usually written as p."},
+  // 4
+  {type:"mcq", question:"What is the SI unit of momentum?", options:["kg m/s","N","m/s²"], answer:0,
+   explanation:"Momentum is measured in kilogram metres per second (kg m/s)."},
+  // 5
+  {type:"mcq", question:"If mass stays the same, what happens to momentum when velocity doubles?", options:["It halves","It doubles","It stays the same"], answer:1,
+   explanation:"Momentum is proportional to velocity, so it doubles."},
+  // 6
+  {type:"mcq", question:"Momentum is an example of a:", options:["Scalar quantity","Vector quantity","Dimensionless number"], answer:1,
+   explanation:"Momentum is a vector because it has a direction as well as a magnitude."},
+  // 7
+  {type:"fill", question:"Because momentum is a vector, it has both magnitude and ______.", answerText:"direction",
+   explanation:"Vectors have magnitude and direction."},
+  // 8
+  {type:"mcq", question:"If we choose 'to the right' as positive, an object moving left has:", options:["Positive velocity","Zero velocity","Negative velocity"], answer:2,
+   explanation:"Motion to the left would be represented with a negative velocity and therefore negative momentum."},
+  // 9
+  {type:"fill", question:"Momentum is calculated by multiplying mass by ______.", answerText:"velocity",
+   explanation:"p = m v, mass times velocity."},
+  // 10
+  {type:"mcq", question:"A 1200 kg car moving at 25 m/s has momentum:", options:["30,000 kg m/s","48,000 kg m/s","300 kg m/s"], answer:0,
+   explanation:"p = 1200 × 25 = 30,000 kg m/s."},
+  // 11
+  {type:"mcq", question:"The principle of conservation of momentum states that in a closed system:", options:["Momentum is always zero","Total momentum before equals total momentum after","Momentum always increases"], answer:1,
+   explanation:"In a closed system, total momentum is conserved."},
+  // 12
+  {type:"fill", question:"In a closed system, total momentum before an event is equal to total momentum ______ the event.", answerText:"after",
+   explanation:"Total momentum before = total momentum after."},
+  // 13
+  {type:"mcq", question:"In a collision, the total momentum of all objects:", options:["Is destroyed","Is created from nothing","Stays the same"], answer:2,
+   explanation:"Total momentum is conserved; it stays the same."},
+  // 14
+  {type:"mcq", question:"When adding momenta in one dimension, we must:", options:["Ignore directions","Use signs for directions","Only add masses"], answer:1,
+   explanation:"We use positive and negative signs to account for directions."},
+  // 15
+  {type:"fill", question:"If one object has +54,000 kg m/s and the other has −30,000 kg m/s, the total is ______ kg m/s.", answerText:"24000",
+   explanation:"+54,000 + (−30,000) = +24,000 kg m/s."},
+  // 16
+  {type:"mcq", question:"After the dinosaur and car collide and stick together, we can treat them as:", options:["Two separate systems","One combined object","A stationary wall"], answer:1,
+   explanation:"After they stick, they move together and can be treated as one object."},
+  // 17
+  {type:"fill", question:"The combined mass of a 4500 kg dinosaur and a 1200 kg car is ______ kg.", answerText:"5700",
+   explanation:"4500 + 1200 = 5700 kg."},
+  // 18
+  {type:"mcq", question:"To find the shared velocity after the collision, we use:", options:["v = m / p","v = p / m","v = p × m"], answer:1,
+   explanation:"Rearranging p = m v gives v = p / m."},
+  // 19
+  {type:"fill", question:"If total momentum after collision is +24,000 kg m/s and mass is 5700 kg, the velocity is about ______ m/s to the right.", answerText:"4.2",
+   explanation:"24,000 ÷ 5700 ≈ 4.2 m/s (often rounded to ~4.4 m/s depending on the figures used)."},
+  // 20
+  {type:"mcq", question:"If an object is stationary, its momentum is:", options:["Zero","One","Negative"], answer:0,
+   explanation:"Stationary objects have zero momentum because their velocity is zero."},
+  // 21
+  {type:"fill", question:"Total momentum before an event is zero. Therefore total momentum after the event must also be ______.", answerText:"zero",
+   explanation:"If initial total momentum is zero, it must stay zero."},
+  // 22
+  {type:"mcq", question:"Which example illustrates zero total momentum before an event?", options:["Two cars moving towards each other","A gun before it is fired","A ball rolling downhill"], answer:1,
+   explanation:"Before firing, the gun (and bullet) are stationary, so total momentum is zero."},
+  // 23
+  {type:"mcq", question:"When a gun fires a bullet forwards, what happens to the gun?", options:["It stays perfectly still","It recoils backwards","It moves forwards with the bullet"], answer:1,
+   explanation:"The gun recoils backwards to conserve momentum."},
+  // 24
+  {type:"fill", question:"The backwards motion of a gun when it fires is called ______.", answerText:"recoil",
+   explanation:"This backward motion is recoil."},
+  // 25
+  {type:"mcq", question:"A 0.005 kg bullet leaving a gun at 120 m/s has momentum:", options:["0.6 kg m/s","6 kg m/s","60 kg m/s"], answer:0,
+   explanation:"p = 0.005 × 120 = 0.6 kg m/s."},
+  // 26
+  {type:"fill", question:"If the bullet has momentum +0.6 kg m/s, the gun must have momentum ______ kg m/s after firing (to make the total zero).", answerText:"-0.6",
+   explanation:"Total momentum is zero, so the gun must have −0.6 kg m/s."},
+  // 27
+  {type:"mcq", question:"If the gun has mass 2 kg and momentum −0.6 kg m/s, its recoil velocity is:", options:["−0.3 m/s","−1.2 m/s","−0.6 m/s"], answer:0,
+   explanation:"v = p / m = −0.6 / 2 = −0.3 m/s."},
+  // 28
+  {type:"fill", question:"In the gun example, the negative sign of the gun's velocity shows it moves in the ______ direction to the bullet.", answerText:"opposite",
+   explanation:"The gun moves in the opposite direction to the bullet."},
+  // 29
+  {type:"mcq", question:"Which statement about total momentum in the gun–bullet system is correct?", options:["It changes from zero to positive","It changes from zero to negative","It remains zero"], answer:2,
+   explanation:"The total momentum of gun plus bullet remains zero."},
+  // 30
+  {type:"mcq", question:"Which pair of quantities must you know to calculate the momentum of a single object?", options:["Mass and force","Mass and velocity","Velocity and time"], answer:1,
+   explanation:"You need mass and velocity to calculate momentum."},
+  // 31
+  {type:"fill", question:"To solve momentum problems, it helps to choose one direction as ______ and keep it consistent.", answerText:"positive",
+   explanation:"Choosing one direction as positive helps with signs."},
+  // 32
+  {type:"mcq", question:"In a one-dimensional collision, if we reverse our choice of positive direction:", options:["The physics changes","The total momentum is no longer conserved","All momenta change sign but the physics is the same"], answer:2,
+   explanation:"Changing the sign convention changes signs but not the underlying physics."},
+  // 33
+  {type:"fill", question:"When adding momenta, we must remember to include positive and ______ signs.", answerText:"negative",
+   explanation:"Signs show the directions of the momenta."},
+  // 34
+  {type:"mcq", question:"If two objects stick together after colliding, the situation is described as a:", options:["Perfectly elastic collision","Completely inelastic collision","Static situation"], answer:1,
+   explanation:"Sticking together is a completely inelastic collision, though momentum is still conserved."},
+  // 35
+  {type:"fill", question:"Conservation of momentum applies to collisions and ______ in a closed system.", answerText:"explosions",
+   explanation:"It applies to both collisions and explosions."},
+  // 36
+  {type:"mcq", question:"Why do we say the dinosaur and car example is one-dimensional?", options:["They move only in one straight line","They move in circles","They are stationary"], answer:0,
+   explanation:"Their motion is along a single line, so it is a 1D problem."},
+  // 37
+  {type:"fill", question:"The equation linking momentum, mass and velocity is p = m ______.", answerText:"v",
+   explanation:"Momentum equals mass times velocity, p = m v."},
+  // 38
+  {type:"mcq", question:"Which quantity can be negative in these problems?", options:["Mass","Speed","Velocity and momentum"], answer:2,
+   explanation:"Velocity and momentum can be negative; mass and speed are not."},
+  // 39
+  {type:"fill", question:"When working with momentum, always state both the value and the ______ (for example, 'to the right').", answerText:"direction",
+   explanation:"Momentum is a vector, so direction is important."},
+  // 40
+  {type:"mcq", question:"Which best summarises the conservation of momentum principle?", options:["Momentum is always zero","Total momentum of a closed system remains constant","Momentum is always positive"], answer:1,
+   explanation:"In a closed system, total momentum remains constant before and after any event."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
