@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>V = IR & I–V Graphs</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#fee2e2;color:#b91c1c;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>15. V = IR & I–V Graphs</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/3zQcKGdYj-c" title="V = IR and I–V Graphs Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: the equation V = IR, how to use it, and how to interpret current–potential difference (I–V) graphs for resistors, filament lamps and diodes.</p>
+
+      <details open>
+        <summary>1) The Equation V = IR (Ohm’s Law Form)</summary>
+        <ul>
+          <li>The equation <strong>V = IR</strong> links three key electrical quantities.</li>
+          <li><strong>V</strong> = potential difference (voltage), measured in <strong>volts (V)</strong>.</li>
+          <li><strong>I</strong> = current, measured in <strong>amperes (A)</strong>.</li>
+          <li><strong>R</strong> = resistance, measured in <strong>ohms (Ω)</strong>.</li>
+          <li>In words, it means: <strong>voltage = current × resistance</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Using V = IR – Basic Calculations</summary>
+        <ul>
+          <li>If we know any two of V, I and R, we can calculate the third.</li>
+          <li>Example 1: A circuit has a current of <strong>4 A</strong> and a resistance of <strong>2 Ω</strong>.</li>
+          <li>Using V = IR, the potential difference is V = 4 × 2 = <strong>8 V</strong>.</li>
+          <li>Example 2: A <strong>24 V</strong> battery produces a current of <strong>8 A</strong>.</li>
+          <li>To find resistance, rearrange to <strong>R = V / I</strong> and calculate R = 24 / 8 = <strong>3 Ω</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Rearranging the Equation</summary>
+        <ul>
+          <li>From <strong>V = IR</strong> we can rearrange to find different quantities:</li>
+          <li>To find current: <strong>I = V / R</strong>.</li>
+          <li>To find resistance: <strong>R = V / I</strong>.</li>
+          <li>These forms are essential when solving circuit problems.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Proportional Relationship Between V and I</summary>
+        <ul>
+          <li>As long as the <strong>resistance stays constant</strong>, voltage and current are <strong>directly proportional</strong>.</li>
+          <li>If potential difference increases, the current increases by the <strong>same factor</strong>, and vice versa.</li>
+          <li>This relationship can be shown on a graph of <strong>current (I)</strong> against <strong>potential difference (V)</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) I–V Graphs for Ohmic Conductors (Wires and Resistors)</summary>
+        <ul>
+          <li>An <strong>ohmic conductor</strong> is a component whose resistance stays constant as long as conditions (like temperature) stay the same.</li>
+          <li>Examples include simple <strong>metal wires</strong> and <strong>fixed resistors</strong> at constant temperature.</li>
+          <li>Their I–V graphs are <strong>straight lines through the origin</strong>.</li>
+          <li>The straight line shows that <strong>current is proportional to potential difference</strong>.</li>
+          <li>The <strong>negative part</strong> of the line (below the axis) represents the same behaviour when the battery is connected the other way round, so V and I are negative.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Gradient and Resistance</summary>
+        <ul>
+          <li>On an I–V graph, the <strong>steepness (gradient)</strong> tells us about the resistance.</li>
+          <li>A <strong>steeper line</strong> means a <strong>larger current</strong> for the same voltage and therefore a <strong>smaller resistance</strong>.</li>
+          <li>A <strong>less steep line</strong> means <strong>smaller current</strong> for the same voltage and therefore a <strong>larger resistance</strong>.</li>
+          <li>For example, a <strong>10 Ω resistor</strong> would have a line that is <strong>less steep</strong> than a smaller resistor.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Effect of Temperature on Resistance</summary>
+        <ul>
+          <li>When we draw straight I–V graphs for wires and resistors, we assume the <strong>temperature is constant</strong>.</li>
+          <li>If the temperature increases, the <strong>resistance also increases</strong>.</li>
+          <li>In real circuits, high currents can cause wires to <strong>heat up over time</strong>.</li>
+          <li>Because of this heating, the I–V line may not stay perfectly straight in practice.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Filament Lamp I–V Graph</summary>
+        <ul>
+          <li>A filament lamp is a light bulb containing a very thin <strong>metal filament</strong>.</li>
+          <li>As current flows through the filament, it heats up until it is <strong>hot enough to emit light</strong>.</li>
+          <li>The high temperature causes the <strong>resistance to increase</strong> a lot.</li>
+          <li>On an I–V graph, the curve is <strong>steep at low voltages</strong> but becomes <strong>less steep</strong> as voltage and current increase.</li>
+          <li>This shows that <strong>less current flows per volt</strong> at higher voltages because the filament is hotter and more resistive.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Diode I–V Graph</summary>
+        <ul>
+          <li>A <strong>diode</strong> is a component that allows current to flow in <strong>only one direction</strong>.</li>
+          <li>When the potential difference is in the <strong>forward direction</strong> (positive), the diode allows current to flow once a certain voltage is reached.</li>
+          <li>In the <strong>reverse direction</strong>, the diode has a very <strong>high resistance</strong>.</li>
+          <li>Because of this, almost <strong>no current flows</strong> when the potential difference is negative.</li>
+          <li>On the I–V graph, we see current only on the <strong>positive side</strong> of the voltage axis.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Summary of Key Ideas</summary>
+        <ul>
+          <li><strong>V = IR</strong> links voltage, current and resistance and allows us to calculate any one if we know the other two.</li>
+          <li>For a constant resistance, the I–V graph is a <strong>straight line</strong> showing direct proportionality.</li>
+          <li>Higher resistance means a <strong>less steep</strong> I–V line.</li>
+          <li><strong>Filament lamps</strong> heat up, so their resistance increases and their I–V graph is a <strong>curved line</strong> that flattens.</li>
+          <li><strong>Diodes</strong> conduct mainly in <strong>one direction</strong>, giving an I–V graph with current on the positive side only.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the V = IR speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 V = IR Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the V = IR speech/notes)
+const questions = [
+  // 1
+  {type:"mcq", question:"In the equation V = IR, what does V stand for?", options:["Volume","Velocity","Potential difference (voltage)"], answer:2,
+   explanation:"V represents the potential difference or voltage across a component."},
+  // 2
+  {type:"mcq", question:"In the equation V = IR, what does I stand for?", options:["Current","Intensity","Ion charge"], answer:0,
+   explanation:"I represents the electric current, measured in amperes (A)."},
+  // 3
+  {type:"mcq", question:"In the equation V = IR, what does R stand for?", options:["Rate","Resistance","Radius"], answer:1,
+   explanation:"R represents resistance, measured in ohms (Ω)."},
+  // 4
+  {type:"fill", question:"The equation linking voltage, current and resistance is written as V = ______.", answerText:"ir",
+   explanation:"The key relationship is V = IR."},
+  // 5
+  {type:"fill", question:"If a circuit has a current of 4 A and a resistance of 2 Ω, the voltage is ______ V.", answerText:"8",
+   explanation:"Using V = IR gives V = 4 × 2 = 8 V."},
+  // 6
+  {type:"mcq", question:"A 24 V battery produces a current of 8 A. What is the resistance?", options:["2 Ω","3 Ω","4 Ω"], answer:1,
+   explanation:"Using R = V / I gives R = 24 / 8 = 3 Ω."},
+  // 7
+  {type:"mcq", question:"Which rearranged form of V = IR is correct for calculating resistance?", options:["R = I / V","R = V / I","R = V × I"], answer:1,
+   explanation:"To find resistance, you use R = V / I."},
+  // 8
+  {type:"mcq", question:"What must stay constant for current to be directly proportional to potential difference?", options:["Temperature","Resistance","Power"], answer:1,
+   explanation:"If resistance stays constant, then current is directly proportional to voltage."},
+  // 9
+  {type:"fill", question:"As long as resistance is constant, increasing the voltage causes the current to increase ______.", answerText:"proportionally",
+   explanation:"Voltage and current are directly proportional in an ohmic conductor."},
+  // 10
+  {type:"mcq", question:"On a graph of current against potential difference for an ohmic conductor, the line is:", options:["Curved","A straight line through the origin","Horizontal"], answer:1,
+   explanation:"For constant resistance, the I–V graph is a straight line through the origin."},
+  // 11
+  {type:"mcq", question:"What does the negative part of a straight I–V graph represent?", options:["The component is broken","The battery is connected the other way round","Zero resistance"], answer:1,
+   explanation:"The negative part shows the same proportional relationship when the battery is reversed, giving negative V and I."},
+  // 12
+  {type:"fill", question:"Components such as simple metal wires and fixed resistors with constant resistance are called ______ conductors.", answerText:"ohmic",
+   explanation:"They are called ohmic conductors because they obey V = IR with constant resistance."},
+  // 13
+  {type:"mcq", question:"What happens to the I–V line when you use a bigger resistor (higher resistance)?", options:["It disappears","It becomes steeper","It becomes less steep"], answer:2,
+   explanation:"A bigger resistance gives a less steep I–V line (smaller current for the same voltage)."},
+  // 14
+  {type:"mcq", question:"A steeper I–V line indicates:", options:["Larger resistance","Smaller resistance","No resistance"], answer:1,
+   explanation:"A steeper line means more current for the same voltage, so the resistance is smaller."},
+  // 15
+  {type:"fill", question:"To produce a given current, a circuit with lower resistance needs a ______ potential difference.", answerText:"smaller",
+   explanation:"With less resistance, only a small voltage is needed to drive a large current."},
+  // 16
+  {type:"mcq", question:"When drawing ideal straight I–V graphs for resistors, what condition is assumed?", options:["Constant temperature","Changing temperature","Zero voltage"], answer:0,
+   explanation:"We assume the temperature is constant so the resistance does not change."},
+  // 17
+  {type:"mcq", question:"In reality, high currents often cause wires to:", options:["Cool down","Heat up","Stay at exactly the same temperature"], answer:1,
+   explanation:"High currents can cause wires to heat up over time."},
+  // 18
+  {type:"fill", question:"If the temperature of a wire increases, its resistance usually ______.", answerText:"increases",
+   explanation:"Higher temperature typically causes the resistance of a metal wire to increase."},
+  // 19
+  {type:"mcq", question:"What is inside a filament lamp?", options:["A thick wooden rod","A very thin metal filament","A plastic coil"], answer:1,
+   explanation:"A filament lamp contains a very thin metal filament that glows when hot."},
+  // 20
+  {type:"mcq", question:"Why does a filament lamp give out light?", options:["The filament cools down","The filament melts","The filament gets so hot that it emits light"], answer:2,
+   explanation:"As current flows, the filament heats up until it glows and gives out light."},
+  // 21
+  {type:"fill", question:"As the filament in a lamp heats up, its resistance becomes much ______.", answerText:"higher",
+   explanation:"Heating the filament greatly increases its resistance."},
+  // 22
+  {type:"mcq", question:"On the I–V graph for a filament lamp, as voltage increases, the curve:", options:["Gets steeper","Stays perfectly straight","Gets less steep"], answer:2,
+   explanation:"The curve gets less steep, meaning less extra current for each extra volt."},
+  // 23
+  {type:"fill", question:"The flattening of the filament lamp I–V curve shows that less current flows per unit of potential difference at ______ voltages.", answerText:"higher",
+   explanation:"At higher voltages the filament is hotter and more resistive, so less current flows per volt."},
+  // 24
+  {type:"mcq", question:"What is the main reason the filament lamp I–V graph is not a straight line?", options:["The filament is made of plastic","The temperature and resistance change as current increases","The battery keeps turning off"], answer:1,
+   explanation:"The filament heats up, changing its resistance and producing a curved I–V graph."},
+  // 25
+  {type:"mcq", question:"What does a diode do?", options:["Allows current in both directions equally","Only allows current to flow in one direction","Stops all current"], answer:1,
+   explanation:"A diode only allows current to flow easily in one direction."},
+  // 26
+  {type:"fill", question:"A diode has a very high ______ in the reverse direction.", answerText:"resistance",
+   explanation:"In reverse bias the diode has very high resistance, so almost no current flows."},
+  // 27
+  {type:"mcq", question:"On the I–V graph of a diode, when the potential difference is negative, the current is:", options:["Large and positive","Zero or almost zero","Exactly the same as in the forward direction"], answer:1,
+   explanation:"In the reverse direction the current is effectively zero because of the high resistance."},
+  // 28
+  {type:"mcq", question:"The part of the diode I–V graph where current increases significantly is:", options:["In the forward (positive) direction","In the reverse (negative) direction","At zero voltage only"], answer:0,
+   explanation:"In forward bias the diode conducts and current increases with voltage."},
+  // 29
+  {type:"fill", question:"A component whose I–V graph is a straight line through the origin has a ______ resistance (at constant temperature).", answerText:"constant",
+   explanation:"A straight I–V line indicates constant resistance."},
+  // 30
+  {type:"mcq", question:"Which component has an I–V graph that curves and becomes less steep at higher voltages?", options:["Fixed resistor","Filament lamp","Ideal diode"], answer:1,
+   explanation:"The filament lamp has a curved I–V graph due to increasing resistance."},
+  // 31
+  {type:"mcq", question:"Which component has almost no current in the negative voltage region of its I–V graph?", options:["Metal wire","Filament lamp","Diode"], answer:2,
+   explanation:"A diode conducts in one direction only, so the negative part has almost no current."},
+  // 32
+  {type:"fill", question:"On an I–V graph for an ohmic conductor, current is directly ______ to potential difference.", answerText:"proportional",
+   explanation:"For an ohmic conductor, I is directly proportional to V."},
+  // 33
+  {type:"mcq", question:"If the resistance in a circuit doubles while the voltage stays the same, what happens to the current?", options:["It doubles","It halves","It stays the same"], answer:1,
+   explanation:"From I = V / R, if R doubles, the current halves."},
+  // 34
+  {type:"fill", question:"To calculate current from V and R, we use the formula I = ______ / R.", answerText:"v",
+   explanation:"The rearranged form is I = V / R."},
+  // 35
+  {type:"mcq", question:"Which of these is measured in ohms (Ω)?", options:["Voltage","Current","Resistance"], answer:2,
+   explanation:"Resistance is measured in ohms (Ω)."},
+  // 36
+  {type:"mcq", question:"Which of these is measured in amperes (A)?", options:["Current","Resistance","Potential difference"], answer:0,
+   explanation:"Current is measured in amperes."},
+  // 37
+  {type:"mcq", question:"Which of these is measured in volts (V)?", options:["Power","Potential difference","Charge"], answer:1,
+   explanation:"Potential difference is measured in volts."},
+  // 38
+  {type:"fill", question:"The letter used for electric current in the equation V = IR is ______.", answerText:"i",
+   explanation:"Current is represented by I."},
+  // 39
+  {type:"fill", question:"The equation that relates voltage, current and resistance is sometimes called ______ law (in its simplest form).", answerText:"ohm",
+   explanation:"It is associated with Ohm’s law for ohmic conductors."},
+  // 40
+  {type:"mcq", question:"Which statement best summarises the behaviour of a diode?", options:["It obeys V = IR at all voltages","It only conducts well in one direction because of high reverse resistance","It has zero resistance in both directions"], answer:1,
+   explanation:"A diode only conducts well in one direction; in reverse it has very high resistance and almost no current flows."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
