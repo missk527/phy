@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forces, Momentum &amp; Safety Features</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Forces, Momentum &amp; Safety Features</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/k-M0vz70p0A" title="Forces and Changing Momentum" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Momentum recap</summary>
+        <ul>
+          <li>Momentum is defined as <b>mass × velocity</b>.</li>
+        </ul>
+        <div class="chem">
+Momentum
+p = m × v
+
+p = momentum (kg m/s)
+m = mass (kg)
+v = velocity (m/s)
+        </div>
+        <ul>
+          <li>Example: a 2 kg object travelling at 5 m/s has momentum:
+            <ul>
+              <li>p = 2 × 5 = 10 kg m/s</li>
+            </ul>
+          </li>
+          <li>If we apply a force in the same direction as motion, the object <b>accelerates</b> and its <b>velocity increases</b>.</li>
+          <li>Higher velocity means the object’s <b>momentum increases</b>.</li>
+          <li>Example: if the same 2 kg object speeds up to 8 m/s:
+            <ul>
+              <li>p = 2 × 8 = 16 kg m/s</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Force and change in momentum</summary>
+        <ul>
+          <li>A force can change an object’s momentum by speeding it up or slowing it down.</li>
+          <li>The size of the force depends on:
+            <div>
+              <span class="pill">How big the change in momentum is (Δp)</span>
+              <span class="pill">How long the change takes (Δt)</span>
+            </div>
+          </li>
+        </ul>
+        <div class="chem">
+Force and change in momentum
+F = Δp / Δt
+
+F = force (N)
+Δp = change in momentum (kg m/s)
+Δt = time taken for the change (s)
+        </div>
+        <ul>
+          <li>Example: the 2 kg object changes momentum from 10 to 16 kg m/s in 0.5 s:
+            <ul>
+              <li>Initial momentum p<sub>initial</sub> = 10 kg m/s</li>
+              <li>Final momentum p<sub>final</sub> = 16 kg m/s</li>
+              <li>Δp = 16 − 10 = 6 kg m/s</li>
+              <li>Δt = 0.5 s</li>
+              <li>F = Δp / Δt = 6 / 0.5 = 12 N</li>
+            </ul>
+          </li>
+          <li>So the hand applied a force of <b>12 N</b>.</li>
+        </ul>
+        <div class="chem">
+Alternative form
+F = (mv − mu) / t
+
+m = mass
+u = initial velocity
+v = final velocity
+mv = final momentum
+mu = initial momentum
+        </div>
+      </details>
+
+      <details>
+        <summary>3) Worked example: accelerating a ball</summary>
+        <ul>
+          <li>Question: Calculate the force needed to accelerate a 600 g ball from rest to 14 m/s in 0.1 s.</li>
+          <li>Step 1 – Write known values:
+            <ul>
+              <li>Initial velocity u = 0 m/s (it starts at rest)</li>
+              <li>Final velocity v = 14 m/s</li>
+              <li>Mass m = 600 g = 0.6 kg</li>
+              <li>Time t = 0.1 s</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="chem">
+Using F = (mv − mu) / t
+• m = 0.6 kg
+• v = 14 m/s
+• u = 0 m/s
+• t = 0.1 s
+
+Final momentum mv = 0.6 × 14 = 8.4 kg m/s
+Initial momentum mu = 0.6 × 0 = 0 kg m/s
+
+Δp = 8.4 − 0 = 8.4 kg m/s
+
+F = Δp / t = 8.4 / 0.1 = 84 N
+        </div>
+        <ul>
+          <li>Answer: the required force is <b>84 N</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Car crashes and large forces</summary>
+        <ul>
+          <li>This idea is especially important in <b>car crashes</b>.</li>
+          <li>If a car travelling at speed hits a wall and stops almost instantly:
+            <ul>
+              <li>its momentum decreases to <b>zero</b> in a very short time,</li>
+              <li>so Δt is very small.</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="chem">
+Crash example
+• Large change in momentum (from high value to zero).
+• Very short time for the change.
+→ F = Δp / Δt becomes very large.
+        </div>
+        <ul>
+          <li>A very large force acts on the people in the car.</li>
+          <li>This can cause serious injuries such as <b>head trauma</b> or <b>spinal damage</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Safety features: increasing impact time</summary>
+        <ul>
+          <li>To reduce injuries, we want to make the momentum change happen over a <b>longer</b> time.</li>
+        </ul>
+        <div class="chem">
+Key safety idea
+• If Δp is the same but Δt is bigger,
+  F = Δp / Δt will be smaller.
+• A longer impact time → smaller force → less chance of injury.
+        </div>
+        <ul>
+          <li>Modern cars are designed with safety features that <b>increase the time</b> taken to stop.</li>
+          <li>Examples:
+            <div>
+              <span class="pill">Crumple zones</span>
+              <span class="pill">Seat belts</span>
+              <span class="pill">Airbags</span>
+            </div>
+          </li>
+        </ul>
+        <div class="chem">
+Crumple zones
+• Located at the front and back of the car.
+• Crumple on impact instead of stopping instantly.
+• Provide extra time for the car and passengers to lose momentum.
+        </div>
+        <div class="chem">
+Seat belts
+• Stop you from being thrown out of the car.
+• Slightly stretchy so you slow down more gradually.
+• Increase the time taken for your momentum to fall to zero.
+        </div>
+        <div class="chem">
+Airbags
+• Inflate in front of you during a crash.
+• Soft, compressible cushion instead of a hard dashboard or steering wheel.
+• Increase the time of impact and spread the force over a larger area.
+        </div>
+      </details>
+
+      <details>
+        <summary>6) Other safety systems and the key principle</summary>
+        <ul>
+          <li>Other safety systems work in a similar way, for example:
+            <div>
+              <span class="pill">Helmets</span>
+              <span class="pill">Crash mats</span>
+            </div>
+          </li>
+        </ul>
+        <div class="chem">
+Examples
+• Helmets: padding compresses during impact, increasing impact time.
+• Crash mats: soft, thick surfaces that slow you down more gently when you land.
+        </div>
+        <ul>
+          <li>The key principle is the same in every case:</li>
+        </ul>
+        <div class="chem">
+Core idea to remember
+• All these safety features increase the time taken for momentum to change.
+• A longer time means a smaller force (for the same change in momentum).
+• Smaller forces reduce the risk of harm.
+        </div>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2025 Physics Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the forces & momentum speech
+    const questions = [
+      // 1
+      {type:"mcq", q:"What is the formula for momentum?", opts:["p = m + v","p = m × v","p = v / m"], a:1, exp:"Momentum is defined as mass times velocity."},
+      // 2
+      {type:"fill", q:"Momentum is measured in kg ______.", ans:"m/s", exp:"The unit of momentum is kilogram metre per second (kg m/s)."},
+      // 3
+      {type:"mcq", q:"If a 2 kg object travels at 5 m/s, its momentum is:", opts:["7 kg m/s","10 kg m/s","12 kg m/s"], a:1, exp:"p = 2 × 5 = 10 kg m/s."},
+      // 4
+      {type:"fill", q:"A 2 kg object travelling at 8 m/s has momentum ______ kg m/s.", ans:"16", exp:"p = 2 × 8 = 16 kg m/s."},
+      // 5
+      {type:"mcq", q:"Applying a force in the same direction as motion will:", opts:["Slow the object down","Have no effect","Speed the object up"], a:2, exp:"A force in the direction of motion causes acceleration and a higher velocity."},
+      // 6
+      {type:"mcq", q:"Changing an object's velocity changes its:", opts:["Mass","Momentum","Density"], a:1, exp:"Momentum depends on velocity, so it changes too."},
+      // 7
+      {type:"fill", q:"The symbol Δp represents a change in ______.", ans:"momentum", exp:"Δp is used for change in momentum."},
+      // 8
+      {type:"mcq", q:"Which equation links force, change in momentum and time?", opts:["F = Δp × Δt","F = Δp / Δt","F = Δt / Δp"], a:1, exp:"Force equals change in momentum divided by time."},
+      // 9
+      {type:"fill", q:"In the formula F = Δp / Δt, F is measured in ______.", ans:"newtons", exp:"Force is measured in newtons (N)."},
+      // 10
+      {type:"mcq", q:"In the example, the momentum changes from 10 to 16 kg m/s. What is Δp?", opts:["4 kg m/s","6 kg m/s","26 kg m/s"], a:1, exp:"Δp = 16 − 10 = 6 kg m/s."},
+      // 11
+      {type:"fill", q:"If Δp = 6 kg m/s and Δt = 0.5 s, then F = ______ N.", ans:"12", exp:"F = 6 / 0.5 = 12 N."},
+      // 12
+      {type:"mcq", q:"In F = (mv − mu) / t, what does mu represent?", opts:["Final momentum","Initial momentum","Change in momentum"], a:1, exp:"mu is the initial momentum (mass × initial velocity)."},
+      // 13
+      {type:"fill", q:"In the worked example, the mass of the ball is 600 g, which is ______ kg.", ans:"0.6", exp:"600 g ÷ 1000 = 0.6 kg."},
+      // 14
+      {type:"mcq", q:"In that example, the initial velocity of the ball is:", opts:["0 m/s","7 m/s","14 m/s"], a:0, exp:"The ball starts from rest, so u = 0 m/s."},
+      // 15
+      {type:"fill", q:"If m = 0.6 kg and v = 14 m/s, the final momentum is ______ kg m/s.", ans:"8.4", exp:"p = 0.6 × 14 = 8.4 kg m/s."},
+      // 16
+      {type:"mcq", q:"The time for the ball’s change in momentum is:", opts:["1 s","0.1 s","10 s"], a:1, exp:"The time given is 0.1 s."},
+      // 17
+      {type:"fill", q:"For the ball, F = 8.4 / 0.1, so F = ______ N.", ans:"84", exp:"The force is 84 N."},
+      // 18
+      {type:"mcq", q:"In a car crash, the car’s momentum changes:", opts:["From zero to a large value","Very slowly over many minutes","From a large value to zero very quickly"], a:2, exp:"The car goes from moving to stopped in a very short time."},
+      // 19
+      {type:"mcq", q:"If the change in momentum is large and the time is very small, the force will be:", opts:["Small","Moderate","Very large"], a:2, exp:"Small Δt makes F = Δp / Δt very large."},
+      // 20
+      {type:"fill", q:"Very large forces in crashes can cause injuries such as head trauma or ______ damage.", ans:"spinal", exp:"Spinal damage is mentioned as one example."},
+      // 21
+      {type:"mcq", q:"To reduce the force on passengers, we want the change in momentum to happen over:", opts:["A shorter time","A longer time","No time"], a:1, exp:"Increasing the time reduces the force."},
+      // 22
+      {type:"fill", q:"If Δp stays the same but Δt increases, the force F will become ______.", ans:"smaller", exp:"A longer time means a smaller force."},
+      // 23
+      {type:"mcq", q:"Which safety features are built into cars to reduce injury?", opts:["Spoilers and alloy wheels","Crumple zones, seat belts and airbags","Louder exhausts"], a:1, exp:"These safety features all help reduce forces in a crash."},
+      // 24
+      {type:"fill", q:"Crumple zones are located at the front and ______ of the car.", ans:"back", exp:"They are at the front and back to absorb impact."},
+      // 25
+      {type:"mcq", q:"What do crumple zones do during a collision?", opts:["Make the car heavier","Stop the car instantly","Crumple to give extra time for the car to lose momentum"], a:2, exp:"They allow the car to slow down over a longer time."},
+      // 26
+      {type:"fill", q:"One function of a seat belt is to stop you from ______ out of the car.", ans:"flying", exp:"They prevent you from being thrown or flying out of the car."},
+      // 27
+      {type:"mcq", q:"Why are seat belts slightly stretchy?", opts:["To be more colourful","To let you speed up","To let you slow down more gradually"], a:2, exp:"Stretching increases the time taken to stop you, reducing force."},
+      // 28
+      {type:"fill", q:"Airbags are ______, like a pillow, rather than hard like a dashboard.", ans:"compressible", exp:"Airbags compress, increasing impact time."},
+      // 29
+      {type:"mcq", q:"How do airbags help reduce injury?", opts:["They speed you up","They spread out and lengthen the impact","They make the car heavier"], a:1, exp:"They increase the time of impact and spread the force over a larger area."},
+      // 30
+      {type:"fill", q:"Increasing the time taken to lose momentum results in a ______ force on the person.", ans:"lower", exp:"Longer time = lower force."},
+      // 31
+      {type:"mcq", q:"Which of the following also work like safety features in cars?", opts:["Helmets and crash mats","Lights and mirrors","Engines and tyres"], a:0, exp:"Helmets and crash mats increase the time over which you stop."},
+      // 32
+      {type:"fill", q:"Helmets contain padding that can ______ during an impact.", ans:"compress", exp:"The padding compresses, lengthening the impact time."},
+      // 33
+      {type:"mcq", q:"Crash mats are used in sports because they:", opts:["Make the floor slippery","Are hard and rigid","Provide a soft surface that slows you down more gently"], a:2, exp:"They increase the time taken to come to rest."},
+      // 34
+      {type:"fill", q:"The key principle is that all these safety features increase the time taken for ______ to change.", ans:"momentum", exp:"They lengthen the time over which momentum is lost."},
+      // 35
+      {type:"mcq", q:"Which expression gives the change in momentum?", opts:["mv + mu","mv − mu","mu − mv"], a:1, exp:"Change in momentum is final minus initial, mv − mu."},
+      // 36
+      {type:"fill", q:"If an object slows down, its change in momentum is final minus ______ momentum.", ans:"initial", exp:"Δp = p_final − p_initial."},
+      // 37
+      {type:"mcq", q:"What happens to momentum when a moving object comes to rest?", opts:["It stays the same","It becomes zero","It becomes infinite"], a:1, exp:"A stationary object has zero momentum."},
+      // 38
+      {type:"fill", q:"If a car’s momentum drops to zero almost instantly, the value of Δt is very ______.", ans:"small", exp:"A very small time produces a large force."},
+      // 39
+      {type:"mcq", q:"Why are forces in car crashes often very large?", opts:["The mass is small","The change in momentum is small","The change in momentum happens in a very short time"], a:2, exp:"Large Δp and tiny Δt produce huge forces."},
+      // 40
+      {type:"fill", q:"To reduce the risk of harm, we want to make Δt as ______ as possible for the same Δp.", ans:"large", exp:"A large Δt gives a smaller force and less risk of injury."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
