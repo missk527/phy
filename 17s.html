@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Series Circuits: Current, Voltage &amp; Resistance</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Series Circuits: Current, Voltage &amp; Resistance</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/Ogae9I2Eoro" title="Series Circuits" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Series vs parallel circuits</summary>
+        <ul>
+          <li>A key exam confusion is the difference between <b>series</b> and <b>parallel</b> circuits.</li>
+          <li>In a <b>series circuit</b>, there is <b>only one loop</b> and all components are connected one after another in that loop.</li>
+          <li>In a <b>parallel circuit</b>, there is <b>more than one loop</b> or branch.</li>
+        </ul>
+        <div class="chem">
+Series circuit
+• Single loop
+• Components in a line, one after another
+
+Parallel circuit
+• More than one loop (branches)
+• Components on different branches
+        </div>
+        <ul>
+          <li>This small structural difference changes how we measure and think about:
+            <div>
+              <span class="pill">Current</span>
+              <span class="pill">Voltage (potential difference)</span>
+              <span class="pill">Resistance</span>
+            </div>
+          </li>
+          <li>This video focuses on <b>series circuits</b>. Parallel circuits are considered in the next video.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Features and disadvantages of series circuits</summary>
+        <ul>
+          <li>In a series circuit, <b>all components share the same loop</b>.</li>
+          <li>If <b>any one component is disconnected or broken</b>, the <b>entire circuit stops working</b>.</li>
+        </ul>
+        <div class="chem">
+Key disadvantage of series circuits
+• One component fails → current stops everywhere → whole circuit off
+        </div>
+        <ul>
+          <li>Because of this major disadvantage, <b>very few practical devices</b> are actually connected in series.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Voltage (potential difference) in series circuits</summary>
+        <ul>
+          <li>The <b>potential difference</b> (voltage) of the cell or battery is <b>shared</b> across all components in series.</li>
+        </ul>
+        <div class="chem">
+Total voltage in series
+V<sub>total</sub> = V<sub>1</sub> + V<sub>2</sub> + V<sub>3</sub> + ...
+• The sum of the voltages across each component equals the battery voltage.
+        </div>
+        <ul>
+          <li>Example: if the battery has <b>12 V</b> and there are only two lamps in series:</li>
+        </ul>
+        <div class="chem">
+Example 1
+• Total battery voltage = 12 V
+• Lamp A has 8 V across it
+• Lamp B must have 4 V
+Because 8 V + 4 V = 12 V
+        </div>
+        <div class="chem">
+Example 2 (identical lamps)
+• Total battery voltage = 12 V
+• Two identical lamps with same resistance
+• Each lamp gets 6 V
+Because they share the voltage equally
+        </div>
+      </details>
+
+      <details>
+        <summary>4) Current in series circuits</summary>
+        <ul>
+          <li>In a series circuit, the <b>current is the same everywhere</b> in the loop.</li>
+          <li>No matter where you measure it in the series circuit, the value of current is identical.</li>
+          <li>Current is measured using an <b>ammeter</b>.</li>
+          <li>An ammeter is placed <b>in series</b>, that is, in the main loop with the other components.</li>
+        </ul>
+        <div class="chem">
+Current in series
+• Same at every point in the loop
+• Same through every component
+• Measured with an ammeter in series
+        </div>
+        <ul>
+          <li>Because the current through all components is the same, it <b>does not matter where in the loop</b> you place the ammeter.</li>
+          <li>We can also calculate current using <b>Ohm's law</b> by dividing the total voltage by the total resistance.</li>
+        </ul>
+        <div class="chem">
+Ohm's law (rearranged)
+I = V<sub>total</sub> / R<sub>total</sub>
+        </div>
+      </details>
+
+      <details>
+        <summary>5) Resistance in series and example calculation</summary>
+        <ul>
+          <li>In a series circuit, the <b>total resistance</b> is the <b>sum</b> of the individual resistances.</li>
+        </ul>
+        <div class="chem">
+Total resistance in series
+R<sub>total</sub> = R<sub>1</sub> + R<sub>2</sub> + R<sub>3</sub> + ...
+(ΣR means "sum of all resistances")
+        </div>
+        <ul>
+          <li>Example: a 4 Ω lamp in series with a 2 Ω lamp:</li>
+        </ul>
+        <div class="chem">
+Example: total resistance and current
+• R<sub>1</sub> = 4 Ω
+• R<sub>2</sub> = 2 Ω
+• R<sub>total</sub> = 4 Ω + 2 Ω = 6 Ω
+
+Battery voltage = 12 V
+Using I = V / R:
+I = 12 V / 6 Ω = 2 A
+        </div>
+        <ul>
+          <li>Ammeters usually have <b>very small resistance</b>, so we normally <b>ignore their resistance</b> in calculations.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Voltage across a single component</summary>
+        <ul>
+          <li>Once we know the <b>current in the circuit</b>, we can find the voltage across a <b>single component</b> using Ohm's law.</li>
+          <li>Remember: in a series circuit, <b>the current through each component is the same</b>.</li>
+        </ul>
+        <div class="chem">
+Finding voltage across one component
+V = I × R
+• Use the circuit current and that component's resistance
+        </div>
+        <ul>
+          <li>Using the previous example with 2 A of current:</li>
+        </ul>
+        <div class="chem">
+Example: voltage across each lamp
+• Lamp on the right: R = 2 Ω, I = 2 A
+  V = I × R = 2 A × 2 Ω = 4 V
+
+• Total battery voltage = 12 V
+  So the other lamp must have 12 V − 4 V = 8 V
+        </div>
+        <ul>
+          <li>Another way to find the voltage is to use a <b>voltmeter</b>.</li>
+          <li>A voltmeter is connected <b>in parallel</b> across the component we are interested in.</li>
+          <li>Even though the voltmeter is in parallel, we still treat the <b>main circuit itself as a series circuit</b>.</li>
+        </ul>
+        <div class="chem">
+Important idea
+• Components with a greater resistance always get a greater share of the total voltage.
+• More resistance means more "push" is needed to move charge through that part of the circuit.
+• This is why the 4 Ω lamp had 8 V, while the 2 Ω lamp only had 4 V.
+        </div>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2025 Physics Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the series circuits speech
+    const questions = [
+      // 1
+      {type:"mcq", q:"In a series circuit, how many loops are there?", opts:["One","Two","Many"], a:0, exp:"A series circuit has only a single loop."},
+      // 2
+      {type:"fill", q:"Parallel circuits contain more than one ______.", ans:"loop", exp:"Parallel circuits have more than one loop or branch."},
+      // 3
+      {type:"mcq", q:"In a series circuit, components are connected:", opts:["Side by side in branches","One after another in a single loop","In random positions"], a:1, exp:"In series, components are all in one loop, one after another."},
+      // 4
+      {type:"mcq", q:"Which circuit type has more than one loop?", opts:["Series","Parallel","Neither"], a:1, exp:"Parallel circuits have more than one loop."},
+      // 5
+      {type:"fill", q:"A key exam confusion is the difference between series and ______ circuits.", ans:"parallel", exp:"Students often confuse series and parallel circuits in exams."},
+      // 6
+      {type:"mcq", q:"If one component in a series circuit breaks, what happens?", opts:["Only that component stops","Nothing changes","The whole circuit stops working"], a:2, exp:"In series, a break anywhere stops current everywhere."},
+      // 7
+      {type:"mcq", q:"Are many practical devices connected purely in series?", opts:["Yes, most are","No, very few are","Exactly half are"], a:1, exp:"Because of the big disadvantage of failure, few things are wired in pure series."},
+      // 8
+      {type:"fill", q:"In a series circuit, all components share the same ______.", ans:"loop", exp:"All components lie in one continuous loop."},
+      // 9
+      {type:"mcq", q:"The potential difference of the battery in a series circuit is:", opts:["Used only by the first component","Shared across all components","Lost in the wires"], a:1, exp:"The battery voltage is shared across every component in series."},
+      // 10
+      {type:"fill", q:"In a series circuit, the total voltage equals the ______ of the voltages across all components.", ans:"sum", exp:"Total voltage is the sum of the individual component voltages."},
+      // 11
+      {type:"fill", q:"If the battery is 12 V and one lamp has 8 V, the other must have ______ V.", ans:"4", exp:"8 V + 4 V = 12 V, so the second lamp has 4 V."},
+      // 12
+      {type:"fill", q:"If two identical lamps share 12 V in series, each lamp has ______ V.", ans:"6", exp:"Identical resistances share the voltage equally, so 6 V each."},
+      // 13
+      {type:"mcq", q:"In a series circuit, the current:", opts:["Is different in each component","Is the same everywhere","Only flows through the battery"], a:1, exp:"The same current flows through every part of a series circuit."},
+      // 14
+      {type:"mcq", q:"What instrument is used to measure current?", opts:["Voltmeter","Ammeter","Thermometer"], a:1, exp:"An ammeter is used to measure current."},
+      // 15
+      {type:"fill", q:"An ammeter must be placed in ______ with the components.", ans:"series", exp:"To measure current, the ammeter is placed in series in the loop."},
+      // 16
+      {type:"mcq", q:"Does the position of the ammeter in a series circuit matter for the current reading?", opts:["Yes, it changes the value","No, the reading is the same anywhere","It only works near the battery"], a:1, exp:"Current is the same everywhere in series, so the reading is unchanged."},
+      // 17
+      {type:"mcq", q:"Ohm's law in the form used here is:", opts:["I = V / R","V = I / R","R = V × I"], a:0, exp:"The rearranged form here is I = V / R."},
+      // 18
+      {type:"fill", q:"In a series circuit, the total resistance equals the ______ of all individual resistances.", ans:"sum", exp:"You add the resistances to get the total in series."},
+      // 19
+      {type:"fill", q:"The Greek symbol Σ used in physics means ______.", ans:"sum", exp:"Σ is used to show a total or sum."},
+      // 20
+      {type:"fill", q:"If resistances are 4 Ω and 2 Ω in series, the total resistance is ______ Ω.", ans:"6", exp:"4 Ω + 2 Ω = 6 Ω."},
+      // 21
+      {type:"fill", q:"With a 12 V battery and 6 Ω total resistance, the current is ______ A.", ans:"2", exp:"I = V / R = 12 / 6 = 2 A."},
+      // 22
+      {type:"mcq", q:"Why do we usually ignore the resistance of an ammeter?", opts:["It is extremely large","It is extremely small","It cancels out the battery"], a:1, exp:"An ammeter has a very tiny resistance so it can be ignored in calculations."},
+      // 23
+      {type:"fill", q:"To find the voltage across one component, we can use the formula V = I × ______.", ans:"R", exp:"Ohm's law: V = I × R."},
+      // 24
+      {type:"fill", q:"If the current is 2 A and a lamp has 2 Ω resistance, the voltage across it is ______ V.", ans:"4", exp:"V = I × R = 2 × 2 = 4 V."},
+      // 25
+      {type:"fill", q:"If the total voltage is 12 V and one lamp has 4 V, the other lamp must have ______ V.", ans:"8", exp:"12 − 4 = 8 V for the other lamp."},
+      // 26
+      {type:"mcq", q:"What instrument is used to measure potential difference (voltage)?", opts:["Ammeter","Voltmeter","Ohmmeter"], a:1, exp:"A voltmeter measures potential difference."},
+      // 27
+      {type:"mcq", q:"How is a voltmeter connected to measure the voltage across a component?", opts:["In series","In parallel","In both"], a:1, exp:"Voltmeters are connected in parallel with the component."},
+      // 28
+      {type:"mcq", q:"When we connect a voltmeter across a component in a series circuit, we still treat the main circuit as:", opts:["A parallel circuit","A mixed circuit","A series circuit"], a:2, exp:"The main circuit is still considered a series circuit."},
+      // 29
+      {type:"mcq", q:"Which components get a larger share of the total voltage in series?", opts:["Those with lower resistance","Those with higher resistance","All get the same regardless of resistance"], a:1, exp:"Components with greater resistance get more voltage."},
+      // 30
+      {type:"fill", q:"A component with greater resistance needs more ______ to push charge through it.", ans:"force", exp:"You can think of more force being needed through higher resistance."},
+      // 31
+      {type:"mcq", q:"In the example, which resistor had 8 V across it?", opts:["The 2 Ω resistor","The 4 Ω resistor","Both had 4 V"], a:1, exp:"The 4 Ω resistor had 8 V across it."},
+      // 32
+      {type:"fill", q:"In the same example, the 2 Ω resistor had ______ V across it.", ans:"4", exp:"The 2 Ω resistor had 4 V across it."},
+      // 33
+      {type:"mcq", q:"What is the main disadvantage of series circuits in practical use?", opts:["They are too cheap","One fault stops the whole circuit","They use no current"], a:1, exp:"If one component fails, the whole series circuit stops."},
+      // 34
+      {type:"fill", q:"Because of the main disadvantage, very ______ devices are connected purely in series.", ans:"few", exp:"Very few real devices use pure series because of failure risk."},
+      // 35
+      {type:"mcq", q:"What quantity is shared between components in series?", opts:["Voltage","Power","Current"], a:2, exp:"The same current flows through all components in series."},
+      // 36
+      {type:"mcq", q:"What quantity is divided or shared between components in series?", opts:["Voltage","Current","Charge"], a:0, exp:"The total voltage is shared between components in series."},
+      // 37
+      {type:"fill", q:"The total voltage across all components in series equals the voltage of the ______.", ans:"battery", exp:"The sum of component voltages equals the battery voltage."},
+      // 38
+      {type:"fill", q:"The circuit discussed in the next video is a ______ circuit.", ans:"parallel", exp:"The next video focuses on parallel circuits."},
+      // 39
+      {type:"mcq", q:"To calculate current using Ohm's law, you must know:", opts:["Only resistance","Only voltage","Both total voltage and total resistance"], a:2, exp:"You need total V and total R to find current."},
+      // 40
+      {type:"fill", q:"In summary, in a series circuit the current is the same everywhere but the ______ is shared between components.", ans:"voltage", exp:"Series circuits have the same current but shared voltage."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
