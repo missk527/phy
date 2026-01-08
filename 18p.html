@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parallel Circuits — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffdfc; --ink:#0f172a; --accent:#5b21b6 }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f6f5ff; color:var(--ink); line-height:1.62 }
+    header{ background:linear-gradient(90deg, var(--brand), #22d3ee); color:#fff; padding:18px 20px; text-align:center; font-size:1.3rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 14px 28px }
+    .video{ display:flex; justify-content:center; margin:18px 0 }
+    iframe{ width:88%; max-width:1100px; height:480px; border:2px solid #ddd6fe; border-radius:14px; background:#000; box-shadow:0 2px 12px rgba(124,58,237,.18) }
+    .card{ background:var(--paper); border-radius:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); padding:20px; margin:18px 0 }
+    h2{ color:var(--accent); border-bottom:2px solid #ddd6fe; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#4c1d95 }
+    .pill{ display:inline-block; background:#ede9fe; border:1px solid #ddd6fe; border-radius:999px; padding:2px 10px; margin:2px; font-size:.9rem }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(124,58,237,.25) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem }
+    .tiny{ font-size:.85rem; color:#475569 }
+    @media (max-width:760px){ iframe{ width:96%; height:240px } }
+  </style>
+</head>
+<body>
+<header>Parallel Circuits: Potential Difference, Current & Resistance</header>
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/WGKvA1KBtK4" title="Parallel Circuits" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+    <section class="card">
+    <h2>Notes (rewritten in English from the speech)</h2>
+
+    <details open>
+      <summary>What is a parallel circuit?</summary>
+      <ul>
+        <li>A <b>parallel circuit</b> has <b>more than one loop</b> (more than one path for current).</li>
+        <li>In a <b>truly parallel</b> circuit, each loop usually contains <b>one component</b>.</li>
+        <li>Many real circuits are a <b>mix of series and parallel</b>, so some loops can contain more than one component.</li>
+      </ul>
+      <div>
+        <span class="pill">More than one loop</span>
+        <span class="pill">Multiple paths</span>
+        <span class="pill">Often mixed circuits</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>Why parallel circuits are useful</summary>
+      <ul>
+        <li>Each component has its <b>own loop</b>, so if one component breaks, <b>other loops can still work</b>.</li>
+        <li>Example: if one light bulb in a house blows, <b>the other lights stay on</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Potential difference (voltage) in parallel</summary>
+      <ul>
+        <li>In a truly parallel circuit, every component gets the <b>full source potential difference</b>.</li>
+        <li>If the supply is <b>12 V</b>, then each component has <b>12 V across it</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Current in parallel</summary>
+      <ul>
+        <li>The <b>total current</b> is <b>shared</b> between the loops.</li>
+        <li>The currents in each loop always add up to the total: <b>I<sub>total</sub> = I₁ + I₂ + ...</b></li>
+        <li>How the current splits depends on resistance: the loop with <b>higher resistance</b> takes a <b>smaller share</b> of the current.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Water analogy (least resistance)</summary>
+      <ul>
+        <li>Think of current like <b>water flowing downhill</b> through different paths.</li>
+        <li>More water (current) chooses the <b>path of least resistance</b>, so <b>lower resistance</b> loops carry <b>higher current</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Total resistance in parallel</summary>
+      <ul>
+        <li>Adding more components in parallel makes the <b>total resistance decrease</b>.</li>
+        <li>Even if a new branch has a large resistance, it still gives the current <b>an extra route</b>, so overall it becomes easier for charge to flow.</li>
+        <li>So: <b>more parallel loops → lower overall resistance</b>.</li>
+      </ul>
+    </details>
+
+  </section>
+
+  <section class="card">
+    <h2>Quiz (40 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar tiny" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40 tightly grounded questions based on the provided speech
+const Q = [
+  {type:"mcq", q:"What is a parallel circuit?", opts:["A circuit with one loop","A circuit with more than one loop","A circuit with no components"], a:1, exp:"Parallel circuits have more than one loop (more than one path)."},
+  {type:"mcq", q:"Parallel circuits are often more useful than series circuits because:", opts:["They always have lower voltage","If one component breaks, others can still work","They cannot include resistors"], a:1, exp:"Each component has its own loop, so the rest of the circuit can keep working."},
+  {type:"mcq", q:"A common real-life example of parallel wiring is:", opts:["A torch with one bulb","House lighting","A single LED on a battery"], a:1, exp:"In homes, if one light blows, others still work."},
+  {type:"mcq", q:"In a truly parallel circuit, each loop generally contains:", opts:["Many components in a line","A single component","No components"], a:1, exp:"The speech describes truly parallel loops as usually containing one component."},
+  {type:"mcq", q:"Many practical circuits are best described as:", opts:["Only series","Only parallel","A mix of series and parallel"], a:2, exp:"Often circuits include both series and parallel sections."},
+  {type:"mcq", q:"In a truly parallel circuit, the potential difference across each component is:", opts:["Shared between components","Equal to the source potential difference","Zero"], a:1, exp:"Each component gets the full supply voltage."},
+  {type:"mcq", q:"If the battery is 12 V, the voltage across each parallel branch is:", opts:["6 V","12 V","24 V"], a:1, exp:"Each branch has the full 12 V across it."},
+  {type:"mcq", q:"In a parallel circuit, the total current is:", opts:["The same in every branch","Shared between branches","Always zero"], a:1, exp:"Current splits between loops."},
+  {type:"mcq", q:"If the total current is 4 A, which branch currents are possible?", opts:["3 A and 1 A","5 A and -1 A","4 A and 4 A"], a:0, exp:"Branch currents can split in many ways but must add to 4 A."},
+  {type:"mcq", q:"In parallel, currents in branches add up to:", opts:["The supply voltage","The total circuit current","The total resistance"], a:1, exp:"I_total equals the sum of branch currents."},
+  {type:"mcq", q:"How the current splits depends mainly on:", opts:["Temperature only","Resistance of the components","Wire color"], a:1, exp:"Higher resistance branches take less current."},
+  {type:"mcq", q:"A branch with greater resistance takes:", opts:["A higher share of current","A lower share of current","Exactly the same current"], a:1, exp:"More resistance \u2192 less current."},
+  {type:"mcq", q:"The water-flow analogy suggests that current prefers the path of:", opts:["Greatest resistance","Least resistance","Most voltage"], a:1, exp:"More current flows through the lower-resistance branch."},
+  {type:"mcq", q:"Adding another parallel branch generally makes total resistance:", opts:["Increase","Decrease","Stay the same"], a:1, exp:"More paths \u2192 lower overall resistance."},
+  {type:"mcq", q:"Why is it \u2018strange\u2019 that adding components in parallel lowers resistance?", opts:["Because it reduces the number of paths","Because it increases options for current flow","Because it removes voltage"], a:1, exp:"Extra routes make it easier overall for current to flow."},
+  {type:"mcq", q:"In the river analogy, adding another route makes the water flow:", opts:["Less easily","More easily","Not at all"], a:1, exp:"More routes allow easier flow, like lower resistance."},
+  {type:"mcq", q:"Even if a new parallel loop contains a big resistor, the total resistance:", opts:["Still decreases","Always increases","Becomes infinite"], a:0, exp:"Any extra path lowers total resistance overall."},
+  {type:"mcq", q:"A parallel circuit must have at least:", opts:["One loop","Two loops","Zero loops"], a:1, exp:"More than one loop means at least two."},
+  {type:"mcq", q:"In a mixed circuit, a loop might contain:", opts:["Only one component always","More than one component","No components"], a:1, exp:"Mixed circuits can have multiple components in some loops."},
+  {type:"mcq", q:"Which relationship is correct for current in parallel?", opts:["I_total = I1 + I2 + ...","I_total = I1 \u2212 I2","I_total = V1 + V2"], a:0, exp:"Total current is the sum of branch currents."},
+  {type:"tf", q:"Parallel circuits have more than one loop.", a:true, exp:"By definition, parallel circuits have multiple loops."},
+  {type:"tf", q:"In a truly parallel circuit, each component gets the full source potential difference.", a:true, exp:"Each branch has the same voltage as the supply."},
+  {type:"tf", q:"In parallel circuits, current is the same in every loop.", a:false, exp:"Current splits between branches."},
+  {type:"tf", q:"If one component fails in a parallel circuit, the entire circuit always stops working.", a:false, exp:"Other branches can still work."},
+  {type:"tf", q:"The sum of branch currents equals the total current.", a:true, exp:"I_total equals I1 + I2 + ..."},
+  {type:"tf", q:"A higher-resistance branch gets a larger share of current.", a:false, exp:"Higher resistance means less current."},
+  {type:"tf", q:"The water analogy represents current as water taking the easiest path.", a:true, exp:"More current flows through the least resistance path."},
+  {type:"tf", q:"Adding more parallel branches increases the total resistance.", a:false, exp:"Total resistance decreases when adding branches in parallel."},
+  {type:"tf", q:"Circuits in real life are often a mix of series and parallel.", a:true, exp:"The speech states many circuits are mixed."},
+  {type:"tf", q:"A 12 V supply gives 12 V across each branch in a truly parallel circuit.", a:true, exp:"Voltage across each branch equals the source."},
+  {type:"fill", q:"Parallel circuits are those with more than one ______.", text:"loop", exp:"Parallel means multiple loops/paths."},
+  {type:"fill", q:"In a truly parallel circuit, each loop usually contains a single ______.", text:"component", exp:"Typically one component per loop."},
+  {type:"fill", q:"Parallel circuits are useful because if one component breaks, the circuit is still ______.", text:"intact", exp:"Other loops can still function."},
+  {type:"fill", q:"In parallel, each component gets the full source potential ______.", text:"difference", exp:"Voltage across each branch equals the supply."},
+  {type:"fill", q:"If the supply is 12 V, each branch has ______ V across it.", text:"12", exp:"Full source voltage across each branch."},
+  {type:"fill", q:"In parallel, the total current is ______ between the loops.", text:"shared", exp:"Current splits among branches."},
+  {type:"fill", q:"Branch currents always add up to the ______ current.", text:"total", exp:"I_total is the sum of branch currents."},
+  {type:"fill", q:"Loops with greater resistance take a ______ share of the current.", text:"lower", exp:"Higher resistance \u2192 less current."},
+  {type:"fill", q:"Current prefers the path of least ______.", text:"resistance", exp:"Analogous to water choosing the easiest route."},
+  {type:"fill", q:"Adding more parallel loops makes the overall resistance ______.", text:"lower", exp:"More paths reduces total resistance."}
+];
+
+let i=0, score=0, order=[];
+function startGame(){
+  order = [...Array(Q.length).keys()].sort(()=>Math.random()-0.5);
+  i = 0; score = 0;
+  document.getElementById("scorebar").textContent = `Question ${i+1} / ${Q.length}  Score: ${score}`;
+  renderQ();
+}
+function renderQ(){
+  const q = Q[order[i]];
+  let html = `<div class='question-box'><p><strong>Q${i+1}:</strong> ${q.q}</p>`;
+  if(q.type==="mcq"){
+    q.opts.forEach((opt,idx)=> html += `<label><input type="radio" name="opt" value="${idx}"> ${opt}</label><br>`);
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type==="tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  const area = document.getElementById("game-area");
+  const inner = document.getElementById("game-area-inner");
+  if(inner){ inner.innerHTML = html; } else { area.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`); }
+}
+function checkMCQ(){
+  const q = Q[order[i]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkTF(){
+  const q = Q[order[i]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select True or False."; fb.className="feedback incorrect"; return;}
+  const val = sel.value === "true";
+  if(val === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkFill(){
+  const q = Q[order[i]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  function norm(s){ return s.replace(/\s+/g,"").toLowerCase(); }
+  const ok = norm(ans).includes(norm(q.text));
+  if(ok){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function nextQ(){
+  i++;
+  if(i < Q.length){
+    document.getElementById("scorebar").textContent = `Question ${i+1} / ${Q.length}  Score: ${score}`;
+    renderQ();
+  }else{
+    endGame();
+  }
+}
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${Q.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${Q.length}`;
+}
+</script>
+</body>
+</html>
