@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waves Basics — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffdfc; --ink:#0f172a; --accent:#5b21b6 }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f6f5ff; color:var(--ink); line-height:1.62 }
+    header{ background:linear-gradient(90deg, var(--brand), #22d3ee); color:#fff; padding:18px 20px; text-align:center; font-size:1.3rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 14px 28px }
+    .video{ display:flex; justify-content:center; margin:18px 0 }
+    iframe{ width:88%; max-width:1100px; height:480px; border:2px solid #ddd6fe; border-radius:14px; background:#000; box-shadow:0 2px 12px rgba(124,58,237,.18) }
+    .card{ background:var(--paper); border-radius:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); padding:20px; margin:18px 0 }
+    h2{ color:var(--accent); border-bottom:2px solid #ddd6fe; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#4c1d95 }
+    .pill{ display:inline-block; background:#ede9fe; border:1px solid #ddd6fe; border-radius:999px; padding:2px 10px; margin:2px; font-size:.9rem }
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(124,58,237,.25) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem }
+    .tiny{ font-size:.85rem; color:#475569 }
+    @media (max-width:760px){ iframe{ width:96%; height:240px } }
+  </style>
+</head>
+<body>
+<header>Waves: Parts, Speed, Frequency, Transverse vs Longitudinal</header>
+
+<div class="video">
+  <iframe src="https://www.youtube.com/embed/8wTyM8A_sLY" title="Waves Basics" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+    <section class="card">
+    <h2>Notes (rewritten in English from the speech)</h2>
+
+    <details open>
+      <summary>What waves do</summary>
+      <ul>
+        <li>Waves <b>transfer energy</b> from one place to another, but they do <b>not transfer matter</b>.</li>
+        <li>Examples: light from a phone screen to your eye, and sound from a speaker to your ear.</li>
+        <li>That transferred energy can carry <b>information</b> (images, music, speech).</li>
+      </ul>
+      <div>
+        <span class="pill">Energy transfer</span>
+        <span class="pill">No matter transfer</span>
+        <span class="pill">Information</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>Wave graphs and key terms</summary>
+      <ul>
+        <li>Waves oscillate about an <b>equilibrium</b> position.</li>
+        <li>On a <b>displacement–distance</b> graph:
+          <ul>
+            <li><b>Distance</b> (x-axis) = how far the wave has travelled from the start.</li>
+            <li><b>Displacement</b> (y-axis) = how far the wave is from equilibrium.</li>
+          </ul>
+        </li>
+        <li><b>Amplitude</b> = the <b>maximum displacement</b> from equilibrium.</li>
+        <li><b>Wavelength (λ)</b> = the distance of <b>one complete oscillation</b> (e.g., crest to crest).</li>
+        <li><b>Crest</b> = highest point; <b>trough</b> = lowest point.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Time period and frequency</summary>
+      <ul>
+        <li>On a <b>displacement–time</b> graph, the length of one full oscillation is the <b>time period (T)</b>, not the wavelength.</li>
+        <li><b>Time period (T)</b> = time for one complete oscillation.</li>
+        <li><b>Frequency (f)</b> = number of oscillations per second (unit: <b>hertz, Hz</b>).</li>
+        <li>Key equations: <b>f = 1 / T</b> and <b>T = 1 / f</b>.</li>
+        <li>Example: if T = 0.5 s, then f = 2 Hz. If f = 4 Hz, then T = 0.25 s.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Wave speed</summary>
+      <ul>
+        <li>Wave speed is given by: <b>v = f × λ</b>.</li>
+        <li>Interpretation: wavelength (meters per wave) × how many waves per second = meters per second.</li>
+        <li>Example: f = 400 Hz, λ = 70 cm = 0.70 m → v = 400 × 0.70 = <b>280 m/s</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Transverse vs longitudinal waves</summary>
+      <ul>
+        <li><b>Transverse waves</b>: oscillations are <b>perpendicular</b> to the direction of energy transfer.</li>
+        <li>Examples of transverse waves: <b>electromagnetic waves</b> (light, radio), water ripples, waves on strings.</li>
+        <li><b>Longitudinal waves</b>: oscillations are <b>parallel</b> to the direction of energy transfer.</li>
+        <li>They form regions of <b>compressions</b> and <b>rarefactions</b> as particles vibrate back and forth.</li>
+        <li>Examples of longitudinal waves: <b>sound waves</b> and seismic <b>P-waves</b>.</li>
+      </ul>
+    </details>
+
+  </section>
+
+  <section class="card">
+    <h2>Quiz (40 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar tiny" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40 tightly grounded questions based on the provided speech
+const Q = [
+  {type:"mcq", q:"What do waves transfer from one place to another?", opts:["Matter","Energy","Atoms"], a:1, exp:"Waves transfer energy but not matter."},
+  {type:"mcq", q:"Waves do NOT transfer:", opts:["Energy","Matter","Information"], a:1, exp:"Matter is not transported by the wave."},
+  {type:"mcq", q:"The equilibrium position is:", opts:["The maximum displacement","The rest/central position about which a wave oscillates","The crest"], a:1, exp:"Displacement is measured from equilibrium."},
+  {type:"mcq", q:"Amplitude is the:", opts:["Distance between crests","Maximum displacement from equilibrium","Time for one oscillation"], a:1, exp:"Amplitude is the biggest displacement."},
+  {type:"mcq", q:"Wavelength (\u03bb) is the:", opts:["Maximum height","Distance of one complete oscillation","Number of waves per second"], a:1, exp:"One full cycle in space is \u03bb."},
+  {type:"mcq", q:"A crest is the:", opts:["Lowest point","Highest point","Middle point"], a:1, exp:"Crest is the peak."},
+  {type:"mcq", q:"A trough is the:", opts:["Highest point","Lowest point","Point where speed is zero"], a:1, exp:"Trough is the valley."},
+  {type:"mcq", q:"A displacement\u2013distance graph has distance on the:", opts:["y-axis","x-axis","Both axes"], a:1, exp:"Distance is on the horizontal axis."},
+  {type:"mcq", q:"A displacement\u2013time graph uses time on the:", opts:["x-axis","y-axis","Neither axis"], a:0, exp:"Time is on the horizontal axis."},
+  {type:"mcq", q:"On a displacement\u2013time graph, one complete oscillation corresponds to the:", opts:["Wavelength","Time period","Amplitude"], a:1, exp:"In time domain, it is the period."},
+  {type:"mcq", q:"The time period (T) is:", opts:["Time for one oscillation","Number of oscillations per second","Distance for one oscillation"], a:0, exp:"T is the time for one cycle."},
+  {type:"mcq", q:"Frequency (f) is measured in:", opts:["Meters","Hertz (Hz)","Seconds"], a:1, exp:"Hz means per second."},
+  {type:"mcq", q:"Frequency means:", opts:["Time per oscillation","Oscillations per second","Distance per second"], a:1, exp:"f counts cycles per second."},
+  {type:"mcq", q:"Which equation links frequency and period?", opts:["f = T","f = 1/T","f = T\u00b2"], a:1, exp:"Frequency is the inverse of period."},
+  {type:"mcq", q:"If T = 0.5 s, f equals:", opts:["0.5 Hz","2 Hz","4 Hz"], a:1, exp:"1/0.5 = 2."},
+  {type:"mcq", q:"If f = 4 Hz, T equals:", opts:["4 s","0.25 s","2 s"], a:1, exp:"T = 1/4."},
+  {type:"mcq", q:"Wave speed is found using:", opts:["v = f/\u03bb","v = f \u00d7 \u03bb","v = \u03bb/T\u00b2"], a:1, exp:"Speed equals frequency times wavelength."},
+  {type:"mcq", q:"In calculations, wavelength should be in:", opts:["Centimeters","Meters","Kilometers"], a:1, exp:"Use SI units: meters."},
+  {type:"mcq", q:"A wave with f = 400 Hz and \u03bb = 0.70 m has speed:", opts:["280 m/s","570 m/s","40 m/s"], a:0, exp:"400 \u00d7 0.70 = 280."},
+  {type:"mcq", q:"In transverse waves, oscillations are ____ to energy transfer.", opts:["Parallel","Perpendicular","Random"], a:1, exp:"Transverse = perpendicular."},
+  {type:"tf", q:"Waves can carry information as well as energy.", a:true, exp:"Energy can be interpreted as meaningful information."},
+  {type:"tf", q:"Amplitude is measured from crest to trough.", a:false, exp:"Amplitude is maximum displacement from equilibrium, not peak-to-peak."},
+  {type:"tf", q:"Wavelength can be measured from crest to crest.", a:true, exp:"That is one full oscillation in space."},
+  {type:"tf", q:"The period is the time for one complete oscillation.", a:true, exp:"That is the definition of period."},
+  {type:"tf", q:"Frequency is the same as time period.", a:false, exp:"They are inverses."},
+  {type:"tf", q:"If frequency increases, the period decreases.", a:true, exp:"Because T = 1/f."},
+  {type:"tf", q:"Wave speed equals wavelength multiplied by frequency.", a:true, exp:"v = f\u03bb."},
+  {type:"tf", q:"Electromagnetic waves like light are longitudinal.", a:false, exp:"They are transverse."},
+  {type:"tf", q:"Sound waves are longitudinal waves.", a:true, exp:"Sound involves compressions/rarefactions."},
+  {type:"tf", q:"Longitudinal waves have oscillations parallel to energy transfer.", a:true, exp:"That is the definition."},
+  {type:"fill", q:"The maximum displacement from equilibrium is called the ______.", text:"amplitude", exp:"Amplitude is the maximum displacement."},
+  {type:"fill", q:"The distance of one complete oscillation is the ______.", text:"wavelength", exp:"One cycle in space is the wavelength."},
+  {type:"fill", q:"The time for one complete oscillation is the ______.", text:"period", exp:"Time period is for one cycle."},
+  {type:"fill", q:"Frequency is measured in ______.", text:"hertz", exp:"Hz means oscillations per second."},
+  {type:"fill", q:"Frequency equals 1 divided by the time ______.", text:"period", exp:"f = 1/T."},
+  {type:"fill", q:"Time period equals 1 divided by ______.", text:"frequency", exp:"T = 1/f."},
+  {type:"fill", q:"Wave speed v equals frequency times ______ (symbol \u03bb).", text:"wavelength", exp:"v = f\u03bb."},
+  {type:"fill", q:"70 cm is equal to ______ meters.", text:"0.7", exp:"Convert cm to m by dividing by 100."},
+  {type:"fill", q:"Transverse oscillations are ______ to the direction of travel.", text:"perpendicular", exp:"Transverse = perpendicular."},
+  {type:"fill", q:"Sound waves have regions of ______ and rarefactions.", text:"compressions", exp:"Longitudinal waves create compressions/rarefactions."}
+];
+
+let i=0, score=0, order=[];
+function startGame(){
+  order = [...Array(Q.length).keys()].sort(()=>Math.random()-0.5);
+  i = 0; score = 0;
+  document.getElementById("scorebar").textContent = `Question ${i+1} / ${Q.length}  Score: ${score}`;
+  renderQ();
+}
+function renderQ(){
+  const q = Q[order[i]];
+  let html = `<div class='question-box'><p><strong>Q${i+1}:</strong> ${q.q}</p>`;
+  if(q.type==="mcq"){
+    q.opts.forEach((opt,idx)=> html += `<label><input type="radio" name="opt" value="${idx}"> ${opt}</label><br>`);
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type==="tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  const area = document.getElementById("game-area");
+  const inner = document.getElementById("game-area-inner");
+  if(inner){ inner.innerHTML = html; } else { area.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`); }
+}
+function checkMCQ(){
+  const q = Q[order[i]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkTF(){
+  const q = Q[order[i]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select True or False."; fb.className="feedback incorrect"; return;}
+  const val = sel.value === "true";
+  if(val === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkFill(){
+  const q = Q[order[i]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  function norm(s){ return s.replace(/\s+/g,"").toLowerCase(); }
+  const ok = norm(ans).includes(norm(q.text));
+  if(ok){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function nextQ(){
+  i++;
+  if(i < Q.length){
+    document.getElementById("scorebar").textContent = `Question ${i+1} / ${Q.length}  Score: ${score}`;
+    renderQ();
+  }else{
+    endGame();
+  }
+}
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${Q.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${Q.length}`;
+}
+</script>
+</body>
+</html>
