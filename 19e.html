@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circuit Symbols & Components</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Circuit Symbols & Components</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/Cz5GdeqgBL8" title="Circuit Symbols &amp; Components" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Power sources and controlling current</summary>
+        <ul>
+          <li>To supply electrical energy to a circuit, you use a <b>cell</b> or a <b>battery</b> (multiple cells).</li>
+          <li>A <b>switch</b> controls whether current can flow:
+            <ul>
+              <li><b>Closed switch</b> = the circuit is complete, so current flows.</li>
+              <li><b>Open switch</b> = the circuit is broken, so current stops.</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="chem">
+Key idea
+• Current only flows when the circuit is complete (closed loop).
+• An open switch effectively turns the circuit off.
+        </div>
+      </details>
+
+      <details>
+        <summary>2) Common components: lamps, fuses, diodes and LEDs</summary>
+        <ul>
+          <li>A <b>filament lamp</b> (bulb) converts electrical energy into <b>light</b> and <b>heat</b>.</li>
+          <li>A <b>fuse</b> is a safety device: if too much current flows, it <b>melts/breaks</b> and stops the circuit.</li>
+          <li>A <b>diode</b> only allows current to flow in <b>one direction</b>.</li>
+          <li>An <b>LED</b> (light-emitting diode) is a diode that <b>gives off light</b> when current flows in the forward direction.</li>
+          <li>LEDs are used in everyday tech like <b>alarm clocks</b>, <b>traffic lights</b>, and <b>LED bulbs</b>.</li>
+        </ul>
+        <div>
+          <span class="pill">Filament lamp</span>
+          <span class="pill">Fuse</span>
+          <span class="pill">Diode</span>
+          <span class="pill">LED</span>
+        </div>
+      </details>
+
+      <details>
+        <summary>3) Measuring in circuits: ammeters and voltmeters</summary>
+        <ul>
+          <li>An <b>ammeter</b> measures <b>current</b> and must be connected in <b>series</b>.</li>
+          <li>A <b>voltmeter</b> measures <b>potential difference (voltage)</b> and must be connected in <b>parallel</b> across a component.</li>
+        </ul>
+        <div class="chem">
+Connections
+• Ammeter → series (so the same current flows through it).
+• Voltmeter → parallel (so it compares potential difference across a component).
+        </div>
+      </details>
+
+      <details>
+        <summary>4) Resistors: fixed and variable</summary>
+        <ul>
+          <li>A <b>resistor</b> limits current by providing <b>resistance</b> (measured in <b>ohms, Ω</b>).</li>
+          <li><b>Fixed resistors</b> have a set resistance value.</li>
+          <li><b>Variable resistors</b> can be adjusted to change the resistance (and therefore the current) easily.</li>
+        </ul>
+        <div class="chem">
+Ohm (Ω)
+• Unit of resistance.
+• Higher resistance → smaller current (for the same voltage).
+        </div>
+      </details>
+
+      <details>
+        <summary>5) Sensor resistors: LDRs and thermistors</summary>
+        <ul>
+          <li>An <b>LDR</b> (light-dependent resistor) changes resistance based on <b>light intensity</b>:
+            <ul>
+              <li><b>Bright light</b> → low resistance → more current can flow.</li>
+              <li><b>Darkness</b> → high resistance → very little current flows.</li>
+            </ul>
+          </li>
+          <li>LDRs are useful in <b>automatic night lights</b> and <b>burglar alarms</b> (light detected → resistance drops → current increases).</li>
+          <li>A <b>thermistor</b> changes resistance based on <b>temperature</b>:
+            <ul>
+              <li><b>Higher temperature</b> → lower resistance.</li>
+              <li><b>Lower temperature</b> → higher resistance.</li>
+            </ul>
+          </li>
+          <li>Thermistors act as temperature sensors in <b>car engines</b> and <b>electronic thermostats</b>.</li>
+        </ul>
+        <div class="chem">
+Sensor summary
+• LDR: light ↑ → resistance ↓
+• Thermistor: temperature ↑ → resistance ↓
+        </div>
+      </details>
+    </section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Physics/Electricity Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the circuit symbols speech
+    const questions = [
+      // 1
+      {type:"mcq", q:"What do you need to know to draw circuit diagrams correctly?", opts:["Only the colours of wires","What components do and their symbols","Only the names of scientists"], a:1, exp:"Circuit diagrams use standard symbols, so you must know both the symbol and the component's job."},
+      // 2
+      {type:"mcq", q:"Which component provides electrical power to a circuit?", opts:["A cell or battery","A fuse","A voltmeter"], a:0, exp:"Cells and batteries supply electrical energy to the circuit."},
+      // 3
+      {type:"fill", q:"A battery is made from multiple ______.", ans:"cells", exp:"A battery is a group of cells connected together."},
+      // 4
+      {type:"mcq", q:"What does a switch do in a circuit?", opts:["Measures voltage","Controls whether current flows","Increases resistance automatically"], a:1, exp:"A switch opens or closes the circuit to control current."},
+      // 5
+      {type:"mcq", q:"A closed switch means the circuit is:", opts:["Broken","Complete","Overloaded"], a:1, exp:"Closed switch = complete circuit, so current can flow."},
+      // 6
+      {type:"mcq", q:"An open switch effectively:", opts:["Turns off the circuit","Increases voltage","Creates a short circuit"], a:0, exp:"An open switch breaks the circuit so current stops."},
+      // 7
+      {type:"fill", q:"Current only flows when the circuit is ______.", ans:"complete", exp:"If the circuit is not complete, the current cannot flow."},
+      // 8
+      {type:"mcq", q:"A filament lamp is basically:", opts:["A small bulb","A measuring device","A power source"], a:0, exp:"A filament lamp is a small bulb used in circuits."},
+      // 9
+      {type:"mcq", q:"What is the main purpose of a fuse?", opts:["To make the circuit brighter","To break if too much current flows","To measure current"], a:1, exp:"Fuses protect circuits by breaking when current is too high."},
+      // 10
+      {type:"fill", q:"If too much current flows, a fuse will ______ and stop the circuit.", ans:"break", exp:"A fuse is designed to melt/break when overloaded."},
+      // 11
+      {type:"mcq", q:"A diode allows current to flow:", opts:["In both directions","In one direction only","Only at night"], a:1, exp:"A diode is directional—it only conducts one way."},
+      // 12
+      {type:"fill", q:"A special type of diode that emits light is an ______.", ans:"LED", exp:"LED stands for light-emitting diode."},
+      // 13
+      {type:"mcq", q:"An LED emits light when current flows:", opts:["In the forward direction","In the reverse direction","Only with alternating current"], a:0, exp:"LEDs light up when forward-biased (forward direction current)." },
+      // 14
+      {type:"mcq", q:"Which device measures current?", opts:["Voltmeter","Ammeter","Diode"], a:1, exp:"Ammeters measure current."},
+      // 15
+      {type:"mcq", q:"An ammeter should be connected:", opts:["In parallel","In series","Across the power supply only"], a:1, exp:"To measure current through a component, the ammeter goes in series."},
+      // 16
+      {type:"fill", q:"A voltmeter measures potential ______.", ans:"difference", exp:"Voltmeter measures potential difference (voltage)." },
+      // 17
+      {type:"mcq", q:"A voltmeter should be connected:", opts:["In series","In parallel","In a loop by itself"], a:1, exp:"Voltmeters are placed in parallel across components."},
+      // 18
+      {type:"mcq", q:"Why must a voltmeter be in parallel?", opts:["So it measures across a component","So it breaks the circuit","So it increases the current"], a:0, exp:"Voltage is compared between two points, so the voltmeter goes across the component."},
+      // 19
+      {type:"mcq", q:"Which component provides resistance in a circuit?", opts:["Resistor","Cell","Switch"], a:0, exp:"A resistor is designed to provide resistance."},
+      // 20
+      {type:"fill", q:"Resistance is measured in ______ (symbol).", ans:"ohms", exp:"The unit is ohms (Ω)." },
+      // 21
+      {type:"mcq", q:"A fixed resistor:", opts:["Has a set resistance value","Changes with temperature","Only works one way"], a:0, exp:"Fixed resistors have a constant resistance value."},
+      // 22
+      {type:"mcq", q:"A variable resistor is useful because it lets you:", opts:["Change the resistance easily","Store electrical energy","Force current to flow backwards"], a:0, exp:"Variable resistors can be adjusted to change resistance."},
+      // 23
+      {type:"mcq", q:"An LDR is a resistor whose resistance depends on:", opts:["Light intensity","Voltage only","Time of day"], a:0, exp:"LDR stands for light-dependent resistor."},
+      // 24
+      {type:"mcq", q:"In bright light, an LDR's resistance is typically:", opts:["High","Low","Infinite"], a:1, exp:"Bright light → low resistance → more current flows."},
+      // 25
+      {type:"mcq", q:"In darkness, an LDR's resistance is typically:", opts:["Low","High","Zero"], a:1, exp:"Darkness → high resistance → little current flows."},
+      // 26
+      {type:"fill", q:"LDR stands for light-dependent ______.", ans:"resistor", exp:"That is the full name of LDR."},
+      // 27
+      {type:"mcq", q:"A useful application of an LDR is:", opts:["Automatic night lights","Making batteries","Measuring mass"], a:0, exp:"LDRs can trigger lights when it gets dark."},
+      // 28
+      {type:"mcq", q:"How can an LDR be used in a burglar alarm?", opts:["Light detected drops resistance and increases current","Heat detected increases resistance and stops current","It forces current to reverse direction"], a:0, exp:"Light hitting the LDR reduces resistance so more current can power an alarm."},
+      // 29
+      {type:"fill", q:"If someone shines a torch on an LDR, its resistance will ______.", ans:"drop", exp:"More light causes resistance to fall."},
+      // 30
+      {type:"mcq", q:"A thermistor is a resistor whose resistance depends on:", opts:["Temperature","Light","Sound"], a:0, exp:"Thermistors are temperature-sensitive resistors."},
+      // 31
+      {type:"mcq", q:"For the thermistor described, higher temperature causes resistance to:", opts:["Rise","Fall","Stay the same"], a:1, exp:"Higher temperature → lower resistance."},
+      // 32
+      {type:"mcq", q:"Lower temperature causes a thermistor's resistance to:", opts:["Fall","Increase","Become zero"], a:1, exp:"Lower temperature → higher resistance."},
+      // 33
+      {type:"fill", q:"Thermistors are useful as temperature ______.", ans:"sensors", exp:"They act as temperature sensors in devices."},
+      // 34
+      {type:"mcq", q:"Which is mentioned as a thermistor application?", opts:["Car engines","Traffic lights","Torch batteries"], a:0, exp:"Thermistors can monitor temperature in car engines."},
+      // 35
+      {type:"mcq", q:"Another device that can use a thermistor is an electronic:", opts:["Thermostat","Ammeter","Diode"], a:0, exp:"Thermistors help thermostats sense and control temperature."},
+      // 36
+      {type:"mcq", q:"Which component is designed to allow current one way and emit light?", opts:["Fuse","LED","Switch"], a:1, exp:"An LED is a light-emitting diode."},
+      // 37
+      {type:"fill", q:"An ammeter is connected in ______.", ans:"series", exp:"Series connection ensures the same current passes through the ammeter."},
+      // 38
+      {type:"fill", q:"A voltmeter is connected in ______.", ans:"parallel", exp:"Parallel connection measures potential difference across a component."},
+      // 39
+      {type:"mcq", q:"If a fuse breaks, what happens to the circuit?", opts:["It becomes complete","Current stops flowing","Voltage doubles automatically"], a:1, exp:"A broken fuse opens the circuit, stopping current."},
+      // 40
+      {type:"mcq", q:"Which list contains only components mentioned in the speech?", opts:["Cell, switch, fuse, LED, ammeter","Magnet, speaker, transformer, motor","Capacitor, relay, transistor, coil"], a:0, exp:"The speech covered cell/battery, switch, fuse, LED and meters, plus resistors."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
