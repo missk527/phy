@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The National Grid</title>
+  <style>
+    :root{ --brand:#3f51b5; --paper:#fffef7; --ink:#333; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Arial, system-ui, sans-serif; background:#f5f7fb; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e0e0e0 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:16px 20px; text-align:center; font-size:1.4rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .video-container{ display:flex; justify-content:center; margin-top:20px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #ccc; border-radius:10px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .notes,.game{ background:var(--paper); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:var(--brand); border-bottom:2px solid #c5cae9; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:bold; color:#283593 }
+    .question-box{ border:1px solid #e0e0e0; border-radius:10px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:bold; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .small{font-size:.95rem}
+  </style>
+</head>
+<body>
+<header>The National Grid</header>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/eEpAFJMCU0Q" title="Metallic Bonding & Alloys" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+      <section class="notes">
+    <h2>Key Notes (rewritten from the speech)</h2>
+
+    <details open>
+      <summary>What the National Grid is</summary>
+      <ul>
+        <li>The <b>National Grid</b> is a large network of <b>cables, pylons, and transformers</b> that distributes electricity across the country.</li>
+        <li>It allows electricity generated in power stations to be transmitted efficiently to homes and businesses.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Where electricity comes from</summary>
+      <ul>
+        <li>In the UK, electricity is generated from several sources, but a large proportion is produced in <b>power stations</b>.</li>
+        <li>Power stations (whether using <b>fossil fuels</b> or <b>nuclear fission</b>) typically generate <b>heat</b> first, then convert <b>thermal energy</b> into <b>electrical energy</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Demand changes throughout the day</summary>
+      <ul>
+        <li>Electricity generation depends on <b>demand</b>.</li>
+        <li>Demand often peaks in the <b>late afternoon and evening</b> when people return home and use appliances (cooking, TVs, etc.).</li>
+        <li>To handle demand surges, power stations keep <b>spare capacity</b> and may run below their maximum output.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Power, voltage, and current</summary>
+      <ul>
+        <li>Electrical power depends on <b>voltage</b> and <b>current</b> (power = voltage × current).</li>
+        <li>To transmit huge amounts of power across long distances, the grid must manage voltage and current carefully.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Why high current causes energy loss</summary>
+      <ul>
+        <li>If a <b>large current</b> flows through transmission wires, the wires heat up due to their <b>resistance</b>.</li>
+        <li>This heating wastes energy to the surroundings, making long-distance transmission inefficient.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Why the grid uses very high voltage</summary>
+      <ul>
+        <li>To reduce energy loss, the grid keeps the <b>current low</b>.</li>
+        <li>For the same power, lowering current means the <b>voltage must be increased</b>.</li>
+        <li>So electricity leaving a power station is sent at a <b>very high voltage</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Step-up transformers</summary>
+      <ul>
+        <li><b>Step-up transformers</b> increase the voltage before transmission.</li>
+        <li>The voltage is stepped up to about <b>400,000 V</b> for efficient long-distance transfer.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Transmission and pylons</summary>
+      <ul>
+        <li>High-voltage electricity is carried over long distances along overhead lines on large <b>pylons</b>.</li>
+        <li>This connects regions across the country so electricity can be delivered where it is needed.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Step-down transformers and safety</summary>
+      <ul>
+        <li>Near towns and homes, <b>step-down transformers</b> reduce the voltage.</li>
+        <li>The voltage is lowered to around <b>230 V</b> for domestic use.</li>
+        <li>Lowering voltage is essential because <b>high voltages are dangerous</b> and would <b>damage household appliances</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Overall summary</summary>
+      <ul>
+        <li>Electricity is generated in power stations, stepped up to high voltage, transmitted across the country, then stepped down to a safe voltage for homes.</li>
+        <li>The National Grid’s main purpose is to <b>reduce energy loss</b> during transmission while delivering electricity safely.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="game">
+    <h2>Quiz (40 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40-question quiz based on the provided speech
+const questions = [
+  {type:"mcq", question:"What is the National Grid?", options:["A single power station","A network of transformers and wires that distributes electricity","A type of battery"], answer:1, explanation:"The National Grid is the national transmission and distribution network."},
+  {type:"mcq", question:"Which components are commonly mentioned as part of the National Grid?", options:["Transformers, wires, and pylons","Bunsen burners and beakers","Magnets and springs"], answer:0, explanation:"The grid uses transformers, cables and pylons."},
+  {type:"mcq", question:"In the UK, most electricity is generated in:", options:["Homes","Power stations","Shopping centres"], answer:1, explanation:"Most electricity is generated in power stations."},
+  {type:"mcq", question:"Power stations typically generate electricity by first producing:", options:["Light","Heat","Sound"], answer:1, explanation:"They generate heat, then convert it to electrical energy."},
+  {type:"fill", question:"Power stations convert ______ energy into electrical energy.", answerText:"thermal", explanation:"Heat (thermal energy) is converted into electrical energy."},
+
+  {type:"mcq", question:"Electricity generation depends mainly on:", options:["Demand","Weather only","Cable colour"], answer:0, explanation:"Generation output changes with demand."},
+  {type:"mcq", question:"When does electricity demand often peak?", options:["Late afternoon and evening","Midnight only","Early morning only"], answer:0, explanation:"Demand peaks when people get home and use appliances."},
+  {type:"mcq", question:"Why do power stations keep spare capacity?", options:["To cope with surges in demand","To reduce voltage to zero","To avoid generating electricity"], answer:0, explanation:"Spare capacity helps meet peak demand."},
+  {type:"mcq", question:"Power stations often run below maximum output because:", options:["They must match demand and keep spare capacity","They cannot produce heat","They only work in winter"], answer:0, explanation:"They adjust output and maintain capacity for peaks."},
+
+  {type:"fill", question:"Electrical power equals voltage × ______.", answerText:"current", explanation:"P = V × I."},
+  {type:"mcq", question:"To transmit a high power, you generally need:", options:["High voltage and high current","Low voltage only","High resistance"], answer:0, explanation:"High power involves voltage and current."},
+  {type:"mcq", question:"What problem occurs when a high current flows through a wire?", options:["The wire cools down","The wire heats up due to resistance","The wire becomes superconducting"], answer:1, explanation:"High current causes heating losses due to resistance."},
+  {type:"mcq", question:"Energy lost as heat in wires is caused by:", options:["Resistance in the wire","Gravity","Sound waves"], answer:0, explanation:"Resistance causes heating when current flows."},
+  {type:"mcq", question:"Why is losing energy to heating 'rubbish' for transmission?", options:["We want to transfer energy efficiently across the country","Heat increases voltage safely","It makes electricity brighter"], answer:0, explanation:"Heat loss wastes energy during transmission."},
+
+  {type:"mcq", question:"To reduce energy loss during transmission, the grid aims to keep the current:", options:["Very high","Very low","Exactly zero"], answer:1, explanation:"Lower current reduces heating losses."},
+  {type:"mcq", question:"If current is kept low but power must stay high, voltage must be:", options:["Low","High","Unchanged forever"], answer:1, explanation:"For fixed power, lower current means higher voltage."},
+  {type:"mcq", question:"What device increases voltage after electricity is generated?", options:["Step-up transformer","Step-down transformer","Fuse"], answer:0, explanation:"Step-up transformers raise voltage."},
+  {type:"fill", question:"Step-up transformers ______ the voltage.", answerText:"increase", explanation:"They step up (increase) voltage."},
+  {type:"mcq", question:"In the speech, transmission voltage is stepped up to about:", options:["230 V","400,000 V","12 V"], answer:1, explanation:"Voltage is stepped up to around 400 kV."},
+
+  {type:"mcq", question:"High-voltage electricity is carried across the country using:", options:["Small phone chargers","Wires between large pylons","Plastic tubes"], answer:1, explanation:"Overhead lines on pylons transmit electricity."},
+  {type:"fill", question:"The grid transmits electricity between huge ______.", answerText:"pylons", explanation:"Pylons support the transmission lines."},
+
+  {type:"mcq", question:"Just before electricity reaches a town, the voltage must be:", options:["Increased further","Reduced","Turned into heat"], answer:1, explanation:"Voltage is reduced near where it will be used."},
+  {type:"mcq", question:"What device reduces voltage near where electricity is used?", options:["Step-up transformer","Step-down transformer","Generator"], answer:1, explanation:"Step-down transformers lower voltage."},
+  {type:"fill", question:"Step-down transformers ______ the voltage.", answerText:"lower", explanation:"They step down (lower) voltage."},
+  {type:"mcq", question:"In the speech, household voltage is around:", options:["230 V","400,000 V","1,000,000 V"], answer:0, explanation:"Domestic supply is about 230 V."},
+
+  {type:"mcq", question:"Why must voltage be lowered for homes?", options:["High voltage is dangerous","High voltage would damage appliances","Both of the above"], answer:2, explanation:"High voltages are unsafe and would blow appliances."},
+  {type:"mcq", question:"Which statement best describes the main purpose of using high voltage in transmission?", options:["To increase energy loss","To minimise energy loss by reducing current","To make electricity heavier"], answer:1, explanation:"High voltage allows low current and less heating loss."},
+  {type:"mcq", question:"What causes heating in transmission cables?", options:["High current through resistance","Low voltage through air","Nuclear fission"], answer:0, explanation:"Current and resistance cause heating."},
+
+  {type:"fill", question:"The National Grid is a network that distributes ______ across the country.", answerText:"electricity", explanation:"Its job is to distribute electricity."},
+  {type:"mcq", question:"Which energy conversion is mentioned for power stations?", options:["Thermal to electrical","Electrical to chemical","Light to sound"], answer:0, explanation:"Thermal energy is converted into electrical energy."},
+  {type:"mcq", question:"Which process is mentioned as a way of generating heat in power stations?", options:["Nuclear fission","Photosynthesis","Evaporation only"], answer:0, explanation:"Nuclear fission is mentioned."},
+  {type:"mcq", question:"Which fuel type is also mentioned for generating heat?", options:["Fossil fuels","Pure water","Sand"], answer:0, explanation:"Burning fossil fuels is mentioned."},
+
+  {type:"mcq", question:"Why do power stations not always run at maximum power output?", options:["Demand varies and they keep spare capacity","They are forbidden by law to run at maximum","Transformers only work at night"], answer:0, explanation:"They match output to demand and keep reserve."},
+  {type:"fill", question:"Demand often rises when people start cooking and watching ______.", answerText:"TV", explanation:"The speech mentions watching TV."},
+  {type:"mcq", question:"If voltage is stepped up, what typically happens to current for the same power?", options:["It decreases","It increases","It becomes negative"], answer:0, explanation:"Higher voltage means lower current for the same power."},
+  {type:"mcq", question:"Which part of the grid makes electricity safe for domestic use?", options:["Step-down transformers","Step-up transformers","Pylons"], answer:0, explanation:"Step-down transformers reduce voltage."},
+
+  {type:"fill", question:"The equation stated is power = voltage × ______.", answerText:"current", explanation:"P = V × I."},
+  {type:"mcq", question:"Which is a correct sequence from generation to home?", options:["Generate → step-up → transmit → step-down → homes","Generate → step-down → transmit → step-up → homes","Transmit → generate → step-up → homes"], answer:0, explanation:"Voltage is stepped up then down."},
+  {type:"mcq", question:"Why is a low current important in long-distance transmission?", options:["It reduces energy loss as heat","It increases resistance","It makes pylons smaller"], answer:0, explanation:"Low current reduces heating losses."},
+  {type:"fill", question:"High current causes energy loss because wires have ______.", answerText:"resistance", explanation:"Resistance causes heating when current flows."},
+  {type:"mcq", question:"Which voltage level is associated with transmission in the speech?", options:["400,000 V","230 V","9 V"], answer:0, explanation:"Transmission uses around 400 kV."},
+  {type:"mcq", question:"Which voltage level is associated with homes in the speech?", options:["230 V","400,000 V","10,000 V"], answer:0, explanation:"Homes use around 230 V."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let order = [];
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const game = document.getElementById("game-area");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`;});
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  game.querySelector("#game-area-inner") ? game.querySelector("#game-area-inner").innerHTML = html : game.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`);
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.answer){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  if(ans.includes(q.answerText.toLowerCase())){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else endGame();
+}
+
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${questions.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
