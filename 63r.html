@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refraction of Light, Ray Diagrams & Prisms</title>
+  <style>
+    :root{ --brand:#3f51b5; --paper:#fffef7; --ink:#333; }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Arial, system-ui, sans-serif; background:#f5f7fb; color:var(--ink); line-height:1.6;
+      background-image:linear-gradient(white 97%, #e0e0e0 100%); background-size:100% 30px;
+    }
+    header{ background:var(--brand); color:#fff; padding:16px 20px; text-align:center; font-size:1.4rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .video-container{ display:flex; justify-content:center; margin-top:20px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #ccc; border-radius:10px; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.15)}
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .notes,.game{ background:var(--paper); border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:var(--brand); border-bottom:2px solid #c5cae9; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:bold; color:#283593 }
+    .question-box{ border:1px solid #e0e0e0; border-radius:10px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:8px; padding:8px 14px; font-weight:bold; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .small{font-size:.95rem}
+  </style>
+</head>
+<body>
+<header>Refraction of Light, Ray Diagrams & Prisms</header>
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/_eNnpHKrPGQ" title="Refraction of Light, Ray Diagrams & Prisms" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="notes">
+        <h2>Key Notes (rewritten from the speech)</h2>
+
+    <details open>
+      <summary>What refraction is</summary>
+      <ul>
+        <li><b>Refraction</b> happens when a light wave changes direction as it passes from one <b>medium</b> to another (for example, from <b>air</b> into <b>glass</b>).</li>
+        <li>The direction only changes if the ray hits the boundary at an <b>angle</b>. If it enters <b>perpendicular</b> to the surface, it continues straight.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Why light bends: speed changes in different materials</summary>
+      <ul>
+        <li>Waves travel at different <b>speeds</b> in different materials because materials have different <b>densities</b>.</li>
+        <li>For light (an electromagnetic wave), a <b>more optically dense</b> material makes the wave travel <b>slower</b>.</li>
+        <li>So when light goes from a less dense medium to a more dense medium (air → glass), it <b>slows down</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Bending towards or away from the normal</summary>
+      <ul>
+        <li>The <b>normal</b> is an imaginary line drawn <b>perpendicular</b> to the surface at the point where the ray hits.</li>
+        <li>Entering a <b>more dense</b> medium (air → glass): the ray bends <b>towards the normal</b>.</li>
+        <li>Entering a <b>less dense</b> medium (glass → air): the ray bends <b>away from the normal</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>How to draw a refraction ray diagram through a glass block</summary>
+      <ol>
+        <li>Draw the <b>incident ray</b> and mark the <b>point of incidence</b> where it hits the surface.</li>
+        <li>Draw the <b>normal</b> at 90° to the surface at that point.</li>
+        <li>Inside the glass, draw the <b>refracted ray</b> bending <b>towards the normal</b> (because the light slows down in glass).</li>
+        <li>Continue the refracted ray to the far side of the glass.</li>
+        <li>At the second surface, draw another <b>normal</b>.</li>
+        <li>Draw the <b>emergent ray</b> bending <b>away from the normal</b> as it leaves the glass into air.</li>
+      </ol>
+      <p class="small"><b>Tip:</b> In exams, the exact bend is usually not judged precisely—what matters is the <i>correct direction</i> (towards/away from the normal).</p>
+    </details>
+
+    <details>
+      <summary>Angles to label</summary>
+      <ul>
+        <li><b>Angle of incidence (i)</b>: between the incident ray and the normal.</li>
+        <li><b>Angle of refraction (r)</b>: between the refracted ray and the normal (in the second medium).</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Frequency vs wavelength when speed changes</summary>
+      <ul>
+        <li>Wave speed depends on frequency and wavelength: <b>v = f × λ</b>.</li>
+        <li>When light enters a new medium, its <b>frequency stays the same</b>.</li>
+        <li>So a change in speed means the <b>wavelength changes</b>:
+          <ul>
+            <li>If speed <b>decreases</b>, wavelength <b>decreases</b>.</li>
+            <li>If speed <b>increases</b>, wavelength <b>increases</b>.</li>
+          </ul>
+        </li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Triangular prisms and dispersion</summary>
+      <ul>
+        <li>Different <b>wavelengths</b> of visible light refract by different amounts.</li>
+        <li>White light contains many wavelengths, so in a <b>triangular prism</b> each colour bends a bit differently.</li>
+        <li>This spreads the light into a <b>spectrum</b> (a rainbow effect), called <b>dispersion</b>.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="game">
+    <h2>Quiz (40 Questions)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+// 40-question quiz based on the provided speech
+const questions = [
+  {"type": "mcq", "question": "What is refraction?", "options": ["A wave speeding up without changing direction", "A wave changing direction when entering a new medium", "A wave stopping at a boundary"], "answer": 1, "explanation": "Refraction is a change in direction as light passes between media."},
+  {"type": "mcq", "question": "Light changes direction at a boundary mainly because its:", "options": ["frequency changes", "speed changes", "amplitude changes"], "answer": 1, "explanation": "Refraction occurs because speed changes in a different medium."},
+  {"type": "mcq", "question": "A medium is best described as:", "options": ["A type of mirror", "The material a wave travels through", "A unit of wavelength"], "answer": 1, "explanation": "A medium is the material through which waves travel."},
+  {"type": "mcq", "question": "For light, a more optically dense material generally makes the wave travel:", "options": ["slower", "faster", "at the same speed"], "answer": 0, "explanation": "Higher optical density means lower speed for light."},
+  {"type": "mcq", "question": "When light travels from air into glass, it usually:", "options": ["speeds up", "slows down", "keeps the same speed"], "answer": 1, "explanation": "Glass is more optically dense than air, so light slows down."},
+  {"type": "mcq", "question": "If a ray enters a boundary perpendicular (at 90°) to the surface, it will:", "options": ["bend towards the normal", "bend away from the normal", "continue straight"], "answer": 2, "explanation": "At normal incidence there is no change in direction."},
+  {"type": "mcq", "question": "The normal is a line drawn:", "options": ["parallel to the surface", "perpendicular to the surface", "along the incident ray"], "answer": 1, "explanation": "The normal is perpendicular to the surface at the point of incidence."},
+  {"type": "mcq", "question": "When light goes from a less dense medium to a more dense medium, it bends:", "options": ["towards the normal", "away from the normal", "randomly"], "answer": 0, "explanation": "Entering a denser medium makes the ray bend towards the normal."},
+  {"type": "mcq", "question": "When light goes from glass into air, it bends:", "options": ["towards the normal", "away from the normal", "into the surface"], "answer": 1, "explanation": "Leaving a denser medium makes the ray bend away from the normal."},
+  {"type": "fill", "question": "The point where the incoming ray hits the surface is the point of ______.", "answerText": "incidence", "explanation": "That point is called the point of incidence."},
+  {"type": "mcq", "question": "In a ray diagram, the incoming ray is called the:", "options": ["emergent ray", "incident ray", "refracted ray"], "answer": 1, "explanation": "The ray arriving at the boundary is the incident ray."},
+  {"type": "mcq", "question": "The ray inside the new medium after bending is the:", "options": ["refracted ray", "reflected ray", "normal ray"], "answer": 0, "explanation": "After entering the second medium, it becomes the refracted ray."},
+  {"type": "mcq", "question": "The ray that leaves the block back into air is the:", "options": ["incident ray", "emergent ray", "refracted normal"], "answer": 1, "explanation": "The exiting ray is the emergent ray."},
+  {"type": "fill", "question": "The angle between the incident ray and the normal is the angle of ______.", "answerText": "incidence", "explanation": "Angle of incidence is measured to the normal."},
+  {"type": "fill", "question": "The angle between the refracted ray and the normal is the angle of ______.", "answerText": "refraction", "explanation": "Angle of refraction is measured to the normal in the second medium."},
+  {"type": "mcq", "question": "Angles in refraction are measured relative to the:", "options": ["surface", "normal", "horizontal axis"], "answer": 1, "explanation": "Angles are always measured from the normal."},
+  {"type": "mcq", "question": "In the speech, why do different materials cause different wave speeds?", "options": ["They have different densities", "They have different colours", "They have different temperatures"], "answer": 0, "explanation": "Different media have different densities, affecting wave speed."},
+  {"type": "mcq", "question": "When light slows down on entering glass at an angle, it bends:", "options": ["towards the normal", "away from the normal", "parallel to the surface"], "answer": 0, "explanation": "Slower speed in a denser medium bends the ray towards the normal."},
+  {"type": "mcq", "question": "When light speeds up on leaving glass into air, it bends:", "options": ["towards the normal", "away from the normal", "straight down"], "answer": 1, "explanation": "Speeding up in a less dense medium bends away from the normal."},
+  {"type": "mcq", "question": "Which sequence best matches a glass-block ray diagram?", "options": ["Incident → emergent → refracted", "Incident → refracted → emergent", "Refracted → incident → emergent"], "answer": 1, "explanation": "It arrives (incident), bends inside (refracted), then leaves (emergent)."},
+  {"type": "fill", "question": "In a glass block, you draw a second normal at the second ______ where the ray exits.", "answerText": "boundary", "explanation": "You repeat the process at the second boundary/surface."},
+  {"type": "mcq", "question": "If light enters a denser medium, which comparison is true?", "options": ["i < r always", "r < i (bends towards normal)", "r = 90° always"], "answer": 1, "explanation": "Bending towards the normal means the refracted angle is smaller."},
+  {"type": "mcq", "question": "If light enters a less dense medium, which comparison is true?", "options": ["r > i (bends away from normal)", "r < i always", "r = i always"], "answer": 0, "explanation": "Bending away from the normal makes the refracted angle larger."},
+  {"type": "mcq", "question": "Which wave equation links speed, frequency, and wavelength?", "options": ["v = f × λ", "v = f ÷ λ", "v = λ ÷ f"], "answer": 0, "explanation": "Wave speed equals frequency times wavelength."},
+  {"type": "mcq", "question": "When light enters a new medium, which quantity stays the same?", "options": ["frequency", "wavelength", "speed"], "answer": 0, "explanation": "Frequency remains constant at a boundary."},
+  {"type": "mcq", "question": "If light’s speed decreases in a medium and frequency stays constant, the wavelength:", "options": ["increases", "decreases", "stays the same"], "answer": 1, "explanation": "With v = fλ and f constant, lower v means lower λ."},
+  {"type": "mcq", "question": "If light’s speed increases in a medium and frequency stays constant, the wavelength:", "options": ["increases", "decreases", "stays the same"], "answer": 0, "explanation": "Higher speed means higher wavelength when frequency is unchanged."},
+  {"type": "mcq", "question": "Which statement about refraction is correct?", "options": ["It only happens in mirrors", "It can happen when light crosses between media", "It requires the ray to be perpendicular to the boundary"], "answer": 1, "explanation": "Refraction occurs at boundaries between different media."},
+  {"type": "mcq", "question": "A triangular prism is especially useful because it can:", "options": ["stop light completely", "separate white light into colours", "increase frequency of light"], "answer": 1, "explanation": "Prisms disperse white light into a spectrum."},
+  {"type": "mcq", "question": "The spreading of white light into different colours is called:", "options": ["polarisation", "dispersion", "diffraction"], "answer": 1, "explanation": "Different wavelengths refract by different amounts (dispersion)."},
+  {"type": "mcq", "question": "Different colours separate in a prism because different wavelengths are refracted by:", "options": ["the same amount", "different amounts", "random amounts"], "answer": 1, "explanation": "Refraction depends on wavelength."},
+  {"type": "fill", "question": "White light is made of many different ______ of visible light.", "answerText": "wavelengths", "explanation": "White light contains a range of visible wavelengths."},
+  {"type": "fill", "question": "A prism produces a rainbow-like ______ (spread of colours).", "answerText": "spectrum", "explanation": "The output is a visible spectrum."},
+  {"type": "mcq", "question": "In ray diagrams, the dashed line drawn at 90° to the surface is the:", "options": ["boundary", "normal", "incident ray"], "answer": 1, "explanation": "That dashed line is the normal."},
+  {"type": "mcq", "question": "Which situation will definitely cause refraction (direction change)?", "options": ["Light hits a boundary at an angle and enters a different medium", "Light travels in one medium only", "Light hits a boundary perpendicularly"], "answer": 0, "explanation": "Angle + new medium leads to bending."},
+  {"type": "mcq", "question": "What is the best first step when drawing a refraction diagram at a boundary?", "options": ["Draw the emergent ray", "Draw the normal at the point of incidence", "Write the wavelength"], "answer": 1, "explanation": "The normal guides which way the ray bends."},
+  {"type": "fill", "question": "A ray bending towards the normal means it entered a more ______ medium.", "answerText": "dense", "explanation": "More dense medium → slower speed → towards the normal."},
+  {"type": "fill", "question": "A ray bending away from the normal means it entered a less ______ medium.", "answerText": "dense", "explanation": "Less dense medium → faster speed → away from the normal."},
+  {"type": "mcq", "question": "Which label would you add to complete a refraction diagram (besides rays and normals)?", "options": ["Angle of incidence and angle of refraction", "Mass and volume", "Resistance and current"], "answer": 0, "explanation": "You must label i and r to show the angles to the normal."},
+  {"type": "mcq", "question": "In the speech’s glass-block example, the refracted ray inside the glass should be drawn:", "options": ["exactly at a fixed angle every time", "in the correct region bending towards the normal", "parallel to the surface"], "answer": 1, "explanation": "Exams focus on correct bending direction, not a precise angle."}
+];
+
+let currentQuestion = 0;
+let score = 0;
+let order = [];
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const game = document.getElementById("game-area");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`;});
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  game.querySelector("#game-area-inner") ? game.querySelector("#game-area-inner").innerHTML = html : game.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`);
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.answer){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  if(ans.includes(q.answerText.toLowerCase())){
+    fb.textContent = "✅ Correct! " + q.explanation;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.explanation;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else endGame();
+}
+
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${questions.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
