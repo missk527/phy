@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Respiration — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffdf9; --ink:#222; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7f5f9; color:var(--ink); line-height:1.6;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#6d28d9; border-bottom:2px solid #e9d5ff; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#6d28d9 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ede9fe; color:#4c1d95; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Microwaves & Infrared — Uses and Hazards <span class="pill">Satellites · Heating · IR</span></h1>
+    <div class="small">Video + exam‑focused notes + 40‑question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/fmIcNJZ32o8" title="Respiration video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+                        <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>Position in the electromagnetic spectrum</summary>
+        <ul>
+          <li><strong>Microwaves</strong> and <strong>infrared (IR)</strong> are the 2nd and 3rd groups in the electromagnetic spectrum (from the long-wavelength end).</li>
+          <li>Because they are on the left side of the spectrum, they have <strong>relatively long wavelengths</strong> and <strong>low frequencies</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microwaves for satellite communication</summary>
+        <ul>
+          <li>Some microwaves are <strong>not absorbed by water molecules</strong>.</li>
+          <li>These are used for <strong>satellite communication</strong> because the waves must pass through the <strong>Earth’s atmosphere</strong>, which contains water.</li>
+          <li>Microwaves are sent up to a satellite, then the satellite <strong>transmits them back to Earth</strong>.</li>
+          <li>We detect the signal using a <strong>satellite dish</strong> (e.g., for satellite TV).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Microwaves in ovens (heating food)</summary>
+        <ul>
+          <li>Other microwaves are <strong>absorbed by water molecules</strong>.</li>
+          <li>In a microwave oven, water molecules absorb microwave energy and <strong>vibrate more</strong>.</li>
+          <li>Vibrating water molecules transfer energy to nearby particles so heat spreads through the food by <strong>conduction</strong> and/or <strong>convection</strong>.</li>
+          <li>Foods with <strong>more water</strong> usually heat up <strong>faster</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Infrared radiation and temperature</summary>
+        <ul>
+          <li><strong>Infrared radiation</strong> is emitted by all objects that have <strong>thermal (heat) energy</strong>.</li>
+          <li>The <strong>hotter</strong> the object, the <strong>more infrared</strong> it emits.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Infrared cameras (thermal imaging)</summary>
+        <ul>
+          <li>Infrared cameras detect IR to show which areas are <strong>hot</strong> and which are <strong>cold</strong>.</li>
+          <li>This helps us <strong>see in the dark</strong> and spot living organisms.</li>
+          <li>Warm animals appear <strong>bright</strong> because they emit lots of IR; cooler surroundings appear <strong>darker</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Infrared for cooking</summary>
+        <ul>
+          <li>Hot metal in ovens and grills emits lots of infrared radiation, which transfers heat to food and cooks it.</li>
+          <li>IR does <strong>not penetrate deeply</strong> into food, so heating is mainly at the surface.</li>
+          <li>That’s why bread <strong>toasts</strong> in a toaster instead of warming evenly like in a microwave.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Infrared heaters</summary>
+        <ul>
+          <li>Electric heaters use electrical energy to heat metal elements.</li>
+          <li>The hot element emits infrared radiation that warms the surroundings (heats rooms).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Hazards</summary>
+        <ul>
+          <li>Microwaves and infrared are generally <strong>safe at background levels</strong>.</li>
+          <li>They can be harmful in <strong>high quantities</strong> because they transfer large amounts of energy.</li>
+          <li>Microwaves can heat living tissue (cells can <strong>boil</strong> and be destroyed).</li>
+          <li>Strong infrared from grills/toasters can cause <strong>burns</strong> by damaging skin cells.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Take-home message</summary>
+        <ul>
+          <li>Microwaves can be used for communication (if not absorbed by water) and for heating (if absorbed by water).</li>
+          <li>Infrared is emitted by warm objects and is useful for thermal imaging, cooking, and heating rooms.</li>
+          <li>Both are mainly harmful only at high intensities due to heating effects.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Respiration practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+// All items are derived from the provided speech.
+const questions = [
+  {type:"mcq", question:"Microwaves and infrared are which groups in the electromagnetic spectrum (from the long-wavelength end)?", options:[
+    "1st and 2nd",
+    "2nd and 3rd",
+    "3rd and 4th",
+    "4th and 5th"
+  ], answer:1, explanation:"The speech says microwaves and infrared are the 2nd and 3rd groups."},
+
+  {type:"mcq", question:"Microwaves and infrared have relatively:", options:[
+    "short wavelengths and high frequencies",
+    "long wavelengths and low frequencies",
+    "short wavelengths and low frequencies",
+    "long wavelengths and high frequencies"
+  ], answer:1, explanation:"They are on the left side of the spectrum: long wavelength, low frequency."},
+
+  {type:"mcq", question:"Microwaves used for satellite communication must not be strongly absorbed by:", options:[
+    "oxygen molecules",
+    "water molecules",
+    "nitrogen molecules",
+    "carbon dioxide molecules"
+  ], answer:1, explanation:"They must pass through an atmosphere containing water."},
+
+  {type:"mcq", question:"Why must satellite-communication microwaves pass through Earth’s atmosphere?", options:[
+    "Satellites are above the Earth so waves must travel through the atmosphere",
+    "Satellites are underwater",
+    "Microwaves only travel in air",
+    "Microwaves cannot travel in space"
+  ], answer:0, explanation:"Signals travel up through the atmosphere to satellites."},
+
+  {type:"mcq", question:"After a satellite receives the microwave signal, it:", options:[
+    "stores it forever",
+    "transmits it back down to Earth",
+    "turns it into visible light",
+    "absorbs it and stops it"
+  ], answer:1, explanation:"Satellites relay signals back to Earth."},
+
+  {type:"mcq", question:"What device is used on Earth to detect satellite microwaves (e.g., satellite TV)?", options:[
+    "Thermometer",
+    "Satellite dish",
+    "Oven grill",
+    "X-ray detector"
+  ], answer:1, explanation:"A satellite dish detects the signal."},
+
+  {type:"mcq", question:"Microwave ovens mainly heat food by interacting with:", options:[
+    "fat molecules only",
+    "water molecules",
+    "glass molecules",
+    "metal atoms"
+  ], answer:1, explanation:"Most food contains water; microwaves are absorbed by water molecules."},
+
+  {type:"tf", question:"In a microwave oven, water molecules absorb microwave energy and vibrate more.", answer:true, explanation:"Energy absorption increases vibration."},
+
+  {type:"mcq", question:"How does heat spread through food after water molecules absorb microwaves?", options:[
+    "Only by radiation",
+    "By conduction and/or convection to neighbouring molecules",
+    "By nuclear decay",
+    "By freezing"
+  ], answer:1, explanation:"Energy transfers through conduction or convection."},
+
+  {type:"mcq", question:"Foods with more water usually heat up:", options:[
+    "more quickly",
+    "more slowly",
+    "at the same rate always",
+    "only at the surface"
+  ], answer:0, explanation:"More water means more absorption, so faster heating."},
+
+  {type:"mcq", question:"Infrared radiation is emitted by:", options:[
+    "only the Sun",
+    "all objects with thermal (heat) energy",
+    "only cold objects",
+    "only water molecules"
+  ], answer:1, explanation:"All objects with thermal energy emit IR."},
+
+  {type:"mcq", question:"The hotter an object is, the infrared radiation it emits:", options:[
+    "the less it emits",
+    "the more it emits",
+    "stays constant",
+    "becomes zero"
+  ], answer:1, explanation:"Hotter objects emit more IR."},
+
+  {type:"mcq", question:"Infrared cameras help us to:", options:[
+    "see in the dark by detecting heat patterns",
+    "measure pH",
+    "detect radio stations",
+    "separate pigments"
+  ], answer:0, explanation:"They detect IR to show hot vs cold."},
+
+  {type:"mcq", question:"In thermal images, warm animals often appear:", options:[
+    "dark because they emit little IR",
+    "bright because they emit lots of IR",
+    "invisible because IR cannot be detected",
+    "green because of chlorophyll"
+  ], answer:1, explanation:"Warm animals emit lots of IR and appear bright."},
+
+  {type:"mcq", question:"Cooler surroundings appear darker in IR images because they:", options:[
+    "emit less infrared radiation",
+    "emit more infrared radiation",
+    "reflect microwaves",
+    "absorb all light"
+  ], answer:0, explanation:"Cooler objects emit less IR."},
+
+  {type:"mcq", question:"Cooking with ovens and grills works partly because hot metal emits:", options:[
+    "radio waves",
+    "infrared radiation",
+    "ultraviolet radiation only",
+    "gamma rays"
+  ], answer:1, explanation:"Hot metal emits IR that heats food."},
+
+  {type:"mcq", question:"Infrared cooks food mainly by:", options:[
+    "penetrating deep inside the food",
+    "transferring heat energy to the surface",
+    "breaking chemical bonds directly",
+    "making water molecules spin only"
+  ], answer:1, explanation:"IR mainly heats the surface."},
+
+  {type:"tf", question:"Infrared radiation penetrates deeply into food like microwaves do.", answer:false, explanation:"IR does not penetrate the surface well."},
+
+  {type:"mcq", question:"Bread toasts in a toaster rather than warming evenly because infrared:", options:[
+    "penetrates deeply and warms the centre first",
+    "heats mainly at the surface",
+    "is absorbed only by metals",
+    "cannot heat food"
+  ], answer:1, explanation:"Surface heating leads to toasting."},
+
+  {type:"mcq", question:"Electric heaters warm rooms mainly by:", options:[
+    "emitting infrared radiation from hot metal elements",
+    "producing oxygen gas",
+    "reflecting microwaves",
+    "creating electrical sparks"
+  ], answer:0, explanation:"Heated metal emits IR to surroundings."},
+
+  {type:"tf", question:"Electric heaters use electrical energy to heat metal, which then emits infrared.", answer:true, explanation:"That is how they work."},
+
+  {type:"mcq", question:"Microwaves are harmful to living tissue mainly because they:", options:[
+    "cause ionisation",
+    "cause heating (cells can boil)",
+    "cause DNA mutations directly at low power",
+    "freeze cells instantly"
+  ], answer:1, explanation:"High microwave exposure heats tissue strongly."},
+
+  {type:"mcq", question:"Infrared can cause burns mainly because it:", options:[
+    "adds heat energy to skin cells",
+    "removes heat energy from skin cells",
+    "turns skin into metal",
+    "creates electricity in bones"
+  ], answer:0, explanation:"High IR intensity heats tissue and can destroy cells."},
+
+  {type:"tf", question:"Background levels of microwaves and infrared from surroundings are generally harmful.", answer:false, explanation:"The speech says background levels don’t really do harm."},
+
+  {type:"mcq", question:"Which microwaves are used for satellite communication?", options:[
+    "Those absorbed by water molecules",
+    "Those not absorbed by water molecules",
+    "Those that are visible",
+    "Those that are ionising"
+  ], answer:1, explanation:"They must pass through a watery atmosphere."},
+
+  {type:"mcq", question:"Which microwaves are used in microwave ovens?", options:[
+    "Those absorbed by water molecules",
+    "Those not absorbed by water molecules",
+    "Those reflected by the ionosphere",
+    "Those emitted by hot metal"
+  ], answer:0, explanation:"Ovens use microwaves absorbed by water molecules."},
+
+  {type:"fill", question:"Heat spreading through food by particle-to-particle transfer is called ______.", answer:"conduction", explanation:"Conduction transfers energy to neighbouring particles."},
+
+  {type:"fill", question:"Heat spreading through moving fluids (like water/air) is called ______.", answer:"convection", explanation:"Convection transfers heat by movement of fluids."},
+
+  {type:"mcq", question:"Which statement best compares microwaves and infrared in cooking?", options:[
+    "Both penetrate deeply into food equally",
+    "Microwaves penetrate more; infrared heats mainly the surface",
+    "Infrared penetrates more; microwaves heat only the surface",
+    "Neither can heat food"
+  ], answer:1, explanation:"Microwaves heat water inside; IR mostly heats surface."},
+
+  {type:"mcq", question:"What is the key factor affecting how much infrared an object emits?", options:[
+    "Object colour only",
+    "Object temperature",
+    "Object mass only",
+    "Object shape only"
+  ], answer:1, explanation:"Hotter objects emit more IR."},
+
+  {type:"mcq", question:"Why would microwaves absorbed by water be bad for satellite communication?", options:[
+    "They would be absorbed by water in the atmosphere",
+    "They would travel too fast",
+    "They would turn into visible light",
+    "They would only travel underground"
+  ], answer:0, explanation:"Atmospheric water would absorb them."},
+
+  {type:"mcq", question:"What happens to water molecules in food when they absorb microwave energy?", options:[
+    "They freeze",
+    "They vibrate more",
+    "They stop moving",
+    "They change into oxygen"
+  ], answer:1, explanation:"They vibrate more with added energy."},
+
+  {type:"tf", question:"Warm objects emit infrared radiation even if they are not glowing visibly.", answer:true, explanation:"All objects with thermal energy emit IR."},
+
+  {type:"mcq", question:"Which device is specifically mentioned for detecting infrared to locate organisms?", options:[
+    "Radar",
+    "Infrared camera",
+    "Satellite dish",
+    "Oscilloscope"
+  ], answer:1, explanation:"IR cameras detect infrared radiation."},
+
+  {type:"mcq", question:"In an infrared image, which region is likely to be darkest?", options:[
+    "A warm animal",
+    "A very hot metal grill",
+    "A cool background surface",
+    "A heated radiator"
+  ], answer:2, explanation:"Cooler areas emit less IR and appear darker."},
+
+  {type:"mcq", question:"Microwaves and infrared are only harmful to humans when:", options:[
+    "present in high quantities/intensities",
+    "present at background levels",
+    "used for satellite TV",
+    "used in thermal cameras"
+  ], answer:0, explanation:"High intensities cause damage via heating."},
+
+  {type:"mcq", question:"Putting living cells in a microwave would likely:", options:[
+    "cool them down",
+    "boil them and destroy them",
+    "make them emit gamma rays",
+    "turn them into plastic"
+  ], answer:1, explanation:"High microwave exposure heats/boils cells."},
+
+  {type:"mcq", question:"Putting your hand too close to a toaster or grill could cause:", options:[
+    "freezing",
+    "burns",
+    "radio reception",
+    "ionisation"
+  ], answer:1, explanation:"High IR can burn skin by heating cells."},
+
+  {type:"fill", question:"Microwaves and infrared have relatively long wavelengths and low ______.", answer:"frequencies|frequency", explanation:"Left side of spectrum: low frequency."},
+
+  {type:"mcq", question:"Which is NOT a use of infrared mentioned in the speech?", options:[
+    "Thermal imaging cameras",
+    "Cooking with grills/ovens",
+    "Electric heaters",
+    "Satellite TV communication"
+  ], answer:3, explanation:"Satellite communication is a microwave use, not infrared."},
+
+  {type:"mcq", question:"Which is NOT a microwave use mentioned in the speech?", options:[
+    "Satellite communication",
+    "Heating food in microwave ovens",
+    "Thermal imaging",
+    "Satellite TV reception via dish"
+  ], answer:2, explanation:"Thermal imaging is an infrared application."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
