@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Respiration — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#7c3aed; --paper:#fffdf9; --ink:#222; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f7f5f9; color:var(--ink); line-height:1.6;
+    }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15)}
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#6d28d9; border-bottom:2px solid #e9d5ff; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#6d28d9 }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#ede9fe; color:#4c1d95; border:1px solid #ddd6fe; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Radio Waves — Types & Communication <span class="pill">Longwave · Shortwave · Very Shortwave</span></h1>
+    <div class="small">Video + exam‑focused notes + 40‑question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/W_1BplXEiGY" title="Respiration video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+                    <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>Radio waves in the electromagnetic spectrum</summary>
+        <ul>
+          <li><strong>Radio waves</strong> are part of the <strong>electromagnetic spectrum</strong>.</li>
+          <li>They have the <strong>longest wavelength</strong> and the <strong>lowest frequency</strong> of all electromagnetic waves.</li>
+          <li>Electromagnetic waves are made of oscillating <strong>electric</strong> and <strong>magnetic</strong> fields.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Generating radio waves (transmitter + alternating current)</summary>
+        <ul>
+          <li>Radio waves can be generated using an <strong>alternating current (AC)</strong>, because AC contains <strong>oscillating charges</strong>.</li>
+          <li>A <strong>transmitter</strong> produces the radio wave and is often connected to an <strong>oscilloscope</strong>.</li>
+          <li>The oscilloscope shows the <strong>frequency</strong> of the AC used.</li>
+          <li><strong>Key idea:</strong> the frequency of the AC determines the frequency of the radio wave produced.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Detecting radio waves (receiver)</summary>
+        <ul>
+          <li>A <strong>receiver</strong> detects the radio wave by absorbing its energy.</li>
+          <li>The receiver generates a new <strong>alternating current</strong>, which can also be displayed on an oscilloscope.</li>
+          <li><strong>Key idea:</strong> the AC produced in the receiver has the <strong>same frequency</strong> as the transmitted wave.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>How information is carried</summary>
+        <ul>
+          <li>Because the receiver reproduces the transmitted frequency, we can use frequency to <strong>transfer information</strong>.</li>
+          <li>Example: transmitting a wave at <strong>800 Hz</strong> could represent the number <strong>800</strong>.</li>
+          <li>This principle can be used to communicate many kinds of information, not just numbers.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Three types used for communication</summary>
+        <ul>
+          <li>The main use of radio waves is <strong>communication</strong>.</li>
+          <li>Three types to know: <strong>longwave</strong>, <strong>shortwave</strong>, and <strong>very shortwave</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Longwave</summary>
+        <ul>
+          <li>Can travel <strong>very large distances</strong> (e.g., London to Singapore).</li>
+          <li>They <strong>diffract</strong> (bend) around the <strong>curved surface of the Earth</strong>.</li>
+          <li>Good for <strong>long-range communication</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Shortwave</summary>
+        <ul>
+          <li>Can also travel long distances, but they do <strong>not</strong> curve around the Earth.</li>
+          <li>Instead, they are <strong>reflected</strong> by the <strong>ionosphere</strong> (an electrically charged layer in the upper atmosphere).</li>
+          <li>By bouncing between the ionosphere and Earth, they can cover long distances.</li>
+          <li>The speech also mentions short-range data transmission such as <strong>Bluetooth</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Very shortwave</summary>
+        <ul>
+          <li>Used for <strong>TV</strong> and <strong>FM radio</strong>.</li>
+          <li>They require <strong>line-of-sight</strong>: travelling directly from transmitter to receiver.</li>
+          <li>Signals can be blocked by obstacles like <strong>hills</strong> and <strong>tunnels</strong> (e.g., in a car).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Take-home message</summary>
+        <ul>
+          <li>Radio waves are generated by AC in a transmitter and detected by a receiver producing AC of the same frequency.</li>
+          <li>Different radio-wave types travel in different ways, which affects how they are used for communication.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Respiration practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+// All items are derived from the provided speech.
+const questions = [
+  {type:"mcq", question:"Radio waves are part of the:", options:[
+    "sound spectrum",
+    "electromagnetic spectrum",
+    "visible spectrum only",
+    "nuclear spectrum"
+  ], answer:1, explanation:"Radio waves are electromagnetic waves."},
+
+  {type:"mcq", question:"Compared with other electromagnetic waves, radio waves have:", options:[
+    "shortest wavelength and highest frequency",
+    "longest wavelength and lowest frequency",
+    "shortest wavelength and lowest frequency",
+    "longest wavelength and highest frequency"
+  ], answer:1, explanation:"Radio waves have the longest wavelength and lowest frequency."},
+
+  {type:"tf", question:"Electromagnetic waves consist of oscillating electric and magnetic fields.", answer:true, explanation:"That is why the spectrum is called electromagnetic."},
+
+  {type:"mcq", question:"Radio waves can be generated using electricity in the form of:", options:[
+    "direct current (DC)",
+    "alternating current (AC)",
+    "static electricity only",
+    "chemical energy only"
+  ], answer:1, explanation:"AC involves oscillating charges that generate EM waves."},
+
+  {type:"mcq", question:"Why is AC useful for generating radio waves?", options:[
+    "It has oscillating charges",
+    "It has no moving charges",
+    "It removes all frequencies",
+    "It blocks magnetic fields"
+  ], answer:0, explanation:"Oscillating charges produce oscillating fields."},
+
+  {type:"mcq", question:"The device used to generate radio waves is a:", options:[
+    "receiver",
+    "transmitter",
+    "thermometer",
+    "microscope"
+  ], answer:1, explanation:"A transmitter produces the radio wave."},
+
+  {type:"mcq", question:"A transmitter is normally connected to an:", options:[
+    "barometer",
+    "oscilloscope",
+    "calorimeter",
+    "pH probe"
+  ], answer:1, explanation:"The oscilloscope shows the wave/frequency."},
+
+  {type:"mcq", question:"An oscilloscope helps because it shows the:", options:[
+    "mass of the wave",
+    "frequency of the AC signal",
+    "chemical formula of air",
+    "colour of the wave"
+  ], answer:1, explanation:"You can see the frequency on the screen."},
+
+  {type:"mcq", question:"What determines the frequency of the radio wave produced?", options:[
+    "the temperature of the transmitter",
+    "the frequency of the alternating current",
+    "the colour of the oscilloscope screen",
+    "the mass of electrons"
+  ], answer:1, explanation:"AC frequency sets the radio-wave frequency."},
+
+  {type:"mcq", question:"A radio wave can be detected again using a:", options:[
+    "transmitter",
+    "receiver",
+    "battery",
+    "lens"
+  ], answer:1, explanation:"A receiver detects/absorbs the wave."},
+
+  {type:"mcq", question:"When a receiver detects a radio wave, it generates:", options:[
+    "a direct current",
+    "an alternating current",
+    "a chemical reaction",
+    "a permanent magnet"
+  ], answer:1, explanation:"It produces an AC that can be displayed."},
+
+  {type:"tf", question:"The AC produced in the receiver has the same frequency as the transmitted wave.", answer:true, explanation:"Key point: frequencies match."},
+
+  {type:"mcq", question:"Why is matching frequency important for communication?", options:[
+    "It allows the receiver to reproduce the sent signal",
+    "It makes the wave travel faster than light",
+    "It changes radio waves into sound waves",
+    "It removes interference completely"
+  ], answer:0, explanation:"Same frequency lets information be interpreted."},
+
+  {type:"mcq", question:"In the example, a wave at 800 Hz could represent:", options:[
+    "the colour green",
+    "the number 800",
+    "the speed of sound",
+    "the mass 800 kg"
+  ], answer:1, explanation:"They use 800 Hz to communicate the number 800."},
+
+  {type:"tf", question:"Radio waves can only transmit numbers, not other types of information.", answer:false, explanation:"They can transfer pretty much any kind of information."},
+
+  {type:"mcq", question:"The main use of radio waves mentioned is:", options:[
+    "heating food",
+    "communication",
+    "nuclear fission",
+    "photosynthesis"
+  ], answer:1, explanation:"Radio waves are mainly used for communication."},
+
+  {type:"mcq", question:"How many types of radio waves for communication must you know (from the speech)?", options:[
+    "2",
+    "3",
+    "4",
+    "5"
+  ], answer:1, explanation:"Longwave, shortwave, very shortwave."},
+
+  {type:"fill", question:"The three types are longwave, ______wave, and very shortwave.", answer:"short|shortwave", explanation:"Shortwave is the second type mentioned."},
+
+  {type:"mcq", question:"Longwave radio waves can travel huge distances mainly because they:", options:[
+    "reflect from the ionosphere",
+    "diffract around the curved surface of the Earth",
+    "travel through tunnels better than other waves",
+    "require line-of-sight transmission"
+  ], answer:1, explanation:"Longwave bends around Earth’s curvature."},
+
+  {type:"tf", question:"Longwave waves are good for long-range communication.", answer:true, explanation:"They can travel from London to Singapore."},
+
+  {type:"mcq", question:"Shortwave signals can travel long distances because they are reflected by the:", options:[
+    "mantle",
+    "ionosphere",
+    "ocean",
+    "core"
+  ], answer:1, explanation:"They reflect from the ionosphere."},
+
+  {type:"fill", question:"The ionosphere is an electrically charged layer of the Earth's upper ______.", answer:"atmosphere", explanation:"It is in the upper atmosphere."},
+
+  {type:"mcq", question:"Shortwave radio waves cover long distances by:", options:[
+    "diffracting around Earth",
+    "bouncing back and forth between Earth and the ionosphere",
+    "travelling only underground",
+    "stopping at the horizon"
+  ], answer:1, explanation:"Repeated reflections extend range."},
+
+  {type:"tf", question:"Shortwave radio waves cannot curve around the Earth.", answer:true, explanation:"They rely on reflection instead of diffraction."},
+
+  {type:"mcq", question:"According to the speech, shortwave can also be used over short distances for:", options:[
+    "Bluetooth",
+    "X-rays",
+    "Gamma scanning",
+    "photosynthesis"
+  ], answer:0, explanation:"Bluetooth is mentioned as a short-distance use."},
+
+  {type:"mcq", question:"Very short radio waves are used for:", options:[
+    "TV and FM radio",
+    "microwave ovens only",
+    "longwave shipping signals",
+    "DNA analysis"
+  ], answer:0, explanation:"Very short waves are used for TV and FM."},
+
+  {type:"mcq", question:"Very shortwave signals must travel:", options:[
+    "around the Earth",
+    "directly from transmitter to receiver",
+    "only via the ionosphere",
+    "only through water"
+  ], answer:1, explanation:"They require direct transmission (line-of-sight)."},
+
+  {type:"tf", question:"Very shortwave transmission is line-of-sight.", answer:true, explanation:"They must travel directly."},
+
+  {type:"mcq", question:"Why might FM radio reception be poor in a car?", options:[
+    "The transmitter stops working near cars",
+    "Hills and tunnels can block direct transmission",
+    "Cars absorb all electromagnetic waves",
+    "FM radio uses only longwave signals"
+  ], answer:1, explanation:"Obstacles block the line-of-sight path."},
+
+  {type:"mcq", question:"Which is an example of a structure that can block very shortwave signals?", options:[
+    "A rainbow",
+    "Hills",
+    "A thermometer",
+    "A magnet"
+  ], answer:1, explanation:"Hills and tunnels are mentioned obstacles."},
+
+  {type:"mcq", question:"Which other obstacle is mentioned that can block very shortwave signals?", options:[
+    "Tunnels",
+    "Clouds",
+    "Trees always",
+    "Rivers"
+  ], answer:0, explanation:"Tunnels can block direct transmission."},
+
+  {type:"mcq", question:"Which device absorbs the energy of a radio wave?", options:[
+    "Receiver",
+    "Transmitter",
+    "Oscilloscope",
+    "Battery"
+  ], answer:0, explanation:"The receiver absorbs energy and generates AC."},
+
+  {type:"tf", question:"The frequency shown on the oscilloscope for the receiver is the same as the transmitted frequency.", answer:true, explanation:"Receiver reproduces the same frequency."},
+
+  {type:"mcq", question:"Which statement best matches the speech?", options:[
+    "Shortwave bends around Earth like longwave",
+    "Longwave diffracts around Earth; shortwave reflects from the ionosphere",
+    "Very shortwave reflects from the ionosphere for long distances",
+    "All radio waves travel only through cables"
+  ], answer:1, explanation:"Different types travel differently."},
+
+  {type:"mcq", question:"What is the key reason longwave can go far without 'interacting' on the way?", options:[
+    "It diffracts around Earth's surface",
+    "It has the highest frequency",
+    "It is reflected by mountains",
+    "It is absorbed by the ionosphere"
+  ], answer:0, explanation:"Diffraction allows it to follow curvature."},
+
+  {type:"mcq", question:"Which type is best described as 'bouncing' to travel long distances?", options:[
+    "Longwave",
+    "Shortwave",
+    "Very shortwave",
+    "Infrared"
+  ], answer:1, explanation:"Shortwave reflects from the ionosphere."},
+
+  {type:"mcq", question:"Which type is most affected by obstacles due to line-of-sight travel?", options:[
+    "Longwave",
+    "Shortwave",
+    "Very shortwave",
+    "All are equally affected"
+  ], answer:2, explanation:"Very shortwave must travel directly."},
+
+  {type:"fill", question:"Radio waves have the longest ______ and the lowest frequency.", answer:"wavelength", explanation:"They have the longest wavelength."},
+
+  {type:"tf", question:"A transmitter generates radio waves and a receiver detects them.", answer:true, explanation:"That is the basic communication system."},
+
+  {type:"mcq", question:"The frequency of a generated radio wave is controlled by:", options:[
+    "changing the AC frequency in the transmitter circuit",
+    "changing the colour of the antenna",
+    "adding salt water to the receiver",
+    "changing gravity"
+  ], answer:0, explanation:"AC frequency sets wave frequency."},
+
+  {type:"mcq", question:"Which term describes radio waves bending around obstacles/curved Earth?", options:[
+    "Refraction",
+    "Diffraction",
+    "Evaporation",
+    "Condensation"
+  ], answer:1, explanation:"Longwave diffracts around Earth."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
