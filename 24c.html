@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Physics: Static Electricity</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#a855f7);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    a{color:#0369a1}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Static Electricity</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/wzvIeRLy5Nw" title="Relative Formula Mass (Mr)" allowfullscreen></iframe>
+      <p style="margin:10px 0 0;color:var(--muted);font-size:.95rem">
+        Video link: <a href="https://youtu.be/wzvIeRLy5Nw" target="_blank" rel="noopener">https://youtu.be/wzvIeRLy5Nw</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+<details open>
+  <summary>1) What static electricity is</summary>
+  <ul>
+    <li><strong>Static electricity</strong> is a build-up of electric charge on an <strong>insulator</strong>.</li>
+    <li>When the charge is released (discharged), it can cause a <strong>spark</strong>.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>2) Why most objects are neutral</summary>
+  <ul>
+    <li>All materials contain <strong>positive protons</strong> and <strong>negative electrons</strong>.</li>
+    <li>In a neutral object, total positive charge equals total negative charge, so the overall charge is <strong>zero</strong>.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>3) Charging by friction (rubbing)</summary>
+  <ul>
+    <li>Rubbing two materials creates <strong>friction</strong> that can transfer <strong>electrons</strong> from one material to the other.</li>
+    <li><strong>Only electrons move</strong>: protons stay fixed in the nucleus.</li>
+    <li>If an object <strong>gains electrons</strong>, it becomes <strong>negatively charged</strong>. If it <strong>loses electrons</strong>, it becomes <strong>positively charged</strong>.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>4) Conductors vs insulators</summary>
+  <ul>
+    <li>In <strong>conductors</strong> (e.g., metals), electrons can move freely, so charge usually flows away and doesn’t build up easily.</li>
+    <li>In <strong>insulators</strong> (e.g., plastic rods, cloth), electrons cannot move freely, so charge can stay on the surface and <strong>build up</strong>.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>5) Examples of electron transfer</summary>
+  <ul>
+    <li><strong>Polythene rod + cloth:</strong> electrons move onto the polythene → polythene becomes <strong>negative</strong>, cloth becomes <strong>positive</strong>.</li>
+    <li><strong>Acetate rod + cloth:</strong> electrons move off the acetate → acetate becomes <strong>positive</strong>, cloth becomes <strong>negative</strong>.</li>
+    <li>Which way electrons transfer depends on the materials involved.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>6) Sparks and earthing</summary>
+  <ul>
+    <li>As charge builds up, a <strong>potential difference</strong> can form between the charged object and the <strong>Earth</strong> (or an earthed object).</li>
+    <li>Earth is treated as <strong>0 V</strong>.</li>
+    <li>If the potential difference is big enough, electrons can <strong>jump the gap</strong> to discharge — this is a <strong>spark</strong>.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>7) Charge build-up on conductors (car example)</summary>
+  <ul>
+    <li>Charge can sometimes build up on conductors (less common), e.g., a car’s metal frame can gain charge through contact with moving air.</li>
+    <li>Touching the car can let it discharge through you to Earth, causing a small <strong>electric shock</strong> (a tiny spark).</li>
+  </ul>
+</details>
+</section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Physics Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the static electricity speech
+    const questions = [
+  {
+    "type": "mcq",
+    "q": "Static electricity is best described as:",
+    "opts": [
+      "A flow of charge in a circuit",
+      "A build-up of charge on an insulator",
+      "A chemical reaction that produces electrons"
+    ],
+    "a": 1,
+    "exp": "Static electricity is a build-up of charge on insulating materials."
+  },
+  {
+    "type": "fill",
+    "q": "Static electricity builds up mainly on ______ materials.",
+    "ans": "insulating",
+    "exp": "Charge tends to stay on insulators because electrons cannot move freely."
+  },
+  {
+    "type": "mcq",
+    "q": "In a neutral object:",
+    "opts": [
+      "There are more electrons than protons",
+      "There are more protons than electrons",
+      "Total positive charge equals total negative charge"
+    ],
+    "a": 2,
+    "exp": "Neutral means overall charge is zero: positives and negatives balance."
+  },
+  {
+    "type": "fill",
+    "q": "The negative particles that can be transferred between materials are ______.",
+    "ans": "electrons",
+    "exp": "Only electrons are transferred during charging by friction."
+  },
+  {
+    "type": "mcq",
+    "q": "When two materials are rubbed together, electrons are transferred because of:",
+    "opts": [
+      "Gravity",
+      "Friction",
+      "Magnetism"
+    ],
+    "a": 1,
+    "exp": "Friction during rubbing can move electrons from one material to another."
+  },
+  {
+    "type": "mcq",
+    "q": "If an object gains electrons, it becomes:",
+    "opts": [
+      "Positively charged",
+      "Negatively charged",
+      "Neutral"
+    ],
+    "a": 1,
+    "exp": "Gaining electrons adds negative charge."
+  },
+  {
+    "type": "mcq",
+    "q": "If an object loses electrons, it becomes:",
+    "opts": [
+      "Positively charged",
+      "Negatively charged",
+      "Neutral"
+    ],
+    "a": 0,
+    "exp": "Losing electrons leaves an overall positive charge."
+  },
+  {
+    "type": "fill",
+    "q": "Positive static charge happens because an object has ______ electrons.",
+    "ans": "lost",
+    "exp": "Positive charge forms when negative electrons are removed, not because protons move in."
+  },
+  {
+    "type": "mcq",
+    "q": "Which statement is correct about protons during static charging?",
+    "opts": [
+      "Protons move from one object to another",
+      "Protons stay fixed in the nucleus",
+      "Protons jump across air gaps"
+    ],
+    "a": 1,
+    "exp": "Protons remain in the nucleus; only electrons move."
+  },
+  {
+    "type": "mcq",
+    "q": "In conductors like metals, electrons:",
+    "opts": [
+      "Cannot move at all",
+      "Move freely so charge usually does not build up",
+      "Are permanently attached to atoms"
+    ],
+    "a": 1,
+    "exp": "In conductors, electrons can flow away, preventing a lasting build-up."
+  },
+  {
+    "type": "fill",
+    "q": "Materials like plastic rods are good ______.",
+    "ans": "insulators",
+    "exp": "Insulators do not allow electrons to flow back easily."
+  },
+  {
+    "type": "mcq",
+    "q": "After rubbing a polythene rod with a cloth (as described), the polythene rod becomes:",
+    "opts": [
+      "Positive",
+      "Negative",
+      "Neutral"
+    ],
+    "a": 1,
+    "exp": "Electrons move onto the polythene, making it negative."
+  },
+  {
+    "type": "mcq",
+    "q": "After rubbing a polythene rod with a cloth, the cloth becomes:",
+    "opts": [
+      "Positive",
+      "Negative",
+      "Neutral"
+    ],
+    "a": 0,
+    "exp": "The cloth loses electrons, so it becomes positive."
+  },
+  {
+    "type": "mcq",
+    "q": "When a cloth is used to rub an acetate rod (as described), the acetate rod becomes:",
+    "opts": [
+      "Positive",
+      "Negative",
+      "Neutral"
+    ],
+    "a": 0,
+    "exp": "Electrons leave the acetate rod, so it becomes positive."
+  },
+  {
+    "type": "mcq",
+    "q": "When a cloth is used to rub an acetate rod, the cloth becomes:",
+    "opts": [
+      "Positive",
+      "Negative",
+      "Neutral"
+    ],
+    "a": 1,
+    "exp": "The cloth gains electrons, making it negative."
+  },
+  {
+    "type": "fill",
+    "q": "Which way electrons transfer depends on the specific ______ involved.",
+    "ans": "materials",
+    "exp": "Different material pairs transfer electrons in different directions."
+  },
+  {
+    "type": "mcq",
+    "q": "A spark is caused by:",
+    "opts": [
+      "Protons jumping through air",
+      "Electrons jumping across a gap",
+      "Neutrons leaving the nucleus"
+    ],
+    "a": 1,
+    "exp": "A spark is the discharge as electrons jump across the gap."
+  },
+  {
+    "type": "mcq",
+    "q": "As more electrons are transferred and charge increases, a ______ develops between the charged object and Earth.",
+    "opts": [
+      "potential difference",
+      "temperature difference",
+      "pressure difference"
+    ],
+    "a": 0,
+    "exp": "A potential difference forms as charge builds up."
+  },
+  {
+    "type": "fill",
+    "q": "Earth (and earthed objects) are treated as being at ______ volts.",
+    "ans": "0",
+    "exp": "In basic circuits, Earth is taken as 0 V."
+  },
+  {
+    "type": "mcq",
+    "q": "A spark will occur when:",
+    "opts": [
+      "The object becomes neutral",
+      "The potential difference is large enough",
+      "The object is a conductor"
+    ],
+    "a": 1,
+    "exp": "A sufficiently large potential difference can cause discharge through the air."
+  },
+  {
+    "type": "fill",
+    "q": "The discharge of static electricity is the release of built-up ______.",
+    "ans": "charge",
+    "exp": "Discharge is the movement of charge away from the charged object."
+  },
+  {
+    "type": "mcq",
+    "q": "Which pair is most likely to build up static charge when rubbed?",
+    "opts": [
+      "Two metal rods",
+      "A metal rod and a copper wire",
+      "A plastic rod and a cloth"
+    ],
+    "a": 2,
+    "exp": "Insulators like plastic and cloth can hold static charge."
+  },
+  {
+    "type": "fill",
+    "q": "In conductors, electrons usually flow back again, so no charge ______ up.",
+    "ans": "builds",
+    "exp": "Mobile electrons in conductors prevent a lasting build-up."
+  },
+  {
+    "type": "mcq",
+    "q": "Which of the following is an example of an earthed object in the video?",
+    "opts": [
+      "A charged rod",
+      "A balloon",
+      "A person (you)"
+    ],
+    "a": 2,
+    "exp": "We act as an earthed object compared with the charged material."
+  },
+  {
+    "type": "mcq",
+    "q": "If a negatively charged object is brought near Earth, electrons will tend to:",
+    "opts": [
+      "Be attracted to the object",
+      "Be repelled away from the object",
+      "Turn into protons"
+    ],
+    "a": 1,
+    "exp": "Negative charge repels electrons, increasing the tendency for discharge if the gap is small enough."
+  },
+  {
+    "type": "fill",
+    "q": "A spark is a rapid movement of ______ across a gap.",
+    "ans": "electrons",
+    "exp": "Sparks are caused by electrons jumping through the air."
+  },
+  {
+    "type": "mcq",
+    "q": "Charges can sometimes build up on conductors, but it is:",
+    "opts": [
+      "More common than on insulators",
+      "Less common than on insulators",
+      "Impossible"
+    ],
+    "a": 1,
+    "exp": "Conductors usually allow charge to flow away, so build-up is less common."
+  },
+  {
+    "type": "mcq",
+    "q": "Why can a car build up charge?",
+    "opts": [
+      "Its tyres are magnets",
+      "Its metal frame can gain electrons from moving air",
+      "Its engine produces extra protons"
+    ],
+    "a": 1,
+    "exp": "Air movement can transfer electrons to/from the car\u2019s metal body."
+  },
+  {
+    "type": "fill",
+    "q": "A small shock from touching a charged car is a tiny ______.",
+    "ans": "spark",
+    "exp": "The car discharges through you, producing a small spark."
+  },
+  {
+    "type": "mcq",
+    "q": "Static electricity is most likely to cause sparks when:",
+    "opts": [
+      "Charge is discharged suddenly",
+      "Charge is stored in a battery",
+      "A circuit is closed"
+    ],
+    "a": 0,
+    "exp": "Sparks are seen when the built-up charge discharges."
+  },
+  {
+    "type": "fill",
+    "q": "Static electricity is a buildup of ______ on insulating surfaces.",
+    "ans": "charge",
+    "exp": "The definition is the build-up of charge on insulating materials."
+  },
+  {
+    "type": "mcq",
+    "q": "Which statement about electrons is correct?",
+    "opts": [
+      "They are positively charged",
+      "They are negatively charged",
+      "They have no charge"
+    ],
+    "a": 1,
+    "exp": "Electrons carry negative charge."
+  },
+  {
+    "type": "fill",
+    "q": "An object becomes positive when it has ______ electrons than protons.",
+    "ans": "fewer",
+    "exp": "Losing electrons means fewer electrons than protons overall."
+  },
+  {
+    "type": "mcq",
+    "q": "Which process best explains getting a shock from a car door?",
+    "opts": [
+      "Electrons discharge from the car to Earth through you",
+      "Protons transfer from you to the car",
+      "Neutrons flow through the air"
+    ],
+    "a": 0,
+    "exp": "The shock is the car discharging via your body."
+  },
+  {
+    "type": "fill",
+    "q": "The transfer of electrons during rubbing is called charging by ______.",
+    "ans": "friction",
+    "exp": "Rubbing causes charging by friction."
+  },
+  {
+    "type": "mcq",
+    "q": "A large potential difference is more likely when:",
+    "opts": [
+      "Very little charge has built up",
+      "A lot of charge has built up",
+      "The object is neutral"
+    ],
+    "a": 1,
+    "exp": "More charge build-up generally creates a larger potential difference."
+  },
+  {
+    "type": "fill",
+    "q": "In metals, electrons are able to ______.",
+    "ans": "move",
+    "exp": "Conductors have mobile electrons."
+  },
+  {
+    "type": "mcq",
+    "q": "In the examples, the cloth becomes negative when rubbing:",
+    "opts": [
+      "Polythene",
+      "Acetate",
+      "Glass"
+    ],
+    "a": 1,
+    "exp": "With acetate, electrons move onto the cloth, making it negative."
+  },
+  {
+    "type": "fill",
+    "q": "Static electricity is usually associated with ______ rather than conductors.",
+    "ans": "insulators",
+    "exp": "Insulators hold charge more easily than conductors."
+  },
+  {
+    "type": "mcq",
+    "q": "A spark involves charge moving through:",
+    "opts": [
+      "A vacuum only",
+      "Air (a gap)",
+      "Solid plastic"
+    ],
+    "a": 1,
+    "exp": "Sparks occur when electrons jump across a gap, often through air."
+  }
+];
+
+
+    let order=[], idx=0, score=0;
+
+    function shuffle(a){
+      for(let i=a.length-1;i>0;i--){
+        const j=Math.floor(Math.random()*(i+1));
+        [a[i],a[j]]=[a[j],a[i]];
+      }
+      return a;
+    }
+
+    function startGame(){
+      order = shuffle([...Array(questions.length).keys()]);
+      idx = 0; score = 0; renderQ();
+    }
+
+    function renderQ(){
+      const q = questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${escapeHtml(q.q)}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${escapeHtml(o)}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      } else {
+        html += `<input id='fill' placeholder='Answer' autocomplete='off' style='padding:10px 12px;border:1px solid #e2e8f0;border-radius:10px;min-width:220px'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+
+    function checkMCQ(){
+      const q = questions[order[idx]];
+      const pick = document.querySelector("input[name='opt']:checked");
+      const fb = document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value,10)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+
+    function norm(s){
+      return (s||"").trim().toLowerCase().replace(/\s+/g," ");
+    }
+
+    function checkFill(){
+      const q = questions[order[idx]];
+      const ans = norm(document.getElementById('fill').value);
+      const fb = document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      const correct = norm(String(q.ans));
+      if(ans===correct){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+
+    function endGame(){
+      document.getElementById('game').innerHTML =
+        `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+
+    function escapeHtml(str){
+      return String(str).replace(/[&<>"']/g, (m)=>({
+        "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"
+      }[m]));
+    }
+  </script>
+</body>
+</html>
