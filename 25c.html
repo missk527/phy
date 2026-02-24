@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electric Fields</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Electric Fields</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/59g83vj0gXs" title="Electric Fields" allowfullscreen></iframe>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+            <details open>
+        <summary>1) Electric fields around charges</summary>
+        <ul>
+          <li>Any charged object creates an <b>electric field</b> in the space around it.</li>
+          <li>This is similar to how masses produce <b>gravitational fields</b> and magnets produce <b>magnetic fields</b>.</li>
+          <li>The field represents a region of influence where the charge can exert a force on other charges.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) Field lines and direction</summary>
+        <ul>
+          <li>We draw electric fields using <b>field lines</b> with arrows.</li>
+          <li>Arrows always point <b>from positive to negative</b>.</li>
+          <li>Field lines meet a charged surface at <b>right angles</b> (perpendicular).</li>
+          <li>Draw several lines to show the pattern clearly (e.g., around a point charge).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Attraction and repulsion</summary>
+        <ul>
+          <li>As charges get closer, their fields interact more strongly.</li>
+          <li><b>Opposite charges attract</b>: you can show this by connecting lines from the positive charge to the negative charge.</li>
+          <li><b>Like charges repel</b>: field lines spread apart and do not run straight from one like charge to the other.</li>
+          <li>The force between charges is an <b>electrostatic force</b> (electrostatic attraction/repulsion).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Ionization of air and sparks</summary>
+        <ul>
+          <li>Normal air has no overall charge and is usually an <b>electrical insulator</b>.</li>
+          <li>A very strong electric field can strip electrons from nearby air particles, turning them into <b>positive ions</b>.</li>
+          <li>This process is called <b>ionization</b>. Ionized air can <b>conduct electricity</b>.</li>
+          <li>That’s why a <b>spark</b> can travel through the air between strongly charged objects.</li>
+        </ul>
+      </details>
+</section>
+
+    <section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Biology Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the electric fields speech
+    const questions = [
+      {type:"mcq", q:"What is an electric field best described as?", opts:["A region where mass causes attraction", "A region around a charge where it can exert force on other charges", "A region where heat flows"], a:1, exp:"An electric field surrounds charged objects and can exert forces on other charges."},
+      {type:"mcq", q:"Electric field lines are drawn with arrows that point:", opts:["From negative to positive", "From positive to negative", "Toward the nearest magnet"], a:1, exp:"By convention, arrows on electric field lines go from positive to negative."},
+      {type:"mcq", q:"Around a single positive point charge, field lines:", opts:["Point inward", "Point outward", "Form closed loops"], a:1, exp:"Field lines leave a positive charge."},
+      {type:"mcq", q:"Around a single negative point charge, field lines:", opts:["Point inward", "Point outward", "Are parallel everywhere"], a:0, exp:"Field lines enter a negative charge."},
+      {type:"mcq", q:"When drawing field lines near a charged surface, the lines should meet the surface:", opts:["Parallel to the surface", "At right angles (perpendicular)", "In random directions"], a:1, exp:"Electric field lines are drawn perpendicular to the surface."},
+      {type:"mcq", q:"Field strength is greatest:", opts:["Far from the charge", "Close to the charge", "Only at the poles of a magnet"], a:1, exp:"The field is strongest near the charged object and weakens with distance."},
+      {type:"mcq", q:"As two oppositely charged particles move closer together, the electrostatic force between them generally:", opts:["Decreases", "Increases", "Becomes zero"], a:1, exp:"Closer separation means stronger interaction between their fields."},
+      {type:"mcq", q:"Opposite charges experience:", opts:["Repulsion", "Attraction", "No force"], a:1, exp:"Unlike charges attract."},
+      {type:"mcq", q:"Like charges experience:", opts:["Attraction", "Repulsion", "Gravitational binding"], a:1, exp:"Like charges repel."},
+      {type:"mcq", q:"In field-line diagrams for opposite charges, many lines:", opts:["Go from the positive charge to the negative charge", "Go from the negative to the positive", "Do not connect"], a:0, exp:"Lines originate at positive charges and terminate at negative charges."},
+      {type:"fill", q:"The arrows on electric field lines always go from ______ to ______.", ans:"positive to negative", exp:"Conventionally, field lines point from positive toward negative."},
+      {type:"fill", q:"Field lines should be drawn ______ to the surface of a charged object.", ans:"perpendicular", exp:"They meet the surface at right angles."},
+      {type:"mcq", q:"Air is normally an electrical ______.", opts:["conductor", "insulator", "semiconductor"], a:1, exp:"Un-ionized air does not conduct electricity well, so it acts as an insulator."},
+      {type:"mcq", q:"A very strong electric field can cause nearby air particles to:", opts:["Gain protons", "Lose electrons and become positive ions", "Turn into magnets"], a:1, exp:"Strong fields can strip electrons, leaving positive ions—this is ionization."},
+      {type:"fill", q:"The process where air particles lose electrons and become ions is called ______.", ans:"ionization", exp:"Ionization creates charged ions from neutral particles."},
+      {type:"mcq", q:"Once air is ionized, it can:", opts:["Conduct electricity", "Only reflect light", "Stop all electric forces"], a:0, exp:"Ionized air contains charges that can move, allowing conduction."},
+      {type:"mcq", q:"Sparks can travel through air because:", opts:["Air is always a metal", "Ionized air becomes conductive", "Gravity pulls electrons downward"], a:1, exp:"Ionization turns air into a conductor so a discharge can pass through."},
+      {type:"mcq", q:"Which statement matches the field-line convention?", opts:["Lines start on negative charges and end on positive charges", "Lines start on positive charges and end on negative charges", "Lines have no direction"], a:1, exp:"Direction is defined from + to −."},
+      {type:"mcq", q:"If you had two positive charges close together, the field lines between them would show:", opts:["Lines joining directly between the charges", "Lines bending away, indicating repulsion", "No lines at all"], a:1, exp:"Like charges repel, so lines spread apart."},
+      {type:"mcq", q:"If you had a positive and a negative charge close together, the field lines between them would show:", opts:["Lines bending away from the region between charges", "Lines running from the positive toward the negative", "Parallel lines that never end"], a:1, exp:"Opposite charges attract and lines connect from + to −."},
+      {type:"mcq", q:"Compared with a weakly charged object, a strongly charged object has:", opts:["No electric field", "A stronger electric field", "A smaller gravitational field only"], a:1, exp:"More charge produces a stronger electric field."},
+      {type:"mcq", q:"Field-line density (how close the lines are) is used to represent:", opts:["Temperature", "Field strength", "Mass"], a:1, exp:"More crowded lines indicate a stronger field."},
+      {type:"fill", q:"The electric field is ______ close to a charge and ______ farther away.", ans:"strongest and weaker", exp:"Field strength decreases with distance."},
+      {type:"mcq", q:"Which pair of fields was used as an analogy for electric fields in the speech?", opts:["Sound and light fields", "Gravitational and magnetic fields", "Nuclear and thermal fields"], a:1, exp:"The speech compares electric fields to gravitational fields around masses and magnetic fields around magnets."},
+      {type:"mcq", q:"Electric field lines are a way to visualize:", opts:["The direction and relative strength of the electric field", "The speed of electrons in a wire", "Only the color of charges"], a:0, exp:"Lines indicate direction (arrow) and strength (spacing)."},
+      {type:"mcq", q:"If the arrows point into a particle in a field diagram, the particle is most likely:", opts:["Positively charged", "Negatively charged", "Neutral"], a:1, exp:"Lines terminate on negative charges."},
+      {type:"fill", q:"Like charges ______ and unlike charges ______.", ans:"repel and attract", exp:"Electrostatic interactions follow the rule: like repel, unlike attract."},
+      {type:"mcq", q:"Electrostatic force is the force between objects due to:", opts:["Their charges", "Their temperatures", "Their volumes"], a:0, exp:"Electrostatic forces arise from electric charges."},
+      {type:"mcq", q:"In the speech, the attractive force between opposite charges is called:", opts:["Electrostatic attraction", "Nuclear attraction", "Magnetic attraction"], a:0, exp:"Opposite charges attract via electrostatic attraction."},
+      {type:"mcq", q:"If an air particle loses an electron, it becomes:", opts:["A positive ion", "A negative ion", "A neutron"], a:0, exp:"Losing an electron leaves a net positive charge."},
+      {type:"mcq", q:"Ionization of air happens when:", opts:["A strong electric field strips electrons from air particles", "Air cools down", "A magnet is nearby"], a:0, exp:"The strong electric field can remove electrons."},
+      {type:"fill", q:"Uncharged air is usually an electrical ______.", ans:"insulator", exp:"Normal air does not conduct well until ionized."},
+      {type:"mcq", q:"A spark is an example of:", opts:["Electrical discharge through ionized air", "Heat conduction through glass", "Gravitational attraction"], a:0, exp:"A spark is a discharge that travels through ionized air."},
+      {type:"mcq", q:"Which is true about field strength with distance from a charge?", opts:["It increases with distance", "It decreases with distance", "It stays constant"], a:1, exp:"Fields weaken as you move away from the charge."},
+      {type:"mcq", q:"In field diagrams, lines should be drawn:", opts:["Starting at positive charges and ending at negative charges (or infinity)", "Starting at negative charges and ending at positive charges", "Only starting and ending on neutral objects"], a:0, exp:"Field lines originate on positive and terminate on negative (or go to infinity)."},
+      {type:"fill", q:"Electric field lines are drawn with ______ to show direction.", ans:"arrows", exp:"Arrows indicate the direction a positive test charge would move."},
+      {type:"mcq", q:"When two charges come closer, their electric fields interact:", opts:["Less", "More", "Not at all"], a:1, exp:"Closer charges cause stronger interactions between fields."},
+      {type:"mcq", q:"The region of influence around a charged object is called its:", opts:["Electric field", "Electric current", "Electric resistance"], a:0, exp:"A charged object produces an electric field around it."},
+      {type:"mcq", q:"Which of these best explains why un-ionized air does not conduct?", opts:["There are no free charges to move easily", "It contains too many metals", "Its field lines are horizontal"], a:0, exp:"Insulators lack free charge carriers."},
+      {type:"mcq", q:"In the speech, sparks were described as traveling:", opts:["Only along metal wires", "Straight through the air between objects", "Only underground"], a:1, exp:"Once air is ionized, sparks can travel through it between objects."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
