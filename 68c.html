@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uses of X-rays and Gamma Rays</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Uses of X-rays and Gamma Rays</h1>
+  </header>
+
+  <div class="wrap">
+    <section class="card video">
+      <iframe src="https://www.youtube.com/embed/F0p1-TsfK1I" title="Tests for Four Common Gases" allowfullscreen></iframe>
+          <p class="muted" style="margin:10px 0 0;"><a href="https://youtu.be/F0p1-TsfK1I" target="_blank" rel="noopener">Video link</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Key Notes (rewritten from the speech)</h2>
+
+      <details open>
+        <summary>1) Where X-rays and gamma rays sit in the EM spectrum</summary>
+        <div class="detail-body">
+          <p>X-rays and gamma rays are electromagnetic waves at the extreme high-energy end of the spectrum, with <strong>very short wavelengths</strong> and <strong>very high frequencies</strong>. Because they are high energy, they are also <strong>ionising radiation</strong>.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>2) How an X-ray image is made</summary>
+        <div class="detail-body">
+          <p>In a hospital X-ray, radiation is fired through the body and a <strong>detector plate</strong> records how much gets through. Different tissues absorb different amounts, so the detector receives different intensities and forms an image of internal structures.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>3) Why bones look white and lungs look dark</summary>
+        <div class="detail-body">
+          <p><strong>Dense materials</strong> like bone absorb X-rays strongly, so fewer reach the detector and those regions stay <strong>white</strong>. Air-filled areas (lungs/intestines) let X-rays pass through more easily, so the detector darkens and those regions appear <strong>darker</strong>. Soft tissues often appear <strong>grey</strong> because they absorb partially.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>4) Uses and safety of X-rays</summary>
+        <div class="detail-body">
+          <p>X-rays are used to spot <strong>broken bones</strong> and help diagnose diseases. The patient dose is usually low, so the benefit often outweighs the risk, but staff reduce exposure by using <strong>lead shielding</strong> and standing back or leaving the room during exposure.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>5) Gamma rays for sterilisation</summary>
+        <div class="detail-body">
+          <p>Gamma rays can <strong>kill microorganisms</strong>, so they are used to sterilise <strong>medical equipment</strong> and <strong>food</strong>. Unlike boiling, gamma sterilisation does not rely on high temperature, so it can sterilise materials (like some plastics) without heat damage.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>6) The medical trade-off</summary>
+        <div class="detail-body">
+          <p>Because X-rays and gamma rays are ionising, they can damage cells and in rare cases contribute to cancer. In medicine we weigh the <strong>risk</strong> against the <strong>diagnostic or treatment benefit</strong> for each individual situation.</p>
+        </div>
+      </details>
+
+    </section>
+<section class="card">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game"><button onclick="startGame()">Start Quiz</button></div>
+    </section>
+
+    <footer>© 2026 Chemistry Pack</footer>
+  </div>
+
+  <script>
+    // 40-question quiz based on the gas tests speech
+        const questions = [
+      {type:"mcq", q:"Which electromagnetic waves have the shortest wavelength and highest frequency?", opts:["Radio waves", "Microwaves", "X-rays and gamma rays", "Infrared"], a:2, exp:"X-rays and gamma rays sit at the high-frequency, short-wavelength end of the spectrum."},
+      {type:"mcq", q:"What is the main purpose of medical X-rays?", opts:["To sterilize equipment", "To view internal structures", "To measure temperature", "To transmit TV signals"], a:1, exp:"X-rays are used to form images of inside the body or objects."},
+      {type:"mcq", q:"In a typical hospital X-ray, X-rays are fired through the body and recorded using a:", opts:["Detector plate", "Thermometer", "Magnet", "Microphone"], a:0, exp:"A detector plate (or sensor) records the X-rays that pass through."},
+      {type:"mcq", q:"Why do bones appear white on an X-ray image?", opts:["Bones emit light", "Bones absorb more X-rays", "Bones are mostly air", "Bones reflect sound"], a:1, exp:"Dense bone absorbs X-rays, so fewer reach the detector; those regions remain white."},
+      {type:"mcq", q:"Which body parts allow X-rays to pass through most easily?", opts:["Bones", "Lungs and intestines (mostly air)", "Teeth", "Metal implants"], a:1, exp:"Air-filled regions absorb very little, so more X-rays reach the detector."},
+      {type:"mcq", q:"Fleshy organs like the heart usually appear as:", opts:["Pure white", "Pure black", "Shades of grey", "Bright blue"], a:2, exp:"Soft tissue partially absorbs X-rays, creating grey areas."},
+      {type:"mcq", q:"On an X-ray detector plate, areas only darken when they receive:", opts:["Heat", "Visible light", "Radiation (X-rays)", "Magnetic field"], a:2, exp:"X-ray images darken where X-rays hit the detector."},
+      {type:"mcq", q:"A common use of X-rays is detecting:", opts:["Broken bones", "Vitamin levels", "Blood sugar", "Sound waves"], a:0, exp:"X-rays are widely used to identify fractures."},
+      {type:"mcq", q:"Why are X-rays considered a risk?", opts:["They are ionizing radiation", "They cool tissues", "They are non-energetic", "They are magnetic"], a:0, exp:"Ionizing radiation can damage cells and DNA."},
+      {type:"mcq", q:"Why are X-ray exams often still worth doing?", opts:["They are always harmless", "They give high doses", "They are quick/cheap and useful for diagnosis", "They replace all other tests"], a:2, exp:"Benefits for diagnosis usually outweigh the low dose risk."},
+      {type:"mcq", q:"Why is the danger higher for X-ray staff than patients?", opts:["Staff are closer to the detector", "Staff are exposed repeatedly", "Staff are immune to radiation", "Patients wear lead"], a:1, exp:"Repeated exposure over many procedures increases risk for staff."},
+      {type:"mcq", q:"What do staff commonly wear to reduce X-ray exposure?", opts:["Lead aprons", "Wool coats", "Rubber gloves only", "Plastic goggles"], a:0, exp:"Lead is dense and absorbs X-rays effectively."},
+      {type:"mcq", q:"What do staff often do when X-rays are being fired?", opts:["Stand next to the patient", "Leave the room", "Turn off lights", "Increase humidity"], a:1, exp:"They step away/leave to minimize exposure."},
+      {type:"mcq", q:"Gamma rays can be used in cancer treatment called:", opts:["Dialysis", "Radiotherapy", "Vaccination", "Ultrasound"], a:1, exp:"Radiotherapy uses gamma radiation to kill cancer cells."},
+      {type:"mcq", q:"In this video, gamma rays are mainly discussed for:", opts:["Sterilization", "Making bones stronger", "Measuring pressure", "Producing sound"], a:0, exp:"Gamma rays can sterilize equipment and food."},
+      {type:"mcq", q:"Why are gamma rays effective for sterilization?", opts:["They freeze microbes", "They kill microorganisms", "They add preservatives", "They remove nutrients"], a:1, exp:"Gamma rays can destroy microbes by damaging their cells/DNA."},
+      {type:"mcq", q:"Sterilizing medical equipment with boiling water may fail because:", opts:["Water is radioactive", "Some materials (e.g., plastics) can be damaged by heat", "It makes equipment heavier", "It creates electricity"], a:1, exp:"High temperatures can warp or melt some materials."},
+      {type:"mcq", q:"Compared with boiling, gamma sterilization is useful because it:", opts:["Damages plastic more", "Does not rely on high temperature", "Only works on metals", "Adds water to equipment"], a:1, exp:"Gamma rays sterilize without heating, so many materials are unaffected."},
+      {type:"mcq", q:"Gamma rays can sterilize food by:", opts:["Changing its taste strongly", "Killing harmful microbes without altering the food much", "Removing all water", "Making it glow"], a:1, exp:"The goal is to kill microorganisms while keeping food unchanged."},
+      {type:"mcq", q:"Sterilized food stays fresh longer mainly because:", opts:["It contains more sugar", "Microorganisms are removed and cannot break it down", "It becomes frozen", "It gains vitamins"], a:1, exp:"Without microbes, spoilage is slowed."},
+      {type:"mcq", q:"Both X-rays and gamma rays are types of:", opts:["Non-ionizing radiation", "Ionizing radiation", "Sound waves", "Water waves"], a:1, exp:"They can ionize atoms and damage cells."},
+      {type:"mcq", q:"A key trade-off in medical use of X-rays/gamma rays is:", opts:["Cost vs color", "Risk of cell damage vs medical benefit", "Heat vs cold", "Speed vs gravity"], a:1, exp:"We weigh diagnostic/treatment benefits against radiation risk."},
+      {type:"mcq", q:"Ionizing radiation can damage cells and in rare cases lead to:", opts:["Dehydration", "Cancer", "Muscle growth", "Allergies"], a:1, exp:"DNA damage can increase cancer risk."},
+      {type:"mcq", q:"Which statement about X-ray images is correct?", opts:["Bones appear black because they absorb X-rays", "Bones appear white because fewer X-rays reach the detector behind them", "Air appears white because it blocks X-rays most", "Everything appears the same shade"], a:1, exp:"Dense bone blocks X-rays so the detector stays lighter there."},
+      {type:"mcq", q:"Which material is described as absorbing X-rays well, used for protection?", opts:["Glass", "Lead", "Wood", "Paper"], a:1, exp:"Lead shielding reduces exposure."},
+      {type:"mcq", q:"What is recorded to form an X-ray image?", opts:["X-rays that pass through the body", "Heat from the skin", "Sound reflections", "Blood pressure"], a:0, exp:"The detector records transmitted X-rays."},
+      {type:"mcq", q:"Which region would appear darkest on an X-ray?", opts:["Bone", "Metal plate", "Air-filled lung area", "Teeth"], a:2, exp:"More X-rays reach the detector through air, darkening the image."},
+      {type:"mcq", q:"Which region would appear whitest on an X-ray?", opts:["Air in lungs", "Soft tissue", "Dense bone", "Empty space"], a:2, exp:"Bone absorbs most X-rays so the detector stays light."},
+      {type:"mcq", q:"Gamma rays sterilize by killing:", opts:["Microorganisms", "Metals", "Plastic", "All atoms"], a:0, exp:"Sterilization targets microbes."},
+      {type:"mcq", q:"The main alternative method mentioned for sterilizing equipment is:", opts:["Freezing", "Boiling water", "Painting", "Microwaving"], a:1, exp:"Boiling can kill microbes but may damage some materials."},
+      {type:"mcq", q:"Why might plastic equipment not be boiled?", opts:["Plastic conducts too well", "Plastic can melt or deform", "Plastic becomes radioactive", "Plastic turns into glass"], a:1, exp:"Heat can damage plastics."},
+      {type:"mcq", q:"What is the key benefit of X-rays in healthcare mentioned?", opts:["They are always harmless", "They are quick and cheap and aid diagnosis", "They cure all diseases", "They improve eyesight"], a:1, exp:"X-rays are fast, relatively inexpensive, and informative."},
+      {type:"mcq", q:"Which best describes why lungs look dark on an X-ray?", opts:["They absorb most X-rays", "They contain mostly air so X-rays pass through", "They emit X-rays", "They reflect X-rays"], a:1, exp:"Air absorbs little, so more X-rays hit the detector."},
+      {type:"mcq", q:"Why do we need to consider pros and cons for each case?", opts:["Radiation dose varies and benefit varies", "All patients want the same test", "X-rays never work", "Gamma rays are always fatal"], a:0, exp:"Risk and benefit depend on the patient and purpose."},
+      {type:"mcq", q:"Which pair matches the correct main uses discussed?", opts:["X-rays: imaging; gamma rays: sterilization", "X-rays: cooking; gamma rays: tanning", "X-rays: radio; gamma rays: TV", "X-rays: sound; gamma rays: heat"], a:0, exp:"The video focuses on imaging (X-rays) and sterilization (gamma)."},
+      {type:"mcq", q:"What happens to microorganisms exposed to sufficient gamma radiation?", opts:["They multiply faster", "They are killed/inactivated", "They become visible", "They turn into minerals"], a:1, exp:"Gamma rays damage them so they can\u2019t survive."},
+      {type:"mcq", q:"Which statement best describes the X-ray image 'odd thing' mentioned?", opts:["It starts black and turns white with radiation", "It starts white and darkens where radiation reaches the detector", "It is always full color", "It shows only bones"], a:1, exp:"Detector darkens with exposure; bone blocks exposure so stays white."},
+      {type:"mcq", q:"In medicine, why is a low patient dose often acceptable?", opts:["Radiation cannot harm patients", "The diagnostic value outweighs the small risk", "Dose is always zero", "Patients can block radiation with clothing"], a:1, exp:"Small risk is balanced against important medical information."},
+      {type:"mcq", q:"What should staff do to reduce exposure besides wearing lead?", opts:["Stay longer in the room", "Leave/stand away during exposure", "Hold the detector tightly", "Increase exposure time"], a:1, exp:"Distance/time reduction lowers dose."},
+      {type:"mcq", q:"Why can gamma rays keep food fresh longer?", opts:["They add antioxidants", "They remove microorganisms that cause spoilage", "They increase water content", "They harden the food"], a:1, exp:"Removing microbes slows decomposition/spoilage."}
+    ];
+
+    let order=[], idx=0, score=0;
+    function startGame(){
+      order=[...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+      idx=0; score=0; renderQ();
+    }
+    function renderQ(){
+      const q=questions[order[idx]];
+      let html = `<div class='qbox'><h3>Q ${idx+1}/${questions.length}</h3><p>${q.q}</p>`;
+      if(q.type==="mcq"){
+        q.opts.forEach((o,i)=>{ html += `<label><input type='radio' name='opt' value='${i}'> ${o}</label><br>`; });
+        html += `<button onclick='checkMCQ()'>Submit</button>`;
+      }else{
+        html += `<input id='fill' placeholder='Answer'> <button onclick='checkFill()'>Submit</button>`;
+      }
+      html += `<div id='fb' class='feedback'></div></div>`;
+      document.getElementById('game').innerHTML = html;
+    }
+    function checkMCQ(){
+      const q=questions[order[idx]];
+      const pick=document.querySelector("input[name='opt']:checked");
+      const fb=document.getElementById('fb');
+      if(!pick){ fb.textContent='Select one'; fb.className='feedback bad'; return; }
+      if(parseInt(pick.value)===q.a){ score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok'; }
+      else{ fb.textContent='❌ '+q.exp; fb.className='feedback bad'; }
+      setTimeout(nextQ, 1200);
+    }
+    function checkFill(){
+      const q=questions[order[idx]];
+      const ans=(document.getElementById('fill').value||'').trim().toLowerCase();
+      const fb=document.getElementById('fb');
+      if(!ans){ fb.textContent='Enter answer'; fb.className='feedback bad'; return; }
+      if(ans===q.ans.toLowerCase()){
+        score++; fb.textContent='✅ '+q.exp; fb.className='feedback ok';
+      }else{
+        fb.textContent='❌ Correct: '+q.ans+'. '+q.exp; }
+      setTimeout(nextQ, 1200);
+    }
+    function nextQ(){
+      idx++;
+      if(idx<questions.length) renderQ();
+      else endGame();
+    }
+    function endGame(){
+      document.getElementById('game').innerHTML = `<div class='qbox'><h3>Finished!</h3><p>Your score: <b>${score}/${questions.length}</b></p><button onclick='startGame()'>Play again</button></div>`;
+    }
+  </script>
+</body>
+</html>
