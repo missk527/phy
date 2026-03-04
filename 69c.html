@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lenses — Notes & 40‑Q Quiz</title>
+  <style>
+    :root{ --brand:#00796b; --paper:#fffef9; --ink:#212121; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f6fbff; color:var(--ink); line-height:1.6; }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10; box-shadow:0 2px 12px rgba(0,0,0,.15) }
+    header h1{ margin:0; font-size:1.25rem; letter-spacing:.2px }
+    .small{ opacity:.9; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000; box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:#004d40; border-bottom:2px solid #b2dfdb; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#00695c }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#e0f2f1; color:#004d40; border:1px solid #b2dfdb; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lenses</h1>
+    <div class="small">Video + exam‑focused notes + interactive practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/U7ITiBXPZlg" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="notes">
+
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>Types of lenses and refraction</summary>
+        <ul>
+          <li><strong>Convex (converging) lens:</strong> bulges outward and refracts <strong>parallel rays</strong> <strong>inwards</strong> to meet at the <strong>principal focus</strong>.</li>
+          <li><strong>Concave (diverging) lens:</strong> curves inward and refracts parallel rays <strong>outwards</strong>, spreading (dispersing) the light.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Principal focus, axis, and focal length</summary>
+        <ul>
+          <li>Every lens has a <strong>principal focus on both sides</strong>, the same distance from the centre (lenses are symmetrical).</li>
+          <li>The <strong>principal axis</strong> is the straight line through the centre of the lens; the principal focus lies on this axis.</li>
+          <li><strong>Focal length</strong> = distance from the lens centre to the principal focus.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Lens power and curvature</summary>
+        <ul>
+          <li>A <strong>shorter focal length</strong> means a <strong>more powerful</strong> lens (it bends light more strongly).</li>
+          <li>To increase power: make the lens <strong>more curved</strong> or use a material with a <strong>higher refractive index</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Real vs virtual images</summary>
+        <ul>
+          <li>Images form where rays from a point <strong>actually meet</strong> (real) or <strong>appear to meet</strong> (virtual).</li>
+          <li><strong>Real images:</strong> rays really converge; the image can be <strong>captured on a screen</strong> (e.g., the eye forms a real image on the retina, inverted).</li>
+          <li><strong>Virtual images:</strong> rays do not truly converge; we trace <strong>virtual rays</strong> backwards (e.g., a mirror image appears behind the mirror).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Describing images in exams</summary>
+        <ul>
+          <li>State whether the image is <strong>real or virtual</strong>.</li>
+          <li>Also describe orientation (<strong>upright or inverted</strong>) and size (<strong>magnified or diminished</strong>).</li>
+        </ul>
+      </details>
+
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Lenses practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string or pipe-separated options)
+const questions = [
+  // 1
+  {type:"mcq", question:'A convex lens is also called a:', options:[
+    'Diverging lens',
+    'Converging lens',
+    'Reflecting lens',
+    'Diffusing prism'
+  ], answer:1, explanation:'Convex lenses bring parallel rays together, so they are converging lenses.'},
+
+  // 2
+  {type:"mcq", question:'A concave lens mainly causes parallel rays to:', options:[
+    'Converge to a focus',
+    'Refract outward and spread',
+    'Pass straight through without refraction',
+    'Reflect back'
+  ], answer:1, explanation:'Concave lenses diverge (disperse) parallel rays.'},
+
+  // 3
+  {type:"fill", question:'The point where parallel rays meet after passing through a convex lens is the ______ ______.', answer:'principal focus', explanation:'Parallel rays are brought to the principal focus by a convex lens.'},
+
+  // 4
+  {type:"tf", question:'A lens has a principal focus on both sides of the lens.', answer:true, explanation:'Lenses are symmetrical, so there is a principal focus on each side.'},
+
+  // 5
+  {type:"fill", question:'The line through the centre of the lens is called the principal ______.', answer:'axis', explanation:'The principal axis passes through the centre of the lens.'},
+
+  // 6
+  {type:"mcq", question:'Focal length is the distance between:', options:[
+    'The two foci',
+    'The object and the lens',
+    'The lens centre and the principal focus',
+    'The image and the screen'
+  ], answer:2, explanation:'Focal length is measured from the lens centre to the principal focus.'},
+
+  // 7
+  {type:"mcq", question:'A shorter focal length means the lens is:', options:[
+    'Less powerful',
+    'More powerful',
+    'Unable to form images',
+    'Only able to form virtual images'
+  ], answer:1, explanation:'Shorter focal length indicates stronger refraction (greater power).'},
+
+  // 8
+  {type:"mcq", question:'To make a lens more powerful you can:', options:[
+    'Make it less curved',
+    'Use a material that refracts more strongly',
+    'Increase its thickness without changing curvature',
+    'Reduce its diameter only'
+  ], answer:1, explanation:'More curvature or a higher refractive material increases power.'},
+
+  // 9
+  {type:"tf", question:'Convex lenses refract parallel rays inward.', answer:true, explanation:'That inward refraction leads to convergence at the focus.'},
+
+  // 10
+  {type:"tf", question:'Concave lenses can be described as converging lenses.', answer:false, explanation:'Concave lenses are diverging lenses.'},
+
+  // 11
+  {type:"mcq", question:'For a concave lens, the outgoing rays appear to come from:', options:[
+    'The principal focus on the far side',
+    'The principal focus on the same side as the incoming rays',
+    'The lens centre only',
+    'No specific point'
+  ], answer:1, explanation:'Diverging rays are traced back to the focus on the same side as the incoming light.'},
+
+  // 12
+  {type:"fill", question:'The principal focus is also called the ______ point.', answer:'focal', explanation:'Principal focus and focal point mean the same thing here.'},
+
+  // 13
+  {type:"tf", question:'If you reverse the direction of light through a lens, the focusing behaviour swaps sides.', answer:true, explanation:'Because lenses are symmetrical, the diagram flips left-right.'},
+
+  // 14
+  {type:"mcq", question:'A real image is formed when light rays:', options:[
+    'Never meet but appear to meet',
+    'Actually meet at the image point',
+    'Reflect off a mirror only',
+    'Travel in parallel after the lens'
+  ], answer:1, explanation:'Real images form where rays truly converge.'},
+
+  // 15
+  {type:"mcq", question:'A virtual image is formed when light rays:', options:[
+    'Actually converge',
+    'Are parallel after refraction',
+    'Do not actually meet where the image appears',
+    'Can be captured on a screen easily'
+  ], answer:2, explanation:'Virtual images are located where rays appear to come from.'},
+
+  // 16
+  {type:"tf", question:'A real image can be projected onto a screen.', answer:true, explanation:'Real images can be captured because rays actually converge there.'},
+
+  // 17
+  {type:"tf", question:'A virtual image can be captured on a screen.', answer:false, explanation:'Virtual images cannot be formed on a screen because rays do not truly meet.'},
+
+  // 18
+  {type:"mcq", question:'In the eye, the lens forms a real image on the:', options:[
+    'Pupil',
+    'Retina',
+    'Cornea',
+    'Iris'
+  ], answer:1, explanation:'The eye forms a real, inverted image on the retina.'},
+
+  // 19
+  {type:"tf", question:'The image formed on the retina is inverted.', answer:true, explanation:'The speech notes the real retinal image is inverted.'},
+
+  // 20
+  {type:"mcq", question:'We usually do not notice the inverted retinal image because:', options:[
+    'The lens flips it back',
+    'The cornea rotates it',
+    'The brain interprets it as upright',
+    'Light travels upside down'
+  ], answer:2, explanation:'The brain corrects our perception.'},
+
+  // 21
+  {type:"mcq", question:'A common example of a virtual image is:', options:[
+    'A projector image on a screen',
+    'A camera sensor image',
+    'An image in a mirror',
+    'A focused image on a retina'
+  ], answer:2, explanation:'Mirror images are virtual.'},
+
+  // 22
+  {type:"tf", question:'Virtual rays are drawn as dashed lines to show where light appears to come from.', answer:true, explanation:'They are construction lines, not real rays.'},
+
+  // 23
+  {type:"mcq", question:'When describing an image in exams, which set is most complete?', options:[
+    'Real/virtual only',
+    'Upright/inverted only',
+    'Real/virtual, upright/inverted, larger/smaller',
+    'Colour and temperature'
+  ], answer:2, explanation:'You should describe type, orientation, and relative size.'},
+
+  // 24
+  {type:"fill", question:'An image that is upside down is described as ______.', answer:'inverted', explanation:'Upside down images are inverted.'},
+
+  // 25
+  {type:"fill", question:'An image the right way up is described as ______.', answer:'upright', explanation:'Right way up images are upright.'},
+
+  // 26
+  {type:"mcq", question:'A convex lens focuses parallel rays to:', options:[
+    'Any point on the axis',
+    'The principal focus',
+    'The lens edge',
+    'A point behind the object'
+  ], answer:1, explanation:'Parallel rays meet at the principal focus.'},
+
+  // 27
+  {type:"tf", question:'Concave lenses disperse light by refraction.', answer:true, explanation:'They refract rays outward, spreading them out.'},
+
+  // 28
+  {type:"mcq", question:'To predict the ray direction for a concave lens, you trace virtual lines:', options:[
+    'From the lens centre to the object',
+    'From the principal focus to where the ray hits the lens',
+    'From the screen to the lens',
+    'From the object to the retina'
+  ], answer:1, explanation:'You trace virtual lines from the focus to the point where the ray hits the lens.'},
+
+  // 29
+  {type:"tf", question:'The principal focus always lies on the principal axis.', answer:true, explanation:'By definition it sits on the axis through the lens centre.'},
+
+  // 30
+  {type:"mcq", question:'If a lens is made more curved (same material), its focal length generally becomes:', options:[
+    'Longer',
+    'Shorter',
+    'Unchanged',
+    'Infinite'
+  ], answer:1, explanation:'More curvature bends light more strongly, shortening focal length.'},
+
+  // 31
+  {type:"mcq", question:'If a material refracts light more strongly, lens power will:', options:[
+    'Decrease',
+    'Increase',
+    'Stay the same',
+    'Become zero'
+  ], answer:1, explanation:'Stronger refraction means higher power.'},
+
+  // 32
+  {type:"tf", question:'Both convex and concave lenses have a principal focus on each side.', answer:true, explanation:'Both lens types have focal points on both sides.'},
+
+  // 33
+  {type:"mcq", question:'Which statement about a mirror image is correct?', options:[
+    'It is a real image behind the mirror',
+    'Light rays exist behind the mirror',
+    'It is a virtual image formed by apparent rays',
+    'It can be projected on a screen behind the mirror'
+  ], answer:2, explanation:"Mirror images are virtual because rays don't actually meet behind the mirror."},
+
+  // 34
+  {type:"fill", question:'A lens that brings rays together is a ______ lens.', answer:'converging', explanation:'Convex lenses are converging lenses.'},
+
+  // 35
+  {type:"fill", question:'A lens that spreads rays apart is a ______ lens.', answer:'diverging', explanation:'Concave lenses are diverging lenses.'},
+
+  // 36
+  {type:"tf", question:'A concave lens has a thinner centre than its edges.', answer:true, explanation:'Concave lenses cave in, giving a thinner centre.'},
+
+  // 37
+  {type:"tf", question:'A convex lens has a thicker centre than its edges.', answer:true, explanation:'Convex lenses bulge outward in the middle.'},
+
+  // 38
+  {type:"mcq", question:'In the speech’s examples, the left-hand image is described as:', options:[
+    'Virtual, upright, larger',
+    'Real, inverted, smaller',
+    'Real, upright, larger',
+    'Virtual, inverted, smaller'
+  ], answer:1, explanation:'The left example is real, inverted, and smaller.'},
+
+  // 39
+  {type:"mcq", question:'In the speech’s examples, the right-hand image is described as:', options:[
+    'Virtual, upright, smaller',
+    'Real, inverted, smaller',
+    'Virtual, inverted, larger',
+    'Real, upright, larger'
+  ], answer:0, explanation:'The right example is virtual, upright, and smaller.'},
+
+  // 40
+  {type:"tf", question:'A screen placed where a virtual image appears will show a sharp image.', answer:false, explanation:'Virtual images cannot be captured on a screen because rays are not actually converging there.'}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
