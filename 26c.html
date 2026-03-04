@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>States of Matter — Notes & 40‑Q Quiz</title>
+  <style>
+    :root{ --brand:#00796b; --paper:#fffef9; --ink:#212121; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f6fbff; color:var(--ink); line-height:1.6; }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10; box-shadow:0 2px 12px rgba(0,0,0,.15) }
+    header h1{ margin:0; font-size:1.25rem; letter-spacing:.2px }
+    .small{ opacity:.9; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:22px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000; box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08); padding:18px; margin-bottom:18px }
+    .notes h2,.game h2{ color:#004d40; border-bottom:2px solid #b2dfdb; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#00695c }
+    ul{ margin:8px 0 0 22px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#e0f2f1; color:#004d40; border:1px solid #b2dfdb; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+        <h1>States of Matter — Exam Notes & 40‑Q Quiz <span class="pill">Solids · Liquids · Gases · Particle theory</span></h1>
+        <div class="small">Video + exam‑focused notes + interactive practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/NTvujGboXG4" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+        <section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>Particle theory (kinetic theory) model</summary>
+        <ul>
+          <li>Matter is made of tiny particles; we model them as small, solid, inelastic spheres.</li>
+          <li>The state (solid, liquid, gas) depends on <strong>particle arrangement</strong>, <strong>particle motion</strong>, and <strong>forces of attraction</strong>.</li>
+          <li>Heating generally increases particle energy (kinetic energy), while cooling reduces it.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Solids</summary>
+        <ul>
+          <li>Strong forces of attraction hold particles <strong>close together</strong> in fixed positions.</li>
+          <li>Particles form a regular lattice and can only <strong>vibrate</strong> about fixed points.</li>
+          <li>Solids have a <strong>definite shape and volume</strong> and do not flow.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Melting (solid → liquid)</summary>
+        <ul>
+          <li>Heating makes particles vibrate more and weakens attractions.</li>
+          <li>At the <strong>melting point</strong>, particles have enough energy to break free from fixed positions.</li>
+          <li>The substance changes into a liquid.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Liquids</summary>
+        <ul>
+          <li>Weaker attractions than solids, so particles can <strong>move past each other</strong>.</li>
+          <li>Particles are randomly arranged but still fairly close together (compact).</li>
+          <li>Liquids have a <strong>definite volume</strong> but no fixed shape, so they <strong>flow</strong> to fit a container.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Boiling / evaporation (liquid → gas)</summary>
+        <ul>
+          <li>Heating increases particle speed and further weakens attractions.</li>
+          <li>At the <strong>boiling point</strong>, particles have enough energy to fully overcome attractions.</li>
+          <li>The liquid turns into a gas (boils/evaporates).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Gases</summary>
+        <ul>
+          <li>Very weak attractions, so particles move freely and are far apart.</li>
+          <li>Gases have <strong>no definite shape or volume</strong> and always expand to fill their container.</li>
+          <li>Gas particles travel in <strong>straight lines</strong>, but their motion seems “random” because collisions change direction unpredictably.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Heating/cooling, pressure, mass, and density</summary>
+        <ul>
+          <li>Heating a gas makes particles move faster: the gas <strong>expands</strong> in a flexible container, or <strong>pressure increases</strong> in a rigid container.</li>
+          <li>Cooling a gas can cause <strong>condensation</strong> (gas → liquid); further cooling can cause <strong>freezing</strong> (liquid → solid).</li>
+          <li>In a <strong>closed system</strong>, state changes do <strong>not</strong> change mass (same number of particles).</li>
+          <li>Density usually: <strong>solid &gt; liquid &gt; gas</strong> (highest to lowest).</li>
+        </ul>
+      </details>
+    </section>
+
+    <section class="game">
+      <h2>Quiz (40 Questions)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Conservation of Mass practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string or pipe-separated options)
+const questions = [
+  {type:"mcq", question:"Which model explains the behaviour of particles in solids, liquids, and gases in the video?", options:["Electron shell model", "Particle theory (kinetic theory)", "Acid\u2013base theory", "Collision theory only"], answer:1, explanation:"The video uses particle (kinetic) theory to explain states of matter."},
+  {type:"tf", question:"In the particle model, particles are treated as small solid inelastic spheres.", answer:true, explanation:"That is the simplifying model described in the speech."},
+  {type:"mcq", question:"In a solid, particles are mainly...", options:["Free to move far apart", "Fixed in place and only vibrating", "Arranged randomly and flowing", "Moving in straight lines with large gaps"], answer:1, explanation:"Solid particles vibrate about fixed positions in a lattice."},
+  {type:"mcq", question:"Why do solids have a definite shape?", options:["Particles have no attraction", "Particles are held in fixed positions by strong attractions", "Particles are far apart", "Particles move faster than in liquids"], answer:1, explanation:"Strong forces hold particles in fixed positions."},
+  {type:"tf", question:"Solids can flow to fill a container.", answer:false, explanation:"Solids keep a fixed shape and do not flow."},
+  {type:"fill", question:"The temperature at which a solid changes to a liquid is the ________ point.", answer:"melting", explanation:"Melting occurs at the melting point."},
+  {type:"mcq", question:"What happens to particle energy when a solid is heated?", options:["It decreases", "It stays the same", "It increases", "It becomes negative"], answer:2, explanation:"Heating increases particle kinetic energy."},
+  {type:"mcq", question:"At the melting point, solid particles...", options:["Become ions immediately", "Gain enough energy to break free from fixed positions", "Stop moving completely", "Move farther apart without breaking attractions"], answer:1, explanation:"They can overcome enough attraction to leave fixed lattice sites."},
+  {type:"mcq", question:"In a liquid, the forces of attraction between particles are...", options:["Strongest of all states", "Weak but present", "Zero", "Stronger than in solids"], answer:1, explanation:"Liquids have weaker attractions than solids but particles still stick together."},
+  {type:"tf", question:"Liquid particles are arranged in a regular lattice like solids.", answer:false, explanation:"Liquid particles are more randomly arranged."},
+  {type:"mcq", question:"Liquids have a definite volume because...", options:["Particles are extremely far apart", "Particles are fairly compact due to attractions", "Particles do not move", "Liquids are always in sealed containers"], answer:1, explanation:"Attractions keep particles close enough to maintain volume."},
+  {type:"mcq", question:"Why can liquids flow?", options:["Particles are fixed", "Particles can move past one another", "There are no particles", "Particles are arranged in perfect rows"], answer:1, explanation:"Particles can slide/move around each other."},
+  {type:"fill", question:"The temperature at which a liquid changes to a gas is the ________ point.", answer:"boiling", explanation:"Boiling occurs at the boiling point."},
+  {type:"mcq", question:"When a liquid is heated, particles generally...", options:["Move slower and pack tighter", "Move faster and weaken attractions", "Become fixed in place", "Stop colliding"], answer:1, explanation:"Heating increases speed and reduces the effect of attractions."},
+  {type:"mcq", question:"At the boiling point, particles have enough energy to...", options:["Form a lattice", "Overcome attractions completely", "Turn into electrons", "Decrease their kinetic energy"], answer:1, explanation:"They can break free into the gas state."},
+  {type:"tf", question:"Evaporation and boiling both describe a change from liquid to gas.", answer:true, explanation:"Both are liquid \u2192 gas processes (boiling occurs at a specific temperature)."},
+  {type:"mcq", question:"In gases, attractions between particles are...", options:["Very weak", "Very strong", "Identical to solids", "Strong enough to fix positions"], answer:0, explanation:"Gas particles experience very weak attractions."},
+  {type:"mcq", question:"Gases do not have a definite volume because they...", options:["Always freeze", "Always fill the container and spread out", "Are liquids", "Have a lattice structure"], answer:1, explanation:"They expand to fill available space."},
+  {type:"tf", question:"Gas particles move in curved paths most of the time.", answer:false, explanation:"They travel in straight lines between collisions."},
+  {type:"mcq", question:"Why is gas motion described as 'random' in the video?", options:["Particles randomly swerve in mid\u2011air", "Collisions with walls/other particles deflect them unpredictably", "Particles spin in circles", "They have no kinetic energy"], answer:1, explanation:"Randomness refers to changing directions due to collisions."},
+  {type:"mcq", question:"If you heat a gas in a balloon (expandable container), the gas will mainly...", options:["Shrink", "Expand", "Condense", "Freeze"], answer:1, explanation:"Faster particles push outward, increasing volume."},
+  {type:"mcq", question:"If you heat a gas in a rigid container, what increases?", options:["The number of particles", "The pressure", "The melting point", "The density of the container"], answer:1, explanation:"Faster-moving particles collide more often/harder, raising pressure."},
+  {type:"tf", question:"Cooling a gas enough can cause it to condense into a liquid.", answer:true, explanation:"Lower energy allows attractions to pull particles together."},
+  {type:"fill", question:"Gas changing to liquid is called ________.", answer:"condensation", explanation:"Condensation is gas \u2192 liquid."},
+  {type:"tf", question:"Freezing is the change from solid to liquid.", answer:false, explanation:"Freezing is liquid \u2192 solid."},
+  {type:"fill", question:"Liquid changing to solid is called ________.", answer:"freezing", explanation:"Freezing fixes particles into place."},
+  {type:"mcq", question:"During freezing, particles...", options:["Gain energy and spread out", "Lose energy and become fixed in place", "Become a gas", "Stop existing"], answer:1, explanation:"Lower energy strengthens the effect of attractions, forming a solid."},
+  {type:"mcq", question:"Which state generally has the highest density (as stated in the video)?", options:["Gas", "Liquid", "Solid", "All equal"], answer:2, explanation:"The video states solids have the highest density, then liquids, then gases."},
+  {type:"mcq", question:"Which statement about shape and volume is correct?", options:["Solids: no fixed shape; liquids: fixed shape", "Liquids: fixed volume but no fixed shape", "Gases: fixed volume but no fixed shape", "Solids: no fixed volume"], answer:1, explanation:"Liquids keep volume but change shape to fit containers."},
+  {type:"tf", question:"In a closed system, a change of state changes the mass because particles are lost.", answer:false, explanation:"Mass stays the same because particle number stays the same."},
+  {type:"mcq", question:"What must be true for mass to stay the same during state changes?", options:["The system is closed", "The substance is a gas", "The temperature is constant", "The container is open"], answer:0, explanation:"A closed system prevents particles from escaping or entering."},
+  {type:"mcq", question:"In a solid lattice, particles are held close together mainly because of...", options:["Strong attractions", "High pressure only", "No collisions", "Electrical current"], answer:0, explanation:"Strong forces of attraction hold them close and fixed."},
+  {type:"tf", question:"Liquid particles are completely independent and never attract one another.", answer:false, explanation:"Liquids still have weak attractions that keep them fairly compact."},
+  {type:"mcq", question:"Which change of state happens when bonds start forming between gas particles as energy decreases?", options:["Melting", "Boiling", "Condensation", "Sublimation"], answer:2, explanation:"Cooling allows attractions to form bonds, condensing gas to liquid."},
+  {type:"mcq", question:"Which pair correctly matches state and particle arrangement?", options:["Solid\u2014random; Gas\u2014lattice", "Liquid\u2014lattice; Solid\u2014far apart", "Solid\u2014regular lattice; Liquid\u2014random close-packed", "Gas\u2014regular lattice; Liquid\u2014far apart"], answer:2, explanation:"Solids are regular; liquids are random but close together."},
+  {type:"tf", question:"At higher temperatures, particles usually have greater kinetic energy.", answer:true, explanation:"Temperature relates to average kinetic energy."},
+  {type:"fill", question:"In gases, particles move in ________ lines between collisions.", answer:"straight", explanation:"They travel in straight lines until deflected."},
+  {type:"mcq", question:"Which is the best description of a gas filling a container?", options:["It forms a fixed shape at the bottom", "It spreads out to occupy all available space", "It keeps the same volume regardless of container size", "It becomes a liquid"], answer:1, explanation:"Gases expand to fill the container."},
+  {type:"tf", question:"When a liquid boils, particles overcome attractions and enter the gas state.", answer:true, explanation:"That is the definition given at the boiling point."},
+  {type:"mcq", question:"Which energy change is most directly responsible for melting and boiling?", options:["Decrease in kinetic energy", "Increase in kinetic energy", "Increase in potential energy only", "No energy change"], answer:1, explanation:"Added heat increases particle kinetic energy, weakening attractions."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
