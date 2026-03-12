@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Density: Concept, Equation & Experimental Methods</title>
+  <style>
+    :root{ --brand:#16a34a; --paper:#fffefb; --ink:#1f2937; --accent:#065f46 }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f5faf7; color:var(--ink); line-height:1.6 }
+    header{ background:linear-gradient(90deg, var(--brand), #22c55e); color:#fff; padding:18px 20px; text-align:center; font-size:1.35rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 14px 28px }
+    .video{ display:flex; justify-content:center; margin:18px 0 }
+    iframe{ width:88%; max-width:1100px; height:480px; border:2px solid #d1fae5; border-radius:14px; background:#000; box-shadow:0 2px 12px rgba(5,150,105,.18) }
+    .card{ background:var(--paper); border-radius:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); padding:20px; margin:18px 0 }
+    h2{ color:var(--accent); border-bottom:2px solid #bbf7d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#064e3b }
+    .flex{ display:flex; gap:10px; flex-wrap:wrap }
+    .pill{ background:#dcfce7; border:1px solid #bbf7d0; border-radius:999px; padding:2px 10px; font-size:.9rem }
+    .kbd{background:#eef2ff;border:1px solid #c7d2fe;border-bottom-width:3px;padding:2px 6px;border-radius:6px;font-family:ui-monospace,Consolas,monospace}
+    .muted{opacity:.85}
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(5,150,105,.25) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem }
+    @media (max-width:760px){ iframe{ width:96%; height:240px } }
+    .tiny{font-size:.85rem;color:#475569}
+  </style>
+</head>
+<body>
+<header>Density — Formula, Units, and Measuring Density</header>
+
+<div class="video">
+  <!-- Updated link as requested -->
+  <iframe src="https://www.youtube.com/embed/Dc2VB6HGlfU" title="Density Video" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="card">
+    <h2>Notes (rewritten in English from the given speech)</h2>
+
+    <details open>
+      <summary>What density means</summary>
+      <ul>
+        <li><b>Density</b> describes how much <b>mass</b> is packed into a given <b>volume</b>.</li>
+        <li>It can be calculated using the formula <b>density = mass ÷ volume</b>.</li>
+        <li>The symbol for density is the Greek letter <b>rho (ρ)</b>.</li>
+      </ul>
+      <div class="flex">
+        <span class="pill">Density = Mass / Volume</span><span class="pill">Symbol: ρ</span><span class="pill">Physical property</span>
+      </div>
+    </details>
+
+    <details>
+      <summary>Units of density</summary>
+      <ul>
+        <li>In physics, <b>mass</b> is usually measured in <b>kilograms (kg)</b> and <b>volume</b> in <b>metres cubed (m³)</b>.</li>
+        <li>So density is commonly measured in <b>kilograms per cubic metre (kg/m³)</b>.</li>
+        <li>Another common unit is <b>grams per cubic centimetre (g/cm³)</b>.</li>
+        <li><b>1 g/cm³ = 1000 kg/m³</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Aluminium example</summary>
+      <ul>
+        <li>Solid aluminium has a density of <b>2710 kg/m³</b>.</li>
+        <li>This means a <b>1 m³</b> block of aluminium would have a mass of <b>2710 kg</b>.</li>
+        <li>The same density can also be written as <b>2.71 g/cm³</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Worked calculation</summary>
+      <ul>
+        <li>To find volume, rearrange the formula to <b>volume = mass ÷ density</b>.</li>
+        <li>For <b>420 kg</b> of aluminium with a density of <b>2710 kg/m³</b>:</li>
+        <li><span class="kbd">420 ÷ 2710 = 0.155</span></li>
+        <li>So the volume is <b>0.155 m³</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Finding the density of a solid experimentally</summary>
+      <ul>
+        <li>To calculate density, you must measure both the <b>mass</b> and the <b>volume</b> of the solid.</li>
+        <li>The <b>mass</b> is measured by placing the object on a <b>balance</b>.</li>
+        <li>For a <b>regular solid</b>, measure its dimensions and calculate the volume using the shape formula.</li>
+        <li>For a cuboid, <b>volume = length × width × height</b>.</li>
+        <li>Example: a cuboid with dimensions <b>4 cm × 3 cm × 2 cm</b> has a volume of <b>24 cm³</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Finding the volume of an irregular solid</summary>
+      <ul>
+        <li>An <b>irregular solid</b> can be measured using a <b>Eureka can</b> filled with water and an empty <b>measuring cylinder</b>.</li>
+        <li>The can has a side outlet, so when the solid is placed into the water, some water flows out.</li>
+        <li>The volume of water collected is <b>equal to the volume of the solid</b>.</li>
+        <li>Once the mass and volume are known, divide mass by volume to find the density.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Finding the density of a liquid</summary>
+      <ul>
+        <li>Place an <b>empty measuring cylinder</b> on a balance and <b>zero</b> the balance first.</li>
+        <li>Pour a known volume of liquid into the cylinder, for example <b>10 ml</b>, which is the same as <b>10 cm³</b>.</li>
+        <li>Record the mass of that liquid.</li>
+        <li>Then calculate density using <b>density = mass ÷ volume</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>How to improve accuracy</summary>
+      <ul>
+        <li>Using a <b>larger volume</b> usually gives a more accurate result because measurement uncertainty has less effect.</li>
+        <li>Taking <b>multiple readings</b> helps identify anomalies.</li>
+        <li>You can then calculate a <b>mean value</b> for better reliability.</li>
+      </ul>
+    </details>
+
+  </section>
+  </section>
+
+  <section class="card">
+    <h2>Quiz (40 Questions based on the speech)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+const Q = [
+  {type:"mcq", q:"What does density measure?", opts:["Force per unit area","Mass per unit volume","Energy per unit time"], a:1, exp:"Density is how much mass there is in a given volume."},
+  {type:"mcq", q:"What is the formula for density?", opts:["density = mass × volume","density = mass ÷ volume","density = volume ÷ mass"], a:1, exp:"Density is found by dividing mass by volume."},
+  {type:"mcq", q:"Which Greek letter is used for density?", opts:["alpha (α)","rho (ρ)","sigma (σ)"], a:1, exp:"The symbol for density is rho, written as ρ."},
+  {type:"mcq", q:"In physics, mass is commonly measured in:", opts:["grams","kilograms","newtons"], a:1, exp:"The speech states that mass is measured in kilograms."},
+  {type:"mcq", q:"In physics, volume is commonly measured in:", opts:["m³","cm²","kg"], a:0, exp:"Volume is commonly measured in cubic metres, m³."},
+  {type:"mcq", q:"The standard unit of density in physics is:", opts:["kg/m³","g/m","kg/cm²"], a:0, exp:"Density is normally measured in kilograms per cubic metre."},
+  {type:"mcq", q:"1 g/cm³ is equal to:", opts:["100 kg/m³","1000 kg/m³","10 kg/m³"], a:1, exp:"The conversion given is 1 g/cm³ = 1000 kg/m³."},
+  {type:"mcq", q:"What is the density of aluminium in kg/m³ from the speech?", opts:["271","2710","2.71"], a:1, exp:"Aluminium is given as 2710 kg/m³."},
+  {type:"mcq", q:"What is the density of aluminium in g/cm³?", opts:["2.71","27.1","0.271"], a:0, exp:"2710 kg/m³ is equivalent to 2.71 g/cm³."},
+  {type:"mcq", q:"A 1 m³ block of aluminium would have a mass of:", opts:["2710 kg","2.71 kg","1000 kg"], a:0, exp:"A 1 m³ block would have the same number of kilograms as the density value."},
+  {type:"mcq", q:"To calculate volume, you divide:", opts:["density by mass","mass by density","mass by volume"], a:1, exp:"Volume = mass ÷ density."},
+  {type:"mcq", q:"What is the volume of 420 kg of aluminium?", opts:["0.155 m³","155 m³","1.55 m³"], a:0, exp:"420 ÷ 2710 = 0.155 m³."},
+  {type:"mcq", q:"To find the density of a solid experimentally, you need its:", opts:["temperature and colour","mass and volume","mass and force"], a:1, exp:"Density requires mass and volume."},
+  {type:"mcq", q:"The mass of a solid is measured using a:", opts:["thermometer","balance","ruler"], a:1, exp:"Mass is measured by placing the solid on a balance."},
+  {type:"mcq", q:"The volume of a regular solid can be found by:", opts:["melting it","measuring its dimensions","guessing from mass"], a:1, exp:"For regular shapes, measure dimensions and calculate volume."},
+  {type:"mcq", q:"The volume of a cuboid is found by:", opts:["length × width × height","length + width + height","mass ÷ density"], a:0, exp:"That is the correct formula for a cuboid."},
+  {type:"mcq", q:"A cuboid measuring 4 cm × 3 cm × 2 cm has a volume of:", opts:["9 cm³","24 cm³","12 cm³"], a:1, exp:"4 × 3 × 2 = 24 cm³."},
+  {type:"mcq", q:"An irregular solid’s volume can be found using a:", opts:["Bunsen burner","Eureka can","spring balance"], a:1, exp:"The speech uses a Eureka can and measuring cylinder."},
+  {type:"mcq", q:"In a Eureka can experiment, the water collected equals the:", opts:["mass of the solid","volume of the solid","density of the solid"], a:1, exp:"Displaced water volume equals solid volume."},
+  {type:"mcq", q:"To find the density of a liquid, first place what on the balance?", opts:["A beaker full of water","An empty measuring cylinder","A ruler"], a:1, exp:"The cylinder is placed empty on the balance first."},
+  {type:"tf", q:"Density tells us how much volume there is in each unit of mass.", a:false, exp:"It tells us how much mass there is in each unit of volume."},
+  {type:"tf", q:"Density can be calculated by dividing mass by volume.", a:true, exp:"This is the core formula."},
+  {type:"tf", q:"Density is normally measured in kg/m³ in physics.", a:true, exp:"Yes, that is the standard unit mentioned."},
+  {type:"tf", q:"Aluminium has a density of 27.10 g/cm³.", a:false, exp:"The correct value is 2.71 g/cm³."},
+  {type:"tf", q:"Volume can be found by dividing density by mass.", a:false, exp:"Volume = mass ÷ density."},
+  {type:"tf", q:"A regular solid may have its volume found by measuring dimensions.", a:true, exp:"That is how regular solids are measured."},
+  {type:"tf", q:"A cuboid with dimensions 4, 3, and 2 has a volume of 24 cm³.", a:true, exp:"Multiplying the three dimensions gives 24 cm³."},
+  {type:"tf", q:"A Eureka can is used to measure the volume of regular solids only.", a:false, exp:"It is especially useful for irregular solids."},
+  {type:"tf", q:"10 ml is the same as 10 cm³.", a:true, exp:"These two volume units are equivalent."},
+  {type:"tf", q:"Using a larger measured volume can improve accuracy.", a:true, exp:"Larger volumes reduce the effect of measurement uncertainty."},
+  {type:"fill", q:"Density is mass divided by ______.", text:"volume", exp:"Density = mass ÷ volume."},
+  {type:"fill", q:"The symbol used for density is ______.", text:"rho", exp:"The Greek letter rho represents density."},
+  {type:"fill", q:"The standard density unit in physics is kg per ______.", text:"m3", exp:"This means kilograms per cubic metre, kg/m³."},
+  {type:"fill", q:"Aluminium has a density of ______ kg/m³.", text:"2710", exp:"That is the value given in the speech."},
+  {type:"fill", q:"420 kg of aluminium has a volume of ______ m³.", text:"0.155", exp:"420 ÷ 2710 = 0.155."},
+  {type:"fill", q:"The mass of a solid is measured with a ______.", text:"balance", exp:"A balance is used to measure mass."},
+  {type:"fill", q:"For an irregular solid, the displaced ______ is collected and measured.", text:"water", exp:"The displaced water gives the volume."},
+  {type:"fill", q:"Before measuring a liquid, the balance should be ______.", text:"zero", exp:"Zeroing resets the balance before adding the liquid."},
+  {type:"fill", q:"Taking multiple measurements lets you identify ______.", text:"anomalies", exp:"Multiple readings help you spot unusual results."},
+  {type:"fill", q:"After several readings, you can calculate a ______ value.", text:"mean", exp:"A mean gives a more reliable result."}
+];
+
+let idx=0, score=0, order=[];
+function startGame(){
+  order = [...Array(Q.length).keys()].sort(()=>Math.random()-0.5);
+  idx = 0; score = 0;
+  document.getElementById("scorebar").textContent = `Question ${idx+1} / ${Q.length}  Score: ${score}`;
+  renderQ();
+}
+function renderQ(){
+  const q = Q[order[idx]];
+  let html = `<div class='question-box'><p><strong>Q${idx+1}:</strong> ${q.q}</p>`;
+  if(q.type==="mcq"){
+    q.opts.forEach((opt,i)=> html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`);
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type==="tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input type="text" id="fill" placeholder="Type answer"> <button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  const area = document.getElementById("game-area");
+  const inner = document.getElementById("game-area-inner");
+  if(inner){ inner.innerHTML = html; } else { area.insertAdjacentHTML("beforeend", `<div id="game-area-inner">${html}</div>`); }
+}
+function checkMCQ(){
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select an answer."; fb.className="feedback incorrect"; return;}
+  if(parseInt(sel.value) === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkTF(){
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Select True or False."; fb.className="feedback incorrect"; return;}
+  const val = sel.value === "true";
+  if(val === q.a){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function checkFill(){
+  const q = Q[order[idx]];
+  const ans = (document.getElementById("fill").value||"").trim().toLowerCase();
+  const fb = document.getElementById("feedback");
+  if(!ans){ fb.textContent = "Enter an answer."; fb.className="feedback incorrect"; return;}
+  function norm(s){ return s.replace(/\s+/g,"").replace(/[³^]/g,'3').toLowerCase(); }
+  const ok = norm(ans).includes(norm(q.text));
+  if(ok){
+    fb.textContent = "✅ Correct! " + q.exp;
+    fb.className="feedback correct"; score++;
+  }else{
+    fb.textContent = "❌ Incorrect. " + q.exp;
+    fb.className="feedback incorrect";
+  }
+  setTimeout(nextQ, 1200);
+}
+function nextQ(){
+  idx++;
+  if(idx < Q.length){
+    document.getElementById("scorebar").textContent = `Question ${idx+1} / ${Q.length}  Score: ${score}`;
+    renderQ();
+  }else{
+    endGame();
+  }
+}
+function endGame(){
+  const game = document.getElementById("game-area");
+  game.querySelector("#game-area-inner").innerHTML = `<h3>Finished!</h3><p>Your score: <b>${score} / ${Q.length}</b></p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${Q.length}`;
+}
+</script>
+</body>
+</html>
