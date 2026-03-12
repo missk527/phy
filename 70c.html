@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ray Diagrams for Convex and Concave Lenses</title>
+  <style>
+    :root{ --brand:#16a34a; --paper:#fffefb; --ink:#1f2937; --accent:#065f46 }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family:Inter, Arial, system-ui, sans-serif; background:#f5faf7; color:var(--ink); line-height:1.6 }
+    header{ background:linear-gradient(90deg, var(--brand), #22c55e); color:#fff; padding:18px 20px; text-align:center; font-size:1.35rem; box-shadow:0 2px 10px rgba(0,0,0,.1) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:0 14px 28px }
+    .video{ display:flex; justify-content:center; margin:18px 0 }
+    iframe{ width:88%; max-width:1100px; height:480px; border:2px solid #d1fae5; border-radius:14px; background:#000; box-shadow:0 2px 12px rgba(5,150,105,.18) }
+    .card{ background:var(--paper); border-radius:16px; box-shadow:0 8px 20px rgba(15,23,42,.08); padding:20px; margin:18px 0 }
+    h2{ color:var(--accent); border-bottom:2px solid #bbf7d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#064e3b }
+    .flex{ display:flex; gap:10px; flex-wrap:wrap }
+    .pill{ background:#dcfce7; border:1px solid #bbf7d0; border-radius:999px; padding:2px 10px; font-size:.9rem }
+    .kbd{background:#eef2ff;border:1px solid #c7d2fe;border-bottom-width:3px;padding:2px 6px;border-radius:6px;font-family:ui-monospace,Consolas,monospace}
+    .muted{opacity:.85}
+    .question-box{ border:1px solid #e5e7eb; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(5,150,105,.25) }
+    .feedback{ margin-top:8px; font-weight:bold }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem }
+    @media (max-width:760px){ iframe{ width:96%; height:240px } }
+    .tiny{font-size:.85rem;color:#475569}
+  </style>
+</head>
+<body>
+<header>Ray Diagrams — Convex and Concave Lenses</header>
+
+<div class="video">
+  <!-- Updated link as requested -->
+  <iframe src="https://www.youtube.com/embed/K7eQWW-k4QY" title="Ray Diagrams for Convex and Concave Lenses" allowfullscreen></iframe>
+</div>
+
+<div class="wrap">
+  <section class="card">
+    <h2>Notes (rewritten in English from the given speech)</h2>
+
+    <details open>
+      <summary>Concave lenses (diverging lenses)</summary>
+      <ul>
+        <li>A <b>concave lens</b> is a <b>diverging lens</b>, so it makes light rays spread out.</li>
+        <li>In ray diagrams, a concave lens is shown wider at the ends and thinner in the middle.</li>
+        <li>The diagram includes a horizontal <b>principal axis</b>, a <b>focal point (F)</b> on each side, and often points labelled <b>2F</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Drawing rays for a concave lens</summary>
+      <ul>
+        <li>Choose a point at the <b>top of the object</b>.</li>
+        <li>Draw one incident ray <b>parallel to the axis</b>.</li>
+        <li>Draw a second ray <b>through the centre of the lens</b>; this ray continues straight because it is not refracted.</li>
+        <li>The parallel ray is refracted so that it appears to come from the <b>focal point on the same side</b> of the lens.</li>
+        <li>Use a <b>dashed virtual ray</b> back to the focal point to show this construction.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Image formed by a concave lens</summary>
+      <ul>
+        <li>The image is <b>virtual</b> because it is found by extending rays backward.</li>
+        <li>The image is <b>upright</b>.</li>
+        <li>The image is <b>smaller</b> than the object.</li>
+        <li>A concave lens always produces a <b>virtual, upright, diminished</b> image.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Convex lenses (converging lenses)</summary>
+      <ul>
+        <li>A <b>convex lens</b> is a <b>converging lens</b>, so it brings light rays together.</li>
+        <li>In diagrams, a convex lens is thicker in the middle and narrower at the ends.</li>
+        <li>It is drawn with the same axis, focal points, and 2F markings.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Drawing rays for a convex lens</summary>
+      <ul>
+        <li>Start from the <b>top of the object</b>.</li>
+        <li>A ray through the <b>centre of the lens</b> continues straight.</li>
+        <li>A ray <b>parallel to the axis</b> is refracted through the <b>focal point on the opposite side</b>.</li>
+        <li>The image is located where the refracted rays actually meet.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Image rules for convex lenses</summary>
+      <ul>
+        <li>If the object is <b>beyond 2F</b>, the image is <b>real, inverted, and smaller</b>.</li>
+        <li>If the object is <b>at 2F</b>, the image is <b>real, inverted, and the same size</b>.</li>
+        <li>If the object is <b>between F and 2F</b>, the image is <b>real, inverted, and larger</b>.</li>
+        <li>If the object is <b>between F and the lens</b>, the refracted rays do not meet, so backward <b>virtual rays</b> are used. The image is then <b>virtual, upright, and larger</b>.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Useful exam reminders</summary>
+      <ul>
+        <li>In exams, the object is usually a simple <b>arrow</b>, not a detailed picture.</li>
+        <li>Always draw rays from the <b>top of the arrow</b>.</li>
+        <li>Be ready to describe images as <b>real or virtual</b>, <b>upright or inverted</b>, and <b>larger, smaller, or the same size</b>.</li>
+      </ul>
+    </details>
+
+  </section>
+
+<section class="card">
+    <h2>Quiz (40 Questions based on the speech)</h2>
+    <div id="game-area">
+      <button onclick="startGame()">Start</button>
+      <div class="scorebar muted" id="scorebar">Not started</div>
+    </div>
+  </section>
+</div>
+
+<script>
+const Q = [
+  {type:"mcq", q:"A concave lens is also called a:", opts:["converging lens","diverging lens","reflecting lens"], a:1, exp:"Concave lenses cause light rays to spread out."},
+  {type:"mcq", q:"A convex lens is also called a:", opts:["diverging lens","converging lens","plane lens"], a:1, exp:"Convex lenses bring light rays together."},
+  {type:"mcq", q:"The horizontal line through the centre of the lens is the:", opts:["principal axis","normal","virtual axis"], a:0, exp:"The axis is drawn through the middle of the lens."},
+  {type:"mcq", q:"What does F represent on a ray diagram?", opts:["force","focal point","frequency"], a:1, exp:"F marks the focal point, also called the principal focus."},
+  {type:"mcq", q:"What does 2F show?", opts:["two focal points","twice the focal distance","double refraction"], a:1, exp:"2F is twice as far from the lens as F."},
+  {type:"mcq", q:"A ray that passes through the centre of a thin lens will:", opts:["continue straight","reflect backward","split into two"], a:0, exp:"The central ray is not refracted in these diagrams."},
+  {type:"mcq", q:"For a concave lens, a ray parallel to the axis is refracted so that it appears to come from:", opts:["the focal point on the same side","the focal point on the opposite side","2F"], a:0, exp:"A diverging lens makes the ray appear to come from the near focal point."},
+  {type:"mcq", q:"For a convex lens, a ray parallel to the axis is refracted through:", opts:["the centre of the lens","the focal point on the opposite side","the focal point on the same side"], a:1, exp:"A converging lens bends the ray through the far focal point."},
+  {type:"mcq", q:"A concave lens always forms an image that is:", opts:["real, inverted, larger","virtual, upright, smaller","real, upright, same size"], a:1, exp:"This is always true for a concave lens."},
+  {type:"mcq", q:"If an object is beyond 2F for a convex lens, the image is:", opts:["real, inverted, smaller","virtual, upright, larger","real, upright, same size"], a:0, exp:"Beyond 2F gives a diminished real image."},
+  {type:"mcq", q:"If an object is at 2F for a convex lens, the image is:", opts:["larger","smaller","the same size"], a:2, exp:"At 2F, image and object are equal in size."},
+  {type:"mcq", q:"If an object is between F and 2F for a convex lens, the image is:", opts:["real, inverted, larger","virtual, upright, larger","real, upright, smaller"], a:0, exp:"This position gives a magnified real image."},
+  {type:"mcq", q:"If an object is between F and the lens in a convex lens, the image is:", opts:["virtual, upright, larger","real, inverted, smaller","real, upright, same size"], a:0, exp:"The rays do not meet, so a virtual magnified image is formed."},
+  {type:"mcq", q:"In an exam, the object is usually a:", opts:["chicken","arrow","cube"], a:1, exp:"A simple arrow is normally used."},
+  {type:"mcq", q:"To gain full marks, you should draw rays from the:", opts:["bottom of the object","top of the object","centre of the page"], a:1, exp:"The speech says to draw from the top of the arrow."},
+  {type:"tf", q:"The principal focus and focal point mean the same thing.", a:true, exp:"They are two names for the same point."},
+  {type:"tf", q:"Concave lenses converge light rays.", a:false, exp:"They diverge light rays."},
+  {type:"tf", q:"Convex lenses are thicker in the middle.", a:true, exp:"That is the shape of a convex lens."},
+  {type:"tf", q:"A central ray is normally shown as unrefracted.", a:true, exp:"It continues straight through the lens."},
+  {type:"tf", q:"A concave lens can form a real image if the object is far enough away.", a:false, exp:"A concave lens always forms a virtual image."},
+  {type:"tf", q:"A convex lens can form a real image.", a:true, exp:"Yes, depending on the object position."},
+  {type:"tf", q:"A real image forms where actual rays meet.", a:true, exp:"That is the definition of a real image."},
+  {type:"tf", q:"A virtual image is found by extending rays backward.", a:true, exp:"Virtual rays are traced back to locate it."},
+  {type:"tf", q:"An inverted image is upside down.", a:true, exp:"Inverted means upside down."},
+  {type:"tf", q:"If the bottom of the object is on the axis, the bottom of the image will also be on the axis.", a:true, exp:"This shortcut was given in the speech."},
+  {type:"tf", q:"At 2F, a convex lens produces a larger image.", a:false, exp:"At 2F, the image is the same size."},
+  {type:"tf", q:"Between F and 2F, a convex lens produces a smaller image.", a:false, exp:"It produces a larger image."},
+  {type:"tf", q:"Between F and the lens, a convex lens image is virtual.", a:true, exp:"That position gives a virtual image."},
+  {type:"tf", q:"Virtual rays are usually drawn as dashed lines.", a:true, exp:"Dashed lines are used for virtual rays."},
+  {type:"tf", q:"In exams, you always have to draw the focal points from scratch.", a:false, exp:"You are usually given the setup."},
+  {type:"fill", q:"A concave lens is a ______ lens.", text:"diverging", exp:"Concave lenses diverge light rays."},
+  {type:"fill", q:"A convex lens is a ______ lens.", text:"converging", exp:"Convex lenses converge light rays."},
+  {type:"fill", q:"The point marked F is the ______ point.", text:"focal", exp:"F stands for focal point."},
+  {type:"fill", q:"A ray through the centre continues in a straight ______.", text:"line", exp:"The central ray continues straight."},
+  {type:"fill", q:"A concave lens always forms a ______ image.", text:"virtual", exp:"It never forms a real image."},
+  {type:"fill", q:"A real image formed by a convex lens is usually ______.", text:"inverted", exp:"Real images from convex lenses are inverted."},
+  {type:"fill", q:"At 2F, the image is the same ______ as the object.", text:"size", exp:"The object and image are equal in size."},
+  {type:"fill", q:"Between F and 2F, the image is ______ than the object.", text:"larger", exp:"It is magnified."},
+  {type:"fill", q:"Beyond 2F, the image is ______ than the object.", text:"smaller", exp:"It becomes diminished."},
+  {type:"fill", q:"In most exam diagrams, the object is shown as an ______.", text:"arrow", exp:"A simple arrow is normally used."}
+];
+
+let idx = 0;
+let score = 0;
+let order = [];
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+function startGame() {
+  order = shuffle([...Array(Q.length).keys()]);
+  idx = 0;
+  score = 0;
+  document.getElementById("scorebar").textContent = `Question ${idx + 1} / ${Q.length}   Score: ${score}`;
+
+  const area = document.getElementById("game-area");
+  let inner = document.getElementById("game-area-inner");
+  if (!inner) {
+    inner = document.createElement("div");
+    inner.id = "game-area-inner";
+    area.appendChild(inner);
+  }
+  renderQ();
+}
+
+function renderQ() {
+  const q = Q[order[idx]];
+  let html = `<div class="question-box"><p><strong>Q${idx + 1}:</strong> ${q.q}</p>`;
+
+  if (q.type === "mcq") {
+    q.opts.forEach((opt, i) => {
+      html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`;
+    });
+    html += `<button type="button" onclick="checkMCQ()">Submit</button>`;
+  } else if (q.type === "tf") {
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button type="button" onclick="checkTF()">Submit</button>`;
+  } else {
+    html += `<input type="text" id="fill" placeholder="Type answer"> `;
+    html += `<button type="button" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  document.getElementById("game-area-inner").innerHTML = html;
+}
+
+function showFeedback(correct, explanation) {
+  const fb = document.getElementById("feedback");
+  if (correct) {
+    fb.textContent = `✅ Correct! ${explanation}`;
+    fb.className = "feedback correct";
+    score++;
+  } else {
+    fb.textContent = `❌ Incorrect. ${explanation}`;
+    fb.className = "feedback incorrect";
+  }
+  setTimeout(nextQ, 900);
+}
+
+function checkMCQ() {
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  if (!sel) {
+    const fb = document.getElementById("feedback");
+    fb.textContent = "Select an answer.";
+    fb.className = "feedback incorrect";
+    return;
+  }
+  showFeedback(parseInt(sel.value, 10) === q.a, q.exp);
+}
+
+function checkTF() {
+  const q = Q[order[idx]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  if (!sel) {
+    const fb = document.getElementById("feedback");
+    fb.textContent = "Select True or False.";
+    fb.className = "feedback incorrect";
+    return;
+  }
+  showFeedback((sel.value === "true") === q.a, q.exp);
+}
+
+function normalizeText(s) {
+  return (s || "")
+    .toString()
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "");
+}
+
+function checkFill() {
+  const q = Q[order[idx]];
+  const ans = document.getElementById("fill").value;
+  if (!ans || !ans.trim()) {
+    const fb = document.getElementById("feedback");
+    fb.textContent = "Enter an answer.";
+    fb.className = "feedback incorrect";
+    return;
+  }
+  const correct = normalizeText(ans) === normalizeText(q.text);
+  showFeedback(correct, q.exp + ` Answer: ${q.text}`);
+}
+
+function nextQ() {
+  idx++;
+  if (idx < Q.length) {
+    document.getElementById("scorebar").textContent = `Question ${idx + 1} / ${Q.length}   Score: ${score}`;
+    renderQ();
+  } else {
+    endGame();
+  }
+}
+
+function endGame() {
+  document.getElementById("game-area-inner").innerHTML = `
+    <div class="question-box">
+      <h3>Finished!</h3>
+      <p>Your score: <b>${score} / ${Q.length}</b></p>
+      <button type="button" onclick="startGame()">Play again</button>
+    </div>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${Q.length}`;
+}
+</script>
+</body>
+</html>
