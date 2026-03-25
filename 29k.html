@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Specific Latent Heat</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>29k. Specific Latent Heat</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/iyE53S_ZVH4" title="Specific Latent Heat Video" allowfullscreen></iframe>
+    </div>
+
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      
+      <p class="muted">Adapted from the provided speech. Focus: specific latent heat, state changes, heating/cooling graphs, and energy calculations.</p>
+
+      <details open>
+        <summary>1) Internal Energy and Temperature</summary>
+        <ul>
+          <li>When a substance is heated, its particles gain energy in their <strong>kinetic energy store</strong>.</li>
+          <li>This increases the substance’s <strong>internal energy</strong>.</li>
+          <li><strong>Temperature</strong> is a measure of the <strong>average internal energy</strong> of the particles.</li>
+          <li>So, when internal energy increases during normal heating, the <strong>temperature rises</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>2) The Exception During a Change of State</summary>
+        <ul>
+          <li>During a <strong>change of state</strong>, temperature does <strong>not</strong> increase even though energy is still being supplied.</li>
+          <li>At the <strong>melting point</strong> or <strong>boiling point</strong>, the energy is used to <strong>weaken or break the forces</strong> between particles.</li>
+          <li>Because that energy is not increasing the average internal energy in the usual way, the <strong>temperature stays constant</strong> until the state change is complete.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>3) Cooling Graphs and Constant Temperature</summary>
+        <ul>
+          <li>The same idea applies during <strong>cooling</strong>.</li>
+          <li>When a substance changes state while cooling, <strong>new bonds form</strong> between particles.</li>
+          <li>This process <strong>releases energy</strong>, which counteracts the cooling for a time.</li>
+          <li>As a result, the <strong>temperature remains constant</strong> during the state change.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>4) Meaning of Latent Heat</summary>
+        <ul>
+          <li><strong>Latent heat</strong> is the energy required to change the state of a substance <strong>without changing its temperature</strong>.</li>
+          <li>The amount of latent heat depends on:</li>
+          <li>1. the <strong>type of substance</strong>, and</li>
+          <li>2. the <strong>amount (mass)</strong> of the substance.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>5) Specific Latent Heat (SLH)</summary>
+        <ul>
+          <li><strong>Specific latent heat</strong> standardises the idea by referring to <strong>1 kilogram</strong> of a substance.</li>
+          <li>It is the <strong>energy required</strong> to change the state of <strong>1 kg</strong> of a substance <strong>without changing its temperature</strong>.</li>
+          <li>For cooling, it can also be described as the <strong>energy released</strong> when <strong>1 kg</strong> changes state.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>6) Two Types of Specific Latent Heat</summary>
+        <ul>
+          <li><strong>Specific latent heat of fusion</strong> is the energy change when a substance changes between a <strong>solid and a liquid</strong>.</li>
+          <li>It applies to <strong>melting</strong> and <strong>freezing</strong>.</li>
+          <li><strong>Specific latent heat of vaporization</strong> is the energy change when a substance changes between a <strong>liquid and a gas</strong>.</li>
+          <li>It applies to <strong>boiling / evaporation</strong> and <strong>condensation</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>7) Water Example from -50°C to 150°C</summary>
+        <ul>
+          <li>Start with <strong>1 kg of ice</strong> at <strong>-50°C</strong>: heating increases internal energy, so the temperature rises up to <strong>0°C</strong>.</li>
+          <li>At <strong>0°C</strong>, the ice <strong>melts</strong> and the temperature stays constant while energy is used to break forces between particles.</li>
+          <li>For water, the <strong>specific latent heat of fusion</strong> is <strong>334,000 J/kg</strong>.</li>
+          <li>After all the ice has melted, the liquid water warms from <strong>0°C to 100°C</strong>.</li>
+          <li>At <strong>100°C</strong>, the water <strong>boils</strong> and the temperature again stays constant until all of it becomes water vapour.</li>
+          <li>For water, the <strong>specific latent heat of vaporization</strong> is <strong>2,260,000 J/kg</strong>.</li>
+          <li>After boiling is complete, the <strong>steam temperature rises</strong> above <strong>100°C</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>8) Heating and Cooling Use the Same Values</summary>
+        <ul>
+          <li>For heating, latent heat values describe the <strong>energy required</strong> for a state change.</li>
+          <li>For cooling, the same values describe the <strong>energy released</strong> during the reverse change of state.</li>
+          <li>So the amount is the same, but the energy transfer direction is different.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>9) Specific Latent Heat Equation</summary>
+        <ul>
+          <li>The equation is <code>E = mL</code>.</li>
+          <li><strong>E</strong> = energy transferred in joules (J)</li>
+          <li><strong>m</strong> = mass in kilograms (kg)</li>
+          <li><strong>L</strong> = specific latent heat in joules per kilogram (J/kg)</li>
+          <li>This equation can be used for energy <strong>required</strong> or energy <strong>released</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>10) Example Calculation</summary>
+        <ul>
+          <li>Question: How much energy is needed to completely boil <strong>2.5 kg</strong> of water at <strong>100°C</strong>?</li>
+          <li>Because the water is <strong>boiling</strong>, use the <strong>specific latent heat of vaporization</strong>.</li>
+          <li>Use <code>E = mL</code> → <code>E = 2.5 × 2,260,000</code>.</li>
+          <li>The answer is <strong>5,650,000 J</strong>.</li>
+          <li>This can also be written as <strong>5,650 kJ</strong>.</li>
+          <li>In exams, the exact latent heat values would be <strong>given</strong> if needed.</li>
+        </ul>
+      </details>
+
+    </section>
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Specific Latent Heat Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the specific latent heat speech/notes)
+const questions = [
+  {
+    "type": "mcq",
+    "question": "What usually happens to a substance’s temperature when its particles gain internal energy during heating?",
+    "options": [
+      "It decreases",
+      "It stays constant",
+      "It increases"
+    ],
+    "answer": 2,
+    "explanation": "As internal energy increases during normal heating, the temperature rises."
+  },
+  {
+    "type": "fill",
+    "question": "Temperature is a measure of the average ______ energy of the particles in a substance.",
+    "answerText": "internal",
+    "explanation": "Temperature measures the average internal energy of the particles."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the main exception to temperature rising during heating?",
+    "options": [
+      "When the mass is very small",
+      "During a change of state",
+      "When the substance is a gas"
+    ],
+    "answer": 1,
+    "explanation": "During a change of state, energy is used differently, so temperature stays constant."
+  },
+  {
+    "type": "mcq",
+    "question": "At the melting point or boiling point, supplied energy is mainly used to:",
+    "options": [
+      "Increase particle speed only",
+      "Break or weaken forces between particles",
+      "Reduce mass"
+    ],
+    "answer": 1,
+    "explanation": "During a state change, energy is used to weaken or break forces between particles."
+  },
+  {
+    "type": "fill",
+    "question": "During a change of state, the temperature stays ______ until the change is complete.",
+    "answerText": "constant",
+    "explanation": "The temperature remains constant during the state change."
+  },
+  {
+    "type": "mcq",
+    "question": "On a heating graph, why are there flat sections?",
+    "options": [
+      "The heater stops working",
+      "Energy is used for a state change",
+      "The substance disappears"
+    ],
+    "answer": 1,
+    "explanation": "Flat sections show energy being used for a state change instead of raising temperature."
+  },
+  {
+    "type": "mcq",
+    "question": "During cooling and a change of state, new bonds between particles:",
+    "options": [
+      "Absorb energy",
+      "Release energy",
+      "Stop particles moving"
+    ],
+    "answer": 1,
+    "explanation": "Forming new bonds releases energy during cooling."
+  },
+  {
+    "type": "fill",
+    "question": "The energy required to change state without changing temperature is called ______ heat.",
+    "answerText": "latent",
+    "explanation": "Latent heat is the energy for a state change at constant temperature."
+  },
+  {
+    "type": "mcq",
+    "question": "Latent heat depends on which two factors?",
+    "options": [
+      "Colour and shape",
+      "Type of substance and amount of substance",
+      "Pressure and volume only"
+    ],
+    "answer": 1,
+    "explanation": "It depends on the substance and how much of it there is."
+  },
+  {
+    "type": "fill",
+    "question": "Specific latent heat is defined for ______ kilogram of a substance.",
+    "answerText": "1",
+    "explanation": "Specific latent heat refers to 1 kg of a substance."
+  },
+  {
+    "type": "mcq",
+    "question": "What does SLH stand for?",
+    "options": [
+      "Standard liquid heating",
+      "Specific latent heat",
+      "Stored latent heat"
+    ],
+    "answer": 1,
+    "explanation": "SLH stands for specific latent heat."
+  },
+  {
+    "type": "mcq",
+    "question": "Specific latent heat of fusion applies to changes between:",
+    "options": [
+      "Solid and liquid",
+      "Liquid and gas",
+      "Solid and gas"
+    ],
+    "answer": 0,
+    "explanation": "Fusion refers to melting and freezing, which are between solid and liquid."
+  },
+  {
+    "type": "fill",
+    "question": "Specific latent heat of ______ is the energy change between a liquid and a gas.",
+    "answerText": "vaporization",
+    "explanation": "Vaporization refers to the liquid-gas change."
+  },
+  {
+    "type": "mcq",
+    "question": "Which process uses the specific latent heat of fusion?",
+    "options": [
+      "Boiling",
+      "Condensing",
+      "Melting"
+    ],
+    "answer": 2,
+    "explanation": "Fusion is used for melting or freezing."
+  },
+  {
+    "type": "mcq",
+    "question": "Which process uses the specific latent heat of vaporization?",
+    "options": [
+      "Freezing",
+      "Boiling",
+      "Melting"
+    ],
+    "answer": 1,
+    "explanation": "Vaporization is used for boiling/evaporation or condensation."
+  },
+  {
+    "type": "fill",
+    "question": "The specific latent heat of fusion of water is 334,000 ______/kg.",
+    "answerText": "j",
+    "explanation": "The value given in the speech is 334,000 J/kg."
+  },
+  {
+    "type": "mcq",
+    "question": "The specific latent heat of vaporization of water is:",
+    "options": [
+      "334,000 J/kg",
+      "2,260,000 J/kg",
+      "5,650,000 J/kg"
+    ],
+    "answer": 1,
+    "explanation": "For water, the SLH of vaporization is 2,260,000 J/kg."
+  },
+  {
+    "type": "fill",
+    "question": "In the water example, ice starts to melt at ______ °C.",
+    "answerText": "0",
+    "explanation": "Water melts at 0°C in the example."
+  },
+  {
+    "type": "mcq",
+    "question": "In the water example, boiling starts at:",
+    "options": [
+      "0°C",
+      "50°C",
+      "100°C"
+    ],
+    "answer": 2,
+    "explanation": "Water boils at 100°C in the example."
+  },
+  {
+    "type": "mcq",
+    "question": "When 1 kg of ice at -50°C is heated to 0°C, the temperature:",
+    "options": [
+      "Stays constant",
+      "Increases",
+      "Decreases"
+    ],
+    "answer": 1,
+    "explanation": "Before melting starts, the ice temperature increases normally."
+  },
+  {
+    "type": "fill",
+    "question": "At 0°C, energy is used to break the ______ between water particles.",
+    "answerText": "forces",
+    "explanation": "The supplied energy breaks or weakens the forces between particles."
+  },
+  {
+    "type": "mcq",
+    "question": "After all the ice has melted, the liquid water temperature rises from 0°C to:",
+    "options": [
+      "50°C",
+      "100°C",
+      "150°C"
+    ],
+    "answer": 1,
+    "explanation": "The water then warms until it reaches 100°C."
+  },
+  {
+    "type": "fill",
+    "question": "After all the water has boiled, the substance is called water ______.",
+    "answerText": "vapour",
+    "explanation": "Gaseous water is water vapour. (US spelling vapor would also be accepted in meaning, but the expected answer is vapour.)"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about cooling is correct?",
+    "options": [
+      "Latent heat values become zero",
+      "The same latent heat values apply, but energy is released",
+      "Temperature always falls continuously"
+    ],
+    "answer": 1,
+    "explanation": "The same values are used, but the change releases energy during cooling."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the equation for specific latent heat calculations?",
+    "options": [
+      "E = mcΔθ",
+      "E = mL",
+      "P = IV"
+    ],
+    "answer": 1,
+    "explanation": "Specific latent heat calculations use E = mL."
+  },
+  {
+    "type": "fill",
+    "question": "In the equation E = mL, E stands for ______ transferred.",
+    "answerText": "energy",
+    "explanation": "E represents the energy transferred."
+  },
+  {
+    "type": "mcq",
+    "question": "In E = mL, the symbol m stands for:",
+    "options": [
+      "Metre",
+      "Mass",
+      "Molecule"
+    ],
+    "answer": 1,
+    "explanation": "m is the mass of the substance."
+  },
+  {
+    "type": "fill",
+    "question": "Mass should be measured in ______ when using E = mL.",
+    "answerText": "kg",
+    "explanation": "Mass is measured in kilograms in the equation."
+  },
+  {
+    "type": "mcq",
+    "question": "The unit of specific latent heat is:",
+    "options": [
+      "J/kg",
+      "kg/J",
+      "J/°C"
+    ],
+    "answer": 0,
+    "explanation": "Specific latent heat is measured in joules per kilogram."
+  },
+  {
+    "type": "mcq",
+    "question": "To completely boil water at 100°C, which latent heat value should you use?",
+    "options": [
+      "Fusion",
+      "Vaporization",
+      "Specific heat capacity"
+    ],
+    "answer": 1,
+    "explanation": "Boiling is a liquid-to-gas change, so use vaporization."
+  },
+  {
+    "type": "fill",
+    "question": "To boil 2.5 kg of water at 100°C, the mass used in the equation is ______ kg.",
+    "answerText": "2.5",
+    "explanation": "The example uses a mass of 2.5 kg."
+  },
+  {
+    "type": "mcq",
+    "question": "How is the energy for boiling 2.5 kg of water at 100°C calculated?",
+    "options": [
+      "2.5 × 334,000",
+      "2.5 × 2,260,000",
+      "2.5 ÷ 2,260,000"
+    ],
+    "answer": 1,
+    "explanation": "Use mass × specific latent heat of vaporization."
+  },
+  {
+    "type": "fill",
+    "question": "The energy needed to boil 2.5 kg of water at 100°C is 5,650,000 ______.",
+    "answerText": "j",
+    "explanation": "The worked answer is 5,650,000 J."
+  },
+  {
+    "type": "mcq",
+    "question": "5,650,000 J is equal to:",
+    "options": [
+      "5,650 kJ",
+      "565 kJ",
+      "56,500 kJ"
+    ],
+    "answer": 0,
+    "explanation": "5,650,000 J = 5,650 kJ."
+  },
+  {
+    "type": "mcq",
+    "question": "Why does temperature stay constant during boiling?",
+    "options": [
+      "The heater is turned off",
+      "Energy is used to separate particles rather than raise temperature",
+      "The mass becomes zero"
+    ],
+    "answer": 1,
+    "explanation": "During boiling, energy is used to overcome forces between particles."
+  },
+  {
+    "type": "fill",
+    "question": "During cooling, state change can keep the temperature constant because bond formation ______ energy.",
+    "answerText": "releases",
+    "explanation": "Bond formation releases energy and counteracts the cooling."
+  },
+  {
+    "type": "mcq",
+    "question": "Which of these would usually be given in an exam according to the speech?",
+    "options": [
+      "The latent heat values",
+      "The student’s final answer",
+      "The graph axes labels only"
+    ],
+    "answer": 0,
+    "explanation": "The speech says you do not need to memorise the latent heat values because they would be given."
+  },
+  {
+    "type": "fill",
+    "question": "Specific latent heat of fusion is used for melting and ______.",
+    "answerText": "freezing",
+    "explanation": "Fusion applies to melting and freezing."
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement best defines specific latent heat?",
+    "options": [
+      "Energy to raise 1 kg by 1°C",
+      "Energy to change the state of 1 kg without changing temperature",
+      "Energy stored in every hot object"
+    ],
+    "answer": 1,
+    "explanation": "That is the correct definition of specific latent heat."
+  },
+  {
+    "type": "fill",
+    "question": "When a liquid changes into a gas, the state change is called ______ or boiling.",
+    "answerText": "evaporation",
+    "explanation": "Liquid to gas is evaporation/boiling depending on context."
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
