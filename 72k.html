@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Absorbing and Emitting Radiation Overview</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>72. Absorbing and Emitting Radiation</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/oXOHYyFkBng" title="Absorbing and Emitting Radiation Video" allowfullscreen></iframe>
+    </div>
+
+    
+    
+    <section class="card">
+      <h2>Key Notes (English)</h2>
+      <p class="muted">Adapted from the provided speech. Focus: how objects absorb and emit radiation, how temperature affects emission, emission graphs, and how these ideas apply to the Earth and its atmosphere.</p>
+
+      <details open>
+        <summary>1) Absorbing and Emitting Radiation</summary>
+        <ul>
+          <li>All objects continuously absorb and emit electromagnetic radiation to and from their surroundings.</li><li>When an object absorbs radiation, it gains energy and can warm up.</li><li>When it emits radiation, it loses energy and can cool down.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>2) Radiation Balance and Temperature</summary>
+        <ul>
+          <li>An object's temperature depends on the balance between the radiation it absorbs and the radiation it emits.</li><li>If it emits more radiation than it absorbs, it cools down.</li><li>If it absorbs more radiation than it emits, it warms up.</li><li>If the absorbed and emitted amounts are equal, the temperature stays constant.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>3) Examples: Hot and Cold Objects</summary>
+        <ul>
+          <li>A hot object such as a cup of tea emits more radiation than it absorbs, so it loses energy and cools down.</li><li>A cold object such as an ice cube absorbs more radiation than it emits, so it gains energy and warms up.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>4) What Intensity Means</summary>
+        <ul>
+          <li>Intensity means the power of radiation transferred per unit area.</li><li>It tells us how much energy reaches a certain area in a given time.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>5) Emission Graphs</summary>
+        <ul>
+          <li>Emission graphs show wavelength on the x-axis and intensity on the y-axis.</li><li>A higher intensity means more radiation is being emitted at that wavelength.</li><li>For this topic, the main regions are ultraviolet, visible light, and infrared.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>6) Radiation from Room-Temperature Objects</summary>
+        <ul>
+          <li>Objects at room temperature, such as a paper bag, emit most of their radiation in the infrared region.</li><li>They do not emit much visible light, so we cannot see their emitted radiation.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>7) Radiation from Hotter Objects</summary>
+        <ul>
+          <li>Hotter objects emit more radiation overall, so their curves are higher on the graph.</li><li>They also emit shorter wavelengths more strongly, so the curve shifts to the left.</li><li>A burning piece of coal emits more radiation than a cooler object.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>8) Very Hot Objects</summary>
+        <ul>
+          <li>Extremely hot objects, such as the Sun, emit even more radiation and at even shorter wavelengths.</li><li>As temperature increases, the intensity increases across all wavelengths.</li><li>The increase is greater at shorter wavelengths.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>9) Colour Changes with Temperature</summary>
+        <ul>
+          <li>As an object gets hotter, the wavelengths of light it emits become shorter.</li><li>This is why a Bunsen burner flame changes colour from orange-red to blue as it gets hotter.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>10) Earth and Atmospheric Radiation</summary>
+        <ul>
+          <li>The Earth absorbs electromagnetic radiation from the Sun and also emits infrared radiation.</li><li>The atmosphere can reflect, absorb, and emit radiation too.</li><li>During the day, more energy is absorbed than emitted locally, so temperature rises.</li><li>At night, less energy is absorbed than emitted locally, so temperature falls.</li><li>Overall, the Earth's average temperature stays fairly constant because some part of the planet is always receiving sunlight.</li>
+        </ul>
+      </details>
+
+    </section>
+
+
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Absorbing and Emitting Radiation Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the reproductive hormones speech/notes)
+const questions = [{"type":"mcq","question":"What happens when an object absorbs electromagnetic radiation?","options":["It always freezes","It gains energy and can warm up","It stops emitting radiation"],"answer":1,"explanation":"Absorbing radiation transfers energy to the object, so it can warm up."},{"type":"fill","question":"When an object emits radiation, it tends to ______ down.","answerText":"cool","explanation":"Emitting radiation means losing energy, so the object cools down."},{"type":"mcq","question":"What determines whether an object's temperature rises or falls?","options":["Its colour only","The balance between absorbed and emitted radiation","Its shape only"],"answer":1,"explanation":"Temperature depends on the balance between absorbing and emitting radiation."},{"type":"fill","question":"A hot cup of tea emits more radiation than it ______.","answerText":"absorbs","explanation":"A hotter object emits more than it absorbs, so it cools."},{"type":"mcq","question":"Why does a hot cup of tea cool down?","options":["It emits more radiation than it absorbs","It absorbs no radiation at all","It stops transferring energy"],"answer":0,"explanation":"It loses more energy by emission than it gains by absorption."},{"type":"fill","question":"An ice cube is cooler than its surroundings, so it absorbs more radiation than it ______.","answerText":"emits","explanation":"A cooler object absorbs more than it emits and therefore warms up."},{"type":"mcq","question":"What happens if an object absorbs and emits the same amount of radiation?","options":["Its temperature stays the same","It becomes invisible","It must melt"],"answer":0,"explanation":"Equal absorption and emission means no net energy change, so temperature stays constant."},{"type":"fill","question":"Intensity is the ______ of radiation per unit area.","answerText":"power","explanation":"Intensity is defined as power per unit area."},{"type":"mcq","question":"What does intensity tell us?","options":["How much energy is transferred to an area in a certain time","Only the colour of radiation","Only the temperature of the source"],"answer":0,"explanation":"Intensity measures energy transfer rate per unit area."},{"type":"fill","question":"On an emission graph, the x-axis shows ______.","answerText":"wavelength","explanation":"The x-axis represents the wavelength of the emitted radiation."},{"type":"mcq","question":"What does the y-axis show on the emission graph?","options":["Temperature","Intensity","Mass"],"answer":1,"explanation":"The y-axis is intensity."},{"type":"fill","question":"A higher intensity means ______ of that wavelength is being emitted.","answerText":"more","explanation":"Greater intensity means more radiation at that wavelength."},{"type":"mcq","question":"Which three regions are important in this topic?","options":["Radio, microwaves, gamma","Ultraviolet, visible light, infrared","X-rays, sound, ultraviolet"],"answer":1,"explanation":"The speech focuses on ultraviolet, visible light, and infrared."},{"type":"fill","question":"From left to right on the graph, wavelength is ______.","answerText":"increasing","explanation":"The speech says the x-axis is in order of increasing wavelength."},{"type":"mcq","question":"What type of radiation is mostly emitted by a room-temperature object?","options":["Visible light","Infrared","Ultraviolet"],"answer":1,"explanation":"Room-temperature objects mainly emit infrared radiation."},{"type":"fill","question":"A paper bag at room temperature emits most of its radiation in the ______ range.","answerText":"infrared","explanation":"The speech says most emission is infrared."},{"type":"mcq","question":"Why can't we usually see radiation emitted by objects at room temperature?","options":["They emit only infrared, not visible light","They emit no radiation","They absorb all visible light"],"answer":0,"explanation":"Room-temperature objects mainly emit infrared, which we cannot see."},{"type":"fill","question":"A hotter object emits more radiation overall, so its curve is shifted ______ on the graph.","answerText":"up","explanation":"Hotter objects have higher intensity, so the curve shifts up."},{"type":"mcq","question":"How else does the emission curve change for a hotter object?","options":["It shifts to the left","It shifts to the right","It becomes flat"],"answer":0,"explanation":"Hotter objects emit shorter wavelengths more strongly, shifting the curve left."},{"type":"fill","question":"A hotter object emits ______ wavelengths more strongly.","answerText":"shorter","explanation":"The increase is greater at shorter wavelengths."},{"type":"mcq","question":"Which object is given as a hotter example than a paper bag?","options":["An ice cube","Burning coal","A glass of water"],"answer":1,"explanation":"The speech uses burning coal as a hotter object example."},{"type":"fill","question":"For an even hotter object like the Sun, the curve shifts further up and to the ______.","answerText":"left","explanation":"Very hot objects have curves further up and left."},{"type":"mcq","question":"As temperature increases, what happens to the intensity of emitted wavelengths?","options":["It decreases for all wavelengths","It increases for all wavelengths","It stays the same"],"answer":1,"explanation":"The speech says intensity increases at every emitted wavelength."},{"type":"fill","question":"The intensity of short wavelengths increases ______ than that of longer wavelengths.","answerText":"more","explanation":"Shorter wavelengths increase more strongly as temperature rises."},{"type":"mcq","question":"Why do Bunsen burner flames change colour as they get hotter?","options":["They emit shorter wavelengths of light","They stop emitting light","They emit only sound"],"answer":0,"explanation":"Hotter flames emit shorter wavelengths, changing colour toward blue."},{"type":"fill","question":"As a Bunsen flame gets hotter, its colour changes from orangey-red to ______.","answerText":"blue","explanation":"The speech says the colour changes from orangey red to blue."},{"type":"mcq","question":"What kind of object is the Earth described as in terms of radiation?","options":["A cold mirror","A big warm object","A source of ultraviolet only"],"answer":1,"explanation":"The Earth is described as a big warm object emitting infrared radiation."},{"type":"fill","question":"The Earth is constantly being bombarded by radiation from the ______.","answerText":"Sun","explanation":"The Earth receives electromagnetic radiation from the Sun."},{"type":"mcq","question":"What kind of radiation does the Earth itself emit?","options":["Infrared radiation","Only visible light","Only ultraviolet"],"answer":0,"explanation":"Warm objects like the Earth emit infrared radiation."},{"type":"fill","question":"The atmosphere can reflect, absorb, and ______ radiation.","answerText":"emit","explanation":"The atmosphere can reflect, absorb, and emit radiation."},{"type":"mcq","question":"During the day, what usually happens locally?","options":["More energy is emitted than absorbed","More energy is absorbed than emitted","No energy is transferred"],"answer":1,"explanation":"During the day, local absorption is greater than local emission."},{"type":"fill","question":"During the day, local temperature tends to ______.","answerText":"increase","explanation":"More absorbed than emitted energy causes temperature to rise."},{"type":"mcq","question":"What usually happens at night locally?","options":["More energy is absorbed than emitted","Less energy is absorbed than emitted","All radiation stops"],"answer":1,"explanation":"At night, local emission exceeds absorption."},{"type":"fill","question":"At night, local temperature tends to ______.","answerText":"decrease","explanation":"Less absorbed than emitted energy means temperature falls."},{"type":"mcq","question":"Why does the Earth's overall temperature stay fairly constant?","options":["Because the Sun stops shining","Because some part of Earth is always in sunlight","Because the atmosphere blocks all radiation"],"answer":1,"explanation":"Some part of Earth is always receiving solar radiation."},{"type":"fill","question":"Some part of the Earth is always in the ______.","answerText":"sun","explanation":"The speech says some part of Earth is always in the sun."},{"type":"mcq","question":"Which statement is true about a cold object in warmer surroundings?","options":["It emits more than it absorbs","It absorbs more than it emits","It cannot exchange radiation"],"answer":1,"explanation":"A colder object absorbs more radiation than it emits."},{"type":"fill","question":"Electromagnetic radiation is described as pure ______.","answerText":"energy","explanation":"The speech says radiation is pure energy."},{"type":"mcq","question":"For a room-temperature object, most emitted energy lies in which region?","options":["Infrared","Visible","Ultraviolet"],"answer":0,"explanation":"Room-temperature objects mainly emit infrared radiation."},{"type":"fill","question":"The balance between absorbing and emitting radiation affects an object's ______.","answerText":"temperature","explanation":"That balance determines whether temperature rises, falls, or stays the same."}];
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
