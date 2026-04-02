@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sound Waves and Hearing</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>73P. Sound Waves and Hearing</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/xK7YbTGyYuw" title="Sound Waves and Hearing Video" allowfullscreen></iframe>
+    </div>
+
+    
+    
+    
+
+
+<section class="card">
+<h2>Key Notes (English)</h2>
+<p class="muted">Rewritten from the speech: sound waves, wave behavior, and human hearing.</p>
+
+<details open><summary>1) What Sound Waves Are</summary>
+<ul>
+<li>Sound waves are vibrations that travel through the particles of a medium.</li>
+<li>They are longitudinal waves, so they move as alternating compressions and rarefactions.</li>
+<li>Compressions are regions where particles are close together, while rarefactions are regions where particles are spread farther apart.</li>
+</ul></details>
+
+<details><summary>2) How Sound Travels Through Materials</summary>
+<ul>
+<li>When sound passes through a material, it makes the particles vibrate.</li>
+<li>These vibrating particles collide with neighboring particles and pass on the vibration.</li>
+<li>This repeated transfer of vibrations allows the sound wave to move through the medium.</li>
+</ul></details>
+
+<details><summary>3) Why Density Affects Speed</summary>
+<ul>
+<li>Sound needs particles to travel, so it cannot move through a vacuum.</li>
+<li>The more closely packed the particles are, the faster sound can be transmitted.</li>
+<li>That is why sound travels fastest in solids, slower in liquids, and slowest in gases.</li>
+</ul></details>
+
+<details><summary>4) Sound in a Vacuum</summary>
+<ul>
+<li>A vacuum contains no particles.</li>
+<li>Because there are no particles to vibrate, sound cannot travel through a vacuum at all.</li>
+</ul></details>
+
+<details><summary>5) Speed, Frequency, and Wavelength</summary>
+<ul>
+<li>When sound moves from one medium to another, its speed can change.</li>
+<li>Its frequency stays the same across different media.</li>
+<li>Using the wave equation, if speed increases and frequency stays constant, the wavelength must increase.</li>
+<li>So sound has a longer wavelength in denser media and a shorter wavelength in less dense media like air.</li>
+</ul></details>
+
+<details><summary>6) Reflection, Refraction, and Absorption</summary>
+<ul>
+<li>Sound can be refracted when it changes speed between different media.</li>
+<li>It can also be reflected or absorbed.</li>
+<li>Hard, flat surfaces reflect most sound, which is why echoes are produced.</li>
+</ul></details>
+
+<details><summary>7) How the Ear Receives Sound</summary>
+<ul>
+<li>Sound waves travel along the ear canal and strike the ear drum.</li>
+<li>The ear drum vibrates and passes the vibrations through the ossicles, the three tiny bones of the middle ear.</li>
+<li>The vibrations then continue into the cochlea.</li>
+<li>The cochlea converts the vibrations into electrical signals.</li>
+<li>These signals travel along the auditory nerve to the brain.</li>
+</ul></details>
+
+<details><summary>8) Hearing Range and Pitch</summary>
+<ul>
+<li>The brain interprets higher frequencies as higher pitches.</li>
+<li>More intense signals are interpreted as louder sounds.</li>
+<li>Human hearing is generally between 20 Hz and 20,000 Hz.</li>
+<li>Hearing range varies from person to person and usually decreases with age because of wear and tear in the cochlea and auditory nerve.</li>
+</ul></details>
+
+</section>
+
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2026 Contraception Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the contraception speech/notes)
+
+const questions = [{"type": "mcq", "question": "What are sound waves described as in the speech?", "options": ["Chemical reactions", "Vibrations passing through a medium", "Light rays", "Electric currents"], "answer": 1, "explanation": "Sound waves are vibrations that pass through the molecules of a medium."}, {"type": "mcq", "question": "What type of wave is a sound wave?", "options": ["Transverse", "Surface", "Longitudinal", "Standing"], "answer": 2, "explanation": "Sound waves are longitudinal waves."}, {"type": "mcq", "question": "In a compression, particles are", "options": ["furthest apart", "not moving", "closest together", "moving in circles"], "answer": 2, "explanation": "Compressions are regions where particles are bunched close together."}, {"type": "mcq", "question": "In a rarefaction, particles are", "options": ["furthest apart", "most compressed", "completely still", "changing into energy"], "answer": 0, "explanation": "Rarefactions are regions where particles are spread farther apart."}, {"type": "mcq", "question": "How does sound travel through a solid?", "options": ["By melting the solid", "By vibrating particles that pass vibrations to neighbors", "By turning into light", "By creating a vacuum"], "answer": 1, "explanation": "Particles vibrate and pass the vibration to neighboring particles."}, {"type": "mcq", "question": "Why does sound need a medium?", "options": ["It needs particles to vibrate through", "It needs sunlight", "It needs magnets", "It needs electricity"], "answer": 0, "explanation": "Sound is transmitted by vibrating particles in a medium."}, {"type": "mcq", "question": "Where does sound travel fastest?", "options": ["In gases", "In liquids", "In solids", "In a vacuum"], "answer": 2, "explanation": "Sound travels fastest in solids because particles are more densely packed."}, {"type": "mcq", "question": "Where does sound travel slowest?", "options": ["In gases", "In solids", "In metals only", "In water"], "answer": 0, "explanation": "Sound travels slowest in gases."}, {"type": "mcq", "question": "Why can't sound travel through a vacuum?", "options": ["It is too cold", "There are no particles", "It is too dark", "The frequency becomes zero"], "answer": 1, "explanation": "A vacuum has no particles to pass on vibrations."}, {"type": "mcq", "question": "When sound passes into a different medium, which quantity stays the same?", "options": ["Speed", "Frequency", "Wavelength", "Density"], "answer": 1, "explanation": "The frequency of sound does not change between media."}, {"type": "mcq", "question": "If sound speed increases while frequency stays constant, what happens to wavelength?", "options": ["It decreases", "It disappears", "It increases", "It stays the same"], "answer": 2, "explanation": "From wave speed = frequency × wavelength, wavelength must increase."}, {"type": "mcq", "question": "In higher-density media, sound generally has a", "options": ["longer wavelength", "lower frequency only", "shorter wavelength", "zero wavelength"], "answer": 0, "explanation": "As sound speeds up in denser media, wavelength gets longer."}, {"type": "mcq", "question": "What can happen to sound when it changes speed between media?", "options": ["Decay", "Refraction", "Combustion", "Ionization"], "answer": 1, "explanation": "A change in speed between media can cause refraction."}, {"type": "mcq", "question": "What kind of surfaces reflect most sound?", "options": ["Soft rough surfaces", "Hard flat surfaces", "Wet surfaces only", "Rubber surfaces"], "answer": 1, "explanation": "Hard flat surfaces reflect most sound and produce echoes."}, {"type": "mcq", "question": "What does reflected sound produce?", "options": ["Color", "Echoes", "Magnetism", "Heat only"], "answer": 1, "explanation": "Reflected sound can be heard as echoes."}, {"type": "mcq", "question": "Which part of the ear do sound waves travel along first?", "options": ["Auditory nerve", "Cochlea", "Ear canal", "Semicircular canals"], "answer": 2, "explanation": "Sound waves first travel along the ear canal."}, {"type": "mcq", "question": "What happens when sound waves hit the ear drum?", "options": ["It melts", "It vibrates", "It stops the sound", "It produces light"], "answer": 1, "explanation": "The ear drum vibrates when sound waves strike it."}, {"type": "mcq", "question": "What are the ossicles?", "options": ["Three small bones", "A group of nerves", "A part of the brain", "Air sacs"], "answer": 0, "explanation": "The ossicles are three tiny bones in the ear."}, {"type": "mcq", "question": "Which structure converts vibrations into electrical signals?", "options": ["Ear canal", "Ear drum", "Cochlea", "Semicircular canals"], "answer": 2, "explanation": "The cochlea converts vibrations into electrical signals."}, {"type": "mcq", "question": "Where do the electrical signals go after leaving the cochlea?", "options": ["To the teeth", "To the lungs", "Along the auditory nerve to the brain", "Back to the ear canal"], "answer": 2, "explanation": "Signals travel along the auditory nerve to the brain."}, {"type": "fill", "question": "Sound waves are a type of __________ wave.", "answerText": "longitudinal", "explanation": "Sound waves are longitudinal waves."}, {"type": "fill", "question": "Regions where particles are closest together are called __________.", "answerText": "compressions", "explanation": "Compressions are the crowded regions of a sound wave."}, {"type": "fill", "question": "Regions where particles are furthest apart are called __________.", "answerText": "rarefactions", "explanation": "Rarefactions are the spread-out regions of a sound wave."}, {"type": "fill", "question": "Sound cannot travel through a __________.", "answerText": "vacuum", "explanation": "A vacuum has no particles for sound to travel through."}, {"type": "fill", "question": "The more densely packed the particles are, the __________ sound travels.", "answerText": "faster", "explanation": "Closer particle spacing helps sound move faster."}, {"type": "fill", "question": "Sound travels fastest in __________.", "answerText": "solids", "explanation": "Solids transmit sound fastest."}, {"type": "fill", "question": "Sound travels slowest in __________.", "answerText": "gases", "explanation": "Gases transmit sound most slowly."}, {"type": "fill", "question": "When sound changes medium, its __________ stays the same.", "answerText": "frequency", "explanation": "Frequency does not change when sound enters a new medium."}, {"type": "fill", "question": "If sound speeds up, its wavelength gets __________.", "answerText": "longer", "explanation": "Higher speed with constant frequency means a longer wavelength."}, {"type": "fill", "question": "If sound slows down, its wavelength gets __________.", "answerText": "shorter", "explanation": "Lower speed with constant frequency means a shorter wavelength."}, {"type": "fill", "question": "Sound changing direction because its speed changes is called __________.", "answerText": "refraction", "explanation": "Refraction happens when sound changes speed between media."}, {"type": "fill", "question": "Hard flat surfaces can reflect sound and produce __________.", "answerText": "echoes", "explanation": "Echoes are caused by reflected sound."}, {"type": "fill", "question": "Sound waves enter the ear through the ear __________.", "answerText": "canal", "explanation": "They travel through the ear canal first."}, {"type": "fill", "question": "The ear __________ vibrates when sound waves hit it.", "answerText": "drum", "explanation": "The ear drum vibrates in response to sound waves."}, {"type": "fill", "question": "The three tiny bones in the ear are called the __________.", "answerText": "ossicles", "explanation": "The ossicles transmit vibrations through the middle ear."}, {"type": "fill", "question": "The __________ converts vibrations into electrical signals.", "answerText": "cochlea", "explanation": "The cochlea changes vibrations into electrical signals."}, {"type": "fill", "question": "Signals are carried to the brain by the __________ nerve.", "answerText": "auditory", "explanation": "The auditory nerve carries signals to the brain."}, {"type": "fill", "question": "Higher frequencies are interpreted as higher __________.", "answerText": "pitches", "explanation": "Higher frequency sounds are heard as higher pitches."}, {"type": "fill", "question": "Humans can generally hear from 20 Hz to __________ Hz.", "answerText": "20000", "explanation": "The general human hearing range is 20 Hz to 20,000 Hz."}, {"type": "fill", "question": "As people get older, their hearing range usually __________.", "answerText": "decreases", "explanation": "Hearing range commonly decreases with age."}];
+
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
