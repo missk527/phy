@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Urinary System Overview</title>
+  <style>
+    :root{
+      --brand:#0ea5e9;
+      --ink:#1f2937;
+      --paper:#fafafa;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --good:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),#6366f1);
+      color:white;
+      padding:20px 16px;
+      text-align:center;
+      box-shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    header h1{margin:0;font-size:clamp(1.2rem,2.5vw,1.8rem);letter-spacing:.5px}
+    .wrap{max-width:1000px;margin:0 auto;padding:16px}
+    .video-container{
+      display:flex;justify-content:center;align-items:center; margin:18px 0;
+    }
+    iframe{
+      width:100%;max-width:900px;height:480px;border:0;border-radius:12px;
+      box-shadow:0 8px 24px rgba(2,6,23,.15);
+      background:#000;
+    }
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(2,6,23,.08);
+      margin:16px 0;
+    }
+    h2{
+      margin:.2rem 0 .8rem;
+      color:#0f172a;
+      font-size:1.2rem;
+    }
+    details{border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{font-weight:700;color:#0f766e;cursor:pointer}
+    ul{margin:.5rem 0 .5rem 1.2rem}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:600;font-size:.8rem;margin-right:.4rem}
+    .muted{color:var(--muted)}
+    .quiz h2{color:#0f172a}
+    .btn{
+      background:var(--brand);color:#fff;border:0;border-radius:10px;
+      padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(14,165,233,.35);
+      transition:transform .06s ease,box-shadow .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(14,165,233,.45)}
+    .question-box{border:1px solid #e5e7eb;border-radius:10px;padding:12px;margin-top:12px;background:#fff}
+    .feedback{margin-top:8px;font-weight:700}
+    .correct{color:var(--good)}
+    .incorrect{color:var(--bad)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    code{background:#f1f5f9;border-radius:6px;padding:2px 6px}
+    .footer{font-size:.85rem;color:var(--muted);text-align:center;margin:16px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>74. Gas Pressure and Particle Behavior</h1>
+  </header>
+
+  <div class="wrap">
+    <div class="video-container card">
+      <!-- Requested video link -->
+      <iframe src="https://www.youtube.com/embed/Q5noQJEYNFE" title="Urinary System Video" allowfullscreen></iframe>
+    </div>
+
+    
+    
+    
+<section class="card">
+<h2>Key Notes (English)</h2>
+<p class="muted">Adapted from the speech: gas particles and pressure.</p>
+
+<details open><summary>1) Particle Motion</summary>
+<ul>
+<li>Gas particles move randomly in all directions.</li>
+<li>They collide with container walls and rebound.</li>
+</ul></details>
+
+<details><summary>2) What Creates Pressure</summary>
+<ul>
+<li>Collisions of particles with walls exert force.</li>
+<li>Pressure = force ÷ area.</li>
+</ul></details>
+
+<details><summary>3) Factors Affecting Pressure</summary>
+<ul>
+<li>Pressure depends on number of collisions and force of each collision.</li>
+</ul></details>
+
+<details><summary>4) Temperature Effect</summary>
+<ul>
+<li>Higher temperature increases kinetic energy.</li>
+<li>Particles move faster → more collisions → greater force.</li>
+<li>Pressure increases.</li>
+</ul></details>
+
+<details><summary>5) Concentration Effect</summary>
+<ul>
+<li>More particles in same volume → more collisions.</li>
+<li>Pressure increases.</li>
+</ul></details>
+
+<details><summary>6) Volume Effect</summary>
+<ul>
+<li>Smaller volume → particles closer → more collisions.</li>
+<li>Pressure increases as volume decreases.</li>
+</ul></details>
+
+<details><summary>7) Flexible Containers</summary>
+<ul>
+<li>Containers like balloons can expand.</li>
+<li>Changes may increase volume instead of pressure.</li>
+<li>In reality, both pressure and volume may increase.</li>
+</ul></details>
+
+</section>
+
+
+
+
+    <section class="card quiz">
+      <h2>Quiz (40 Questions)</h2>
+      <p class="muted">Mix of multiple choice and short answer. Based strictly on the speech and notes above.</p>
+      <div id="game-area">
+        <button class="btn" onclick="startGame()">Start Quiz</button>
+      </div>
+    </section>
+
+    <p class="footer">© 2025 Urinary System Study Helper</p>
+  </div>
+
+<script>
+// 40 quiz questions (based on the reproductive hormones speech/notes)
+
+const questions = [
+{"type":"fill","question":"What do gas particles do?","answerText":"move randomly","explanation":"move randomly"},
+{"type":"fill","question":"What happens when particles hit walls?","answerText":"rebound","explanation":"rebound"},
+{"type":"fill","question":"What do collisions produce?","answerText":"pressure","explanation":"pressure"},
+{"type":"fill","question":"What is pressure equal to?","answerText":"force","explanation":"force per area"},
+{"type":"fill","question":"Pressure = force divided by what?","answerText":"area","explanation":"area"},
+{"type":"fill","question":"What determines pressure?","answerText":"collisions","explanation":"collisions"},
+{"type":"fill","question":"Higher temperature increases what energy?","answerText":"kinetic","explanation":"kinetic"},
+{"type":"fill","question":"Faster particles cause more what?","answerText":"collisions","explanation":"collisions"},
+{"type":"fill","question":"More collisions cause higher what?","answerText":"pressure","explanation":"pressure"},
+{"type":"fill","question":"Increasing particle number increases what?","answerText":"concentration","explanation":"concentration"},
+{"type":"fill","question":"Higher concentration means more what?","answerText":"collisions","explanation":"collisions"},
+{"type":"fill","question":"Smaller volume means higher what?","answerText":"pressure","explanation":"pressure"},
+{"type":"fill","question":"Particles in smaller space collide more what?","answerText":"often","explanation":"often"},
+{"type":"fill","question":"Volume decrease leads to pressure what?","answerText":"increase","explanation":"increase"},
+{"type":"fill","question":"What container can expand?","answerText":"balloon","explanation":"balloon"},
+{"type":"fill","question":"Flexible containers change what instead?","answerText":"volume","explanation":"volume"},
+{"type":"fill","question":"Particles exert what on walls?","answerText":"force","explanation":"force"},
+{"type":"fill","question":"Motion is completely what?","answerText":"random","explanation":"random"},
+{"type":"fill","question":"More energy means more what?","answerText":"speed","explanation":"speed"},
+{"type":"fill","question":"Higher speed means more collisions and higher what?","answerText":"pressure","explanation":"pressure"},
+{"type":"fill","question":"Pressure depends on collision number and what?","answerText":"force","explanation":"force"},
+{"type":"fill","question":"Particles travel shorter distance in smaller what?","answerText":"volume","explanation":"volume"},
+{"type":"fill","question":"Collision force increases with what?","answerText":"temperature","explanation":"temperature"},
+{"type":"fill","question":"More particles means more what per volume?","answerText":"particles","explanation":"particles"},
+{"type":"fill","question":"Gas particles are free to what?","answerText":"move","explanation":"move"},
+{"type":"fill","question":"Particles change direction after what?","answerText":"collision","explanation":"collision"},
+{"type":"fill","question":"What is transferred when heating gas?","answerText":"energy","explanation":"energy"},
+{"type":"fill","question":"Energy goes into what store?","answerText":"kinetic","explanation":"kinetic"},
+{"type":"fill","question":"Pressure increases with what?","answerText":"temperature","explanation":"temperature"},
+{"type":"fill","question":"Pressure increases with what?","answerText":"concentration","explanation":"concentration"},
+{"type":"fill","question":"Pressure increases when volume what?","answerText":"decreases","explanation":"decreases"},
+{"type":"fill","question":"What kind of motion do particles have?","answerText":"random","explanation":"random"},
+{"type":"fill","question":"Collisions involve what?","answerText":"force","explanation":"force"},
+{"type":"fill","question":"Pressure is force per unit what?","answerText":"area","explanation":"area"},
+{"type":"fill","question":"Flexible containers can expand or what?","answerText":"shrink","explanation":"shrink"},
+{"type":"fill","question":"Balloon expansion reduces pressure increase because volume what?","answerText":"increases","explanation":"increases"},
+{"type":"fill","question":"Particles collide with what?","answerText":"walls","explanation":"walls"},
+{"type":"fill","question":"More collisions means higher what?","answerText":"pressure","explanation":"pressure"},
+{"type":"fill","question":"Less volume means higher what?","answerText":"concentration","explanation":"concentration"},
+{"type":"fill","question":"Gas pressure comes from what?","answerText":"collisions","explanation":"collisions"}
+];
+
+
+let currentQuestion = 0;
+let score = 0;
+let shuffledQuestions = [];
+
+function startGame(){
+  shuffledQuestions = [...questions].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  showQuestion();
+}
+
+function showQuestion(){
+  const gameArea = document.getElementById("game-area");
+  const q = shuffledQuestions[currentQuestion];
+  let html = `<div class="question-box"><p><strong>Question ${currentQuestion+1} of ${shuffledQuestions.length}:</strong> ${q.question}</p>`;
+
+  if(q.type==="mcq"){
+    q.options.forEach((opt, idx)=>{
+      html += `<label style="display:block;margin:.25rem 0"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+    });
+    html += `<button class="btn" onclick="checkMCQ()">Submit</button>`;
+  } else {
+    html += `<input id="fill" type="text" placeholder="Type your answer…" style="width:100%;padding:10px;border:1px solid #e5e7eb;border-radius:8px">`;
+    html += `<div style="height:8px"></div>`;
+    html += `<button class="btn" onclick="checkFill()">Submit</button>`;
+  }
+
+  html += `<div id="feedback" class="feedback"></div></div>`;
+  gameArea.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = shuffledQuestions[currentQuestion];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const feedback = document.getElementById("feedback");
+  if(!sel){
+    feedback.textContent = "Please select an answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(parseInt(sel.value,10) === q.answer){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  }else{
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function checkFill(){
+  const q = shuffledQuestions[currentQuestion];
+  const ans = (document.getElementById("fill").value || "").trim().toLowerCase();
+  const feedback = document.getElementById("feedback");
+  if(!ans){
+    feedback.textContent = "Please enter your answer.";
+    feedback.className = "feedback incorrect";
+    return;
+  }
+  if(ans.includes(q.answerText)){
+    feedback.textContent = "✅ Correct! " + q.explanation;
+    feedback.className = "feedback correct";
+    score++;
+  } else {
+    feedback.textContent = "❌ Incorrect. " + q.explanation;
+    feedback.className = "feedback incorrect";
+  }
+  setTimeout(nextQuestion, 1400);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < shuffledQuestions.length){
+    showQuestion();
+  } else {
+    endGame();
+  }
+}
+
+function endGame(){
+  const gameArea = document.getElementById("game-area");
+  gameArea.innerHTML = `<h3>Quiz Complete!</h3>
+    <p>Your score: <strong>${score} / ${shuffledQuestions.length}</strong></p>
+    <button class="btn" onclick="startGame()">Try Again</button>`;
+}
+</script>
+</body>
+</html>
