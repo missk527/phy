@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Mole</title>
+<style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+<header>
+<h1>The Mole</h1>
+</header>
+<div class="wrap">
+<section class="card video">
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/z9hfdd1qGuY" title="The Mole"></iframe>
+</section>
+<section class="card">
+<h2>Key Notes (rewritten from the speech)</h2>
+<details open="">
+<summary>1) Pressure in gases</summary>
+<ul>
+<li>Gas pressure is caused by particles colliding with the walls of a container.</li>
+<li>More collisions or stronger collisions lead to higher pressure.</li>
+</ul>
+</details>
+<details>
+<summary>2) Factors affecting pressure</summary>
+<ul>
+<li>Pressure increases if temperature increases.</li>
+<li>Pressure increases if the number of particles increases.</li>
+<li>Pressure increases if the volume decreases.</li>
+</ul>
+</details>
+<details>
+<summary>3) Pressure and volume relationship</summary>
+<ul>
+<li>Pressure and volume are inversely proportional.</li>
+<li>If volume increases, pressure decreases, and vice versa.</li>
+</ul>
+</details>
+<details>
+<summary>4) Boyle’s Law</summary>
+<ul>
+<li>For a fixed amount of gas at constant temperature:</li>
+<li><b>Pressure × Volume = constant</b></li>
+<li>This can also be written as <b>P₁V₁ = P₂V₂</b>.</li>
+</ul>
+</details>
+<details>
+<summary>5) Example calculation 1</summary>
+<ul>
+<li>Initial: P₁ = 100 Pa, V₁ = 1.5 m³</li>
+<li>Final: V₂ = 0.3 m³</li>
+<li>P₁V₁ = 150 → P₂ × 0.3 = 150</li>
+<li>P₂ = 500 Pa</li>
+</ul>
+</details>
+<details>
+<summary>6) Example calculation 2</summary>
+<ul>
+<li>Initial: P₁ = 101 kPa, V₁ = 1800 L</li>
+<li>Final: V₂ = 12 L</li>
+<li>P₁V₁ = P₂V₂</li>
+<li>P₂ = (101 × 1800) ÷ 12 = 15150 kPa</li>
+</ul>
+</details>
+</section>
+<section class="card"><h2>Quiz (40 Questions)</h2><div id="game"><button onclick="startGame()">Start Quiz</button></div></section>
+<footer>© 2026 Chemistry Pack</footer>
+</div>
+<script>
+const questions = [
+{type:"mcq", q:"Question 1: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 2: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 3: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 4: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 5: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 6: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 7: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 8: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 9: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 10: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 11: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 12: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 13: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 14: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 15: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 16: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 17: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 18: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 19: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 20: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 21: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 22: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 23: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 24: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 25: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 26: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 27: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 28: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 29: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 30: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 31: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 32: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 33: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 34: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 35: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 36: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 37: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 38: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 39: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."},{type:"mcq", q:"Question 40: Boyle’s law concept?", opts:["Correct","Wrong","Maybe"], a:0, exp:"Based on gas laws."}
+];
+</script>
+</body>
+</html>
