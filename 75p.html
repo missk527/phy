@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seismic Waves</title>
+<style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    .options{display:grid;gap:10px;margin-top:12px}
+    .option-btn{display:block;width:100%;text-align:left;background:#f8fafc;color:var(--ink);border:1px solid #cbd5e1}
+    .option-btn:hover{background:#e0f2fe}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+<header>
+<h1>Seismic Waves</h1>
+</header>
+<div class="wrap">
+<section class="card video">
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/dZ4IE-nlhno" title="Seismic Waves"></iframe>
+</section>
+
+<section class="card">
+<h2>Key Notes (rewritten from the speech)</h2>
+<details open="">
+<summary>1) Seismic waves</summary>
+<ul>
+<li>Large-scale events such as <b>earthquakes, volcanoes, and explosions</b> produce waves that travel through the Earth.</li>
+<li>These waves spread out in <b>all directions</b> and move through different layers of the planet.</li>
+<li>They are called <b>seismic waves</b>.</li>
+</ul>
+</details>
+<details>
+<summary>2) P waves and S waves</summary>
+<ul>
+<li><b>P waves</b> are <b>longitudinal</b> waves and can travel through both <b>solids and liquids</b>.</li>
+<li><b>S waves</b> are <b>transverse</b> waves and can travel only through <b>solids</b>.</li>
+<li>P waves also travel <b>faster</b> than S waves.</li>
+</ul>
+</details>
+<details>
+<summary>3) How scientists study the Earth</summary>
+<ul>
+<li>Scientists study how seismic waves move through the Earth to learn about its <b>internal structure</b>.</li>
+<li>This helps them understand what the Earth is <b>made of</b>.</li>
+<li>Special devices called <b>seismometers</b> are used to detect the waves.</li>
+</ul>
+</details>
+<details>
+<summary>4) Comparing wave data</summary>
+<ul>
+<li>Seismologists compare results from different places around the world.</li>
+<li>By measuring how long waves take to travel from an earthquake to different locations, they get <b>clues</b> about the Earth’s layers.</li>
+<li>The pattern of which waves arrive and where they arrive is very important.</li>
+</ul>
+</details>
+<details>
+<summary>5) Reflection, absorption, transmission, and refraction</summary>
+<ul>
+<li>When seismic waves meet a boundary between different materials, they can be <b>reflected</b>, <b>absorbed</b>, or <b>transmitted</b>.</li>
+<li>If they are transmitted, they are often <b>refracted</b>, which means they <b>change direction</b>.</li>
+<li>Refraction happens because waves change speed in materials with different <b>densities</b>.</li>
+</ul>
+</details>
+<details>
+<summary>6) Wave paths inside the Earth</summary>
+<ul>
+<li>The Earth’s layers do not all have the same density, so seismic waves are constantly being bent.</li>
+<li>Within one layer, waves are usually refracted <b>gradually</b> and seem to <b>curve</b>.</li>
+<li>At the boundary between two layers, such as the mantle and outer core, the change in direction is more <b>sudden</b>.</li>
+</ul>
+</details>
+<details>
+<summary>7) Evidence for a liquid outer core</summary>
+<ul>
+<li>P waves can pass through the <b>liquid outer core</b>, but S waves cannot.</li>
+<li>This was one of the key clues showing that the outer core is <b>liquid</b>.</li>
+<li>S waves cannot reach the inner core because the liquid outer core blocks them.</li>
+</ul>
+</details>
+<details>
+<summary>8) Wave detection and Earth’s structure</summary>
+<ul>
+<li>S waves are missing from certain regions because they cannot travel through the liquid outer core.</li>
+<li>P waves are detected in most places, but there is also a region where they are not detected because refraction bends them away.</li>
+<li>By studying where P waves and S waves are or are not detected, scientists worked out the Earth’s <b>internal structure</b>.</li>
+</ul>
+</details>
+</section>
+
+<section class="card"><h2>Quiz (40 Questions)</h2><div id="game"><button onclick="startGame()">Start Quiz</button></div></section>
+<footer>© 2026 Chemistry Pack</footer>
+</div>
+<script>
+const questions = [
+{type:"mcq", q:'1. What are waves produced by earthquakes, volcanoes, and explosions called?', opts:["Sound waves", "Seismic waves", "Light waves", "Radio waves"], a:1, exp:'These waves are called seismic waves.'},
+{type:"mcq", q:'2. Which type of seismic wave is longitudinal?', opts:["S waves", "Surface waves", "P waves", "Tidal waves"], a:2, exp:'P waves are longitudinal waves.'},
+{type:"mcq", q:'3. Which type of seismic wave is transverse?', opts:["P waves", "S waves", "Heat waves", "Water waves"], a:1, exp:'S waves are transverse waves.'},
+{type:"mcq", q:'4. Which seismic wave can travel through both solids and liquids?', opts:["Only S waves", "Only P waves", "Neither P nor S waves", "Only surface waves"], a:1, exp:'P waves can travel through both solids and liquids.'},
+{type:"mcq", q:'5. Which seismic wave can travel only through solids?', opts:["P waves", "Light waves", "S waves", "Radio waves"], a:2, exp:'S waves can travel only through solids.'},
+{type:"mcq", q:'6. Which travels faster, P waves or S waves?', opts:["S waves", "P waves", "They travel at the same speed", "It depends only on temperature"], a:1, exp:'P waves are faster than S waves.'},
+{type:"mcq", q:'7. Why do scientists study seismic waves?', opts:["To measure rainfall", "To understand the Earth"s internal structure", "To predict tides only", "To map clouds"], a:1, exp:"Seismic waves help scientists work out the Earth's internal structure."},
+{type:"mcq", q:'8. What device is used to detect seismic waves?', opts:["Thermometer", "Barometer", "Seismometer", "Voltmeter"], a:2, exp:'Seismic waves are detected using seismometers.'},
+{type:"mcq", q:'9. What do seismologists compare from different places around the world?', opts:["Wind speeds", "Wave results", "Moon phases", "Ocean currents"], a:1, exp:'They compare wave results from different locations.'},
+{type:"mcq", q:'10. What can travel time of seismic waves give scientists?', opts:["Clues about Earth"s structure", "The age of the Sun", "The size of clouds", "The speed of light"], a:0, exp:"Travel times give clues about the Earth's internal structure."},
+{type:"mcq", q:'11. What can happen when seismic waves reach a boundary between two media?', opts:["They can only stop", "They can be reflected, absorbed, or transmitted", "They always disappear", "They always speed up"], a:1, exp:'Seismic waves may be reflected, absorbed, or transmitted at boundaries.'},
+{type:"mcq", q:'12. What does refraction mean?', opts:["A wave changes color", "A wave changes direction", "A wave stops moving", "A wave doubles in size"], a:1, exp:'Refraction means a wave changes direction.'},
+{type:"mcq", q:'13. Why does refraction happen?', opts:["Because waves always slow down", "Because waves change speed in media of different densities", "Because waves gain mass", "Because gravity disappears"], a:1, exp:'Refraction happens when wave speed changes in materials with different densities.'},
+{type:"mcq", q:'14. What boundary is mentioned as an example of a sudden density change?', opts:["Crust and atmosphere", "Mantle and liquid outer core", "Ocean and beach", "Cloud and air"], a:1, exp:'The speech mentions the boundary between the mantle and the liquid outer core.'},
+{type:"mcq", q:'15. Why do waves seem to curve inside the mantle?', opts:["Because the mantle has exactly one density", "Because they are gently refracted as density changes", "Because they stop and restart", "Because magnets pull them"], a:1, exp:'Waves curve because they are gradually refracted in material of changing density.'},
+{type:"mcq", q:'16. What happens to wave direction at a layer boundary?', opts:["It never changes", "It changes more suddenly", "It becomes random", "It always reverses completely"], a:1, exp:'The direction changes more suddenly at the boundary between layers.'},
+{type:"mcq", q:'17. Which statement about the liquid outer core is true?', opts:["It lets S waves pass through easily", "It blocks both P and S waves", "It allows P waves but not S waves", "It has no effect on waves"], a:2, exp:'P waves can pass through the liquid outer core, but S waves cannot.'},
+{type:"mcq", q:'18. Why was the behavior of S waves important to scientists?', opts:["It helped prove the outer core is liquid", "It showed the Earth has no mantle", "It measured ocean depth", "It proved earthquakes are harmless"], a:0, exp:'S waves not passing through the outer core helped show it is liquid.'},
+{type:"mcq", q:'19. Can S waves pass through liquids?', opts:["Yes, always", "No, they cannot", "Only at high temperature", "Only near the surface"], a:1, exp:'S waves cannot travel through liquids.'},
+{type:"mcq", q:"20. Why can't S waves reach the inner core?", opts:["The crust blocks them", "They are too slow", "The liquid outer core surrounds the inner core", "The inner core repels them"], a:2, exp:'S waves cannot reach the inner core because the liquid outer core surrounds it.'},
+{type:"mcq", q:'21. Where are S waves not detected for an earthquake on one side of Earth?', opts:["In every region", "In no region", "In a large region blocked by the liquid outer core", "Only at the epicenter"], a:2, exp:'S waves are missing in a large region because they cannot pass through the liquid outer core.'},
+{type:"mcq", q:'22. Are P waves detected in more places than S waves?', opts:["No, in fewer places", "Yes, almost everywhere", "No, never", "Only at the poles"], a:1, exp:'P waves are detected almost everywhere compared with S waves.'},
+{type:"mcq", q:'23. Why are P waves not detected in some positions?', opts:["They turn into S waves", "Refraction bends them away from that region", "They cannot travel through solids", "Seismometers cannot record them"], a:1, exp:'Refraction causes P waves to miss a certain region.'},
+{type:"mcq", q:'24. What is the main reason P-wave paths bend?', opts:["The Earth is flat", "Density changes inside the Earth", "The Sun pulls them", "They lose all energy"], a:1, exp:'P-wave paths bend because density changes affect their speed and direction.'},
+{type:"mcq", q:'25. How do waves behave in a single Earth layer with changing density?', opts:["They travel in perfectly straight lines", "They are gradually refracted and appear curved", "They stop completely", "They bounce back immediately"], a:1, exp:'Within one layer, waves are gently refracted and appear curved.'},
+{type:"mcq", q:'26. How do waves behave when crossing from one Earth layer to another?', opts:["They disappear", "They change direction more suddenly", "They always become faster", "They split into light"], a:1, exp:'At a layer boundary, the change in direction is more sudden.'},
+{type:"mcq", q:'27. What kind of events can produce seismic waves?', opts:["Volcanoes, earthquakes, and explosions", "Only windstorms", "Only tsunamis", "Only rainfall"], a:0, exp:'The speech lists volcanoes, earthquakes, and explosions.'},
+{type:"mcq", q:'28. What do scientists learn by measuring which waves are detected in different places?', opts:["The Earth"s internal structure", "The color of the core", "The height of mountains only", "The shape of clouds"], a:0, exp:"Detection patterns help scientists work out Earth's internal structure."},
+{type:"mcq", q:'29. Which wave type provided a major clue about the liquid outer core?', opts:["Light waves", "S waves", "Water waves", "Radio waves"], a:1, exp:'S waves not passing through the outer core gave the clue.'},
+{type:"mcq", q:'30. What is one key difference between P waves and S waves?', opts:["P waves are slower", "S waves travel through liquids", "P waves travel through liquids but S waves do not", "S waves are longitudinal"], a:2, exp:'P waves can travel through liquids, but S waves cannot.'},
+{type:"mcq", q:'31. Which medium can both P waves and S waves travel through?', opts:["Liquids only", "Solids only", "Gases only", "Vacuum only"], a:1, exp:'Both can travel through solids, but only P waves can travel through liquids.'},
+{type:"mcq", q:'32. What happens to a transmitted seismic wave at a boundary?', opts:["It is often refracted", "It always reflects only", "It always becomes stationary", "It changes into heat only"], a:0, exp:'Transmitted waves are often refracted.'},
+{type:"mcq", q:'33. What is the outer core described as in the speech?', opts:["Solid", "Liquid", "Gas", "Plasma"], a:1, exp:'The outer core is described as liquid.'},
+{type:"mcq", q:'34. What is the inner core described as?', opts:["Liquid", "Solid", "Gas", "Empty"], a:1, exp:'The inner core is referred to as solid.'},
+{type:"mcq", q:"35. Why can't S waves enter the inner core even though it is solid?", opts:["They are blocked by the liquid outer core", "They are too weak to travel", "They only move upward", "They cannot enter deep layers"], a:0, exp:'The liquid outer core prevents S waves from reaching the solid inner core.'},
+{type:"mcq", q:'36. What do differences in density affect?', opts:["Wave speed and direction", "Only wave color", "Only temperature", "Only magnetism"], a:0, exp:'Differences in density affect wave speed and therefore direction.'},
+{type:"mcq", q:'37. Which statement best explains why P waves are useful for studying deep Earth layers?', opts:["They move only near the surface", "They can travel through both solids and liquids", "They are transverse", "They stop at the mantle"], a:1, exp:'P waves can travel through both solids and liquids, so they can pass deeper through Earth.'},
+{type:"mcq", q:"38. What does 'absorbed' mean at a boundary?", opts:["The wave passes through unchanged", "The wave energy is taken in by the material", "The wave becomes brighter", "The wave always speeds up"], a:1, exp:'Absorption means the material takes in the wave energy.'},
+{type:"mcq", q:'39. What helps seismologists work out wave travel times around the world?', opts:["Comparing measurements from many locations", "Looking through telescopes", "Measuring air pressure only", "Using magnets underground"], a:0, exp:'They compare results from seismologists in different places.'},
+{type:"mcq", q:'40. What is the main idea of the speech?', opts:["Seismic waves helped scientists discover Earth"s internal structure", "All waves behave the same way", "The crust is the only important layer", "Only earthquakes produce useful data"], a:0, exp:"The main idea is that seismic waves revealed the Earth's internal structure."}
+];
+
+let current = 0;
+let score = 0;
+let locked = false;
+
+function startGame(){
+  current = 0;
+  score = 0;
+  locked = false;
+  renderQ();
+}
+
+function renderQ(){
+  const game = document.getElementById('game');
+  const item = questions[current];
+  game.innerHTML = `
+    <div class="meta">
+      <span class="pill">Question ${current + 1} / ${questions.length}</span>
+      <span class="pill">Score: ${score}</span>
+    </div>
+    <div class="qbox">
+      <div><b>${item.q}</b></div>
+      <div class="options">
+        ${item.opts.map((opt, i) => `<button class="option-btn" onclick="checkAnswer(${i})">${opt}</button>`).join('')}
+      </div>
+      <div id="feedback" class="feedback"></div>
+    </div>
+  `;
+  locked = false;
+}
+
+function checkAnswer(choice){
+  if(locked) return;
+  locked = true;
+  const item = questions[current];
+  const fb = document.getElementById('feedback');
+  if(choice === item.a){
+    score++;
+    fb.className = 'feedback ok';
+    fb.innerHTML = `Correct! ${item.exp}`;
+  } else {
+    fb.className = 'feedback bad';
+    fb.innerHTML = `Incorrect. Correct answer: <b>${item.opts[item.a]}</b>. ${item.exp}`;
+  }
+
+  const game = document.getElementById('game');
+  const nav = document.createElement('div');
+  nav.style.marginTop = '12px';
+  nav.innerHTML = current < questions.length - 1
+    ? `<button onclick="nextQuestion()">Next Question</button>`
+    : `<button onclick="showResult()">See Result</button>`;
+  game.appendChild(nav);
+}
+
+function nextQuestion(){
+  current++;
+  renderQ();
+}
+
+function showResult(){
+  const percent = ((score / questions.length) * 100).toFixed(1);
+  document.getElementById('game').innerHTML = `
+    <div class="qbox">
+      <h3>Your Result</h3>
+      <p><b>Score:</b> ${score} / ${questions.length}</p>
+      <p><b>Percentage:</b> ${percent}%</p>
+      <p>${percent >= 80 ? 'Excellent work!' : percent >= 60 ? 'Good job!' : 'Keep practicing and try again.'}</p>
+      <button onclick="startGame()">Restart Quiz</button>
+    </div>
+  `;
+}
+</script>
+</body>
+</html>
