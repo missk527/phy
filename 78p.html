@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Electromagnetism</title>
+<style>
+    :root{
+      --brand:#0ea5e9;
+      --paper:#fff;
+      --ink:#0f172a;
+      --muted:#64748b;
+      --ok:#16a34a;
+      --bad:#dc2626;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Arial;line-height:1.6;background:#f1f5f9;color:var(--ink)}
+    header{background:linear-gradient(120deg,var(--brand),#22c55e);color:#fff;padding:18px 14px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.35)}
+    header h1{margin:0;font-size:clamp(22px,4vw,34px)}
+    .wrap{max-width:980px;margin:18px auto;padding:0 16px 40px}
+    .card{background:var(--paper);border-radius:14px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin:16px 0}
+    .video iframe{width:100%;height:420px;border:0;border-radius:10px}
+    .card h2{margin:0 0 10px;color:#0369a1}
+    details{border:1px solid #e2e8f0;border-radius:10px;padding:10px 12px;margin:10px 0;background:#fff}
+    summary{cursor:pointer;font-weight:700}
+    .chem{font-family:ui-monospace,monospace;background:#0f172a;color:#e2e8f0;padding:10px 12px;border-radius:10px;overflow:auto;white-space:pre-wrap}
+    .pill{display:inline-block;background:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:2px 10px;margin-right:6px;margin-bottom:4px}
+    .qbox{border:1px solid #e2e8f0;border-radius:12px;padding:12px;background:#fff;margin-top:10px}
+    button{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}
+    .feedback{font-weight:700;margin-top:8px}
+    .ok{color:var(--ok)} .bad{color:var(--bad)}
+    .options{display:grid;gap:10px;margin-top:12px}
+    .option-btn{display:block;width:100%;text-align:left;background:#f8fafc;color:var(--ink);border:1px solid #cbd5e1}
+    .option-btn:hover{background:#e0f2fe}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+    footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px}
+    @media (max-width:760px){ .video iframe{height:240px} }
+  </style>
+</head>
+<body>
+<header>
+<h1>Electromagnetism</h1>
+</header>
+<div class="wrap">
+<section class="card video">
+<iframe allowfullscreen="" src="https://www.youtube.com/embed/IJbJBOCxPaM" title="Electromagnetism"></iframe>
+</section>
+<section class="card">
+<h2>Key Notes (rewritten from the speech)</h2>
+<details open="">
+<summary>1) What is electromagnetism?</summary>
+<ul>
+<li><b>Electromagnetism</b> is the idea that an electric current produces a magnetic field.</li>
+<li>This happens around ordinary wires, coils, solenoids, and electromagnets.</li>
+<li>The magnetic field only exists because current is flowing.</li>
+</ul>
+</details>
+<details>
+<summary>2) Magnetic field around a straight wire</summary>
+<ul>
+<li>A current-carrying wire creates magnetic field lines around itself.</li>
+<li>The field lines form <b>concentric circles</b> around the wire.</li>
+<li>The field is strongest closest to the wire, where the field lines are closest together.</li>
+</ul>
+</details>
+<details>
+<summary>3) The right hand rule</summary>
+<ul>
+<li>The direction of the magnetic field depends on the direction of the current.</li>
+<li>Point your right thumb in the direction of the current.</li>
+<li>Your curled fingers show the direction of the magnetic field.</li>
+</ul>
+</details>
+<details>
+<summary>4) Reversing the current</summary>
+<ul>
+<li>If the current reverses, the magnetic field also reverses.</li>
+<li>The right hand rule can be used again to check the new direction.</li>
+<li>Changing current direction changes the direction of the field lines.</li>
+</ul>
+</details>
+<details>
+<summary>5) Coils and solenoids</summary>
+<ul>
+<li>When a wire is bent into a circular coil, the magnetic fields from each side interact.</li>
+<li>Adding many turns of wire makes a <b>solenoid</b>.</li>
+<li>Inside a solenoid, the magnetic field is strong and uniform.</li>
+</ul>
+</details>
+<details>
+<summary>6) Electromagnets</summary>
+<ul>
+<li>The field outside a solenoid is similar to the field around a bar magnet.</li>
+<li>Field lines come out of the north pole and enter the south pole.</li>
+<li>A solenoid with current acts as an <b>electromagnet</b>.</li>
+</ul>
+</details>
+<details>
+<summary>7) Switching and reversing electromagnets</summary>
+<ul>
+<li>An electromagnet is magnetic only while current flows.</li>
+<li>Turning off the power source makes the magnetic field disappear.</li>
+<li>Reversing the current reverses the magnetic field and swaps the poles.</li>
+</ul>
+</details>
+<details>
+<summary>8) Increasing electromagnet strength</summary>
+<ul>
+<li>Increase the current through the solenoid.</li>
+<li>Increase the number of turns or pack the turns closer together.</li>
+<li>Add an iron core, which becomes an induced magnet and greatly strengthens the field.</li>
+</ul>
+</details>
+</section>
+<section class="card"><h2>Quiz (40 Questions)</h2><div id="game"><button onclick="startGame()">Start Quiz</button></div></section>
+<footer>© 2026 Physics Pack</footer>
+</div>
+<script>
+const questions = [{"type": "mcq", "q": "1. What is electromagnetism?", "opts": ["The production of magnetic fields by electric currents", "The production of light by magnets", "The movement of heat through wires", "The storage of charge in batteries"], "a": 0, "exp": "Electromagnetism is when an electric current produces a magnetic field."}, {"type": "mcq", "q": "2. What does a current-carrying wire produce around itself?", "opts": ["A gravitational field", "A magnetic field", "A sound wave", "A chemical reaction"], "a": 1, "exp": "A wire with current flowing through it produces a magnetic field."}, {"type": "mcq", "q": "3. What shape are the magnetic field lines around a straight wire?", "opts": ["Straight parallel lines", "Concentric circles", "Squares", "Random spirals"], "a": 1, "exp": "The field lines around a straight current-carrying wire are concentric circles."}, {"type": "mcq", "q": "4. Where is the magnetic field strongest around a straight wire?", "opts": ["Far away from the wire", "Close to the wire", "Only above the wire", "Only below the wire"], "a": 1, "exp": "Field lines are closest together near the wire, showing the field is strongest there."}, {"type": "mcq", "q": "5. What determines the direction of the magnetic field around a wire?", "opts": ["The wire colour", "The direction of current", "The wire length only", "The room temperature"], "a": 1, "exp": "The magnetic field direction depends on the direction of the current."}, {"type": "mcq", "q": "6. Which rule helps find the magnetic field direction around a wire?", "opts": ["Left foot rule", "Right hand rule", "Energy rule", "Reflection rule"], "a": 1, "exp": "The right hand rule is used to find the field direction around a current-carrying wire."}, {"type": "mcq", "q": "7. In the right hand rule, what does the thumb point along?", "opts": ["The magnetic field", "The current direction", "The force direction", "The wire thickness"], "a": 1, "exp": "Your thumb points in the direction of current."}, {"type": "mcq", "q": "8. In the right hand rule, what do the curled fingers show?", "opts": ["The current direction", "The magnetic field direction", "The voltage direction", "The electron mass"], "a": 1, "exp": "The curled fingers show the direction of the magnetic field."}, {"type": "mcq", "q": "9. If the current in a straight wire reverses, what happens to the magnetic field?", "opts": ["It disappears forever", "It reverses direction", "It becomes electric only", "It becomes weaker automatically"], "a": 1, "exp": "Reversing the current reverses the magnetic field direction."}, {"type": "mcq", "q": "10. What happens when a wire is made into a circular coil?", "opts": ["The magnetic fields interact and combine", "The current stops flowing", "The wire becomes non-metallic", "No magnetic field forms"], "a": 0, "exp": "The fields from different parts of the coil interact and combine."}, {"type": "mcq", "q": "11. In a flat circular coil, the field through the centre is mainly what?", "opts": ["Zero", "Straight through the centre", "Only outside the coil", "Only random"], "a": 1, "exp": "The combined magnetic field runs through the centre of the coil."}, {"type": "mcq", "q": "12. What is a solenoid?", "opts": ["A long coil with many turns of wire", "A single straight wire", "A type of battery", "A plastic insulator"], "a": 0, "exp": "A solenoid is made from many turns of wire arranged in a long coil."}, {"type": "mcq", "q": "13. What is the magnetic field like inside a solenoid?", "opts": ["Weak and random", "Strong and uniform", "Only circular", "Always zero"], "a": 1, "exp": "Inside a solenoid, the magnetic field is strong and uniform."}, {"type": "mcq", "q": "14. What is the magnetic field outside a solenoid similar to?", "opts": ["A bar magnet", "A glass rod", "A battery cell", "A sound wave"], "a": 0, "exp": "Outside the solenoid, the field looks like the field around a bar magnet."}, {"type": "mcq", "q": "15. Where do magnetic field lines come out of a magnet?", "opts": ["The south pole", "The north pole", "The middle only", "Both poles inward"], "a": 1, "exp": "Field lines come out of the north pole."}, {"type": "mcq", "q": "16. Where do magnetic field lines point into a magnet?", "opts": ["The north pole", "The south pole", "The middle only", "Nowhere"], "a": 1, "exp": "Field lines point into the south pole."}, {"type": "mcq", "q": "17. What do we call a magnet made using electricity?", "opts": ["Permanent magnet", "Electromagnet", "Compass", "Generator only"], "a": 1, "exp": "A magnet produced using electric current is called an electromagnet."}, {"type": "mcq", "q": "18. When is an electromagnet magnetic?", "opts": ["Only when current flows", "Only when current is off", "Always, even with no current", "Only at night"], "a": 0, "exp": "An electromagnet is magnetic only while current flows through the wire."}, {"type": "mcq", "q": "19. What happens when the power source is switched off?", "opts": ["The magnetic field disappears", "The magnetic field doubles", "The current increases", "The solenoid melts"], "a": 0, "exp": "When the current stops, the magnetic field disappears."}, {"type": "mcq", "q": "20. What happens when the power source is switched on again?", "opts": ["The magnetic field returns", "The wire becomes plastic", "The field can never return", "The poles vanish forever"], "a": 0, "exp": "The magnetic field returns when current flows again."}, {"type": "mcq", "q": "21. How can the magnetic field direction of an electromagnet be reversed?", "opts": ["Reverse the current direction", "Paint the wire", "Cool the wire only", "Use fewer labels"], "a": 0, "exp": "Reversing the current reverses the magnetic field and poles."}, {"type": "mcq", "q": "22. What happens to the poles when the current is reversed?", "opts": ["They swap around", "They disappear permanently", "They stay the same", "They become both north"], "a": 0, "exp": "Reversing current flips the magnetic field, so the poles swap."}, {"type": "mcq", "q": "23. Why might a small electromagnet be weak?", "opts": ["It produces only a small magnetic field", "It has no wire", "It cannot carry current", "It is always permanent"], "a": 0, "exp": "A small electromagnet can produce only a weak magnetic field unless strengthened."}, {"type": "mcq", "q": "24. What is one way to increase electromagnet strength?", "opts": ["Decrease current", "Increase current", "Remove all coils", "Use plastic core only"], "a": 1, "exp": "Increasing the current through the solenoid strengthens the electromagnet."}, {"type": "mcq", "q": "25. What happens if the number of turns in the coil is increased?", "opts": ["The electromagnet becomes stronger", "The field disappears", "The current must stop", "The poles cannot form"], "a": 0, "exp": "More turns in the coil make the electromagnet stronger."}, {"type": "mcq", "q": "26. If the same number of turns is packed into a shorter length, what happens?", "opts": ["The coil becomes denser and stronger", "The field must vanish", "The current reverses automatically", "It becomes a permanent battery"], "a": 0, "exp": "Densely packed coils produce a stronger magnetic field."}, {"type": "mcq", "q": "27. Which coils make the strongest solenoids?", "opts": ["Loosely spaced coils", "Densely packed coils", "Broken coils", "Single open coils"], "a": 1, "exp": "Solenoids with densely packed coils are strongest."}, {"type": "mcq", "q": "28. What can be added inside a solenoid to increase strength?", "opts": ["Iron core", "Wood core", "Glass core", "Air only"], "a": 0, "exp": "Adding an iron core greatly increases the electromagnet's strength."}, {"type": "mcq", "q": "29. Why is iron useful in an electromagnet?", "opts": ["It is a soft magnetic material", "It blocks all current", "It prevents magnetism", "It is always liquid"], "a": 0, "exp": "Iron is a soft magnetic material and becomes magnetised when the solenoid is on."}, {"type": "mcq", "q": "30. What is an induced magnet?", "opts": ["A material made magnetic by a magnetic field", "A magnet with no field", "A wire with no current", "A broken solenoid"], "a": 0, "exp": "An induced magnet becomes magnetic because of an external magnetic field."}, {"type": "mcq", "q": "31. What happens to an iron core when the solenoid is switched on?", "opts": ["It becomes an induced magnet", "It loses all atoms", "It becomes plastic", "It blocks the wire"], "a": 0, "exp": "The iron core becomes magnetised when current flows."}, {"type": "mcq", "q": "32. What happens to the iron core when current is turned off?", "opts": ["It loses its magnetic field", "It becomes stronger", "It reverses forever", "It stays fully permanent"], "a": 0, "exp": "Soft iron loses its magnetism when the current is switched off."}, {"type": "mcq", "q": "33. Which material is described as soft magnetic?", "opts": ["Iron", "Wood", "Copper plastic coating", "Glass"], "a": 0, "exp": "The speech describes iron as a soft magnetic material."}, {"type": "mcq", "q": "34. Which statement about electromagnets is true?", "opts": ["They can be switched on and off", "They never need current", "They are always permanent", "They only work without coils"], "a": 0, "exp": "Electromagnets can be switched on and off by controlling the current."}, {"type": "mcq", "q": "35. What do close magnetic field lines indicate?", "opts": ["A stronger magnetic field", "No magnetic field", "Lower current always", "Only electric charge"], "a": 0, "exp": "Closer field lines show a stronger magnetic field."}, {"type": "mcq", "q": "36. What shape do field lines become when coil fields interact?", "opts": ["They stretch into ellipses", "They vanish completely", "They become only squares", "They stop showing direction"], "a": 0, "exp": "In a circular coil, the circular fields stretch out and form ellipses."}, {"type": "mcq", "q": "37. What does adding more turns to a coil eventually make?", "opts": ["A solenoid", "A thermometer", "A resistor only", "A lamp"], "a": 0, "exp": "Lots of turns of wire arranged together form a solenoid."}, {"type": "mcq", "q": "38. What is the main advantage of an electromagnet over a permanent magnet?", "opts": ["It can be turned on and off", "It cannot be controlled", "It needs no current", "It has no poles"], "a": 0, "exp": "A key advantage is that the magnetism can be controlled by switching current on or off."}, {"type": "mcq", "q": "39. Which change would weaken an electromagnet?", "opts": ["Reducing the current", "Adding an iron core", "Increasing coil turns", "Packing turns closer"], "a": 0, "exp": "Reducing current would reduce the magnetic field strength."}, {"type": "mcq", "q": "40. What happens to field lines and poles each time the current is flipped?", "opts": ["They flip direction too", "They stay fixed", "They disappear forever", "They become electric charges"], "a": 0, "exp": "Flipping current flips the magnetic field direction and the poles."}];
+
+let current = 0;
+let score = 0;
+let locked = false;
+
+function startGame(){
+  current = 0;
+  score = 0;
+  locked = false;
+  renderQ();
+}
+
+function renderQ(){
+  const game = document.getElementById('game');
+  const item = questions[current];
+  game.innerHTML = `
+    <div class="meta">
+      <span class="pill">Question ${current + 1} / ${questions.length}</span>
+      <span class="pill">Score: ${score}</span>
+    </div>
+    <div class="qbox">
+      <div><b>${item.q}</b></div>
+      <div class="options">
+        ${item.opts.map((opt, i) => `<button class="option-btn" onclick="checkAnswer(${i})">${opt}</button>`).join('')}
+      </div>
+      <div id="feedback" class="feedback"></div>
+    </div>
+  `;
+  locked = false;
+}
+
+function checkAnswer(choice){
+  if(locked) return;
+  locked = true;
+  const item = questions[current];
+  const fb = document.getElementById('feedback');
+  if(choice === item.a){
+    score++;
+    fb.className = 'feedback ok';
+    fb.innerHTML = `Correct! ${item.exp}`;
+  } else {
+    fb.className = 'feedback bad';
+    fb.innerHTML = `Incorrect. Correct answer: <b>${item.opts[item.a]}</b>. ${item.exp}`;
+  }
+
+  const game = document.getElementById('game');
+  const nav = document.createElement('div');
+  nav.style.marginTop = '12px';
+  nav.innerHTML = current < questions.length - 1
+    ? `<button onclick="nextQuestion()">Next Question</button>`
+    : `<button onclick="showResult()">See Result</button>`;
+  game.appendChild(nav);
+}
+
+function nextQuestion(){
+  current++;
+  renderQ();
+}
+
+function showResult(){
+  const percent = ((score / questions.length) * 100).toFixed(1);
+  document.getElementById('game').innerHTML = `
+    <div class="qbox">
+      <h3>Your Result</h3>
+      <p><b>Score:</b> ${score} / ${questions.length}</p>
+      <p><b>Percentage:</b> ${percent}%</p>
+      <p>${percent >= 80 ? 'Excellent work!' : percent >= 60 ? 'Good job!' : 'Keep practicing and try again.'}</p>
+      <button onclick="startGame()">Restart Quiz</button>
+    </div>
+  `;
+}
+</script>
+</body>
+</html>
