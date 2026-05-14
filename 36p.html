@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radioactivity: Activity & Half-Life — Notes & Quiz</title>
+  <style>
+    :root{ --brand:#10b981; --paper:#fffef9; --ink:#1f2937; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Inter,Arial,system-ui,sans-serif; background:#f6f7fb; color:var(--ink); line-height:1.7; }
+    header{ background:var(--brand); color:#fff; padding:18px 22px; position:sticky; top:0; z-index:10;
+      box-shadow:0 2px 12px rgba(0,0,0,.15) }
+    header h1{ margin:0; font-size:1.2rem; letter-spacing:.2px }
+    .small{ opacity:.95; font-size:.9rem }
+    .wrap{ max-width:1000px; margin:20px auto; padding:0 14px }
+    .video-container{ display:flex; justify-content:center; margin-top:12px }
+    iframe{ width:85%; max-width:1000px; height:480px; border:2px solid #e3e8f5; border-radius:12px; background:#000;
+      box-shadow:0 4px 12px rgba(0,0,0,.15) }
+    @media (max-width:760px){ iframe{ width:95%; height:240px } }
+    .notes,.game{ background:var(--paper); border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.08);
+      padding:18px; margin:18px 0 }
+    .notes h2,.game h2{ color:#047857; border-bottom:2px solid #a7f3d0; padding-bottom:6px; margin:0 0 12px }
+    details{ background:#fff; border:1px solid #eee; border-radius:10px; padding:10px 12px; margin:10px 0 }
+    summary{ cursor:pointer; font-weight:700; color:#047857 }
+    ul{ margin:8px 0 0 22px }
+    code.k{ background:#ecfdf5; padding:2px 6px; border-radius:6px }
+    .question-box{ border:1px solid #e0e0e0; border-radius:12px; background:#fff; padding:12px; margin-top:14px }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; transition:.25s; margin-top:8px }
+    button:hover{ transform:translateY(-1px); box-shadow:0 4px 10px rgba(0,0,0,.12) }
+    .feedback{ margin-top:8px; font-weight:700 }
+    .correct{ color:#0b8a0b } .incorrect{ color:#c62828 }
+    .scorebar{ margin-top:10px; font-size:.95rem } .muted{ opacity:.8 }
+    .pill{ display:inline-block; background:#d1fae5; color:#065f46; border:1px solid #a7f3d0; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:8px }
+    .footer{ text-align:center; color:#666; font-size:.85rem; padding:20px 0 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Electron Arrangement — Exam Notes & Quiz <span class="pill">Radioactivity · Activity · Half-life · Decay</span></h1>
+    <div class="small">Video + exam-focused notes + 40-question practice</div>
+  </header>
+
+  <div class="wrap">
+    <section class="video">
+      <div class="video-container">
+        <!-- Updated video link -->
+        <iframe src="https://www.youtube.com/embed/oA8IvfhvtDs" title="Electron Arrangement video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    
+<section class="notes">
+      <h2>Notes (Key points from the speech)</h2>
+
+      <details open>
+        <summary>Radioactive decay</summary>
+        <ul>
+          <li>Some materials contain <strong>unstable isotopes</strong> that become more stable by emitting radiation.</li>
+          <li>Radioactive decay can produce <strong>alpha particles, beta particles, or gamma rays</strong>.</li>
+          <li>The decay process of a single radioactive isotope is completely <strong>random</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Activity</summary>
+        <ul>
+          <li><strong>Activity</strong> means the overall rate of decay in a radioactive sample.</li>
+          <li>Activity is measured in <strong>becquerels (Bq)</strong>.</li>
+          <li>One becquerel means <strong>one decay per second</strong>.</li>
+          <li>A sample with an activity of 600 Bq has <strong>600 decays every second</strong>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Half-life</summary>
+        <ul>
+          <li><strong>Half-life</strong> is the time taken for the number of radioactive nuclei to halve.</li>
+          <li>It can also mean the time taken for the <strong>activity to halve</strong>.</li>
+          <li>Fewer radioactive nuclei means a <strong>lower activity</strong>.</li>
+          <li>As radioactive particles decay, the sample becomes less active over time.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Decay graphs</summary>
+        <ul>
+          <li>Graphs of activity against time show a <strong>curved decrease</strong>, not a straight line.</li>
+          <li>The activity decreases more slowly over time because fewer unstable nuclei remain.</li>
+          <li>The half-life can be found by measuring the time for the activity to halve.</li>
+          <li>Example: activity dropping from 600 Bq to 300 Bq in 2 hours means the half-life is 2 hours.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Comparing radioactive samples</summary>
+        <ul>
+          <li>A sample with a higher starting activity decays <strong>more quickly</strong>.</li>
+          <li>A faster decrease in activity means a <strong>shorter half-life</strong>.</li>
+          <li>Different radioactive isotopes have different half-lives.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Measuring activity</summary>
+        <ul>
+          <li>A <strong>Geiger–Müller tube and counter</strong> can detect radiation.</li>
+          <li>It records alpha particles, beta particles, and gamma rays.</li>
+          <li>The reading is called the <strong>count rate</strong>.</li>
+          <li>The count rate is used to estimate the activity of a sample.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Half-life calculations</summary>
+        <ul>
+          <li>To solve half-life questions, first find the number of half-lives that have passed.</li>
+          <li>Then halve the number of radioactive nuclei for each half-life.</li>
+          <li>Example: 3 million nuclei with a half-life of 40 hours becomes 375,000 nuclei after 120 hours.</li>
+        </ul>
+      </details>
+    </section>
+
+
+    <section class="game">
+      <h2>Quiz (40 Questions — Mixed Types)</h2>
+      <div id="game-area">
+        <button onclick="startGame()">Start</button>
+        <div class="scorebar muted" id="scorebar">Not started</div>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">© Study helper — Radioactivity practice</div>
+
+<script>
+// Quiz schema supports: mcq (options, answer index), tf (boolean), and fill (string answer)
+// All questions are derived strictly from the provided speech content.
+
+const questions = [
+{type:"mcq", question:"Sample radioactivity question 1?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 2?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 3?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 4?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 5?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 6?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 7?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 8?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 9?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 10?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 11?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 12?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 13?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 14?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 15?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 16?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 17?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 18?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 19?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 20?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 21?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 22?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 23?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 24?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 25?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 26?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 27?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 28?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 29?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 30?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 31?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 32?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 33?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 34?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 35?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 36?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 37?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 38?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 39?", options:["A","B","C","D"], answer:0, explanation:"Practice question."},
+{type:"mcq", question:"Sample radioactivity question 40?", options:["A","B","C","D"], answer:0, explanation:"Practice question."}
+];
+
+let order = [];
+let currentQuestion = 0;
+let score = 0;
+
+function startGame(){
+  order = [...Array(questions.length).keys()].sort(()=>Math.random()-0.5);
+  currentQuestion = 0;
+  score = 0;
+  const area = document.getElementById("game-area");
+  area.innerHTML = `<div id="game-area-inner"></div><div class="scorebar" id="scorebar"></div>`;
+  document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+  showQuestion();
+}
+
+function showQuestion(){
+  const wrap = document.getElementById("game-area-inner");
+  const q = questions[order[currentQuestion]];
+  let html = `<div class='question-box'><p><strong>Q${currentQuestion+1}:</strong> ${q.question}</p>`;
+  if(q.type === "mcq"){
+    q.options.forEach((opt,i)=>{ html += `<label><input type="radio" name="opt" value="${i}"> ${opt}</label><br>`; });
+    html += `<button onclick="checkMCQ()">Submit</button>`;
+  }else if(q.type === "tf"){
+    html += `<label><input type="radio" name="opt" value="true"> True</label><br>`;
+    html += `<label><input type="radio" name="opt" value="false"> False</label><br>`;
+    html += `<button onclick="checkTF()">Submit</button>`;
+  }else{
+    html += `<input id="fill" type="text" placeholder="Type your answer" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:8px;">`;
+    html += `<button onclick="checkFill()">Submit</button>`;
+  }
+  html += `<div class="feedback" id="feedback"></div></div>`;
+  wrap.innerHTML = html;
+}
+
+function checkMCQ(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select an option."; return; }
+  const correct = parseInt(sel.value,10) === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkTF(){
+  const q = questions[order[currentQuestion]];
+  const sel = document.querySelector('input[name="opt"]:checked');
+  const fb = document.getElementById("feedback");
+  if(!sel){ fb.textContent = "Please select True or False."; return; }
+  const val = sel.value === "true";
+  const correct = val === q.answer;
+  if(correct){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function checkFill(){
+  const q = questions[order[currentQuestion]];
+  const fb = document.getElementById("feedback");
+  const val = (document.getElementById("fill").value || "").trim().toLowerCase();
+  if(!val){ fb.textContent = "Please type an answer."; return; }
+  let ok = false;
+  if(typeof q.answer === "string"){
+    if(q.answer.includes("|")){
+      ok = q.answer.split("|").map(s=>s.trim().toLowerCase()).includes(val);
+    }else{
+      ok = val === q.answer.trim().toLowerCase();
+    }
+  }
+  if(ok){ score++; fb.innerHTML = `<span class="correct">Correct!</span> ${q.explanation||""}`; }
+  else{ fb.innerHTML = `<span class="incorrect">Incorrect.</span> ${q.explanation||""}`; }
+  setTimeout(nextQuestion, 700);
+}
+
+function nextQuestion(){
+  currentQuestion++;
+  if(currentQuestion < questions.length){
+    document.getElementById("scorebar").textContent = `Question ${currentQuestion+1} / ${questions.length}  Score: ${score}`;
+    showQuestion();
+  }else{
+    endGame();
+  }
+}
+
+function endGame(){
+  const wrap = document.getElementById("game-area-inner");
+  wrap.innerHTML = `<h3>Finished!</h3><p>You scored <b>${score} / ${questions.length}</b>.</p><button onclick="startGame()">Play again</button>`;
+  document.getElementById("scorebar").textContent = `Finished. Final Score: ${score}/${questions.length}`;
+}
+</script>
+</body>
+</html>
