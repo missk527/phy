@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motor Effect</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>80P. The Motor Effect</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/1N3Lk0rBb9o" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:59 | Introduction to the Motor Effect</summary>
+<ul>
+<li>The motor effect happens when a current-carrying wire is placed in a magnetic field.</li>
+<li>The wire experiences a force because magnetic fields interact.</li>
+<li>A current-carrying wire produces its own magnetic field.</li>
+<li>The strongest force occurs when the wire is at 90° to the magnetic field.</li>
+<li>No force acts when the wire is parallel to the field.</li>
+</ul>
+</details>
+
+<details>
+<summary>1:06 - 1:49 | Fleming’s Left Hand Rule</summary>
+<ul>
+<li>Fleming’s left hand rule predicts the force direction.</li>
+<li>The first finger points in the magnetic field direction.</li>
+<li>The second finger points in the current direction.</li>
+<li>The thumb points in the force direction.</li>
+<li>The magnetic field goes from north to south.</li>
+</ul>
+</details>
+
+<details>
+<summary>2:00 - 3:00 | Horseshoe Magnet Example</summary>
+<ul>
+<li>A current flows through metal rails between magnet poles.</li>
+<li>The rails create their own magnetic field.</li>
+<li>The magnetic fields interact and produce a force.</li>
+<li>Using Fleming’s left hand rule shows the force direction.</li>
+<li>In the example, the force acts to the right.</li>
+</ul>
+</details>
+
+<details>
+<summary>3:00 - 4:07 | Calculating Force</summary>
+<ul>
+<li>The force equation is F = BIL.</li>
+<li>F is force measured in Newtons.</li>
+<li>B is magnetic flux density measured in Teslas.</li>
+<li>I is current measured in amps.</li>
+<li>L is wire length measured in meters.</li>
+</ul>
+</details>
+
+<details>
+<summary>4:07 - 4:23 | Example Calculation</summary>
+<ul>
+<li>A 10 cm wire carries a 5 A current.</li>
+<li>The magnetic flux density is 0.4 T.</li>
+<li>10 cm must be converted to 0.1 m.</li>
+<li>Using F = BIL gives 0.2 N.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+{type:"mcq",question:"What is the motor effect?",options:["Heating effect","Force on a current-carrying wire","Chemical reaction"],answer:1,explanation:"The motor effect creates force on a wire."},
+{type:"fill",question:"A current-carrying wire produces its own magnetic ______.",answerText:"field",explanation:"Current creates a magnetic field."},
+{type:"mcq",question:"What happens when magnetic fields interact?",options:["They disappear","A force is produced","Nothing happens"],answer:1,explanation:"Field interaction creates force."},
+{type:"fill",question:"The strongest force occurs at ______ degrees.",answerText:"90",explanation:"Maximum force occurs at 90°."},
+{type:"mcq",question:"What happens if the wire is parallel to the field?",options:["Maximum force","No force","Double force"],answer:1,explanation:"Parallel wires feel no force."},
+{type:"mcq",question:"Which rule predicts force direction?",options:["Right-hand grip rule","Fleming’s left hand rule","Newton’s rule"],answer:1,explanation:"Fleming’s left hand rule is used."},
+{type:"fill",question:"The thumb shows the direction of the ______.",answerText:"force",explanation:"The thumb points in the force direction."},
+{type:"mcq",question:"The first finger shows:",options:["Current","Force","Magnetic field"],answer:2,explanation:"First finger = magnetic field."},
+{type:"mcq",question:"The second finger shows:",options:["Current","Force","Voltage"],answer:0,explanation:"Second finger = current."},
+{type:"fill",question:"Magnetic field lines go from north to ______.",answerText:"south",explanation:"Fields go N to S."},
+{type:"mcq",question:"Which magnet is used in the example?",options:["Bar magnet","Horseshoe magnet","Electromagnet"],answer:1,explanation:"A horseshoe magnet is shown."},
+{type:"mcq",question:"Why does the wire move?",options:["Gravity","Magnetic force","Heat"],answer:1,explanation:"The motor effect causes movement."},
+{type:"fill",question:"The free rail can ______ between the magnets.",answerText:"roll",explanation:"The rail is free to roll."},
+{type:"mcq",question:"What equation calculates motor effect force?",options:["V=IR","F=BIL","P=IV"],answer:1,explanation:"Force is calculated using F=BIL."},
+{type:"mcq",question:"What unit measures force?",options:["Teslas","Amps","Newtons"],answer:2,explanation:"Force is measured in Newtons."},
+{type:"fill",question:"Magnetic flux density is measured in ______.",answerText:"teslas",explanation:"B is measured in Teslas."},
+{type:"mcq",question:"Current is measured in:",options:["Volts","Amps","Ohms"],answer:1,explanation:"Current uses amps."},
+{type:"mcq",question:"Wire length must be measured in:",options:["Centimeters","Meters","Kilometers"],answer:1,explanation:"Length must use meters."},
+{type:"fill",question:"A 10 cm wire equals ______ m.",answerText:"0.1",explanation:"10 cm = 0.1 m."},
+{type:"mcq",question:"What current flows in the example?",options:["2 A","5 A","10 A"],answer:1,explanation:"The example uses 5 amps."},
+{type:"mcq",question:"What magnetic flux density is used?",options:["0.2 T","0.4 T","1 T"],answer:1,explanation:"The field strength is 0.4 T."},
+{type:"fill",question:"The calculated force is ______ N.",answerText:"0.2",explanation:"The force equals 0.2 N."},
+{type:"mcq",question:"What does B stand for?",options:["Battery","Magnetic flux density","Bond energy"],answer:1,explanation:"B means magnetic field strength."},
+{type:"mcq",question:"What does I stand for?",options:["Current","Force","Resistance"],answer:0,explanation:"I means current."},
+{type:"fill",question:"F stands for ______.",answerText:"force",explanation:"F means force."},
+{type:"mcq",question:"The magnetic field direction is from:",options:["South to north","North to south","Left to right"],answer:1,explanation:"Fields travel north to south."},
+{type:"mcq",question:"When is force maximum?",options:["At 90°","At 0°","At 45°"],answer:0,explanation:"Maximum force occurs at right angles."},
+{type:"fill",question:"If the wire is parallel to the field, force is ______.",answerText:"zero",explanation:"Parallel means no force."},
+{type:"mcq",question:"What creates the wire’s magnetic field?",options:["Voltage","Current","Heat"],answer:1,explanation:"Current creates magnetic fields."},
+{type:"mcq",question:"Which hand is used in Fleming’s rule?",options:["Right","Left","Both"],answer:1,explanation:"Use the left hand."},
+{type:"fill",question:"The second finger points in the direction of ______.",answerText:"current",explanation:"Second finger = current."},
+{type:"mcq",question:"Which finger represents magnetic field?",options:["Thumb","First finger","Second finger"],answer:1,explanation:"First finger = field."},
+{type:"mcq",question:"Which finger represents force?",options:["Thumb","First finger","Second finger"],answer:0,explanation:"Thumb = force."},
+{type:"fill",question:"The equation F=BIL only works best at ______°.",answerText:"90",explanation:"The wire must be perpendicular."},
+{type:"mcq",question:"What happens if the angle decreases?",options:["Force increases","Force decreases","Force disappears instantly"],answer:1,explanation:"Smaller angle gives less force."},
+{type:"mcq",question:"What interacts to create the force?",options:["Electric charges","Magnetic fields","Atoms"],answer:1,explanation:"Magnetic fields interact."},
+{type:"fill",question:"The motor effect pushes the wire out of the ______.",answerText:"field",explanation:"The wire is pushed out of the field."},
+{type:"mcq",question:"What is the SI unit of magnetic field strength?",options:["Tesla","Newton","Amp"],answer:0,explanation:"Magnetic field strength uses Teslas."},
+{type:"mcq",question:"What happens when power is switched on?",options:["Rails generate magnetic fields","The magnet disappears","Current stops"],answer:0,explanation:"Current creates fields."},
+{type:"fill",question:"Force is stronger when the magnetic field is ______.",answerText:"stronger",explanation:"Larger B gives greater force."}
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
