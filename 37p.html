@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radiation: Irradiation & Contamination</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>37P. Irradiation & Contamination</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/WPN_pb7hTnk" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:45 | Irradiation</summary>
+<ul>
+<li>Irradiation happens when an object is exposed to radiation.</li>
+<li>Radiation can be ionizing or non-ionizing.</li>
+<li>Examples include alpha, beta, gamma rays, X-rays, ultraviolet, and microwaves.</li>
+<li>If radiation reaches your body, you have been irradiated.</li>
+</ul>
+</details>
+
+<details>
+<summary>0:45 - 1:21 | Contamination</summary>
+<ul>
+<li>Contamination happens when radioactive particles get onto objects.</li>
+<li>Example: radioactive uranium on your skin.</li>
+<li>The main danger is that radioactive materials decay and irradiate you.</li>
+<li>Contamination increases the risk of radiation exposure.</li>
+</ul>
+</details>
+
+<details>
+<summary>1:21 - 2:17 | Harmful Effects of Radiation</summary>
+<ul>
+<li>The danger depends on radiation type, exposure location, and dosage.</li>
+<li>Ionizing radiation is more dangerous because it can enter living cells.</li>
+<li>Radiation can ionize DNA and cause mutations.</li>
+<li>Mutations may lead to uncontrolled cell division and cancer.</li>
+<li>Ultraviolet radiation can also increase cancer risk.</li>
+</ul>
+</details>
+
+<details>
+<summary>2:17 - 3:19 | Radiation Types & Penetration</summary>
+<ul>
+<li>Alpha radiation is most harmful inside the body.</li>
+<li>Alpha particles are stopped by air and skin.</li>
+<li>Beta and gamma radiation can penetrate skin.</li>
+<li>External beta and gamma sources are dangerous.</li>
+<li>Internal contamination makes alpha radiation very dangerous.</li>
+</ul>
+</details>
+
+<details>
+<summary>3:19 - 3:57 | Radiation Dosage</summary>
+<ul>
+<li>Dosage depends on distance, exposure time, and radioactivity.</li>
+<li>Greater distance reduces exposure.</li>
+<li>Longer exposure increases risk.</li>
+<li>Highly radioactive materials are more dangerous.</li>
+</ul>
+</details>
+
+<details>
+<summary>3:57 - 4:25 | Radiation Safety</summary>
+<ul>
+<li>Protective clothing helps reduce contamination.</li>
+<li>Gloves and overalls are commonly used.</li>
+<li>Tongs should be used instead of bare hands.</li>
+<li>Radioactive materials are often stored in lead-lined containers.</li>
+</ul>
+</details>
+
+<details>
+<summary>4:25 - 4:42 | Important Final Point</summary>
+<ul>
+<li>Being irradiated does not make someone radioactive.</li>
+<li>People exposed to radiation cannot emit radiation afterwards.</li>
+<li>Only contamination with radioactive material can harm others.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+{type:"mcq",question:"What is irradiation?",options:["Exposure to radiation","Touching metal","Chemical burning"],answer:0,explanation:"Irradiation means exposure to radiation."},
+{type:"mcq",question:"What is contamination?",options:["Exposure to sunlight","Radioactive particles on objects","Heat transfer"],answer:1,explanation:"Contamination involves radioactive particles."},
+{type:"fill",question:"Alpha, beta and gamma are types of ______ radiation.",answerText:"ionizing",explanation:"They are ionizing radiation."},
+{type:"mcq",question:"Which radiation is non-ionizing?",options:["Gamma rays","Microwaves","Alpha particles"],answer:1,explanation:"Microwaves are non-ionizing."},
+{type:"mcq",question:"If radiation reaches your body, you are:",options:["Contaminated","Irradiated","Mutated"],answer:1,explanation:"Exposure means irradiation."},
+{type:"fill",question:"Radioactive uranium on your arm is an example of ______.",answerText:"contamination",explanation:"Particles on the body cause contamination."},
+{type:"mcq",question:"Why is contamination dangerous?",options:["It causes fire","Radioactive material can decay and irradiate you","It changes eye color"],answer:1,explanation:"Decay exposes you to radiation."},
+{type:"mcq",question:"Which factor affects radiation harm?",options:["Hair color","Radiation type","Favorite food"],answer:1,explanation:"Radiation type affects danger."},
+{type:"fill",question:"Ionizing radiation can damage ______.",answerText:"dna",explanation:"Radiation can ionize DNA."},
+{type:"mcq",question:"DNA damage may lead to:",options:["Cancer","Stronger bones","Faster running"],answer:0,explanation:"Mutations may cause cancer."},
+{type:"mcq",question:"Which radiation can also increase cancer risk?",options:["Ultraviolet","Sound waves","Infrared"],answer:0,explanation:"UV can cause cancer."},
+{type:"fill",question:"Alpha radiation is most dangerous when ______ the body.",answerText:"inside",explanation:"Alpha is dangerous internally."},
+{type:"mcq",question:"What stops alpha particles?",options:["Skin and air","Lead walls only","Water only"],answer:0,explanation:"Alpha has low penetration."},
+{type:"mcq",question:"Which radiation can penetrate skin?",options:["Beta and gamma","Alpha only","Microwaves only"],answer:0,explanation:"Beta and gamma penetrate skin."},
+{type:"fill",question:"External ______ radiation is dangerous because it penetrates skin.",answerText:"gamma",explanation:"Gamma radiation penetrates deeply."},
+{type:"mcq",question:"Internal contamination makes which radiation most harmful?",options:["Alpha","Radio waves","Infrared"],answer:0,explanation:"Alpha damages cells internally."},
+{type:"mcq",question:"What is another word for amount of radiation exposure?",options:["Dosage","Volume","Density"],answer:0,explanation:"Exposure amount is dosage."},
+{type:"fill",question:"Distance from the source affects radiation ______.",answerText:"dosage",explanation:"Distance changes exposure level."},
+{type:"mcq",question:"Longer exposure time causes:",options:["Less exposure","More exposure","No change"],answer:1,explanation:"Time increases dosage."},
+{type:"mcq",question:"Highly radioactive materials are:",options:["Safer","More dangerous","Invisible"],answer:1,explanation:"More radioactivity means more danger."},
+{type:"fill",question:"Gloves and overalls are examples of protective ______.",answerText:"gear",explanation:"Protective gear reduces contamination."},
+{type:"mcq",question:"What tool should handle radioactive materials?",options:["Bare hands","Tongs","Paper"],answer:1,explanation:"Tongs keep distance."},
+{type:"mcq",question:"Radioactive materials are often kept in:",options:["Wood boxes","Lead-lined boxes","Plastic cups"],answer:1,explanation:"Lead blocks radiation."},
+{type:"fill",question:"Being irradiated does not make you ______.",answerText:"radioactive",explanation:"Exposure alone does not make you radioactive."},
+{type:"mcq",question:"Can irradiated people emit radiation later?",options:["Yes always","No","Only at night"],answer:1,explanation:"Irradiated people are not radioactive."},
+{type:"mcq",question:"What can make a person dangerous to others?",options:["Contamination","Sunlight","Sweat"],answer:0,explanation:"Contamination involves radioactive material."},
+{type:"fill",question:"Radiation can cause uncontrolled cell ______.",answerText:"division",explanation:"Cancer involves uncontrolled division."},
+{type:"mcq",question:"Which radiation is least harmful?",options:["Radio waves","Alpha","Gamma"],answer:0,explanation:"Radio waves are not harmful."},
+{type:"mcq",question:"Which radiation is usually most harmful internally?",options:["Alpha","Microwaves","Infrared"],answer:0,explanation:"Alpha strongly ionizes cells."},
+{type:"fill",question:"Beta radiation can ______ the skin.",answerText:"penetrate",explanation:"Beta particles pass through skin."},
+{type:"mcq",question:"Why is gamma radiation dangerous externally?",options:["It penetrates skin","It smells bad","It is colorful"],answer:0,explanation:"Gamma rays penetrate deeply."},
+{type:"mcq",question:"What causes mutations?",options:["Ionized DNA","Cold weather","Exercise"],answer:0,explanation:"DNA ionization causes mutations."},
+{type:"fill",question:"Ultraviolet radiation may cause ______.",answerText:"cancer",explanation:"UV exposure can lead to cancer."},
+{type:"mcq",question:"What reduces radiation exposure?",options:["Moving closer","Increasing distance","Removing gloves"],answer:1,explanation:"Distance lowers exposure."},
+{type:"mcq",question:"Which radiation category is generally more dangerous?",options:["Ionizing","Non-ionizing","Visible light"],answer:0,explanation:"Ionizing radiation damages cells."},
+{type:"fill",question:"Contamination means radioactive ______ are on an object.",answerText:"particles",explanation:"Particles create contamination."},
+{type:"mcq",question:"Which item blocks radiation effectively?",options:["Lead","Paper","Cotton"],answer:0,explanation:"Lead is commonly used for shielding."},
+{type:"mcq",question:"What should replace direct hand contact?",options:["Tongs","Shoes","Paper"],answer:0,explanation:"Tools reduce exposure."},
+{type:"fill",question:"Radiation harm depends partly on exposure ______.",answerText:"time",explanation:"Longer exposure increases risk."},
+{type:"mcq",question:"Which statement is true?",options:["Irradiation makes people radioactive","Only contamination can spread radioactive material","Radiation always mutates people"],answer:1,explanation:"Contamination spreads radioactive particles."}
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
