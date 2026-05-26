@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Motors</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>81P. Electric Motors</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/1NNwOo1dGhk" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:33 | Motor Effect</summary>
+<ul>
+<li>A current-carrying wire placed in a magnetic field experiences a force.</li>
+<li>This effect is called the motor effect.</li>
+<li>The direction of the force depends on the direction of the current and the magnetic field.</li>
+<li>Fleming’s left-hand rule is used to work out the direction of the force.</li>
+</ul>
+</details>
+
+<details>
+<summary>0:33 - 1:16 | Forces on Opposite Sides of a Coil</summary>
+<ul>
+<li>If current flows out of the page and the magnetic field points right, the wire experiences an upward force.</li>
+<li>If the current flows in the opposite direction, the force also acts in the opposite direction.</li>
+<li>A coil has current flowing around both sides of the wire loop.</li>
+<li>The two sides of the coil experience forces in opposite directions.</li>
+</ul>
+</details>
+
+<details>
+<summary>1:16 - 2:21 | Why the Coil Needs Help to Keep Spinning</summary>
+<ul>
+<li>One side of the coil is pushed upward while the other side is pushed downward, so the coil starts to rotate.</li>
+<li>After half a turn, the current direction in each side of the coil reverses.</li>
+<li>The forces also reverse, so the coil would turn back the other way.</li>
+<li>Without a special device, the coil would only flip back and forth instead of rotating continuously.</li>
+</ul>
+</details>
+
+<details>
+<summary>2:21 - 3:04 | Split-Ring Commutator</summary>
+<ul>
+<li>To keep the coil rotating in the same direction, the current must reverse every half turn.</li>
+<li>A split-ring commutator swaps the positive and negative connections every half turn.</li>
+<li>This reverses the current at the correct moment.</li>
+<li>As a result, the forces keep producing rotation in the same direction.</li>
+</ul>
+</details>
+
+<details>
+<summary>3:11 - 4:06 | Current Flow in a Motor</summary>
+<ul>
+<li>The positive terminal sends current into one side of the commutator.</li>
+<li>The current flows around the coil and leaves through the negative terminal.</li>
+<li>The coil experiences clockwise forces and starts to turn.</li>
+<li>The commutator rotates with the coil while the terminals stay fixed.</li>
+<li>Electric motors convert electrical energy into rotational motion.</li>
+</ul>
+</details>
+
+<details>
+<summary>4:12 - 4:31 | Increasing Motor Speed</summary>
+<ul>
+<li>Real motors often need to be more powerful than a simple demonstration motor.</li>
+<li>The rotation speed can be increased by increasing the current in the wire.</li>
+<li>Adding more turns to the coil also increases the turning effect.</li>
+<li>Using stronger magnets increases the magnetic flux density and makes the motor rotate faster.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+{
+"type": "mcq",
+"question": "What happens to a current-carrying wire in a magnetic field?",
+"options": [
+"It experiences a force",
+"It becomes neutral",
+"It stops conducting"
+],
+"answer": 0,
+"explanation": "A current-carrying wire in a magnetic field experiences a force."
+},
+{
+"type": "fill",
+"question": "The force on a current-carrying wire in a magnetic field is called the motor ______.",
+"answerText": "effect",
+"explanation": "This is called the motor effect."
+},
+{
+"type": "mcq",
+"question": "Which rule is used to find the direction of the force?",
+"options": [
+"Fleming’s left-hand rule",
+"Ohm’s law",
+"Hooke’s law"
+],
+"answer": 0,
+"explanation": "Fleming’s left-hand rule gives the force direction."
+},
+{
+"type": "fill",
+"question": "The direction of the force depends on the magnetic field and the ______.",
+"answerText": "current",
+"explanation": "The force direction depends on field direction and current direction."
+},
+{
+"type": "mcq",
+"question": "If the current reverses, what happens to the force?",
+"options": [
+"It reverses direction",
+"It disappears forever",
+"It doubles automatically"
+],
+"answer": 0,
+"explanation": "Reversing the current reverses the force."
+},
+{
+"type": "mcq",
+"question": "What shape of wire is used in a simple motor?",
+"options": [
+"Coil",
+"Straight rod only",
+"Circle with no current"
+],
+"answer": 0,
+"explanation": "A simple motor uses a coil of wire."
+},
+{
+"type": "fill",
+"question": "A coil starts to spin because opposite sides experience forces in opposite ______.",
+"answerText": "directions",
+"explanation": "Opposite forces create a turning effect."
+},
+{
+"type": "mcq",
+"question": "In the example, the coil first starts rotating in which direction?",
+"options": [
+"Clockwise",
+"Anticlockwise",
+"It does not move"
+],
+"answer": 0,
+"explanation": "The coil begins to rotate clockwise."
+},
+{
+"type": "mcq",
+"question": "What happens after the coil rotates 180 degrees without a commutator?",
+"options": [
+"The forces swap direction",
+"The magnet disappears",
+"The coil melts"
+],
+"answer": 0,
+"explanation": "After half a turn, the forces reverse."
+},
+{
+"type": "fill",
+"question": "180 degrees is equal to half a ______.",
+"answerText": "turn",
+"explanation": "A half turn is 180 degrees."
+},
+{
+"type": "mcq",
+"question": "Without a commutator, what would the coil do?",
+"options": [
+"Flip back and forth",
+"Rotate smoothly forever",
+"Stop using current"
+],
+"answer": 0,
+"explanation": "It would flip back and forth instead of turning continuously."
+},
+{
+"type": "fill",
+"question": "To keep spinning, the current must change direction every half ______.",
+"answerText": "turn",
+"explanation": "The current reverses every half turn."
+},
+{
+"type": "mcq",
+"question": "What device changes the current direction every half turn?",
+"options": [
+"Split-ring commutator",
+"Thermistor",
+"Fuse"
+],
+"answer": 0,
+"explanation": "A split-ring commutator reverses the connections every half turn."
+},
+{
+"type": "mcq",
+"question": "What does a split-ring commutator swap?",
+"options": [
+"Positive and negative connections",
+"The magnets only",
+"The coil material"
+],
+"answer": 0,
+"explanation": "It swaps the positive and negative connections."
+},
+{
+"type": "fill",
+"question": "The split-ring commutator helps the coil rotate in the same ______.",
+"answerText": "direction",
+"explanation": "It keeps the rotation in one direction."
+},
+{
+"type": "mcq",
+"question": "What happens to the positive and negative terminals during rotation?",
+"options": [
+"They stay fixed",
+"They vanish",
+"They become magnets"
+],
+"answer": 0,
+"explanation": "The terminals stay in place while the commutator rotates."
+},
+{
+"type": "mcq",
+"question": "What part rotates with the coil?",
+"options": [
+"Split-ring commutator",
+"Battery terminals",
+"Power supply"
+],
+"answer": 0,
+"explanation": "The commutator rotates with the coil."
+},
+{
+"type": "fill",
+"question": "Electric motors create spinning motion using ______.",
+"answerText": "electricity",
+"explanation": "Motors use electricity to create rotation."
+},
+{
+"type": "mcq",
+"question": "Which energy transfer happens in an electric motor?",
+"options": [
+"Electrical to kinetic",
+"Chemical to thermal only",
+"Sound to chemical"
+],
+"answer": 0,
+"explanation": "An electric motor converts electrical energy into kinetic energy."
+},
+{
+"type": "mcq",
+"question": "Where are electric motors commonly used?",
+"options": [
+"Fans, vehicles, and hard drives",
+"Only candles",
+"Only paper books"
+],
+"answer": 0,
+"explanation": "Motors are used in many devices including fans, vehicles, and hard drives."
+},
+{
+"type": "fill",
+"question": "Increasing the ______ through the wire can increase motor speed.",
+"answerText": "current",
+"explanation": "More current increases the force and speed."
+},
+{
+"type": "mcq",
+"question": "What is one way to increase the turning effect?",
+"options": [
+"Add more turns to the coil",
+"Remove the wire",
+"Use no magnet"
+],
+"answer": 0,
+"explanation": "More coil turns increase the motor effect."
+},
+{
+"type": "fill",
+"question": "Using stronger magnets increases the magnetic flux ______.",
+"answerText": "density",
+"explanation": "Stronger magnets increase magnetic flux density."
+},
+{
+"type": "mcq",
+"question": "What does a stronger magnetic field do to the motor?",
+"options": [
+"Makes it rotate faster",
+"Makes it impossible to move",
+"Stops the current"
+],
+"answer": 0,
+"explanation": "A stronger field increases the force and rotation speed."
+},
+{
+"type": "mcq",
+"question": "What must be present for the motor effect?",
+"options": [
+"Current and magnetic field",
+"Only heat",
+"Only light"
+],
+"answer": 0,
+"explanation": "The motor effect needs current in a magnetic field."
+},
+{
+"type": "fill",
+"question": "The force on each side of the coil produces a turning ______.",
+"answerText": "effect",
+"explanation": "Opposite forces produce a turning effect."
+},
+{
+"type": "mcq",
+"question": "What is the purpose of reversing the current every half turn?",
+"options": [
+"To keep the forces turning the coil the same way",
+"To stop the coil",
+"To remove the magnetic field"
+],
+"answer": 0,
+"explanation": "The reversal keeps rotation in the same direction."
+},
+{
+"type": "mcq",
+"question": "What would happen if the forces kept swapping without correction?",
+"options": [
+"The coil would not complete full rotations",
+"It would rotate faster",
+"It would become a battery"
+],
+"answer": 0,
+"explanation": "The coil would not keep rotating through 360 degrees."
+},
+{
+"type": "fill",
+"question": "A full rotation is ______ degrees.",
+"answerText": "360",
+"explanation": "A full turn is 360 degrees."
+},
+{
+"type": "mcq",
+"question": "Which side of the coil experiences the opposite force when current flows the opposite way?",
+"options": [
+"The side with reversed current",
+"The battery only",
+"The air"
+],
+"answer": 0,
+"explanation": "Changing current direction changes the force on that side."
+},
+{
+"type": "fill",
+"question": "Fleming’s left-hand rule uses field, current, and ______.",
+"answerText": "force",
+"explanation": "The rule relates field, current, and force."
+},
+{
+"type": "mcq",
+"question": "What does the motor effect produce in a coil?",
+"options": [
+"Rotation",
+"Freezing",
+"Radioactivity"
+],
+"answer": 0,
+"explanation": "Forces on the coil produce rotation."
+},
+{
+"type": "mcq",
+"question": "Why is a simple motor useful?",
+"options": [
+"It turns electrical energy into motion",
+"It stores DNA",
+"It measures temperature only"
+],
+"answer": 0,
+"explanation": "Motors are useful because they produce motion from electricity."
+},
+{
+"type": "fill",
+"question": "The coil is connected to a power supply through the split-ring ______.",
+"answerText": "commutator",
+"explanation": "The commutator connects the rotating coil to the supply."
+},
+{
+"type": "mcq",
+"question": "What happens when the current flows around the coil?",
+"options": [
+"Forces act on the sides",
+"The wire becomes invisible",
+"The magnets disappear"
+],
+"answer": 0,
+"explanation": "Current in the magnetic field causes forces on the coil."
+},
+{
+"type": "mcq",
+"question": "What remains stationary while the commutator turns?",
+"options": [
+"Positive and negative terminals",
+"The coil only",
+"The split ring only"
+],
+"answer": 0,
+"explanation": "The terminals stay fixed."
+},
+{
+"type": "fill",
+"question": "A motor relies on a magnetic field and a current-carrying ______.",
+"answerText": "wire",
+"explanation": "The basic motor effect acts on a current-carrying wire."
+},
+{
+"type": "mcq",
+"question": "Adding more turns to the coil means there is more wire experiencing the what?",
+"options": [
+"Motor effect",
+"Cooling effect",
+"Chemical effect"
+],
+"answer": 0,
+"explanation": "More turns mean more wire experiences force."
+},
+{
+"type": "fill",
+"question": "A more powerful magnet gives a stronger magnetic ______.",
+"answerText": "field",
+"explanation": "A stronger magnet produces a stronger magnetic field."
+},
+{
+"type": "mcq",
+"question": "What is the main job of the split-ring commutator?",
+"options": [
+"Keep the coil rotating continuously in one direction",
+"Store charge permanently",
+"Cool the motor"
+],
+"answer": 0,
+"explanation": "The commutator reverses current so rotation continues in one direction."
+}
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
