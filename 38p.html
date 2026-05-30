@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exothermic & Endothermic Reactions</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>38P. Exothermic & Endothermic Reactions</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/XWiSBLFPqhY" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:15 | Lesson Overview</summary>
+<ul>
+<li>This lesson explains exothermic and endothermic reactions.</li>
+<li>Reaction profiles are used to show energy changes during reactions.</li>
+<li>Activation energy is the energy needed to start a reaction.</li>
+</ul>
+</details>
+
+<details>
+<summary>0:15 - 0:51 | Energy Stored in Chemical Bonds</summary>
+<ul>
+<li>Different chemicals store different amounts of energy in their bonds.</li>
+<li>The total energy of the reactants is compared with the total energy of the products.</li>
+<li>For methane reacting with oxygen, the products have less energy than the reactants.</li>
+<li>Energy changes depend on the difference between reactant energy and product energy.</li>
+</ul>
+</details>
+
+<details>
+<summary>0:51 - 1:57 | Exothermic Reactions</summary>
+<ul>
+<li>A reaction profile shows total energy on the y-axis and reaction progress on the x-axis.</li>
+<li>Reactants are shown on the left and products on the right.</li>
+<li>In an exothermic reaction, the products are lower because they have less energy.</li>
+<li>The lost chemical energy is transferred to the surroundings, usually as heat.</li>
+<li>Temperature increases when heat energy is released.</li>
+<li>Exothermic reactions transfer energy to the surroundings.</li>
+</ul>
+</details>
+
+<details>
+<summary>2:06 - 2:26 | Examples of Exothermic Reactions</summary>
+<ul>
+<li>Combustion reactions are common exothermic reactions.</li>
+<li>Fuels usually burn in oxygen during combustion.</li>
+<li>Neutralisation between acids and bases is usually exothermic.</li>
+<li>Most oxidation reactions are also exothermic.</li>
+</ul>
+</details>
+
+<details>
+<summary>2:26 - 3:15 | Endothermic Reactions</summary>
+<ul>
+<li>Endothermic reactions take in heat energy from the surroundings.</li>
+<li>Calcium carbonate can be thermally decomposed into calcium oxide and carbon dioxide.</li>
+<li>Heat must be supplied to break down calcium carbonate, for example using a Bunsen burner.</li>
+<li>On an endothermic reaction profile, products are higher than reactants.</li>
+<li>The vertical difference is labelled as energy absorbed.</li>
+</ul>
+</details>
+
+<details>
+<summary>3:15 - 4:31 | Activation Energy</summary>
+<ul>
+<li>Activation energy is the minimum energy reactant particles need to collide and react.</li>
+<li>A higher activation energy means more energy is needed to start the reaction.</li>
+<li>On a reaction profile, the curve rises from the reactants to a highest point.</li>
+<li>The energy difference between the reactants and the top of the curve is the activation energy.</li>
+<li>Even exothermic reactions need some energy to begin.</li>
+<li>Endothermic reaction profiles also show activation energy in the same way.</li>
+</ul>
+</details>
+
+<details>
+<summary>4:31 - 4:54 | Changing and Labelling Profiles</summary>
+<ul>
+<li>Higher activation energy is shown by drawing a taller curve.</li>
+<li>Lower activation energy is shown by drawing a lower curve.</li>
+<li>For a specific reaction, write the actual chemicals instead of only writing “reactants” and “products”.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[{"type": "mcq", "question": "What does an exothermic reaction do?", "options": ["Takes in energy from surroundings", "Transfers energy to surroundings", "Stops all energy transfer"], "answer": 1, "explanation": "Exothermic reactions transfer energy to the surroundings, usually as heat."}, {"type": "mcq", "question": "What does an endothermic reaction do?", "options": ["Takes in heat energy from surroundings", "Always releases light only", "Has no energy change"], "answer": 0, "explanation": "Endothermic reactions take in heat energy from the surroundings."}, {"type": "fill", "question": "Different chemicals store different amounts of energy in their chemical ______ stores.", "answerText": "energy", "explanation": "Chemicals have chemical energy stores."}, {"type": "mcq", "question": "What is shown on the y-axis of a reaction profile?", "options": ["Total energy", "Time only", "Mass of products"], "answer": 0, "explanation": "The y-axis shows the total energy of the molecules."}, {"type": "mcq", "question": "What is shown on the x-axis of a reaction profile?", "options": ["Temperature", "Progress of the reaction", "Concentration only"], "answer": 1, "explanation": "The x-axis shows the progress of the reaction."}, {"type": "mcq", "question": "Where are reactants usually placed on a reaction profile?", "options": ["Left side", "Right side", "At the top only"], "answer": 0, "explanation": "Reactants are placed on the left side."}, {"type": "mcq", "question": "Where are products usually placed on a reaction profile?", "options": ["Left side", "Right side", "Outside the graph"], "answer": 1, "explanation": "Products are placed on the right side."}, {"type": "mcq", "question": "In an exothermic reaction profile, where are the products compared with the reactants?", "options": ["Higher", "Lower", "Exactly the same always"], "answer": 1, "explanation": "Products are lower because they have less energy."}, {"type": "mcq", "question": "In an endothermic reaction profile, where are the products compared with the reactants?", "options": ["Lower", "Higher", "Missing from the graph"], "answer": 1, "explanation": "Products are higher because they have more energy."}, {"type": "fill", "question": "Energy cannot be created or ______.", "answerText": "destroyed", "explanation": "Energy can only be transferred from one place to another."}, {"type": "mcq", "question": "What is the most common way energy is exchanged with surroundings in these reactions?", "options": ["Sound", "Heat", "Magnetism"], "answer": 1, "explanation": "Energy is usually exchanged as heat."}, {"type": "mcq", "question": "What happens to temperature in a sealed container during an exothermic reaction?", "options": ["It increases", "It always becomes zero", "It cannot be measured"], "answer": 0, "explanation": "Temperature increases because heat energy is released."}, {"type": "fill", "question": "Combustion reactions usually involve fuels burning in ______.", "answerText": "oxygen", "explanation": "Combustion usually happens in the presence of oxygen."}, {"type": "mcq", "question": "Which reaction type is a common example of an exothermic reaction?", "options": ["Combustion", "Evaporation only", "Filtration"], "answer": 0, "explanation": "Combustion is a common exothermic reaction."}, {"type": "mcq", "question": "Neutralisation usually happens between which two substances?", "options": ["Acids and bases", "Metals and plastics", "Oxygen and water only"], "answer": 0, "explanation": "Neutralisation is between acids and bases."}, {"type": "mcq", "question": "Most oxidation reactions are usually: ", "options": ["Exothermic", "Endothermic", "Not reactions"], "answer": 0, "explanation": "Most oxidation reactions are exothermic."}, {"type": "fill", "question": "The opposite of exothermic is ______.", "answerText": "endothermic", "explanation": "Endothermic reactions take in energy."}, {"type": "mcq", "question": "What must be supplied to break down calcium carbonate?", "options": ["Heat", "Salt", "Light only"], "answer": 0, "explanation": "Heat must be supplied to decompose calcium carbonate."}, {"type": "mcq", "question": "Calcium carbonate breaks down into calcium oxide and what else?", "options": ["Carbon dioxide", "Hydrogen", "Methane"], "answer": 0, "explanation": "Calcium carbonate decomposes into calcium oxide and carbon dioxide."}, {"type": "fill", "question": "A ______ burner can be used to heat calcium carbonate.", "answerText": "bunsen", "explanation": "A Bunsen burner can provide heat."}, {"type": "mcq", "question": "What is labelled in an endothermic reaction profile?", "options": ["Energy absorbed", "Energy destroyed", "No energy"], "answer": 0, "explanation": "The difference is labelled energy absorbed."}, {"type": "mcq", "question": "What is labelled in an exothermic reaction profile?", "options": ["Energy released", "Energy absorbed only", "Activation mass"], "answer": 0, "explanation": "The difference is labelled energy released."}, {"type": "fill", "question": "Activation energy is the ______ amount of energy needed for particles to react.", "answerText": "minimum", "explanation": "Activation energy is the minimum energy needed."}, {"type": "mcq", "question": "What must reactant particles do for a reaction to happen?", "options": ["Collide with enough energy", "Become invisible", "Stop moving"], "answer": 0, "explanation": "Particles must collide with enough energy to react."}, {"type": "mcq", "question": "If activation energy is greater, what is required?", "options": ["More energy to start the reaction", "Less reactants always", "No collisions"], "answer": 0, "explanation": "A greater activation energy needs more energy to start."}, {"type": "mcq", "question": "How is activation energy shown on a reaction profile?", "options": ["From reactants to the highest point of the curve", "From products to the x-axis", "As the width of the graph"], "answer": 0, "explanation": "It is the difference between reactants and the top of the curve."}, {"type": "fill", "question": "The highest point on the reaction profile curve helps show activation ______.", "answerText": "energy", "explanation": "The top of the curve is used to measure activation energy."}, {"type": "mcq", "question": "Do exothermic reactions still need activation energy?", "options": ["Yes", "No", "Only if cold"], "answer": 0, "explanation": "Even exothermic reactions need energy to get started."}, {"type": "mcq", "question": "How do you show a higher activation energy on a profile?", "options": ["Draw the curve higher", "Remove the products", "Move the x-axis"], "answer": 0, "explanation": "A higher curve shows higher activation energy."}, {"type": "mcq", "question": "How do you show a lower activation energy on a profile?", "options": ["Draw the curve lower", "Make products vanish", "Write no labels"], "answer": 0, "explanation": "A lower curve shows lower activation energy."}, {"type": "fill", "question": "Methane plus oxygen forms carbon dioxide and ______.", "answerText": "water", "explanation": "Methane combustion forms carbon dioxide and water."}, {"type": "mcq", "question": "In methane combustion, do products have more or less energy than reactants?", "options": ["Less energy", "More energy", "Exactly double"], "answer": 0, "explanation": "The products have less energy than the reactants."}, {"type": "mcq", "question": "When products have less energy than reactants, the reaction is usually: ", "options": ["Exothermic", "Endothermic", "Impossible"], "answer": 0, "explanation": "Less product energy means energy has been released."}, {"type": "mcq", "question": "When products have more energy than reactants, the reaction is usually: ", "options": ["Endothermic", "Exothermic", "Neutral only"], "answer": 0, "explanation": "More product energy means energy has been absorbed."}, {"type": "fill", "question": "The energy difference in exothermic reactions is energy ______.", "answerText": "released", "explanation": "Exothermic reactions release energy to the surroundings."}, {"type": "fill", "question": "The energy difference in endothermic reactions is energy ______.", "answerText": "absorbed", "explanation": "Endothermic reactions absorb energy from the surroundings."}, {"type": "mcq", "question": "What should you write on a reaction profile for a specific reaction?", "options": ["The actual chemicals", "Only random letters", "Only numbers"], "answer": 0, "explanation": "For a specific reaction, label the chemicals from the equation."}, {"type": "mcq", "question": "Which phrase best describes chemical energy stores?", "options": ["Energy stored in chemical bonds", "Energy stored only in containers", "Energy stored in graph labels"], "answer": 0, "explanation": "Different bonds store different amounts of energy."}, {"type": "mcq", "question": "What is released to the surroundings in many exothermic reactions?", "options": ["Heat energy", "Calcium carbonate only", "Nothing"], "answer": 0, "explanation": "Many exothermic reactions release heat energy."}, {"type": "fill", "question": "Reaction profiles show how energy changes during a ______.", "answerText": "reaction", "explanation": "Reaction profiles show energy changes during reactions."}];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
