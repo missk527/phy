@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclear Fusion</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>39P. Nuclear Fusion</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/SLekGxtypmg" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:27 | What Nuclear Fusion Is</summary>
+<ul>
+<li>Nuclear fusion happens when two light nuclei join together to form one larger nucleus.</li>
+<li>For example, hydrogen-1 and hydrogen-2 nuclei can fuse to form helium-3.</li>
+<li>Fusion releases a very large amount of energy.</li>
+<li>This is the process that fuels stars and helped create elements heavier than hydrogen.</li>
+</ul>
+</details>
+<details>
+<summary>0:32 - 1:23 | Why Fusion Releases So Much Energy</summary>
+<ul>
+<li>During fusion, the new nucleus has slightly less mass than the original nuclei combined.</li>
+<li>The missing mass is converted into energy rather than staying in the product nucleus.</li>
+<li>Einstein’s equation E = mc² explains how mass can be changed into energy.</li>
+<li>Because the speed of light squared is extremely large, even a tiny mass loss releases a huge amount of energy.</li>
+</ul>
+</details>
+<details>
+<summary>1:27 - 1:58 | Benefits and Challenges of Fusion</summary>
+<ul>
+<li>Nuclear fusion does not produce radioactive waste in the same way nuclear fission does.</li>
+<li>Hydrogen fuel is relatively easy to obtain.</li>
+<li>Fusion needs extremely high temperatures and pressures, around 10 million degrees.</li>
+<li>Scientists are still researching how to make fusion practical on Earth.</li>
+</ul>
+</details>
+<details>
+<summary>1:58 - 2:38 | Fusion Compared with Fission</summary>
+<ul>
+<li>Nuclear fusion joins light nuclei to make heavier nuclei and releases a huge amount of energy.</li>
+<li>Nuclear fission splits large unstable nuclei into smaller nuclei.</li>
+<li>Fission also releases energy, but less than fusion.</li>
+<li>Nuclear fission is the process currently used on Earth to generate electricity in nuclear power stations.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+  {
+    "type": "mcq",
+    "question": "What is nuclear fusion?",
+    "options": [
+      "Two light nuclei joining to form a larger nucleus",
+      "A large nucleus splitting into smaller nuclei",
+      "Electrons moving through a wire"
+    ],
+    "answer": 0,
+    "explanation": "Nuclear fusion is the joining of light nuclei to make a larger nucleus."
+  },
+  {
+    "type": "fill",
+    "question": "Nuclear fusion joins two lighter nuclei to form one larger ______.",
+    "answerText": "nucleus",
+    "explanation": "Fusion produces one larger nucleus."
+  },
+  {
+    "type": "mcq",
+    "question": "Which nuclei are used in the example from the video?",
+    "options": [
+      "Hydrogen-1 and hydrogen-2",
+      "Uranium and plutonium",
+      "Carbon and oxygen"
+    ],
+    "answer": 0,
+    "explanation": "The example uses hydrogen-1 and hydrogen-2."
+  },
+  {
+    "type": "fill",
+    "question": "Hydrogen-1 and hydrogen-2 can fuse to form helium-______.",
+    "answerText": "3",
+    "explanation": "The product in the example is helium-3."
+  },
+  {
+    "type": "mcq",
+    "question": "What process fuels stars?",
+    "options": [
+      "Nuclear fusion",
+      "Combustion of coal",
+      "Nuclear fission only"
+    ],
+    "answer": 0,
+    "explanation": "Stars are powered by nuclear fusion."
+  },
+  {
+    "type": "mcq",
+    "question": "How were elements heavier than hydrogen made?",
+    "options": [
+      "By fusion in stars",
+      "By evaporation",
+      "By dissolving in water"
+    ],
+    "answer": 0,
+    "explanation": "Fusion in stars formed elements heavier than hydrogen."
+  },
+  {
+    "type": "fill",
+    "question": "Fusion releases a huge amount of ______.",
+    "answerText": "energy",
+    "explanation": "Fusion releases a huge amount of energy."
+  },
+  {
+    "type": "mcq",
+    "question": "Why does fusion release energy?",
+    "options": [
+      "Some mass is converted into energy",
+      "All mass disappears without effect",
+      "The nuclei become colder"
+    ],
+    "answer": 0,
+    "explanation": "Some of the original mass is converted into energy."
+  },
+  {
+    "type": "fill",
+    "question": "The new helium nucleus is very slightly ______ than the total mass of the hydrogen nuclei.",
+    "answerText": "lighter",
+    "explanation": "The product nucleus has slightly less mass than the original nuclei combined."
+  },
+  {
+    "type": "mcq",
+    "question": "Which equation links mass and energy?",
+    "options": [
+      "E = mc²",
+      "V = IR",
+      "F = ma"
+    ],
+    "answer": 0,
+    "explanation": "Einstein’s equation E = mc² links mass and energy."
+  },
+  {
+    "type": "fill",
+    "question": "In E = mc², c is the speed of ______.",
+    "answerText": "light",
+    "explanation": "c represents the speed of light."
+  },
+  {
+    "type": "mcq",
+    "question": "Why can a tiny mass loss release lots of energy?",
+    "options": [
+      "Because c² is extremely large",
+      "Because atoms are cold",
+      "Because helium is a gas"
+    ],
+    "answer": 0,
+    "explanation": "The speed of light squared is extremely large."
+  },
+  {
+    "type": "mcq",
+    "question": "Does nuclear fusion produce radioactive waste like fission?",
+    "options": [
+      "No",
+      "Yes, always a lot",
+      "Only in plants"
+    ],
+    "answer": 0,
+    "explanation": "Fusion is described as not producing radioactive waste like fission."
+  },
+  {
+    "type": "fill",
+    "question": "The fuel needed for fusion is often ______.",
+    "answerText": "hydrogen",
+    "explanation": "Hydrogen is the fuel discussed for fusion."
+  },
+  {
+    "type": "mcq",
+    "question": "What conditions are required for fusion?",
+    "options": [
+      "Very high temperature and pressure",
+      "Low temperature and no pressure",
+      "Complete darkness only"
+    ],
+    "answer": 0,
+    "explanation": "Fusion needs very high temperatures and pressures."
+  },
+  {
+    "type": "fill",
+    "question": "Fusion may require temperatures of about 10 million ______.",
+    "answerText": "degrees",
+    "explanation": "The video mentions around 10 million degrees."
+  },
+  {
+    "type": "mcq",
+    "question": "Where does fusion happen naturally?",
+    "options": [
+      "Inside stars",
+      "Inside normal batteries",
+      "Inside copper wires"
+    ],
+    "answer": 0,
+    "explanation": "Fusion naturally occurs inside stars."
+  },
+  {
+    "type": "mcq",
+    "question": "Why is fusion difficult to do on Earth?",
+    "options": [
+      "It needs extreme temperature and pressure",
+      "Hydrogen cannot exist on Earth",
+      "It needs no energy at all"
+    ],
+    "answer": 0,
+    "explanation": "The required conditions are extremely difficult to create and control."
+  },
+  {
+    "type": "fill",
+    "question": "Scientists are doing experimental ______ into fusion on Earth.",
+    "answerText": "research",
+    "explanation": "There is experimental research into how fusion could work on Earth."
+  },
+  {
+    "type": "mcq",
+    "question": "What should nuclear fusion not be confused with?",
+    "options": [
+      "Nuclear fission",
+      "Photosynthesis",
+      "Electrolysis"
+    ],
+    "answer": 0,
+    "explanation": "Fusion and fission are different processes."
+  },
+  {
+    "type": "mcq",
+    "question": "What is nuclear fission?",
+    "options": [
+      "Splitting large unstable nuclei",
+      "Joining light nuclei",
+      "Making hydrogen by photosynthesis"
+    ],
+    "answer": 0,
+    "explanation": "Fission splits large unstable nuclei into smaller nuclei."
+  },
+  {
+    "type": "fill",
+    "question": "Fusion means nuclei ______ together.",
+    "answerText": "fuse",
+    "explanation": "Fusion means light nuclei fuse or join together."
+  },
+  {
+    "type": "fill",
+    "question": "Fission means a large unstable nucleus is ______.",
+    "answerText": "split",
+    "explanation": "Fission is the splitting of a large unstable nucleus."
+  },
+  {
+    "type": "mcq",
+    "question": "Which releases more energy, according to the video?",
+    "options": [
+      "Fusion",
+      "Fission",
+      "Neither releases energy"
+    ],
+    "answer": 0,
+    "explanation": "Fusion releases more energy than fission."
+  },
+  {
+    "type": "mcq",
+    "question": "Which nuclear process is currently used on Earth to generate electricity?",
+    "options": [
+      "Fission",
+      "Fusion",
+      "Freezing"
+    ],
+    "answer": 0,
+    "explanation": "Nuclear fission is currently used to generate electricity."
+  },
+  {
+    "type": "fill",
+    "question": "Fusion uses light nuclei, while fission uses large ______ nuclei.",
+    "answerText": "unstable",
+    "explanation": "Fission splits large unstable nuclei."
+  },
+  {
+    "type": "mcq",
+    "question": "What happens to the missing mass during fusion?",
+    "options": [
+      "It becomes energy",
+      "It becomes sound only",
+      "It becomes water"
+    ],
+    "answer": 0,
+    "explanation": "The missing mass is converted into energy."
+  },
+  {
+    "type": "fill",
+    "question": "Einstein’s equation multiplies mass loss by the speed of light ______.",
+    "answerText": "squared",
+    "explanation": "E = mc² uses the speed of light squared."
+  },
+  {
+    "type": "mcq",
+    "question": "Which element is the starting fuel in the video example?",
+    "options": [
+      "Hydrogen",
+      "Lead",
+      "Sodium"
+    ],
+    "answer": 0,
+    "explanation": "The video example begins with hydrogen nuclei."
+  },
+  {
+    "type": "mcq",
+    "question": "Which element is formed from the example fusion reaction?",
+    "options": [
+      "Helium",
+      "Bromine",
+      "Copper"
+    ],
+    "answer": 0,
+    "explanation": "Hydrogen nuclei can fuse to form helium-3."
+  },
+  {
+    "type": "fill",
+    "question": "Stars have the high temperatures and pressures needed for nuclear ______.",
+    "answerText": "fusion",
+    "explanation": "Stars can carry out fusion because of their extreme conditions."
+  },
+  {
+    "type": "mcq",
+    "question": "What is one advantage of fusion fuel?",
+    "options": [
+      "Hydrogen is easy to make or obtain",
+      "It must be rare uranium",
+      "It cannot be found anywhere"
+    ],
+    "answer": 0,
+    "explanation": "The video says the hydrogen needed as fuel can be made easily."
+  },
+  {
+    "type": "mcq",
+    "question": "What is one major challenge of fusion power?",
+    "options": [
+      "Creating and maintaining extreme conditions",
+      "Finding any electrons",
+      "Stopping all sunlight"
+    ],
+    "answer": 0,
+    "explanation": "Fusion needs very high temperature and pressure."
+  },
+  {
+    "type": "fill",
+    "question": "Nuclear fission produces lots of energy, but not as much as nuclear ______.",
+    "answerText": "fusion",
+    "explanation": "The video states fission releases less energy than fusion."
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about fusion is correct?",
+    "options": [
+      "It joins light nuclei",
+      "It splits large nuclei",
+      "It only separates compounds"
+    ],
+    "answer": 0,
+    "explanation": "Fusion joins light nuclei."
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about fission is correct?",
+    "options": [
+      "It splits large unstable nuclei",
+      "It joins hydrogen nuclei",
+      "It produces no energy"
+    ],
+    "answer": 0,
+    "explanation": "Fission splits large unstable nuclei."
+  },
+  {
+    "type": "fill",
+    "question": "The energy from fusion comes from converting mass into ______.",
+    "answerText": "energy",
+    "explanation": "Mass is converted into energy during fusion."
+  },
+  {
+    "type": "mcq",
+    "question": "Why can the mass difference not be seen from mass numbers alone?",
+    "options": [
+      "The difference is very small",
+      "Mass numbers are always zero",
+      "The product has no protons"
+    ],
+    "answer": 0,
+    "explanation": "The actual mass loss is tiny and not obvious from mass numbers."
+  },
+  {
+    "type": "fill",
+    "question": "Fusion is the process that powers the ______.",
+    "answerText": "stars",
+    "explanation": "Fusion fuels stars."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the best summary of nuclear fusion?",
+    "options": [
+      "Light nuclei combine, forming a heavier nucleus and releasing energy",
+      "Large nuclei split and absorb energy",
+      "Electrons form a solid metal"
+    ],
+    "answer": 0,
+    "explanation": "Fusion combines light nuclei and releases energy."
+  }
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
