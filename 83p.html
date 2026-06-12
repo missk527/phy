@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transformers</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>83P. Transformers</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/87T2hpqvz24" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:52 | Transformers in the National Grid</summary>
+<ul>
+<li>Most electricity in the UK is generated at large power stations across the country.</li>
+<li>Before electricity travels through the National Grid, step-up transformers increase the voltage to about 400,000 V.</li>
+<li>Using a very high voltage helps reduce energy losses as electricity travels through long cables and pylons.</li>
+<li>Near homes and towns, step-down transformers reduce the voltage to about 230 V so it is safer to use.</li>
+</ul>
+</details>
+<details >
+<summary>0:52 - 1:20 | The Main Job and Parts of a Transformer</summary>
+<ul>
+<li>A transformer changes the potential difference, or voltage, of an alternating current supply.</li>
+<li>A transformer can either increase voltage or decrease voltage.</li>
+<li>The main parts are a primary coil, a secondary coil, and an iron core.</li>
+<li>The iron core links the magnetic effects of the two coils.</li>
+</ul>
+</details>
+<details >
+<summary>1:20 - 2:43 | How a Transformer Works</summary>
+<ul>
+<li>An alternating potential difference is applied across the primary coil, causing an alternating current to flow.</li>
+<li>This alternating current produces an alternating magnetic field around the primary coil.</li>
+<li>The alternating magnetic field magnetises the iron core and induces an alternating magnetic field in it.</li>
+<li>The changing magnetic field in the iron core induces a potential difference across the secondary coil.</li>
+<li>If the secondary coil is part of a complete circuit, an alternating current flows in the secondary circuit.</li>
+</ul>
+</details>
+<details >
+<summary>2:43 - 3:16 | Energy Transfer by Magnetic Fields</summary>
+<ul>
+<li>A transformer transfers electrical energy from the primary coil to the secondary coil using induced magnetic fields.</li>
+<li>Electricity does not conduct directly from one coil to the other.</li>
+<li>The wires are insulated, so charge cannot pass between the coils and the iron core.</li>
+<li>The magnetic field provides the link between the two separate circuits.</li>
+</ul>
+</details>
+<details >
+<summary>3:16 - 3:46 | Step-up and Step-down Transformers</summary>
+<ul>
+<li>Transformers can change voltage because the primary and secondary coils can have different numbers of turns.</li>
+<li>In a step-up transformer, the secondary coil has more turns than the primary coil, so the output voltage is higher.</li>
+<li>For example, if the secondary coil has twice as many turns, a 10 V input can become a 20 V output.</li>
+<li>In a step-down transformer, the secondary coil has fewer turns than the primary coil, so the output voltage is lower.</li>
+</ul>
+</details>
+
+</section>
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+  {
+    "type": "mcq",
+    "question": "What is the main role of a transformer?",
+    "options": [
+      "To increase or decrease voltage",
+      "To store chemical energy",
+      "To create permanent magnets"
+    ],
+    "answer": 0,
+    "explanation": "A transformer changes the voltage of an alternating current supply."
+  },
+  {
+    "type": "fill",
+    "question": "Transformers can increase or decrease the ______ of electricity.",
+    "answerText": "voltage",
+    "explanation": "Transformers change voltage, also called potential difference."
+  },
+  {
+    "type": "mcq",
+    "question": "Where is most UK electricity generated, according to the video?",
+    "options": [
+      "Large power stations",
+      "Small batteries",
+      "Household plugs"
+    ],
+    "answer": 0,
+    "explanation": "Most electricity is generated at large power stations."
+  },
+  {
+    "type": "fill",
+    "question": "Electricity in the National Grid is first passed through step-up ______.",
+    "answerText": "transformers",
+    "explanation": "Step-up transformers increase the voltage before transmission."
+  },
+  {
+    "type": "mcq",
+    "question": "What voltage can step-up transformers raise electricity to in the National Grid?",
+    "options": [
+      "Around 400,000 V",
+      "Around 230 V",
+      "Around 12 V"
+    ],
+    "answer": 0,
+    "explanation": "Step-up transformers raise the voltage to about 400,000 V."
+  },
+  {
+    "type": "fill",
+    "question": "High voltage helps reduce energy ______ during transmission.",
+    "answerText": "losses",
+    "explanation": "High voltage reduces energy losses in the cables."
+  },
+  {
+    "type": "mcq",
+    "question": "What carries electricity across the country in the National Grid?",
+    "options": [
+      "Wires and pylons",
+      "Pipes and tanks",
+      "Belts and wheels"
+    ],
+    "answer": 0,
+    "explanation": "Electricity is transmitted using a large network of wires and pylons."
+  },
+  {
+    "type": "mcq",
+    "question": "What type of transformer is used near homes and towns?",
+    "options": [
+      "Step-down transformer",
+      "Step-up transformer",
+      "Chemical transformer"
+    ],
+    "answer": 0,
+    "explanation": "Step-down transformers reduce voltage near where electricity is used."
+  },
+  {
+    "type": "fill",
+    "question": "A step-down transformer reduces the voltage to about ______ V for homes.",
+    "answerText": "230",
+    "explanation": "The video says the voltage is reduced to about 230 V."
+  },
+  {
+    "type": "mcq",
+    "question": "Why is the voltage reduced before electricity enters homes?",
+    "options": [
+      "So it is safer to use",
+      "So it becomes radioactive",
+      "So it stops being electricity"
+    ],
+    "answer": 0,
+    "explanation": "Domestic electricity must be at a safer voltage."
+  },
+  {
+    "type": "fill",
+    "question": "The grey part of a transformer is called the iron ______.",
+    "answerText": "core",
+    "explanation": "The iron core links the primary and secondary coils."
+  },
+  {
+    "type": "mcq",
+    "question": "Which coil is on the input side in the video diagram?",
+    "options": [
+      "Primary coil",
+      "Secondary coil",
+      "Reaction coil"
+    ],
+    "answer": 0,
+    "explanation": "The primary coil is the input coil."
+  },
+  {
+    "type": "mcq",
+    "question": "Which coil is on the output side in the video diagram?",
+    "options": [
+      "Secondary coil",
+      "Primary coil",
+      "Earth coil"
+    ],
+    "answer": 0,
+    "explanation": "The secondary coil is the output coil."
+  },
+  {
+    "type": "fill",
+    "question": "The iron core connects the primary coil to the ______ coil.",
+    "answerText": "secondary",
+    "explanation": "The iron core links the two coils magnetically."
+  },
+  {
+    "type": "mcq",
+    "question": "What is applied across the primary coil?",
+    "options": [
+      "An alternating potential difference",
+      "A direct flame",
+      "A fixed mass"
+    ],
+    "answer": 0,
+    "explanation": "An alternating potential difference is applied to the primary coil."
+  },
+  {
+    "type": "fill",
+    "question": "An alternating potential difference causes a current to ______ in the primary coil.",
+    "answerText": "flow",
+    "explanation": "The applied potential difference causes current to flow."
+  },
+  {
+    "type": "mcq",
+    "question": "What does the current in the primary coil generate?",
+    "options": [
+      "A magnetic field",
+      "A sound wave",
+      "A chemical solution"
+    ],
+    "answer": 0,
+    "explanation": "A current in a coil generates a magnetic field."
+  },
+  {
+    "type": "fill",
+    "question": "Because the potential difference is alternating, the current direction also ______.",
+    "answerText": "alternates",
+    "explanation": "An alternating potential difference produces an alternating current."
+  },
+  {
+    "type": "mcq",
+    "question": "What happens to the magnetic field when the current alternates?",
+    "options": [
+      "It alternates too",
+      "It disappears forever",
+      "It becomes a liquid"
+    ],
+    "answer": 0,
+    "explanation": "The magnetic field alternates as the current changes direction."
+  },
+  {
+    "type": "mcq",
+    "question": "Why can the iron core become magnetised?",
+    "options": [
+      "Iron is a magnetic material",
+      "Iron is plastic",
+      "Iron is an insulator only"
+    ],
+    "answer": 0,
+    "explanation": "Iron can become magnetised in a magnetic field."
+  },
+  {
+    "type": "fill",
+    "question": "The alternating magnetic field in the primary coil induces an alternating magnetic field in the iron ______.",
+    "answerText": "core",
+    "explanation": "The changing field is transferred into the iron core."
+  },
+  {
+    "type": "mcq",
+    "question": "What does the iron core magnetic field induce in the secondary coil?",
+    "options": [
+      "A potential difference",
+      "A gravitational field",
+      "A fuel supply"
+    ],
+    "answer": 0,
+    "explanation": "The changing magnetic field induces a potential difference in the secondary coil."
+  },
+  {
+    "type": "fill",
+    "question": "If the secondary coil is in a complete circuit, a current will ______.",
+    "answerText": "flow",
+    "explanation": "A complete circuit allows current to flow."
+  },
+  {
+    "type": "mcq",
+    "question": "How is energy transferred between the coils?",
+    "options": [
+      "By induced magnetic fields",
+      "By direct conduction through the iron",
+      "By hot air only"
+    ],
+    "answer": 0,
+    "explanation": "Transformers use induced magnetic fields to transfer energy."
+  },
+  {
+    "type": "fill",
+    "question": "Electricity cannot pass directly between the wire and iron core because the wires are ______.",
+    "answerText": "insulated",
+    "explanation": "Insulation prevents direct electrical conduction."
+  },
+  {
+    "type": "mcq",
+    "question": "What material insulates the wires in the video explanation?",
+    "options": [
+      "Plastic",
+      "Copper oxide",
+      "Water"
+    ],
+    "answer": 0,
+    "explanation": "The wires are insulated in plastic."
+  },
+  {
+    "type": "mcq",
+    "question": "Why do transformers use magnetic effects?",
+    "options": [
+      "To change the size of the potential difference",
+      "To make the core melt",
+      "To remove all current"
+    ],
+    "answer": 0,
+    "explanation": "Magnetic induction allows the voltage to be changed."
+  },
+  {
+    "type": "fill",
+    "question": "A step-up transformer increases the output ______.",
+    "answerText": "voltage",
+    "explanation": "A step-up transformer makes the output voltage higher."
+  },
+  {
+    "type": "mcq",
+    "question": "In the example, what output is produced from a 10 V input?",
+    "options": [
+      "20 V",
+      "5 V",
+      "400,000 V exactly"
+    ],
+    "answer": 0,
+    "explanation": "The example gives 20 V output from 10 V input."
+  },
+  {
+    "type": "fill",
+    "question": "In the example, the secondary coil has ______ as many turns as the primary coil.",
+    "answerText": "twice",
+    "explanation": "Twice as many turns doubles the voltage."
+  },
+  {
+    "type": "mcq",
+    "question": "What coil has more turns in a step-up transformer?",
+    "options": [
+      "Secondary coil",
+      "Primary coil",
+      "Neither coil"
+    ],
+    "answer": 0,
+    "explanation": "A step-up transformer has more turns on the secondary coil."
+  },
+  {
+    "type": "mcq",
+    "question": "What coil has fewer turns in a step-down transformer?",
+    "options": [
+      "Secondary coil",
+      "Primary coil",
+      "Both coils always equal"
+    ],
+    "answer": 0,
+    "explanation": "A step-down transformer has fewer turns on the secondary coil."
+  },
+  {
+    "type": "fill",
+    "question": "A step-down transformer makes the output voltage ______.",
+    "answerText": "lower",
+    "explanation": "Step-down transformers reduce voltage."
+  },
+  {
+    "type": "mcq",
+    "question": "What kind of current is needed for a transformer to work?",
+    "options": [
+      "Alternating current",
+      "Direct current only",
+      "No current"
+    ],
+    "answer": 0,
+    "explanation": "Transformers need alternating current to create a changing magnetic field."
+  },
+  {
+    "type": "fill",
+    "question": "The primary coil produces an alternating magnetic ______.",
+    "answerText": "field",
+    "explanation": "The current in the primary coil creates a magnetic field."
+  },
+  {
+    "type": "mcq",
+    "question": "What links the two coils magnetically?",
+    "options": [
+      "Iron core",
+      "Plastic insulation",
+      "Household plug"
+    ],
+    "answer": 0,
+    "explanation": "The iron core links the magnetic fields of the coils."
+  },
+  {
+    "type": "fill",
+    "question": "The secondary coil receives energy by electromagnetic ______.",
+    "answerText": "induction",
+    "explanation": "The changing magnetic field induces a potential difference."
+  },
+  {
+    "type": "mcq",
+    "question": "Which transformer is useful for long-distance electricity transmission?",
+    "options": [
+      "Step-up transformer",
+      "Step-down transformer only",
+      "No transformer"
+    ],
+    "answer": 0,
+    "explanation": "Step-up transformers raise voltage to reduce transmission losses."
+  },
+  {
+    "type": "mcq",
+    "question": "Which transformer is useful before electricity enters homes?",
+    "options": [
+      "Step-down transformer",
+      "Step-up transformer",
+      "Generator only"
+    ],
+    "answer": 0,
+    "explanation": "Step-down transformers reduce voltage to a safer domestic level."
+  },
+  {
+    "type": "fill",
+    "question": "A transformer transfers energy from the primary coil to the ______ coil.",
+    "answerText": "secondary",
+    "explanation": "Energy is transferred from the primary to the secondary coil."
+  }
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
