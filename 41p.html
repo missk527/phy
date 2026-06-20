@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scalars and Vectors</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>41P. Scalars and Vectors</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/mThktYHiIjo" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:11 | Scalars and Vectors</summary>
+<ul>
+<li>This video explains the difference between scalar quantities and vector quantities.</li>
+<li>Scalar quantities may also be called scalars.</li>
+<li>Vector quantities may also be called vectors.</li>
+</ul>
+</details>
+<details>
+<summary>0:11 - 0:40 | Scalar Quantities</summary>
+<ul>
+<li>Scalars are physical quantities that have magnitude only.</li>
+<li>Magnitude means size, so it can be measured using a number and a unit.</li>
+<li>For example, if a car travels at 22 m/s, 22 m/s is the magnitude of its speed.</li>
+<li>Speed alone has no direction, so it is a scalar quantity.</li>
+</ul>
+</details>
+<details>
+<summary>0:40 - 0:59 | Examples of Scalars and Vectors</summary>
+<ul>
+<li>Examples of scalar quantities include distance, mass, temperature, and time.</li>
+<li>Vectors have both magnitude and direction.</li>
+<li>Examples of vector quantities include velocity, displacement, acceleration, force, and momentum.</li>
+</ul>
+</details>
+<details>
+<summary>1:18 - 1:52 | Distance Compared with Displacement</summary>
+<ul>
+<li>If you walk 3 km from point A, distance only tells us how far you travelled.</li>
+<li>Because distance gives no direction, you could end up anywhere 3 km from the starting point.</li>
+<li>If you walk 3 km east from point A, your final position is clear.</li>
+<li>Displacement is a vector because it includes both a magnitude of 3 km and a direction of east.</li>
+</ul>
+</details>
+<details>
+<summary>2:04 - 2:22 | Representing Vectors with Arrows</summary>
+<ul>
+<li>Vectors are represented using arrows.</li>
+<li>The length of the arrow shows the magnitude of the vector.</li>
+<li>The direction the arrow points shows the direction of the vector.</li>
+<li>For example, 4 km north is shown by an arrow pointing north.</li>
+</ul>
+</details>
+<details>
+<summary>2:22 - 2:40 | Comparing and Naming Vectors</summary>
+<ul>
+<li>A 2 km west vector is shown by an arrow pointing left.</li>
+<li>A 2 km vector is half the length of a 4 km vector.</li>
+<li>Vectors can also be written as negative vectors.</li>
+<li>For example, 2 km west can be described as -2 km east because it is opposite to the east direction.</li>
+</ul>
+</details>
+
+
+
+<section class="card">
+<h2>Quiz (40 Questions)</h2>
+<div id="game-area">
+<button class="btn" onclick="startGame()">Start Quiz</button>
+</div>
+</section>
+
+</div>
+
+<script>
+const questions=[
+  {
+    "type": "mcq",
+    "question": "What is a scalar quantity?",
+    "options": [
+      "A quantity with magnitude only",
+      "A quantity with direction only",
+      "A quantity with no size"
+    ],
+    "answer": 0,
+    "explanation": "A scalar has magnitude, or size, but no direction."
+  },
+  {
+    "type": "fill",
+    "question": "A vector quantity has both magnitude and ______.",
+    "answerText": "direction",
+    "explanation": "Vectors have magnitude and direction."
+  },
+  {
+    "type": "mcq",
+    "question": "What does magnitude mean?",
+    "options": [
+      "Size",
+      "Direction",
+      "Colour"
+    ],
+    "answer": 0,
+    "explanation": "Magnitude means the size or numerical value of a quantity."
+  },
+  {
+    "type": "fill",
+    "question": "Scalars have magnitude but no ______.",
+    "answerText": "direction",
+    "explanation": "Scalars do not include direction."
+  },
+  {
+    "type": "mcq",
+    "question": "Which of these is a scalar quantity?",
+    "options": [
+      "Speed",
+      "Velocity",
+      "Force"
+    ],
+    "answer": 0,
+    "explanation": "Speed is scalar because it has magnitude but no direction."
+  },
+  {
+    "type": "fill",
+    "question": "If a car travels at 22 m/s, 22 m/s is the magnitude of its ______.",
+    "answerText": "speed",
+    "explanation": "The value 22 m/s gives the magnitude of the car's speed."
+  },
+  {
+    "type": "mcq",
+    "question": "Why is speed by itself a scalar?",
+    "options": [
+      "It has no direction",
+      "It always points north",
+      "It has no unit"
+    ],
+    "answer": 0,
+    "explanation": "Speed alone tells us how fast something moves, not the direction."
+  },
+  {
+    "type": "fill",
+    "question": "Distance is a ______ quantity.",
+    "answerText": "scalar",
+    "explanation": "Distance has magnitude only, so it is scalar."
+  },
+  {
+    "type": "mcq",
+    "question": "Which list contains only scalar quantities?",
+    "options": [
+      "Distance, mass, temperature, time",
+      "Velocity, force, momentum, displacement",
+      "Speed, force, mass, acceleration"
+    ],
+    "answer": 0,
+    "explanation": "Distance, mass, temperature, and time are all scalars."
+  },
+  {
+    "type": "fill",
+    "question": "Mass is an example of a ______ quantity.",
+    "answerText": "scalar",
+    "explanation": "Mass has size but no direction."
+  },
+  {
+    "type": "mcq",
+    "question": "Which of these is a vector quantity?",
+    "options": [
+      "Velocity",
+      "Temperature",
+      "Time"
+    ],
+    "answer": 0,
+    "explanation": "Velocity includes both speed and direction."
+  },
+  {
+    "type": "fill",
+    "question": "Velocity is a ______ quantity.",
+    "answerText": "vector",
+    "explanation": "Velocity has magnitude and direction."
+  },
+  {
+    "type": "mcq",
+    "question": "Which list contains only vector quantities?",
+    "options": [
+      "Velocity, displacement, acceleration, force, momentum",
+      "Distance, mass, time, temperature",
+      "Speed, distance, mass, force"
+    ],
+    "answer": 0,
+    "explanation": "All of these quantities have both magnitude and direction."
+  },
+  {
+    "type": "fill",
+    "question": "Force is an example of a ______ quantity.",
+    "answerText": "vector",
+    "explanation": "Force has size and direction."
+  },
+  {
+    "type": "mcq",
+    "question": "What extra information does a vector have compared with a scalar?",
+    "options": [
+      "Direction",
+      "Temperature",
+      "Mass"
+    ],
+    "answer": 0,
+    "explanation": "A vector includes direction as well as magnitude."
+  },
+  {
+    "type": "fill",
+    "question": "Displacement has magnitude and direction, so it is a ______.",
+    "answerText": "vector",
+    "explanation": "Displacement is a vector quantity."
+  },
+  {
+    "type": "mcq",
+    "question": "If you walk a distance of 3 km from point A, what does distance tell you?",
+    "options": [
+      "How far you walked",
+      "Exactly where you ended up",
+      "The direction east"
+    ],
+    "answer": 0,
+    "explanation": "Distance tells how far you travelled, but not the direction."
+  },
+  {
+    "type": "fill",
+    "question": "Distance does not tell us which ______ you travelled.",
+    "answerText": "direction",
+    "explanation": "Distance is scalar, so it does not include direction."
+  },
+  {
+    "type": "mcq",
+    "question": "If someone only says they walked 3 km from point A, where could they end up?",
+    "options": [
+      "Anywhere 3 km from point A",
+      "Only east of point A",
+      "Only north of point A"
+    ],
+    "answer": 0,
+    "explanation": "Without direction, many final positions are possible."
+  },
+  {
+    "type": "fill",
+    "question": "Walking 3 km east gives a clear final ______.",
+    "answerText": "position",
+    "explanation": "The direction east makes the final position clear."
+  },
+  {
+    "type": "mcq",
+    "question": "What quantity is described by 3 km east from a starting point?",
+    "options": [
+      "Displacement",
+      "Mass",
+      "Temperature"
+    ],
+    "answer": 0,
+    "explanation": "3 km east includes magnitude and direction, so it describes displacement."
+  },
+  {
+    "type": "fill",
+    "question": "In 3 km east, the magnitude is ______ km.",
+    "answerText": "3",
+    "explanation": "The size of the displacement is 3 km."
+  },
+  {
+    "type": "mcq",
+    "question": "In 3 km east, what is the direction?",
+    "options": [
+      "East",
+      "3 km",
+      "Speed"
+    ],
+    "answer": 0,
+    "explanation": "East is the direction of the vector."
+  },
+  {
+    "type": "fill",
+    "question": "Displacement is different from distance because displacement includes ______.",
+    "answerText": "direction",
+    "explanation": "Displacement includes direction, while distance does not."
+  },
+  {
+    "type": "mcq",
+    "question": "How are vectors usually represented in diagrams?",
+    "options": [
+      "With arrows",
+      "With circles only",
+      "With bar charts only"
+    ],
+    "answer": 0,
+    "explanation": "Vectors are represented using arrows."
+  },
+  {
+    "type": "fill",
+    "question": "The length of a vector arrow shows its ______.",
+    "answerText": "magnitude",
+    "explanation": "Longer arrows represent greater magnitude."
+  },
+  {
+    "type": "mcq",
+    "question": "What does the direction of a vector arrow show?",
+    "options": [
+      "The direction of the vector",
+      "Only the mass",
+      "Only the time"
+    ],
+    "answer": 0,
+    "explanation": "The way the arrow points shows the vector's direction."
+  },
+  {
+    "type": "fill",
+    "question": "A 4 km north vector should point ______.",
+    "answerText": "north",
+    "explanation": "The arrow points north to show the direction."
+  },
+  {
+    "type": "mcq",
+    "question": "A 2 km west vector should point which way on a simple diagram?",
+    "options": [
+      "Left",
+      "Right",
+      "Up"
+    ],
+    "answer": 0,
+    "explanation": "West is usually shown as left."
+  },
+  {
+    "type": "fill",
+    "question": "A 2 km vector is ______ the length of a 4 km vector.",
+    "answerText": "half",
+    "explanation": "2 km is half of 4 km, so the arrow is half as long."
+  },
+  {
+    "type": "mcq",
+    "question": "Why is a 2 km west arrow shorter than a 4 km north arrow?",
+    "options": [
+      "Its magnitude is smaller",
+      "It has no direction",
+      "It is a scalar"
+    ],
+    "answer": 0,
+    "explanation": "The 2 km vector has a smaller magnitude."
+  },
+  {
+    "type": "fill",
+    "question": "The arrow for 2 km west points to the ______.",
+    "answerText": "left",
+    "explanation": "West is represented by a left-pointing arrow."
+  },
+  {
+    "type": "mcq",
+    "question": "Can vectors be negative?",
+    "options": [
+      "Yes",
+      "No",
+      "Only if they are scalars"
+    ],
+    "answer": 0,
+    "explanation": "Vectors can be described as negative when they act in the opposite direction."
+  },
+  {
+    "type": "fill",
+    "question": "2 km west can be written as -2 km ______.",
+    "answerText": "east",
+    "explanation": "West is opposite to east, so 2 km west is -2 km east."
+  },
+  {
+    "type": "mcq",
+    "question": "What does -2 km east mean?",
+    "options": [
+      "2 km in the opposite direction to east",
+      "2 km faster than east",
+      "No movement"
+    ],
+    "answer": 0,
+    "explanation": "A negative east vector points opposite to east, which is west."
+  },
+  {
+    "type": "fill",
+    "question": "A negative vector points in the ______ direction to the named positive direction.",
+    "answerText": "opposite",
+    "explanation": "Negative vectors act opposite to the positive reference direction."
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement is correct?",
+    "options": [
+      "4 km north is a vector",
+      "4 km north is a scalar",
+      "4 km north has no direction"
+    ],
+    "answer": 0,
+    "explanation": "4 km north has magnitude and direction, so it is a vector."
+  },
+  {
+    "type": "fill",
+    "question": "Temperature is a scalar because it has no ______.",
+    "answerText": "direction",
+    "explanation": "Temperature has magnitude but no direction."
+  },
+  {
+    "type": "mcq",
+    "question": "Which quantity has magnitude but not direction?",
+    "options": [
+      "Scalar",
+      "Vector",
+      "Displacement"
+    ],
+    "answer": 0,
+    "explanation": "A scalar quantity has magnitude only."
+  },
+  {
+    "type": "fill",
+    "question": "Momentum is a vector because it has magnitude and ______.",
+    "answerText": "direction",
+    "explanation": "Momentum is listed as a vector quantity because it has direction as well as magnitude."
+  }
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
