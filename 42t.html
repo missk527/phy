@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Body Diagrams</title>
+<style>
+:root{
+--brand:#0ea5e9;
+--ink:#1f2937;
+--paper:#fafafa;
+--card:#ffffff;
+--muted:#6b7280;
+--good:#16a34a;
+--bad:#dc2626;
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+color:var(--ink);
+background:var(--paper);
+line-height:1.6;
+}
+header{
+background:linear-gradient(135deg,var(--brand),#6366f1);
+color:white;
+padding:20px 16px;
+text-align:center;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+.card{
+background:var(--card);
+border-radius:12px;
+padding:18px;
+box-shadow:0 6px 18px rgba(2,6,23,.08);
+margin:16px 0;
+}
+iframe{
+width:100%;
+max-width:900px;
+height:480px;
+border:0;
+border-radius:12px;
+}
+details{
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:10px 12px;
+margin:10px 0;
+background:#fff;
+}
+summary{
+font-weight:700;
+color:#0f766e;
+cursor:pointer;
+}
+.btn{
+background:var(--brand);
+color:white;
+border:0;
+border-radius:10px;
+padding:10px 14px;
+font-weight:700;
+cursor:pointer;
+}
+.correct{color:green}
+.incorrect{color:red}
+</style>
+</head>
+<body>
+
+<header>
+<h1>84B. Free Body Diagrams and Resultant Force</h1>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<iframe src="https://www.youtube.com/embed/ZI_UTJ8tIPI" allowfullscreen></iframe>
+</div>
+
+<section class="card">
+<h2>Key Notes (Synced with Video)</h2>
+
+<details open>
+<summary>0:00 - 0:10 | Introduction to Free Body Diagrams</summary>
+<ul>
+<li>This video explains free body diagrams and how they help us find the resultant force on an object.</li>
+<li>A free body diagram is a simple drawing that shows every force acting on one object.</li>
+<li>Forces are shown using arrows.</li>
+</ul>
+</details>
+<details>
+<summary>0:23 - 0:52 | Forces on a Flying Plane</summary>
+<ul>
+<li>A plane in flight can be represented with four main force arrows.</li>
+<li>Thrust acts forwards, while air resistance or drag acts backwards.</li>
+<li>Weight acts downwards, and lift acts upwards.</li>
+</ul>
+</details>
+<details>
+<summary>0:52 - 1:14 | Magnitude and Direction</summary>
+<ul>
+<li>Forces are vectors, so each force has both magnitude and direction.</li>
+<li>The direction is shown by the way the arrow points.</li>
+<li>The magnitude is shown by the arrow length and can be labelled in newtons.</li>
+</ul>
+</details>
+<details>
+<summary>1:14 - 1:35 | Resultant Force</summary>
+<ul>
+<li>Forces acting in opposite directions may cancel each other out.</li>
+<li>After balanced forces are removed, the remaining overall force is called the resultant force.</li>
+<li>The resultant force describes the overall force acting on the object.</li>
+</ul>
+</details>
+<details>
+<summary>1:35 - 2:26 | Calculating Resultant Force</summary>
+<ul>
+<li>It is easiest to calculate horizontal and vertical forces separately.</li>
+<li>In the vertical direction, 80,000 N up and 80,000 N down give a resultant force of 0 N.</li>
+<li>In the horizontal direction, 120,000 N right and 90,000 N left give a resultant force of 30,000 N to the right.</li>
+<li>Overall, the plane has a resultant force of 30,000 N to the right.</li>
+</ul>
+</details>
+<details>
+<summary>2:39 - 3:01 | Balanced Forces and Equilibrium</summary>
+<ul>
+<li>If air resistance is 120,000 N, it balances the 120,000 N thrust.</li>
+<li>The horizontal resultant force is then 0 N.</li>
+<li>When both horizontal and vertical forces are balanced, the object is in equilibrium.</li>
+<li>An object in equilibrium has no resultant force acting on it.</li>
+</ul>
+</details>
+
+</section></div>
+
+<script>
+const questions=[
+  {
+    "type": "mcq",
+    "question": "What is the main topic of the video?",
+    "options": [
+      "Free body diagrams and resultant force",
+      "Electrical circuits",
+      "Chemical reactions"
+    ],
+    "answer": 0,
+    "explanation": "The video focuses on free body diagrams and how to find resultant force."
+  },
+  {
+    "type": "fill",
+    "question": "A free body diagram shows all the ______ acting on an object.",
+    "answerText": "forces",
+    "explanation": "A free body diagram includes all forces acting on a chosen object."
+  },
+  {
+    "type": "mcq",
+    "question": "How are forces shown in a free body diagram?",
+    "options": [
+      "Using arrows",
+      "Using only numbers",
+      "Using colours only"
+    ],
+    "answer": 0,
+    "explanation": "Forces are represented by force arrows."
+  },
+  {
+    "type": "fill",
+    "question": "Force arrows are used to represent forces acting on a particular ______.",
+    "answerText": "object",
+    "explanation": "The diagram focuses on one object and the forces acting on it."
+  },
+  {
+    "type": "mcq",
+    "question": "In the plane example, which force acts forwards?",
+    "options": [
+      "Thrust",
+      "Weight",
+      "Drag"
+    ],
+    "answer": 0,
+    "explanation": "Thrust acts in the forward direction."
+  },
+  {
+    "type": "fill",
+    "question": "Air resistance is also called ______.",
+    "answerText": "drag",
+    "explanation": "Air resistance may also be called drag."
+  },
+  {
+    "type": "mcq",
+    "question": "Which force acts downwards on the plane?",
+    "options": [
+      "Weight",
+      "Lift",
+      "Thrust"
+    ],
+    "answer": 0,
+    "explanation": "Weight acts downwards due to gravity."
+  },
+  {
+    "type": "fill",
+    "question": "The upward force on the plane is called ______.",
+    "answerText": "lift",
+    "explanation": "Lift acts upwards on the plane."
+  },
+  {
+    "type": "mcq",
+    "question": "Why must each force have magnitude and direction?",
+    "options": [
+      "Because forces are vectors",
+      "Because forces are scalars",
+      "Because forces have no units"
+    ],
+    "answer": 0,
+    "explanation": "Forces are vectors, so they have both size and direction."
+  },
+  {
+    "type": "fill",
+    "question": "The direction of a force is shown by the way the arrow ______.",
+    "answerText": "points",
+    "explanation": "The arrow direction shows the direction of the force."
+  },
+  {
+    "type": "mcq",
+    "question": "What shows the magnitude of a force arrow?",
+    "options": [
+      "The length of the arrow",
+      "The colour of the arrow",
+      "The object name"
+    ],
+    "answer": 0,
+    "explanation": "Longer arrows represent larger forces."
+  },
+  {
+    "type": "fill",
+    "question": "Force magnitude can be labelled in ______.",
+    "answerText": "newtons",
+    "explanation": "Forces are measured in newtons, written as N."
+  },
+  {
+    "type": "mcq",
+    "question": "What can happen when forces act in opposite directions?",
+    "options": [
+      "They can cancel each other out",
+      "They always double",
+      "They become mass"
+    ],
+    "answer": 0,
+    "explanation": "Opposite forces can balance or partially cancel."
+  },
+  {
+    "type": "fill",
+    "question": "The overall force left after considering all forces is the ______ force.",
+    "answerText": "resultant",
+    "explanation": "The resultant force is the overall force on the object."
+  },
+  {
+    "type": "mcq",
+    "question": "What is usually the easiest way to find resultant force?",
+    "options": [
+      "Consider horizontal and vertical directions separately",
+      "Ignore vertical forces",
+      "Add all labels together"
+    ],
+    "answer": 0,
+    "explanation": "Separating horizontal and vertical components makes the calculation clearer."
+  },
+  {
+    "type": "fill",
+    "question": "The vertical component compares upward and ______ forces.",
+    "answerText": "downward",
+    "explanation": "Vertical forces act up and down."
+  },
+  {
+    "type": "mcq",
+    "question": "If 80,000 N acts up and 80,000 N acts down, what is the vertical resultant force?",
+    "options": [
+      "0 N",
+      "80,000 N up",
+      "160,000 N down"
+    ],
+    "answer": 0,
+    "explanation": "Equal opposite vertical forces cancel to give 0 N."
+  },
+  {
+    "type": "fill",
+    "question": "For the vertical example, 80,000 N up minus 80,000 N down equals ______ N.",
+    "answerText": "0",
+    "explanation": "The two vertical forces are equal and opposite."
+  },
+  {
+    "type": "mcq",
+    "question": "In the first horizontal example, what force acts to the right?",
+    "options": [
+      "120,000 N",
+      "90,000 N",
+      "80,000 N"
+    ],
+    "answer": 0,
+    "explanation": "The rightward force is 120,000 N."
+  },
+  {
+    "type": "fill",
+    "question": "In the first horizontal example, the force to the left is ______ N.",
+    "answerText": "90000",
+    "explanation": "The leftward force is 90,000 N."
+  },
+  {
+    "type": "mcq",
+    "question": "What is 120,000 N right minus 90,000 N left?",
+    "options": [
+      "30,000 N to the right",
+      "30,000 N to the left",
+      "210,000 N down"
+    ],
+    "answer": 0,
+    "explanation": "The larger force is to the right by 30,000 N."
+  },
+  {
+    "type": "fill",
+    "question": "The horizontal resultant force in the first example is 30,000 N to the ______.",
+    "answerText": "right",
+    "explanation": "The rightward force is larger, so the resultant is to the right."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the overall resultant force in the first plane example?",
+    "options": [
+      "30,000 N to the right",
+      "0 N",
+      "30,000 N upward"
+    ],
+    "answer": 0,
+    "explanation": "The vertical forces cancel and the remaining horizontal resultant is 30,000 N to the right."
+  },
+  {
+    "type": "fill",
+    "question": "When vertical forces are balanced, their resultant is ______ N.",
+    "answerText": "0",
+    "explanation": "Balanced opposite forces give zero resultant force."
+  },
+  {
+    "type": "mcq",
+    "question": "What changes in the second scenario?",
+    "options": [
+      "Air resistance becomes 120,000 N",
+      "Lift becomes zero",
+      "Weight acts upward"
+    ],
+    "answer": 0,
+    "explanation": "The second scenario increases air resistance to 120,000 N."
+  },
+  {
+    "type": "fill",
+    "question": "In the second scenario, thrust and air resistance are both ______ N.",
+    "answerText": "120000",
+    "explanation": "Both horizontal forces are 120,000 N."
+  },
+  {
+    "type": "mcq",
+    "question": "What is 120,000 N minus 120,000 N?",
+    "options": [
+      "0 N",
+      "30,000 N",
+      "240,000 N"
+    ],
+    "answer": 0,
+    "explanation": "Equal forces in opposite directions cancel."
+  },
+  {
+    "type": "fill",
+    "question": "The horizontal resultant force in the second scenario is ______ N.",
+    "answerText": "0",
+    "explanation": "The horizontal forces are perfectly balanced."
+  },
+  {
+    "type": "mcq",
+    "question": "When both horizontal and vertical components are balanced, the object is in what state?",
+    "options": [
+      "Equilibrium",
+      "Acceleration only",
+      "Drag"
+    ],
+    "answer": 0,
+    "explanation": "An object is in equilibrium when there is no resultant force."
+  },
+  {
+    "type": "fill",
+    "question": "An object in equilibrium has no ______ force acting on it.",
+    "answerText": "resultant",
+    "explanation": "Equilibrium means the resultant force is zero."
+  },
+  {
+    "type": "mcq",
+    "question": "Which pair of forces act horizontally on the plane?",
+    "options": [
+      "Thrust and drag",
+      "Lift and weight",
+      "Mass and temperature"
+    ],
+    "answer": 0,
+    "explanation": "Thrust and drag act forward and backward."
+  },
+  {
+    "type": "fill",
+    "question": "Which pair of forces act vertically on the plane? Lift and ______.",
+    "answerText": "weight",
+    "explanation": "Lift acts upward and weight acts downward."
+  },
+  {
+    "type": "mcq",
+    "question": "If the rightward force is larger than the leftward force, the resultant points where?",
+    "options": [
+      "To the right",
+      "To the left",
+      "Nowhere"
+    ],
+    "answer": 0,
+    "explanation": "The resultant points in the direction of the larger force."
+  },
+  {
+    "type": "fill",
+    "question": "If two equal forces act in opposite directions, they are ______.",
+    "answerText": "balanced",
+    "explanation": "Equal and opposite forces are balanced."
+  },
+  {
+    "type": "mcq",
+    "question": "What does a free body diagram help us calculate?",
+    "options": [
+      "The resultant force",
+      "The colour of an object",
+      "The temperature only"
+    ],
+    "answer": 0,
+    "explanation": "Free body diagrams help identify forces and calculate the resultant force."
+  },
+  {
+    "type": "fill",
+    "question": "The resultant force is the ______ force on an object.",
+    "answerText": "overall",
+    "explanation": "The resultant force is the overall effect of all forces."
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement is correct about force arrows?",
+    "options": [
+      "They show both direction and magnitude",
+      "They show mass only",
+      "They cannot be labelled"
+    ],
+    "answer": 0,
+    "explanation": "Force arrows show direction and magnitude, and may be labelled in newtons."
+  },
+  {
+    "type": "fill",
+    "question": "A longer force arrow represents a larger force ______.",
+    "answerText": "magnitude",
+    "explanation": "Arrow length represents magnitude."
+  },
+  {
+    "type": "mcq",
+    "question": "If there is no resultant force, what can we say about the forces?",
+    "options": [
+      "They are balanced",
+      "They are all missing",
+      "They are not vectors"
+    ],
+    "answer": 0,
+    "explanation": "No resultant force means the forces are balanced overall."
+  },
+  {
+    "type": "fill",
+    "question": "The unit symbol for newtons is ______.",
+    "answerText": "n",
+    "explanation": "Newton is commonly written as N."
+  }
+];
+
+let currentQuestion=0;
+let score=0;
+let shuffledQuestions=[];
+
+function startGame(){
+shuffledQuestions=[...questions].sort(()=>Math.random()-0.5);
+currentQuestion=0;
+score=0;
+showQuestion();
+}
+
+function showQuestion(){
+const gameArea=document.getElementById("game-area");
+const q=shuffledQuestions[currentQuestion];
+let html=`<div><p><strong>Question ${currentQuestion+1}:</strong> ${q.question}</p>`;
+
+if(q.type==="mcq"){
+q.options.forEach((opt,idx)=>{
+html+=`<label style="display:block"><input type="radio" name="opt" value="${idx}"> ${opt}</label>`;
+});
+html+=`<button class="btn" onclick="checkMCQ()">Submit</button>`;
+}else{
+html+=`<input id="fill" type="text" style="width:100%;padding:10px;margin:10px 0;">`;
+html+=`<button class="btn" onclick="checkFill()">Submit</button>`;
+}
+
+html+=`<div id="feedback"></div></div>`;
+gameArea.innerHTML=html;
+}
+
+function checkMCQ(){
+const q=shuffledQuestions[currentQuestion];
+const sel=document.querySelector('input[name="opt"]:checked');
+if(!sel)return;
+
+const feedback=document.getElementById("feedback");
+
+if(parseInt(sel.value)===q.answer){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function checkFill(){
+const q=shuffledQuestions[currentQuestion];
+const ans=document.getElementById("fill").value.trim().toLowerCase();
+const feedback=document.getElementById("feedback");
+
+if(ans.includes(q.answerText)){
+feedback.innerHTML=`<p class="correct">Correct! ${q.explanation}</p>`;
+score++;
+}else{
+feedback.innerHTML=`<p class="incorrect">Incorrect. ${q.explanation}</p>`;
+}
+
+setTimeout(nextQuestion,1200);
+}
+
+function nextQuestion(){
+currentQuestion++;
+if(currentQuestion<shuffledQuestions.length){
+showQuestion();
+}else{
+document.getElementById("game-area").innerHTML=`<h3>Quiz Complete!</h3><p>Your score: ${score}/${shuffledQuestions.length}</p><button class="btn" onclick="startGame()">Try Again</button>`;
+}
+}
+</script>
+
+</body>
+</html>
